@@ -621,9 +621,9 @@ const Timeline = () => {
 
 						<div className="flex items-center relative">
 							<div className="hidden md:block w-52">
-								<div className="font-bold italic">2019</div>
+								<div className="font-bold italic">2020</div>
 								<div className="md:flex space-x-1 text-xs">
-									<div>Jul. - Aug. </div>
+									<div>Jan. - June </div>
 								</div>
 							</div>
 
@@ -639,7 +639,7 @@ const Timeline = () => {
 								<div className="italic md:mb-4">LINTON UNIVERSITY COLLEGE</div>
 								<div className="mb-4 mt-2 md:hidden">
 									<div className="font-bold">2020</div>
-									<div className="text-xs">Jan. - June.</div>
+									<div className="text-xs">Jan. - June</div>
 								</div>
 								<div className="mb-10">
 									After having argument with my parents, I run away from home
