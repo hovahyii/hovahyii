@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const Project = () => {
 	return (
-		<div className="flex w-screen justify-center items-center pt-40">
+		<div id="project" className="flex w-screen justify-center items-center pt-40">
 			<div className="w-3/4">
 				<h1 className="h1">Projects</h1>
 				<p className="paragraph pb-10">Some of my previous projects:</p>

@@ -2,7 +2,7 @@ import Script from "next/script"
 
 const Timeline = () => {
 	return (
-		<div className="p-4 md:p-10 bg-white">
+		<div id="timeline" className="p-4 md:p-10 bg-white">
 			<Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></Script>
 
 			<div className="md:flex mt-20 text-center ml-10 mr-10 md:ml-36 md:mr-36">
