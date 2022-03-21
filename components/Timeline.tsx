@@ -830,7 +830,7 @@ const Timeline = () => {
 							<div className="hidden md:block w-48">
 								<div className="font-bold italic">2021</div>
 								<div className="md:flex space-x-1 text-xs">
-									<div>Feb. - Present</div>
+									<div>Dec. - Present</div>
 								</div>
 							</div>
 
