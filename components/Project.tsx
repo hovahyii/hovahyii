@@ -203,8 +203,8 @@ const Project = () => {
 									LUC Chinese Association
 								</p>
 								<p className="text-gray-400 dark:text-gray-300 font-light text-md">
-									This is teh full stack web application I had done with my club
-									members during the studies at Linton. This website allows
+									This is the full stack web application I had done with my club
+									members during my studies at Linton. This website allows
 									visitor to post comment on memory wall. We also make a admin
 									dashboard whereby the admin can check the post and perform
 									CRUD on the unwanted posts. Only admin can login to the
