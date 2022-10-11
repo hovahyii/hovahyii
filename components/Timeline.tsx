@@ -5,7 +5,7 @@ const Timeline = () => {
 		<div id="timeline" className="p-4 md:p-10 bg-white">
 			<Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></Script>
 
-			<div className="md:flex mt-20 text-center ml-10 mr-10 md:ml-36 md:mr-36">
+			<div className="md:flex mt-20 text-center ml-16 mr-10 md:ml-36 md:mr-36">
 				<div className="md:mr-20 md:w-1/3">
 					<h1 className="font-bold italic mb-10">
 						Technologies that I used the most
@@ -368,7 +368,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									Swinburne Foundation Studies (Engineering/Science)
 								</div>
@@ -401,7 +401,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									Bachelor of Engineering (Robotics and Mechatronics) (Hounours)
 									/ Bachelor of Computer Science
@@ -439,7 +439,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">Web Design Part Time (Remotely)</div>
 								<div className="italic md:mb-4">
 									<a
@@ -478,7 +478,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									Founded Swinburne Sarawak Computer Science Club
 								</div>
@@ -517,7 +517,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									Young Innovator Challenge (YIC) Student Mentor
 								</div>
@@ -548,7 +548,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									<a
 										className="text-blue-500"
@@ -586,7 +586,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									<a
 										className="text-blue-500"
@@ -628,7 +628,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									BACHELOR OF SCIENCE (HONS) IN ELECTRICAL AND ELECTRONIC
 									ENGINEERING
@@ -639,7 +639,7 @@ const Timeline = () => {
 									<div className="text-xs">Jan. - June</div>
 								</div>
 								<div className="mb-10">
-									I transfer to Linton University College as I managed to get the univerisity offering me a scholarship.
+									I transfer to Linton University College as I managed to get the univerisity offering me &nbsp;
 									<a
 										href="https://umpedumy-my.sharepoint.com/:b:/g/personal/tb20091_student_ump_edu_my/ESwJqhXggxBPjNzR7jw1GEsBNuNAu1EdkmQZeX0GRokG9g?e=owoBh9"
 										target="_blank"
@@ -668,7 +668,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">Web Developer (Freelance)</div>
 								<div className="italic md:mb-4">
 									<a
@@ -737,7 +737,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">Founded Linton IET on Campus</div>
 								<div className="italic md:mb-4">LINTON UNIVERSITY COLLEGE</div>
 								<div className="mb-4 mt-2 md:hidden">
@@ -793,7 +793,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									BTE - SARJANA MUDA TEKNOLOGI KEJURUTERAAN (ELEKTRIKAL) DENGAN
 									KEPUJIAN
@@ -832,7 +832,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									Web Developer - Student Part Time
 								</div>
@@ -862,9 +862,9 @@ const Timeline = () => {
 
 						<div className="flex items-center relative">
 							<div className="hidden md:block w-48">
-								<div className="font-bold italic">2021</div>
+								<div className="font-bold italic">2022</div>
 								<div className="md:flex space-x-1 text-xs">
-									<div>Dec. - Present</div>
+									<div>Mar. - Present</div>
 								</div>
 							</div>
 
@@ -872,7 +872,7 @@ const Timeline = () => {
 								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
 							</div>
 
-							<div className="ml-10">
+							<div className="ml-16">
 								<div className="font-bold">
 									Volunteering Experience - Backend Developer
 								</div>
@@ -888,7 +888,7 @@ const Timeline = () => {
 								</div>
 								<div className="mb-10">
 									I was lucky enough to be accepted as a volunteer developer at TEDxPS. I had been a fan of TED and I love their talks. I managed to passed my interview out of 200 applicants and to be one of the volunteers of TEDxPS. The theme this year for TEDxPS is RESET, which relates to me so much. 
-									<br/>
+									<br/><br/>
 									I was tasked to develop the admin panel for uploading quizzes and profile images of the participants using Angular, ABP framework and MSSQL. I learnt about entity diagram, authentication, singleton when I was developing the website under the guidance of Mr. Alex Soh, the senior programmer.
 								</div>
 							</div>
