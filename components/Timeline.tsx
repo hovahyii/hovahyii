@@ -414,10 +414,7 @@ const Timeline = () => {
 									<div className="text-xs">Aug. - Mar.</div>
 								</div>
 								<div className="mb-10">
-									Started my double degree at Swinburne. I overestimated my
-									capability of studying both degree and failed my engineering
-									subjects. Due to my parents&apos pressure and financial
-									concern, I dropped out from the university with regret.
+									Started my double degree at Swinburne.
 									<ol className="mt-2">
 										Computer Science subjects that I had taken:
 									</ol>
@@ -642,10 +639,7 @@ const Timeline = () => {
 									<div className="text-xs">Jan. - June</div>
 								</div>
 								<div className="mb-10">
-									After having argument with my parents, I run away from home
-									and come to Peninsula. I still want to complete my degree but
-									I am financially broke. Luckily, through my brother, I found
-									this university which provides{" "}
+									I transfer to Linton University College as I managed to get the univerisity offering me a scholarship.
 									<a
 										href="https://umpedumy-my.sharepoint.com/:b:/g/personal/tb20091_student_ump_edu_my/ESwJqhXggxBPjNzR7jw1GEsBNuNAu1EdkmQZeX0GRokG9g?e=owoBh9"
 										target="_blank"
@@ -865,6 +859,42 @@ const Timeline = () => {
 								</div>
 							</div>
 						</div>
+
+						<div className="flex items-center relative">
+							<div className="hidden md:block w-48">
+								<div className="font-bold italic">2021</div>
+								<div className="md:flex space-x-1 text-xs">
+									<div>Dec. - Present</div>
+								</div>
+							</div>
+
+							<div className="border-r-2 border-black absolute h-full left-1 md:left-20 top-2 z-10">
+								<i className="fas fa-circle -top-1 -ml-2 absolute"></i>
+							</div>
+
+							<div className="ml-10">
+								<div className="font-bold">
+									Volunteering Experience - Backend Developer
+								</div>
+								<div className="italic md:mb-4">
+									<a href="http://www.tedxpetalingstreet.com/en/" 
+                                        target="_blank"
+										rel="noreferrer"
+										className="text-blue-500">TEDxPetalingStreet</a>
+								</div>
+								<div className="mb-4 mt-2 md:hidden">
+									<div className="font-bold">2021</div>
+									<div className="text-xs">Dec. - Present</div>
+								</div>
+								<div className="mb-10">
+									I was lucky enough to be accepted as a volunteer developer at TEDxPS. I had been a fan of TED and I love their talks. I managed to passed my interview out of 200 applicants and to be one of the volunteers of TEDxPS. The theme this year for TEDxPS is RESET, which relates to me so much. 
+									<br/>
+									I was tasked to develop the admin panel for uploading quizzes and profile images of the participants using Angular, ABP framework and MSSQL. I learnt about entity diagram, authentication, singleton when I was developing the website under the guidance of Mr. Alex Soh, the senior programmer.
+								</div>
+							</div>
+						</div>
+
+						
 					</div>
 				</div>
 			</div>
