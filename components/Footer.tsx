@@ -32,7 +32,7 @@ const Footer = () => {
 						href="https://github.com/hovahyii"
 						target="_blank"
 						rel="noreferrer"
-						className="text-gray-800"
+						className="mr-6 text-gray-800"
 					>
 						<svg
 							aria-hidden="true"
@@ -50,7 +50,30 @@ const Footer = () => {
 							></path>
 						</svg>
 					</a>
-				</div>
+
+				<a
+                    href="https://www.linkedin.com/in/jehovah-yii-zui-hon/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-800"
+                >
+                    <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fab"
+                        data-icon="linkedin"
+                        className="w-8"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3C448 46.5 433.6 32 416 32zM135.4 416H71V202.6h64.4V416zm-32.2-256.3a32.2 32.2 0 11-.1-64.4 32.2 32.2 0 01.1 64.4zm277.9 256.3H352V312.1c0-24.6-.5-56.3-34.3-56.3-34.4 0-39.7 26.9-39.7 54.7V416h-64.3V202.6h61.8v26.7h.9c8.6-16.3 29.7-33.5 61.1-33.5 65.2 0 77 42.9 77 98.5V416z"
+                        ></path>
+                    </svg>
+                </a>
+            </div>
 
 				<div className="text-center text-gray-700 p-4 ">
 					Made by Hovah Yii ©{date} with ❤️️ &amp; 🔥

@@ -403,8 +403,8 @@ const Timeline = () => {
 
 							<div className="ml-16">
 								<div className="font-bold">
-									Bachelor of Engineering (Robotics and Mechatronics) (Hounours)
-									/ Bachelor of Computer Science
+									Diploma in Engineering (Robotics and Mechatronics) (Hounours)
+									/ Computer Science (Minor)
 								</div>
 								<div className="italic md:mb-4">
 									Swinburne University Sarawak
@@ -414,7 +414,6 @@ const Timeline = () => {
 									<div className="text-xs">Aug. - Mar.</div>
 								</div>
 								<div className="mb-10">
-									Started my double degree at Swinburne.
 									<ol className="mt-2">
 										Computer Science subjects that I had taken:
 									</ol>
