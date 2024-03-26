@@ -1,8 +1,7 @@
 
 
-import About from "@/components/about"
-import Projects from "@/components/project"
-import Work from "@/components/work"
+import About from "../components/about"
+import Projects from "../components/project"
 
 export default function Home() {
   return (
