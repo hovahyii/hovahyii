@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import projectData from '../public/projects.json'; // Import the JSON data
-import BadgePage from './badge'
 
 
 

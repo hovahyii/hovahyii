@@ -1,7 +1,7 @@
 
 
-import About from "../components/about"
-import ProjectPage from "../components/project"
+import About from "@/components/about"
+import ProjectPage from "@/components/projects"
 
 export default function Home() {
   return (
