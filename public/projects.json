@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Leica Malaysia",
+      "description": "Buy your favourite Leica Camera here",
+      "website": "https://leica-store.my",
+      "logo": "/logo/leica.png",
+      "status": "Completed",
+      "type": ["Shopify", " Ecommerce", " Cron Job", " Freelance"],
+      "filter": "Web"
+    },
+    {
+        "name": "TEDxPetaling Street",
+        "description": "Writing backend server",
+        "website": "http://www.tedxpetalingstreet.com/en/",
+        "logo": "/logo/ted.jpeg",
+        "status": "On-going",
+        "type": ["Volunteer", " ABP", " GraphQL"],
+        "filter": "Web"
+      },
+    {
+        "name": "Aito",
+        "description": "Supplies fire equipment at best price",
+        "website": "https://aito.com.my/",
+        "logo": "/logo/aito.png",
+        "status": "Completed",
+        "type": ["Laravel", " Part-time"],
+        "filter": "Web"
+      },
+    {
+      "name": "IEM UMPSA",
+      "description": "IEM UMPSA Club Official Website",
+      "website": "https://iemumpss.vercel.app",
+      "logo": "/logo/iem.jpg",
+      "status": "Maintenance",
+      "type": [" Next Js",  " Volunteer"],
+      "filter": "Web"
+    },
+    {
+        "name": "MilkTea+",
+        "description": "Get your assignment done with price of Milk Tea",
+        "website": "https://milkteaplus.vercel.app/",
+        "logo": "/logo/milktea.webp",
+        "status": "On-going",
+        "type": [" Next Js",  " Work"],
+        "filter": "Web"
+      },
+    {
+        "name": "Pekan Christian Community",
+        "description": "A welcoming community of Christian students dedicated to connecting, supporting, and strengthening the faith of its members.",
+        "website": "https://pekan-christian-community.vercel.app/",
+        "logo": "/logo/pcc.webp",
+        "status": "On-going",
+        "type": [" Next Js",  " Charity"],
+        "filter": "Web"
+      },
+      {
+        "name": "STEM Lab | FPGA",
+        "description": "Researching on FPGA",
+        "website": "https://stem-lab-fpga.vercel.app/",
+        "logo": "/logo/stem-lab.jpg",
+        "status": "On-going",
+        "type": ["DE10-Lite",  " Verilog HDL", " Research"],
+        "filter": "Engineering"
+      }
+  ]
+  

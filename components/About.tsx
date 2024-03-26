@@ -1,67 +1,45 @@
-import Image from "next/image"
-import Link from "next/link"
+import React from 'react'
+import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import Work from "./work"
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { AiOutlineAim } from "react-icons/ai";
+import { MdLocationCity } from "react-icons/md";
+import Link from 'next/link'
 
-const myLoader = () => {
-	return `/hovahyii.jpg`
+export default function About(){
+  return (
+   <div className=" lg:block lg:w-1/3 overflow-y-auto">
+    <div className="mt-12 flex flex-col items-center md:items-start text-center md:text-left">
+      <Avatar className="w-1/3 h-1/2">
+        <AvatarImage alt="Hovah Yii" src="/hovah.jpeg?height=512&width=512" />
+      </Avatar>
+      <h1 className="mt-4 text-4xl font-bold">Hovah Yii</h1>
+      <div className="mt-2 flex items-center">
+        <MdLocationCity   className="text-gray-500" size="1.2em"/>
+        <span className="ml-1 text-lg text-gray-500">Selangor, Malaysia</span>
+        <AiOutlineAim   className="ml-4 text-gray-500" size="1.2em"/>
+        <span className="ml-1 text-lg text-blue-500">Looking for Internship</span>
+      </div>
+      <p className="mt-4 text-xl font-semibold">Student, Mentor, Developer</p>
+      <p className="mt-2 text-gray-600">
+        Need a solution designed by me? 🚀
+      </p>
+      <div className="mt-4 flex w-full max-w-xs flex-col sm:flex-row sm:space-x-4">
+        <Input placeholder="Your enquiry..." />
+        <Button className="mt-2 sm:mt-0"><Link href="https://api.whatsapp.com/send?phone=601110501375&text=Hi,%20Hovah.%20I%20need%20asssitance">Message</Link></Button>
+      </div>
+      <div className="mt-4 flex space-x-4">
+        <Link href="https://www.linkedin.com/in/jehovah-yii-zui-hon/" target="_blank"><FaLinkedin  className="text-gray-500" size="1.5em"/> </Link>
+        <Link href="https://github.com/hovahyii" target="_blank"><FaGithub   className="text-gray-500" size="1.5em" /></Link>
+
+      </div>
+    </div>
+      <Work />
+
+  </div>
+  )
 }
 
-const About = () => {
-	return (
-		<div className="lg:flex w-full justify-center items-center lg:-mx-6 pt-12 ">
-			<div className="lg:text-left lg:w-1/2 text-center w-screen p-4 lg:p-0">
-				<h1 className="h1">
-					Hello! I&#39;m Hovah, a developer based in Malaysia.
-				</h1>
-
-				<p className="paragraph">
-					I love building tools that are user-friendly, simple and delightful.
-				</p>
-				<p className="paragraph">
-					I went to Swinburne University where I learnt the fundamentals of
-					programming but dropped out. I got an internship offer at one UI/UX
-					web design company. Then, I went to Linton University College where I
-					had time to focus on learning web development in depth. Later, I got
-					an opportunity to work as a freelancer at an Angular based company
-					which writes algorithm and solution.
-				</p>
-				<p className="paragraph">
-					Unfortunately, in 2020, COVID-19 outbreak hit the world unprecedented,
-					my college was closed down due to financial crisis. That was when I
-					got transferred again to Universiti Malaysia Pahang. At Universiti
-					Malaysia Pahang, I found a part time job as a web developer at a
-					startup called Mahiran Digital and apply what I learnt into the work
-					force.
-				</p>
-				<p className="paragraph">
-					Through these experiences, I had the opportunity to work with small,
-					specialised and cross-functional teams across different area and
-					developed a working and studying life that leans towards flexibility,
-					skill-based, clarity and collaboration.
-				</p>
-				<p className="paragraph">
-					I&#39;m currently looking for internship as a developer. Hire me?
-				</p>
-				<button className="border rounded-lg bg-black text-white p-2 w-2/4 lg:w-1/4">
-					<Link href="https://github.com/hovahyii">
-						<a target="_blank" rel="noopener noreferrer">
-							View Github
-						</a>
-					</Link>
-				</button>
-			</div>
-
-			<div className="drop-shadow-xl ml-8 mt-10">
-				<Image
-					loader={myLoader}
-					src="me.png"
-					alt="Picture of the author"
-					width={350}
-					height={480}
-					className="rounded-md object-center object-cover"
-				/>
-			</div>
-		</div>
-	)
-}
-
-export default About
