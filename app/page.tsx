@@ -1,7 +1,7 @@
 
 
 import About from "../components/about"
-import Projects from "../components/project"
+import ProjectPage from "../components/project"
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
   <About />
 
   {/* Cards Section */}
-  <Projects />
+  <ProjectPage />
 
 
   
