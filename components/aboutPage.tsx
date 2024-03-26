@@ -19,9 +19,9 @@ export default function About(){
       <h1 className="mt-4 text-4xl font-bold">Hovah Yii</h1>
       <div className="mt-2 flex items-center">
         <MdLocationCity   className="text-gray-500" size="1.2em"/>
-        <span className="ml-1 text-lg text-gray-500">Selangor, Malaysia</span>
+        <span className="ml-1 text-sm md:text-lg  text-gray-500">Selangor, Malaysia</span>
         <AiOutlineAim   className="ml-4 text-gray-500" size="1.2em"/>
-        <span className="ml-1 text-lg text-blue-500">Looking for Internship</span>
+        <span className="ml-1 text-sm  md:text-lg text-blue-500">Looking for Internship</span>
       </div>
       <p className="mt-4 text-xl font-semibold">Student, Mentor, Developer</p>
       <p className="mt-2 text-gray-600">

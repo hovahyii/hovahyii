@@ -42,7 +42,7 @@ function Resume() {
   ];
 
   return (
-    <div className="mt-12 flex flex-col items-center md:items-start shadow text-center md:text-left border rounded p-4">
+    <div className="mt-12 flex flex-col items-center md:items-start text-center  md:text-left border-2 border-zinc-300  rounded p-4">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
@@ -55,7 +55,7 @@ function Resume() {
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
-              <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              <dd className="w-full flex-none text-left text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {role.company}
               </dd>
               <dt className="sr-only">Role</dt>
