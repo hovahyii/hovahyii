@@ -1,6 +1,6 @@
 
 
-import About from "@/components/about"
+import About from "@/components/aboutPage"
 import ProjectPage from "@/components/projects"
 
 export default function Home() {
