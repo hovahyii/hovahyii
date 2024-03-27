@@ -39,7 +39,7 @@
       "name": "Hovah's Blog",
       "description": "My blog about life at UMPSA",
       "website": "https://hovah-blog.vercel.app/",
-      "logo": "/icon/blog.jpg",
+      "logo": "/logo/blog.jpg",
       "status": "On-going",
       "type": [" Next Js",  " Work"],
       "filter": "Web"
