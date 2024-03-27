@@ -14,8 +14,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import projectData from '../public/projects.json'; // Import the JSON data
 
-
-
 const ProjectPage: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>("");
 
@@ -23,34 +21,33 @@ const ProjectPage: React.FC = () => {
     setSelectedFilter(filter);
   };
 
-
   return (
     <div className="lg:w-2/3 overflow-y-auto">
       <div className="mt-6 lg:mt-8 lg:ml-6">
-        
         <h1 className="text-4xl font-bold mb-4">Projects</h1>
         <div className="flex space-x-4 mb-2">
           <Badge
-            variant="default"
-            onClick={() => handleFilterClick("Web")}
+  className={selectedFilter === "Web" ? "selected" : ""}
+  onClick={() => handleFilterClick("Web")}
           >
             Web
           </Badge>
           <Badge
-            variant="default"
+            className={selectedFilter === "Engineering" ? "selected" : ""}
+
             onClick={() => handleFilterClick("Engineering")}
           >
             Engineering
           </Badge>
           <Badge
-            variant="default"
-            onClick={() => handleFilterClick("IoT")}
+  className={selectedFilter === "IoT" ? "selected" : ""}
+  onClick={() => handleFilterClick("IoT")}
           >
             IoT
           </Badge>
           <Badge
-            variant="default"
-            onClick={() => handleFilterClick("3D Modeling")}
+  className={selectedFilter === "3D Modeling" ? "selected" : ""}
+  onClick={() => handleFilterClick("3D Modeling")}
           >
             3D Modeling
           </Badge>
@@ -63,35 +60,34 @@ const ProjectPage: React.FC = () => {
           )
           .map((project, index) => (
             <Card key={index} className="w-full transition-shadow duration-300 hover:shadow-lg">
-                  <Link href={project.website} target="_blank" rel="noopener noreferrer" className="block">
-
-                  <CardHeader className="flex justify-start items-start ">
-                <div className="flex items-center">
-                  <Image src={project.logo} alt={project.name}  width={32} height={32}  className="mr-2" />
-                  <CardTitle className="text-sm">{project.name}</CardTitle>
-                  <Badge
-                    variant="default"
-                    className={`flex absolute    ml-64 text-white ${
-                      project.status === "Completed"
-                        ? "bg-green-500"
-                        : project.status === "On-going"
-                        ? "bg-orange-500"
-                        : project.status === "On-hold" ||
-                          project.status === "Maintenance"
-                        ? "bg-red-500"
-                        : ""
-                    }`}
-                  >
-                    {project.status}
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{project.description}</CardDescription>
-              </CardContent>
-              <CardFooter className="justify-between">
-                <div className="text-xs" dangerouslySetInnerHTML={{__html:project.type}} />
-              </CardFooter>
+              <Link href={project.website} target="_blank" rel="noopener noreferrer" className="block">
+                <CardHeader className="flex justify-start items-start ">
+                  <div className="flex items-center">
+                    <Image src={project.logo} alt={project.name}  width={32} height={32}  className="mr-2" />
+                    <CardTitle className="text-sm">{project.name}</CardTitle>
+                    <Badge
+                      variant="default"
+                      className={`flex absolute    ml-64 text-white ${
+                        project.status === "Completed"
+                          ? "bg-green-500"
+                          : project.status === "On-going"
+                          ? "bg-orange-500"
+                          : project.status === "On-hold" ||
+                            project.status === "Maintenance"
+                          ? "bg-red-500"
+                          : ""
+                      }`}
+                    >
+                      {project.status}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardContent>
+                <CardFooter className="justify-between">
+                  <div className="text-xs" dangerouslySetInnerHTML={{__html:project.type}} />
+                </CardFooter>
               </Link>
             </Card>
           ))}
@@ -99,6 +95,5 @@ const ProjectPage: React.FC = () => {
     </div>
   );
 };
-
 
 export default ProjectPage;

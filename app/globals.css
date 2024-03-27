@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.selected {
+  background-color: grey;
+}
