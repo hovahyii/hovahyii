@@ -36,12 +36,21 @@
       "filter": "Web"
     },
     {
+      "name": "Hovah's Blog",
+      "description": "My blog about life at UMPSA",
+      "website": "https://hovah-blog.vercel.app/",
+      "logo": "/icon/blog.jpg",
+      "status": "On-going",
+      "type": [" Next Js",  " Work"],
+      "filter": "Web"
+    },
+    {
         "name": "MilkTea+",
         "description": "Get your assignment done with price of Milk Tea",
         "website": "https://milkteaplus.vercel.app/",
         "logo": "/logo/milktea.webp",
         "status": "On-going",
-        "type": [" Next Js",  " Work"],
+        "type": [" Next Js",  " Life"],
         "filter": "Web"
       },
     {
