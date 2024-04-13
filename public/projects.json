@@ -29,9 +29,9 @@
     {
       "name": "IEM UMPSA",
       "description": "IEM UMPSA Club Official Website",
-      "website": "https://iemumpss.vercel.app",
+      "website": "https://iemumpsa.vercel.app",
       "logo": "/logo/iem.jpg",
-      "status": "Maintenance",
+      "status": "On-going",
       "type": [" Next Js",  " Volunteer"],
       "filter": "Web"
     },
