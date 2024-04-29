@@ -53,7 +53,7 @@
         "name": "MilkTea+",
         "description": "Get your assignment done with price of Milk Tea",
         "website": "https://milkteaplus.vercel.app/",
-        "logo": "/logo/milktea.webp",
+        "logo": "/logo/milktea.png",
         "status": "On-going",
         "type": [" Next Js",  " Services"],
         "revenue": "MYR200/month",
