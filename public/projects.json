@@ -6,6 +6,7 @@
       "logo": "/logo/leica.png",
       "status": "Completed",
       "type": ["Shopify", " Ecommerce", " Cron Job", " Freelance"],
+      "revenue": "",
       "filter": "Web"
     },
     {
@@ -15,6 +16,7 @@
         "logo": "/logo/ted.jpeg",
         "status": "On-going",
         "type": ["Volunteer", " ABP", " GraphQL"],
+        "revenue": "",
         "filter": "Web"
       },
     {
@@ -24,6 +26,7 @@
         "logo": "/logo/aito.png",
         "status": "Completed",
         "type": ["Laravel", " Part-time"],
+        "revenue": "",
         "filter": "Web"
       },
     {
@@ -33,6 +36,7 @@
       "logo": "/logo/iem.jpg",
       "status": "On-going",
       "type": [" Next Js",  " Volunteer"],
+      "revenue": "",
       "filter": "Web"
     },
     {
@@ -42,6 +46,7 @@
       "logo": "/logo/blog.png",
       "status": "On-going",
       "type": [" Next Js",  " Work"],
+      "revenue": "",
       "filter": "Web"
     },
     {
@@ -50,7 +55,8 @@
         "website": "https://milkteaplus.vercel.app/",
         "logo": "/logo/milktea.webp",
         "status": "On-going",
-        "type": [" Next Js",  " Life"],
+        "type": [" Next Js",  " Services"],
+        "revenue": "MYR200/month",
         "filter": "Web"
       },
     {
@@ -60,6 +66,7 @@
         "logo": "/logo/pcc.webp",
         "status": "On-going",
         "type": [" Next Js",  " Charity"],
+        "revenue": "",
         "filter": "Web"
       },
       {
@@ -69,6 +76,7 @@
         "logo": "/logo/stem-lab.jpg",
         "status": "On-going",
         "type": ["DE10-Lite",  " Verilog HDL", " Research"],
+        "revenue": "",
         "filter": "Engineering"
       }
   ]

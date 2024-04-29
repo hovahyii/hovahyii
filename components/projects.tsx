@@ -65,9 +65,10 @@ const ProjectPage: React.FC = () => {
                   <div className="flex items-center">
                     <Image src={project.logo} alt={project.name}  width={32} height={32}  className="mr-2" />
                     <CardTitle className="text-sm">{project.name}</CardTitle>
+                  
                     <Badge
                       variant="default"
-                      className={`flex absolute    ml-64 text-white ${
+                      className={`flex absolute ml-64 text-white ${
                         project.status === "Completed"
                           ? "bg-green-500"
                           : project.status === "On-going"
@@ -78,11 +79,20 @@ const ProjectPage: React.FC = () => {
                           : ""
                       }`}
                     >
-                      {project.status}
+                                            {project.status}
+
                     </Badge>
+            
                   </div>
+                  {project.revenue && (
+                    <Badge variant="default" className="bg-gray-200 text-black">
+                      {project.revenue}
+                    </Badge>
+                  )}
                 </CardHeader>
+        
                 <CardContent>
+            
                   <CardDescription>{project.description}</CardDescription>
                 </CardContent>
                 <CardFooter className="justify-between">
