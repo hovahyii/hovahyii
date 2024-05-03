@@ -8,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { AiOutlineAim } from "react-icons/ai";
 import { MdLocationCity } from "react-icons/md";
 import Link from 'next/link'
+import { SiHuawei } from "react-icons/si";
 
 export default function About(){
   return (
@@ -19,9 +20,9 @@ export default function About(){
       <h1 className="mt-4 text-4xl font-bold">Hovah Yii</h1>
       <div className="mt-2 flex items-center">
         <MdLocationCity   className="text-gray-500" size="1.2em"/>
-        <span className="ml-1 text-sm md:text-lg  text-gray-500">Selangor, Malaysia</span>
-        <AiOutlineAim   className="ml-4 text-gray-500" size="1.2em"/>
-        <span className="ml-1 text-sm  md:text-lg text-blue-500">Looking for Internship</span>
+        <span className="ml-1 text-sm md:text-lg  text-gray-500"> Selangor, Malaysia</span>
+        <SiHuawei    className="ml-2 md:ml-4 text-gray-500" size="1.2em"/>
+        <span className="ml-1 text-sm  md:text-lg text-red-500"> RF Engineer Intern</span>
       </div>
       <p className="mt-4 text-xl font-semibold">Student, Mentor, Developer</p>
       <p className="mt-2 text-gray-600">
