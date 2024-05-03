@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
-    keywords: "hovahyii, Hovah Yii, Hovah, hovah yii, Yii, Hovah Yii Portfolio, Hovah Yii Projects, Hovah Yii Work, Hovah Yii blog, Hovah Yii Projects, Hovah Yii Work, mentor, milkteaplus, iem umpsa, Student Mentor, Software Developer, Freelance Developer, Web, engineering, iot, 3d modelling ",
   },
   robots: {
     index: false,
