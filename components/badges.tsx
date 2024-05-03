@@ -24,6 +24,12 @@ function BadgeIcon(props: any) {
 function Badge() {
     let resume = [
       {
+        name: 'Google Project Management Certificate',
+        logo: '/logo/GCC_badge_PGM_1000x1000.png',
+        link: 'https://www.credly.com/badges/a30646a1-4000-40d4-9fcf-d87c0fad2af7/linked_in_profile',
+      },
+  
+      {
         name: 'Young Innovators Challenge 2022 - Train-the-Trainer (TTT)',
         logo: '/logo/yic.png',
         link: 'https://sms.chumbaka.asia/b/TEYKjgaATR',
@@ -34,22 +40,21 @@ function Badge() {
         logo: '/logo/exercism.svg',
         link: 'https://exercism.org/profiles/hovahyii/badges',
       },
-  
-  
+    
     ]
 
   return (
     <div className="mt-12 flex flex-col items-center md:items-start shadow text-center md:text-left border rounded ">
-            <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+            <div className="w-full rounded-2xl border border-zinc-300 shadow p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BadgeIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Badges</span>
+        <span className="ml-3">Certificates & Achivements</span>
       </h2>
       <ol className="mt-6 flex">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
              <Link href={role.link} target="_blank">
-                <Image width={500} height={500} className=" w-20 h-20" src={role.logo} alt={role.name} /></Link>
+                <Image width={500} height={500} className=" w-16 h-16" src={role.logo} alt={role.name} /></Link>
           </li>
         ))}
       </ol>

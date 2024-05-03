@@ -9,6 +9,7 @@ import { AiOutlineAim } from "react-icons/ai";
 import { MdLocationCity } from "react-icons/md";
 import Link from 'next/link'
 import { SiHuawei } from "react-icons/si";
+import Badge from './badges'
 
 export default function About(){
   return (
@@ -39,7 +40,7 @@ export default function About(){
       </div>
     </div>
       <Work />
-
+      <Badge />
   </div>
   )
 }
