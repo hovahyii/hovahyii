@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Hovah Yii | Portfolio",
   applicationName: 'Hovah Yii | Portfolio',
   description: "Discover the portfolio of Hovah Yii, a results-driven student mentor and developer. With a proven track record in the .NET Framework and SQL, Hovah has delivered coding excellence across more than 7 web apps and 2 mobile apps. Explore his work, including the backend code for 3 successful business websites, and see how his tech-savvy approach can build your next project.",  
-  keywords: "Hovah Yii, Hovah, Yii, Hovah Yii Portfolio, Hovah Yii Projects, Hovah Yii Work, Hovah Yii Resume, Hovah Yii Projects, Hovah Yii Work,HStudent Mentor, Software Developer, Freelance Developer, Web Apps, Mobile Apps, Business Website, Coding Excellence",
+  keywords: "hovahyii, Hovah Yii, Hovah, hovah yii, Yii, Hovah Yii Portfolio, Hovah Yii Projects, Hovah Yii Work, Hovah Yii blog, Hovah Yii Projects, Hovah Yii Work, mentor, milkteaplus, iem umpsa, Student Mentor, Software Developer, Freelance Developer, Web, engineering, iot, 3d modelling ",
   authors: [{ name: 'Hovah Yii', url: 'https://hovahyii.vercel.app/' }],
   creator: 'Hovah Yii',
   referrer: 'origin-when-cross-origin',
