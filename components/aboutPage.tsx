@@ -21,8 +21,8 @@ export default function About(){
       <div className="mt-2 flex items-center">
         <MdLocationCity   className="text-gray-500" size="1.2em"/>
         <span className="ml-1 text-sm md:text-lg  text-gray-500"> Selangor, Malaysia</span>
-        <SiHuawei    className="ml-2 md:ml-4 text-gray-500" size="1.2em"/>
-        <span className="ml-1 text-sm  md:text-lg text-red-500"> RF Engineer Intern</span>
+        <SiHuawei    className="ml-2 md:ml-4 text-red-500" size="1.2em"/>
+        <span className="ml-1 text-sm  md:text-lg "> RF Engineer Intern</span>
       </div>
       <p className="mt-4 text-xl font-semibold">Student, Mentor, Developer</p>
       <p className="mt-2 text-gray-600">
