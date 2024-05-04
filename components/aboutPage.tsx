@@ -9,13 +9,14 @@ import { MdLocationCity } from "react-icons/md";
 import Link from 'next/link'
 import { SiHuawei } from "react-icons/si";
 import Badge from './badges'
+import Image from 'next/image'
 
 export default function About(){
   return (
    <div className=" lg:block lg:w-1/3 overflow-y-auto">
     <div className="mt-12 flex flex-col items-center md:items-start text-center md:text-left">
       <Avatar className="w-1/3 h-1/2">
-        <AvatarImage alt="Hovah Yii" src="/hovah.jpeg?height=512&width=512" />
+        <Image alt="Hovah Yii" width={512} height={512} src="/hovah.jpeg" />
       </Avatar>
       <h1 className="mt-4 text-4xl font-bold">Hovah Yii</h1>
       <div className="mt-2 flex items-center">
