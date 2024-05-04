@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import type { Viewport } from 'next'
- 
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -96,6 +97,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Analytics />
+        <SpeedInsights />
 
       </body>
     </html>
