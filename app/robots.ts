@@ -11,7 +11,8 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: ['Applebot', 'Bingbot'],
-        disallow: ['/'],
+        allow: ['/'],
+        disallow: '/private/',
       },
     ],
     sitemap: 'https://hovahyii.vercel.app/sitemap.xml',

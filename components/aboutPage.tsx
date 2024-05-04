@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import Work from "./work"
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { AiOutlineAim } from "react-icons/ai";
 import { MdLocationCity } from "react-icons/md";
 import Link from 'next/link'
 import { SiHuawei } from "react-icons/si";

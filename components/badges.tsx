@@ -48,7 +48,7 @@ function Badge() {
             <div className="w-full rounded-2xl border border-zinc-300 shadow p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BadgeIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Certificates & Achivements</span>
+        <span className="ml-3">Certificates & Achievements</span>
       </h2>
       <ol className="mt-6 flex">
         {resume.map((role, roleIndex) => (

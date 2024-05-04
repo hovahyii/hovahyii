@@ -6,10 +6,11 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hovah Yii | Portfolio",
-  applicationName: 'Hovah Yii | Portfolio',
-  description: "Discover the portfolio of Hovah Yii, a results-driven student mentor and developer. With a proven track record in the .NET Framework and SQL, Hovah has delivered coding excellence across more than 7 web apps and 2 mobile apps. Explore his work, including the backend code for 3 successful business websites, and see how his tech-savvy approach can build your next project.",  
-  keywords: "jehovah yii zui hon, Jehovah Yii Zui Hon, Jehovah Yii, hovahyii, Hovah Yii, Hovah, hovah yii, Yii, Hovah Yii Portfolio, Hovah Yii Projects, Hovah Yii Work, Hovah Yii blog, Hovah Yii Projects, Hovah Yii Work, mentor, milkteaplus, iem umpsa, Student Mentor, Software Developer, Freelance Developer, Web, engineering, iot, 3d modelling ",
+  metadataBase: new URL('https://hovahyii.vercel.app/'),
+  title: "Meet Hovah Yii | Explore His Portfolio",
+  applicationName: 'Meet Hovah Yii | Explore His Portfolio',
+  description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",  
+  keywords: ['jehovah yii zui hon', 'Jehovah Yii Zui Hon', 'Jehovah Yii', 'hovahyii', 'Hovah Yii', 'Hovah', 'hovah yii', 'Yii'],
   authors: [{ name: 'Hovah Yii', url: 'https://hovahyii.vercel.app/' }],
   creator: 'Hovah Yii',
   referrer: 'origin-when-cross-origin',
@@ -21,47 +22,58 @@ export const metadata: Metadata = {
   openGraph: {
     url: 'https://hovahyii.vercel.app/',
     siteName: 'Hovah Yii',
-    title: "Hovah Yii | Portfolio",
-    description: "Discover the portfolio of Hovah Yii, a results-driven student mentor and developer. With a proven track record in the .NET Framework and SQL, Hovah has delivered coding excellence across more than 7 web apps and 2 mobile apps. Explore his work, including the backend code for 3 successful business websites, and see how his tech-savvy approach can build your next project.",  
+    title: "Meet Hovah Yii | Explore His Portfolio",
+    description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",  
     images: [
       {
-        url: '/hovah.jpeg', // Must be an absolute URL
+        url: 'https://hovahyii.vercel.app/hovah.jpeg', // Must be an absolute URL
         width: 800,
         height: 600,
+        alt: 'Hovah Yii Avatar'
       }
     ],
     locale: 'en_US',
     type: 'website',
   },
-  robots: {
-    index: false,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
   icons: {
-    icon: '/icon/android-chrome-512x512.png',
-    shortcut: '/icon/android-chrome-512x512.png',
-    apple: '/icon/apple-touch-icon.png',
-    other: {
-      rel: '/icon/apple-touch-icon-precomposed',
-      url: '/icon/apple-touch-icon.png',
-    },
+    icon: [
+      { url: '/icon/android-chrome-512x512.png' },
+      new URL('/icon/android-chrome-512x512.png', 'https://hovahyii.vercel.app/'),
+    ],
+    shortcut: ['/icon/android-chrome-512x512.png'],
+    apple: [
+      { url: '/icon/apple-touch-icon' },
+      { url: '/icon/apple-touch-icon-180x180.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'apple-touch-icon',
+        url: '/apple-touch-icon.png',
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: "Hovah Yii | Portfolio",
-    description: "Discover the portfolio of Hovah Yii, a results-driven student mentor and developer. With a proven track record in the .NET Framework and SQL, Hovah has delivered coding excellence across more than 7 web apps and 2 mobile apps. Explore his work, including the backend code for 3 successful business websites, and see how his tech-savvy approach can build your next project.",  
+    card: 'app',
+    title: "Meet Hovah Yii | Explore His Portfolio",
+    description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",  
     creator: '@HovahYii',
     creatorId: '913234211418468352',
-    images: ['/hovah.jpeg'], // Must be an absolute URL
+    images: {
+      url: 'https://hovahyii.vercel.app/icon/android-chrome-512x512.png',
+      alt: 'Hovah Yii Avatar',
+    },
+    app: {
+      name: 'twitter_app',
+      id: {
+        iphone: 'twitter_app://iphone',
+        ipad: 'twitter_app://ipad',
+        googleplay: 'twitter_app://googleplay',
+      },
+      url: {
+        iphone: 'https://iphone_url',
+        ipad: 'https://ipad_url',
+      },
+    },
   },
 };
 
