@@ -54,7 +54,7 @@ function Badge() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
              <Link href={role.link} target="_blank">
-                <Image width={500} height={500} className=" w-16 h-16" src={role.logo} alt={role.name} /></Link>
+                <Image width={512} height={512} className=" w-14 h-14" src={role.logo} alt={role.name} /></Link>
           </li>
         ))}
       </ol>
