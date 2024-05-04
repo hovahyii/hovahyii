@@ -2,7 +2,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
-
+import type { Viewport } from 'next'
+ 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: true,
+  // Also supported by less commonly used
+  // interactiveWidget: 'resizes-visual',
+}
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -87,6 +96,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <Analytics />
+
       </body>
     </html>
   );

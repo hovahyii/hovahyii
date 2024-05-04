@@ -6,6 +6,8 @@ const nextConfig = {
             'img.buymeacoffee.com'
         ],
     },
+
+    
 };
 
 export default nextConfig;
