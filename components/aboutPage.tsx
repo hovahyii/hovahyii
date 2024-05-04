@@ -1,15 +1,17 @@
 import React from 'react'
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
+import { Avatar } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Work from "./work"
+import Badge from './badges'
+import Image from 'next/image'
+import Link from 'next/link'
+import { SiHuawei } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { MdLocationCity } from "react-icons/md";
-import Link from 'next/link'
-import { SiHuawei } from "react-icons/si";
-import Badge from './badges'
-import Image from 'next/image'
+import { SiBuymeacoffee } from "react-icons/si";
+
 
 export default function About(){
   return (
@@ -36,6 +38,8 @@ export default function About(){
       <div className="mt-4 flex space-x-4">
         <Link href="https://www.linkedin.com/in/jehovah-yii-zui-hon/" target="_blank"><FaLinkedin  className="text-gray-500" size="1.5em"/> </Link>
         <Link href="https://github.com/hovahyii" target="_blank"><FaGithub   className="text-gray-500" size="1.5em" /></Link>
+        <Link href="https://buymeacoffee.com/hovahyii" target="_blank"><SiBuymeacoffee    className="text-gray-500" size="1.5em" /></Link>
+
 
       </div>
     </div>

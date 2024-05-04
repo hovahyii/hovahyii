@@ -9,7 +9,6 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  userScalable: true,
   // Also supported by less commonly used
   // interactiveWidget: 'resizes-visual',
 }
@@ -18,12 +17,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://hovahyii.vercel.app/'),
   title: "Meet Hovah Yii | Explore His Portfolio",
+  referrer: 'origin-when-cross-origin',
   applicationName: 'Meet Hovah Yii | Explore His Portfolio',
   description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",  
   keywords: ['jehovah yii zui hon', 'Jehovah Yii Zui Hon', 'Jehovah Yii', 'hovahyii', 'Hovah Yii', 'Hovah', 'hovah yii', 'Yii'],
   authors: [{ name: 'Hovah Yii', url: 'https://hovahyii.vercel.app/' }],
   creator: 'Hovah Yii',
-  referrer: 'origin-when-cross-origin',
   formatDetection: {
     email: false,
     address: false,
