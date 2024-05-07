@@ -87,7 +87,7 @@
         "status": "On-going",
         "type": ["IoT",  " 3D Modelling", " Electrical Wiring", " Mechanical Piping", " Software"],
         "revenue": "",
-        "filter": "IoT"
+        "filter":  ["IoT",  "Engineering"]
       }
   ]
   
