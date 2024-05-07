@@ -54,10 +54,10 @@ const ProjectPage: React.FC = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 lg:mt-6 lg:ml-6 lg:grid-cols-2 gap-4">
-        {projectData
-          .filter(
-            (project) => !selectedFilter || project.filter === selectedFilter
-          )
+      {projectData
+    .filter(
+      (project) => !selectedFilter || project.filter.includes(selectedFilter)
+    )
           .map((project, index) => (
             <Card key={index} className="w-full transition-shadow duration-300 hover:shadow-lg">
               <Link href={project.website} target="_blank" rel="noopener noreferrer" className="block">
