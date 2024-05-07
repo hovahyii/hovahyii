@@ -78,6 +78,16 @@
         "type": ["DE10-Lite",  " Verilog HDL", " Research"],
         "revenue": "",
         "filter": "Engineering"
+      },
+      {
+        "name": "DISTILWISE IoT",
+        "description": "Final Year Project",
+        "website": "https://smart-agrotech-solutions.vercel.app/projects/compact-membrane-distillation",
+        "logo": "/logo/sags.png",
+        "status": "On-going",
+        "type": ["IoT",  " 3D Modelling", " Electrical Wiring", " Mechanical Piping", " Software"],
+        "revenue": "",
+        "filter": "IoT"
       }
   ]
   
