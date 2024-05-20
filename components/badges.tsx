@@ -23,6 +23,13 @@ function BadgeIcon(props: any) {
 
 function Badge() {
     let resume = [
+
+      {
+        name: 'Anugerah Best of the Best Citrex 2024',
+        logo: '/logo/best.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7194406897800687619/',
+      },
+
       {
         name: 'Google Project Management Certificate',
         logo: '/logo/GCC_badge_PGM_1000x1000.png',
