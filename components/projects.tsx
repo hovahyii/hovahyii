@@ -64,7 +64,7 @@ const ProjectPage: React.FC = () => {
                 <CardHeader className="flex justify-start items-start ">
                   <div className="flex items-center">
                     <Image src={project.logo} alt={project.name}  width={32} height={32}  className="mr-2" />
-                    <CardTitle className="text-sm">{project.name}</CardTitle>
+                    <CardTitle className="text-sm truncate">{project.name}</CardTitle>
                   
                     <Badge
                       variant="default"
