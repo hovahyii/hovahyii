@@ -90,8 +90,8 @@
         "filter":  ["IoT",  "Engineering"]
       },
       {
-        "name": "LED Control using ESP32",
-        "description": "Exhibition",
+        "name": "IoT Smart Home",
+        "description": "LED Control with Flutter App and ESP32",
         "website": "https://www.linkedin.com/feed/update/urn:li:activity:7196313348429291520/",
         "logo": "/logo/flutter.png",
         "status": "Completed",
