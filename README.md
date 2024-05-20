@@ -52,6 +52,8 @@
 
 </details>
 
+<br />
+
 ---
 
 ### ✍️ Random Dev Quote
