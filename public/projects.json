@@ -88,6 +88,16 @@
         "type": ["IoT",  " 3D Modelling", " Electrical Wiring", " Mechanical Piping", " Software"],
         "revenue": "",
         "filter":  ["IoT",  "Engineering"]
+      },
+      {
+        "name": "LED Control with Flutter App and ESP32",
+        "description": "Exhibition",
+        "website": "https://www.linkedin.com/feed/update/urn:li:activity:7196313348429291520/",
+        "logo": "/logo/flutter.png",
+        "status": "Completed",
+        "type": ["IoT", "Flutter", "IP Address"],
+        "revenue": "",
+        "filter":  ["IoT",  "Engineering"]
       }
   ]
   

@@ -51,3 +51,10 @@
   <img align="left" alt="Hovah Yii's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=hovahyii&show_icons=true&hide_border=false&title_color=ff652f&icon_color=FFE400&bg_color=09131B&text_color=ffffff&border_color=0c1a25" />
 
 </details>
+
+
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+---
+[![](https://visitcount.itsvg.in/api?id=hovahyii&label=Profile%20Views&color=1&icon=0&pretty=true)](https://visitcount.itsvg.in)
