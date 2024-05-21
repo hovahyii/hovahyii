@@ -95,7 +95,7 @@
         "website": "https://www.linkedin.com/feed/update/urn:li:activity:7196313348429291520/",
         "logo": "/logo/flutter.png",
         "status": "Completed",
-        "type": ["IoT", "Flutter", "ESP32", "Smart Home"],
+        "type": ["IoT", "Flutter", "ESP32", "Smart Home", "Exhibition"],
         "revenue": "",
         "filter":  ["IoT",  "Engineering"]
       }
