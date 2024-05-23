@@ -33,7 +33,7 @@ function Badge() {
       {
         name: 'Postman API Fundamentals Student Expert',
         logo: '/logo/Postman - Postman API Fundamentals Student Expert - 2024-05-23.png',
-        link: 'https://badgr.com/public/assertions/rmVwiQe3RbqmjpnQ9brwyw',
+        link: 'https://badgr.com/public/assertions/rmVwiQe3RbqmjpnQ9brwyw?identity__email=tb20091@student.ump.edu.my',
       },
 
       {
