@@ -31,6 +31,12 @@ function Badge() {
       },
 
       {
+        name: 'Postman API Fundamentals Student Expert',
+        logo: '/logo/Postman - Postman API Fundamentals Student Expert - 2024-05-23.png',
+        link: 'https://badgr.com/public/assertions/rmVwiQe3RbqmjpnQ9brwyw',
+      },
+
+      {
         name: 'Google Project Management Certificate',
         logo: '/logo/GCC_badge_PGM_1000x1000.png',
         link: 'https://www.credly.com/badges/a30646a1-4000-40d4-9fcf-d87c0fad2af7/linked_in_profile',
