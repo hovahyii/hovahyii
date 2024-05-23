@@ -57,8 +57,8 @@ function Badge() {
     ]
 
   return (
-    <div className="mt-12 flex flex-col items-center md:items-start shadow text-center md:text-left border rounded ">
-            <div className="w-full rounded-2xl border border-zinc-300 shadow p-6 dark:border-zinc-700/40">
+    <div className="mt-12 flex flex-col items-center md:items-start  text-center md:text-left  ">
+            <div className="w-full rounded-2xl border  shadow p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BadgeIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Certificates & Achievements</span>
