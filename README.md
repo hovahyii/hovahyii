@@ -45,14 +45,17 @@
 
 ---
 
-<details>
-  <summary>:zap: GitHub Stats</summary>
+## Stats
 
-  <img align="center" alt="Hovah Yii's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=hovahyii&show_icons=true&hide_border=false&title_color=ff652f&icon_color=FFE400&bg_color=09131B&text_color=ffffff&border_color=0c1a25" />
+<div  align="center">
+  <a href="https://wakatime.com/@222632e8-daa2-44e3-aefc-8011e640fb58"><img src="https://wakatime.com/badge/user/222632e8-daa2-44e3-aefc-8011e640fb58.svg" alt="Total time coded since Mar 28 2024" /></a>
+</div>
 
-</details>
+<div align="center">
+  <img height="200em" src="https://github-readme-stats.vercel.app/api?username=hovahyii&show_icons=true&theme=radical">
+  <img height="200em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=hovahyii&layout=donut&theme=radical">
+</div>
 
-<br />
 
 ---
 
