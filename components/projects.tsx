@@ -67,7 +67,7 @@ const ProjectPage: React.FC = () => {
                     <CardTitle className="text-sm truncate">{project.name}</CardTitle>
                     <Badge
                       variant="default"
-                      className={`flex absolute ml-52 md:ml-72 text-white ${
+                      className={`flex absolute ml-56 md:ml-72 text-white ${
                         project.status === "Completed"
                           ? "bg-green-500"
                           : project.status === "On-going"
