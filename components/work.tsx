@@ -50,8 +50,8 @@ function Resume() {
   ];
 
   return (
-    <div className="mt-12 flex flex-col items-center md:items-start text-center  md:text-left border-2 border-zinc-300  rounded p-4">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <div className="mt-12 flex flex-col  md:items-start  text-left border-2 border-zinc-300  rounded p-4">
+      <h2 className="flex text-sm font-semibold text-zinc-900  dark:text-zinc-100">
         <FaBriefcase  className="h-4 w-10 flex-none" />
         <span className="ml-3">Work</span>
       </h2>

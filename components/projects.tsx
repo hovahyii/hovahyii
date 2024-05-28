@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import projectData from '../public/projects.json'; // Import the JSON data
+import Slideshow from "@/components/carousel";
 
 const ProjectPage: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>("");
@@ -24,7 +25,7 @@ const ProjectPage: React.FC = () => {
   return (
     <div className="lg:w-2/3 overflow-y-auto">
       <div className="mt-6 lg:mt-8 lg:ml-6">
-        <h1 className="text-4xl font-bold mb-4">Projects</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center  md:text-left">Projects</h1>
         <div className="flex space-x-4 mb-2">
           <Badge
             className={selectedFilter === "Web" ? "selected" : ""}
@@ -66,7 +67,7 @@ const ProjectPage: React.FC = () => {
                     <CardTitle className="text-sm truncate">{project.name}</CardTitle>
                     <Badge
                       variant="default"
-                      className={`flex absolute ml-56 md:ml-72 text-white ${
+                      className={`flex absolute ml-52 md:ml-72 text-white ${
                         project.status === "Completed"
                           ? "bg-green-500"
                           : project.status === "On-going"
@@ -101,6 +102,7 @@ const ProjectPage: React.FC = () => {
             </Card>
           ))}
       </div>
+      <Slideshow />
     </div>
   );
 };
