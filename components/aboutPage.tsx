@@ -10,6 +10,7 @@ import { SiHuawei } from "react-icons/si";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdLocationCity } from "react-icons/md";
 import { SiBuymeacoffee } from "react-icons/si";
+import { FaHackerrank } from "react-icons/fa";
 
 export default function About(){
   return (
@@ -35,8 +36,9 @@ export default function About(){
         <Button className="mt-2 sm:mt-0"><Link href="https://api.whatsapp.com/send?phone=601110501375&text=Hi,%20Hovah.%20I%20need%20assistance">Message</Link></Button>
       </div>
       <div className="ml-2  mt-4 flex space-x-4">
-        <Link href="https://www.linkedin.com/in/jehovah-yii-zui-hon/" aria-label="Connect with Hovah on Linkedin" target="_blank"><FaLinkedin className="text-gray-500" size="1.5em"/> </Link>
+        <Link href="https://www.linkedin.com/in/hovahyii" aria-label="Connect with Hovah on Linkedin" target="_blank"><FaLinkedin className="text-gray-500" size="1.5em"/> </Link>
         <Link href="https://github.com/hovahyii" aria-label="Checkout Hovah's repo" target="_blank"><FaGithub className="text-gray-500" size="1.5em" /></Link>
+        <Link href="https://www.hackerrank.com/profile/hovahyii" aria-label="Connect with Hovah on HackerRank" target="_blank"><FaHackerrank className="text-gray-500" size="1.5em"/> </Link>
         <Link href="https://buymeacoffee.com/hovahyii" aria-label="Consider buying Hovah a coffee" target="_blank"><SiBuymeacoffee className="text-gray-500" size="1.5em" /></Link>
       </div>
     </div>
