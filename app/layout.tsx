@@ -1,10 +1,11 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { metadata } from "./metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export default function RootLayout({ isDarkMode, toggleDarkMode, children }: RootLayoutProps) {
+const RootLayout: React.FC<RootLayoutProps> = ({ isDarkMode, toggleDarkMode, children }) => {
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
@@ -25,6 +26,7 @@ export default function RootLayout({ isDarkMode, toggleDarkMode, children }: Roo
 
   return (
     <html lang="en" className={`${inter.className} ${isDarkMode ? 'dark' : ''}`}>
+      <metadata />
       <body className="bg-white dark:bg-black text-black dark:text-white">
         {children}
         <Analytics />
@@ -33,3 +35,5 @@ export default function RootLayout({ isDarkMode, toggleDarkMode, children }: Roo
     </html>
   );
 }
+
+export default RootLayout;

@@ -24,7 +24,7 @@ const Photos: React.FC<CarouselProps> = ({ isDarkMode }) => {
               src={project.photo} 
               alt={project.name} 
               layout="fill" 
-              objectFit="contain" 
+              objectFit="cover" 
               className="rounded-md bg-gray-200"
             />
             <p className="legend">{project.name}</p>
