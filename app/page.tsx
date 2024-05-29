@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <RootLayout isDarkMode={isDarkMode}>
+    <RootLayout>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col lg:flex-row m-4">
         {/* About Page */}
         <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
