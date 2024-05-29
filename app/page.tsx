@@ -12,9 +12,9 @@ export default function Home() {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
-  
+
   return (
-    <RootLayout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+    <RootLayout isDarkMode={isDarkMode}>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col lg:flex-row m-4">
         {/* About Page */}
         <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />

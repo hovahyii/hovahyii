@@ -11,11 +11,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 interface RootLayoutProps {
   isDarkMode: boolean;
-  toggleDarkMode: () => void;
   children: React.ReactNode;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ isDarkMode, toggleDarkMode, children }) => {
+const RootLayout: React.FC<RootLayoutProps> = ({ isDarkMode, children }) => {
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
