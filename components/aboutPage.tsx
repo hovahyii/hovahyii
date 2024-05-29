@@ -56,13 +56,15 @@ export default function About(){
       <div className="mt-8 p-4 bg-gray-100 rounded-lg">
         <h2 className="text-2xl font-bold text-center">Professional Summary</h2>
         <p className="mt-4">
-          Honored with the "Best of the Best" Staff award at Citrex 2024 for the project DISTILWISE IoT 🏆. A mentor at Chumbaka since the second year, teaching secondary students about Arduino and programming 👨‍🏫. Developed more than seven web and two mobile applications 🌐📱. Created the Leica Official Store Malaysia Shopify website at Go-Emerge Sdn Bhd, increasing web traffic and customer subscriptions 📈.
+            I was honoured with the <strong>"Best of the Best" Staff award</strong> at Citrex 2024 for my final year project DISTILWISE IoT 🏆. I have been a mentor at Chumbaka since my second year, teaching secondary students about Arduino and programming 👨‍🏫. I have developed more than seven web and two mobile applications 🌐📱. 
         </p>
         <p className="mt-4">
-          Achieved a threefold increase in daily web traffic and enhanced SEO at Go E-Merge Sdn Bhd 🔍. Completed five Laravel projects at Mahiran Digital Sdn Bhd, improving system integration and client satisfaction 👍.
+        I developed the Leica Official Store Malaysia Shopify website at Go-Emerge Sdn Bhd, resulting in increased web traffic and more customer subscriptions 📈. Additionally, I achieved a threefold increase in daily web traffic and enhanced SEO at Go E-Merge Sdn Bhd 🔍. During my tenure at Mahiran Digital Sdn Bhd, I successfully completed five Laravel projects, enhancing system integration and ensuring client satisfaction 👍.        </p>
+        <p className="mt-4">
+            I also actively involved in volunteer work 🤝. I was appointed as the Backend Team Lead for TEDxPetalingStreet this year, leading an Agile team to upgrade the web infrastructure 💻. I am certified in Google Project Management, HCIA-AI, and Microsoft Azure AI Fundamentals. 
         </p>
         <p className="mt-4">
-          Actively involved in volunteer work 🤝. Appointed as the Backend Team Lead for TEDxPetalingStreet, leading an Agile team to upgrade the web infrastructure 💻. Certified in Google Project Management, HCIA-AI, and Microsoft Azure AI Fundamentals. Proficient in Chinese, English, and Malay 📜. Dedicated to continuous learning and ready for future technological challenges and achievements 🚀.
+        I am proficient in Chinese, English, and Malay 📜. I am dedicated to continuous learning and ready for future technological challenges and achievements 🚀.
         </p>
       </div>
       <Work />
