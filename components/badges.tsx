@@ -1,80 +1,34 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import badges from '../public/badges.json'; // Import the JSON data
+import { SlBadge } from "react-icons/sl";
 
-function BadgeIcon(props: any) {
-    return (
-      <svg 
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-        viewBox="0 0 375.04 375.04" 
-        {...props}
-      >
-        <path className="fill-zinc-400 stroke-zinc-400 dark:fill-zinc-100/50 dark:stroke-zinc-200" d="m305.74 152.49c7.346-6.515 15.67-13.898 15.67-24.241s-8.324-17.727-15.67-24.242c-4.156-3.686-8.867-7.864-9.873-10.965-1.105-3.399 0.275-9.773 1.494-15.397 2.035-9.399 4.342-20.054-1.523-28.111-5.918-8.131-16.828-9.221-26.453-10.182-5.678-0.567-12.111-1.209-14.922-3.255-2.74-1.993-5.301-7.856-7.56-13.029-3.902-8.929-8.322-19.049-18.006-22.192-1.788-0.58-3.686-0.875-5.643-0.875-7.396 0-14.439 4.105-21.25 8.076-5.049 2.942-10.77 6.277-14.488 6.277-3.721 0-9.441-3.335-14.49-6.277-6.811-3.971-13.854-8.076-21.251-8.076-1.959 0-3.857 0.295-5.644 0.875-9.682 3.144-14.102 13.264-18.002 22.191-2.26 5.173-4.822 11.036-7.56 13.029-2.813 2.046-9.246 2.688-14.922 3.255-9.627 0.961-20.537 2.051-26.453 10.182-5.865 8.058-3.559 18.712-1.521 28.111 1.217 5.624 2.598 11.998 1.494 15.397-1.008 3.1-5.717 7.278-9.873 10.964-7.346 6.516-15.672 13.9-15.672 24.243 0 10.344 8.326 17.729 15.672 24.243 4.156 3.686 8.867 7.863 9.873 10.961 1.104 3.401-0.277 9.776-1.494 15.4-2.037 9.399-4.344 20.054 1.52 28.111 5.912 8.122 16.805 9.218 26.422 10.178l-38.959 125.55c-0.871 2.804-0.025 5.857 2.164 7.814 2.188 1.957 5.318 2.456 8.008 1.278l40.315-17.656 23.24 37.377c1.379 2.22 3.799 3.54 6.367 3.54 0.316 0 0.637-0.019 0.957-0.061 2.912-0.373 5.338-2.412 6.207-5.216l33.602-108.28 33.6 108.28c0.871 2.804 3.297 4.843 6.209 5.216 0.32 0.042 0.639 0.061 0.957 0.061 2.568 0 4.986-1.321 6.367-3.54l23.238-37.377 40.316 17.656c2.686 1.178 5.818 0.681 8.006-1.278 2.189-1.957 3.035-5.011 2.166-7.814l-38.959-125.54c9.619-0.961 20.51-2.057 26.422-10.179 5.865-8.058 3.559-18.712 1.523-28.112-1.219-5.624-2.6-11.999-1.494-15.399 1.006-3.101 5.717-7.278 9.873-10.964zm-161.29 197.15-18-28.952c-1.969-3.167-5.965-4.405-9.379-2.91l-31.227 13.676 34.504-111.19c0.07 0.048 0.148 0.092 0.217 0.141 2.738 1.993 5.301 7.855 7.56 13.028 3.9 8.928 8.322 19.048 18.004 22.19 1.787 0.581 3.688 0.875 5.645 0.875 7.396 0 14.439-4.106 21.25-8.074 1.127-0.657 2.287-1.332 3.453-1.987l-32.027 103.21zm113.5-31.863c-3.412-1.494-7.408-0.254-9.377 2.91l-18.002 28.952-32.025-103.21c1.164 0.654 2.326 1.33 3.453 1.987 6.811 3.971 13.854 8.075 21.25 8.075 1.959 0 3.857-0.294 5.645-0.874 9.682-3.144 14.104-13.264 18.004-22.191 2.26-5.173 4.822-11.035 7.56-13.028 0.066-0.049 0.145-0.093 0.217-0.14l34.504 111.19-31.229-13.675zm23.644-158.96c-2.354 7.25-0.598 15.361 1.1 23.205 1.303 6.009 2.922 13.487 1.012 16.112-1.965 2.699-9.646 3.466-15.816 4.082-7.943 0.793-16.158 1.612-22.258 6.053-6.029 4.387-9.309 11.893-12.479 19.15-2.506 5.733-5.623 12.869-8.893 13.931-0.293 0.095-0.623 0.141-1.012 0.141-3.344 0-8.844-3.206-13.697-6.034-7.016-4.089-14.27-8.317-22.041-8.317-7.773 0-15.027 4.229-22.043 8.317-4.852 2.828-10.352 6.034-13.695 6.034-0.389 0-0.719-0.046-1.012-0.142-3.27-1.061-6.387-8.196-8.893-13.93-3.17-7.258-6.449-14.764-12.479-19.15-6.102-4.441-14.316-5.261-22.262-6.054-6.17-0.616-13.848-1.383-15.813-4.081-1.91-2.625-0.291-10.102 1.01-16.11 1.699-7.844 3.457-15.955 1.102-23.208-2.266-6.98-8.326-12.354-14.186-17.55-4.981-4.418-10.625-9.424-10.625-13.021s5.644-8.604 10.625-13.021c5.859-5.197 11.92-10.572 14.188-17.554 2.353-7.251 0.596-15.361-1.102-23.205-1.303-6.009-2.922-13.485-1.012-16.11 1.965-2.699 9.645-3.466 15.816-4.082 7.943-0.793 16.156-1.612 22.258-6.052 6.029-4.389 9.309-11.895 12.479-19.153 2.506-5.733 5.623-12.868 8.891-13.93 0.293-0.094 0.625-0.141 1.013-0.141 3.344 0 8.844 3.207 13.697 6.035 7.016 4.09 14.27 8.318 22.043 8.318 7.771 0 15.025-4.229 22.041-8.318 4.854-2.828 10.354-6.035 13.698-6.035 0.389 0 0.719 0.047 1.01 0.142 3.27 1.061 6.387 8.196 8.893 13.931 3.172 7.259 6.451 14.765 12.48 19.152 6.1 4.439 14.314 5.259 22.258 6.052 6.17 0.616 13.852 1.383 15.816 4.082 1.91 2.625 0.291 10.103-1.012 16.11-1.697 7.844-3.453 15.955-1.1 23.204 2.266 6.982 8.326 12.357 14.188 17.556 4.979 4.416 10.623 9.423 10.623 13.02s-5.645 8.603-10.623 13.019c-5.861 5.196-11.922 10.571-14.188 17.552z"/>
-        <path className="fill-zinc-400 stroke-zinc-400 dark:fill-zinc-100/50 dark:stroke-zinc-200" d="m187.52 43.244c-46.871 0-85.004 38.133-85.004 85.004s38.133 85.004 85.004 85.004 85.004-38.133 85.004-85.004-38.132-85.004-85.004-85.004zm0 155.01c-38.602 0-70.004-31.403-70.004-70.004s31.402-70.004 70.004-70.004c38.6 0 70.004 31.403 70.004 70.004s-31.404 70.004-70.004 70.004z"/>
-        <path className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/50 dark:stroke-zinc-200" d="m187.52 69.186c-32.566 0-59.063 26.495-59.063 59.063 0 4.143 3.357 7.5 7.5 7.5s7.5-3.357 7.5-7.5c0-24.296 19.766-44.063 44.063-44.063 4.143 0 7.5-3.357 7.5-7.5s-3.357-7.5-7.5-7.5z"/>
-      </svg>
-    )
-  }
-  
+interface BadgeProps {
+  isDarkMode: boolean;
+}
 
-function Badge() {
-    let resume = [
 
-      {
-        name: 'Anugerah Best of the Best Citrex 2024',
-        logo: '/logo/best.jpg',
-        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7194406897800687619/',
-      },
-
-      {
-        name: 'Postman API Fundamentals Student Expert',
-        logo: '/logo/Postman - Postman API Fundamentals Student Expert - 2024-05-23.png',
-        link: 'https://badgr.com/public/assertions/rmVwiQe3RbqmjpnQ9brwyw?identity__email=tb20091@student.ump.edu.my',
-      },
-
-      {
-        name: 'Google Project Management Certificate',
-        logo: '/logo/GCC_badge_PGM_1000x1000.png',
-        link: 'https://www.credly.com/badges/a30646a1-4000-40d4-9fcf-d87c0fad2af7/linked_in_profile',
-      },
-  
-      {
-        name: 'Young Innovators Challenge 2022 - Train-the-Trainer (TTT)',
-        logo: '/logo/yic.png',
-        link: 'https://sms.chumbaka.asia/b/TEYKjgaATR',
-      
-      },
-      {
-        name: 'Contributor to Exercism',
-        logo: '/logo/exercism.svg',
-        link: 'https://exercism.org/profiles/hovahyii/badges',
-      },
-    
-    ]
-
+function Badge({ isDarkMode }: BadgeProps) {
   return (
-    <div className="mt-12 flex flex-col items-center md:items-start  text-center md:text-left  ">
-            <div className="w-full rounded-2xl border  shadow p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BadgeIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Certificates & Achievements</span>
-      </h2>
-      <ol className="mt-6 flex">
-        {resume.map((role, roleIndex) => (
-          <li key={roleIndex} className="flex gap-4">
-             <Link href={role.link} target="_blank">
-                <Image width={512} height={512} className=" w-14 h-14" src={role.logo} alt={role.name} /></Link>
-          </li>
-        ))}
-      </ol>
-
+    <div className={`mt-12 flex  rounded-lg border shadow p-6 flex-col items-center md:items-start text-center md:text-left ${isDarkMode ? 'bg-white text-black' : 'bg-gray-100 text-black'}`}>
+      <div className="w-full  dark:border-zinc-700/40">
+        <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+          <SlBadge className="h-6 w-6 flex-none" />
+          <span className="ml-3">Certificates & Achievements</span>
+        </h2>
+        <ol className="mt-6 flex">
+          {badges.map((role, roleIndex) => (
+            <li key={roleIndex} className="flex gap-4">
+              <Link href={role.link} target="_blank">
+                <Image width={512} height={512} className="w-14 h-14" src={role.logo} alt={role.name} />
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </div>
     </div>
-     </div>
-  )
+  );
 }
 
 export default Badge;

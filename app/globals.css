@@ -1,37 +1,82 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 34, 34, 34; /* Dark gray background */
   --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 34, 34, 34; /* Dark gray background */
+    --background-end-rgb: 34, 34, 34; /* Dark gray background */
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.dark body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
 }
 
-.selected {
-  background-color: grey;
+.text-gray-500.dark\:text-gray-300 {
+  color: rgb(156 163 175);
+}
+
+.text-gray-600.dark\:text-gray-400 {
+  color: rgb(107 114 128);
+}
+
+.light-bg {
+  background-color: rgb(243, 244, 246);
+  color: rgb(17, 24, 39);
+}
+
+.dark-bg {
+  background-color: rgb(255, 255, 255); /* White background for Professional Summary in dark mode */
+  color: rgb(0, 0, 0); /* Black text for Professional Summary in dark mode */
+}
+
+.toggle-button {
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.dark {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+}
+
+.toggle-icon {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #ff7e5f;
+  transition: all 0.3s ease;
+}
+
+.toggle-button.dark .toggle-icon {
+  color: #4b6cb7;
+  transform: translateX(30px);
 }

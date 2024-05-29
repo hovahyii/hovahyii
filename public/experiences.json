@@ -1,0 +1,43 @@
+[
+    {
+      "company": "Go E-Merge Sdn Bhd",
+      "title": "Shopify Ecommerce Developer",
+      "alt": "Go E-Merge Sdn Bhd Logo",
+      "logo": "/logo/go-emerge.jpeg",
+      "start": "August 2023",
+      "end": "March 2024"
+    },
+    {
+      "company": "Mahiran Digital Sdn Bhd",
+      "title": "Full-stack Developer",
+      "logo": "/logo/mahiran.jpeg",
+      "alt": "Mahiran Digital Sdn Bhd Logo",
+      "start": "2021",
+      "end": "August 2022"
+    },
+    {
+      "company": "Rajang Digital Solutions",
+      "title": "Junior Web Developer",
+      "alt": "Rajang Digital Solutions Logo",
+      "logo": "/logo/rajang.png",
+      "start": "Mar 2020",
+      "end": "Jun 2020"
+    },
+    {
+      "company": "Press Metal Bintulu Sdn Bhd",
+      "title": "Robotics Engineer",
+      "alt": "Press Metal Bintulu Sdn Bhd Logo",
+      "logo": "/logo/press-metal.jpeg",
+      "start": "June 2019",
+      "end": "August 2019"
+    },
+    {
+      "company": "iLead Solutions",
+      "title": "Web Designer",
+      "alt": "iLead Solutions Logo",
+      "logo": "/logo/ilead.webp",
+      "start": "June 2018",
+      "end": "August 2018"
+    }
+  ]
+  

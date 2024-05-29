@@ -6,11 +6,16 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 import projectData from '../public/photos.json'; // Import the JSON data
 
-const Photos: React.FC = () => {
+interface CarouselProps {
+  isDarkMode: boolean;
+}
+
+
+const Photos: React.FC<CarouselProps> = ({ isDarkMode }) => {
   return (
     <div className="md:ml-8  overflow-y-auto">
       <div className="mt-6 lg:mt-8">
-        <h1 className="text-4xl font-bold mb-4 text-center md:text-left">Photos</h1>
+        <h1 className={`text-4xl font-bold mb-4 text-center md:text-left  ${isDarkMode ? 'text-white' : 'text-black'}`}>Photos</h1>
       </div>
       <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
         {projectData.map((project, index) => (
@@ -20,7 +25,7 @@ const Photos: React.FC = () => {
               alt={project.name} 
               layout="fill" 
               objectFit="contain" 
-              className="rounded-md" 
+              className="rounded-md bg-gray-200"
             />
             <p className="legend">{project.name}</p>
           </div>

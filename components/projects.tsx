@@ -15,7 +15,12 @@ import { Badge } from "@/components/ui/badge";
 import projectData from '../public/projects.json'; // Import the JSON data
 import Slideshow from "@/components/carousel";
 
-const ProjectPage: React.FC = () => {
+
+interface ProjectPageProps {
+  isDarkMode: boolean;
+}
+
+const ProjectPage: React.FC<ProjectPageProps> = ({ isDarkMode }) => {
   const [selectedFilter, setSelectedFilter] = useState<string>("");
 
   const handleFilterClick = (filter: string) => {
@@ -23,30 +28,30 @@ const ProjectPage: React.FC = () => {
   };
 
   return (
-    <div className="lg:w-2/3 overflow-y-auto">
+    <div className={`lg:w-2/3 overflow-y-auto ${isDarkMode ? 'dark' : ''}`}>
       <div className="mt-6 lg:mt-8 lg:ml-6">
-        <h1 className="text-4xl font-bold mb-4 text-center  md:text-left">Projects</h1>
+        <h1 className={`text-4xl font-bold mb-4 text-center md:text-left ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h1>
         <div className="flex space-x-4 mb-2">
           <Badge
-            className={selectedFilter === "Web" ? "selected" : ""}
+            className={selectedFilter === "Web" ? " bg-red-500" : " border-white"}
             onClick={() => handleFilterClick("Web")}
           >
             Web
           </Badge>
           <Badge
-            className={selectedFilter === "Engineering" ? "selected" : ""}
+            className={selectedFilter === "Engineering" ? " bg-red-500" : " border-white"}
             onClick={() => handleFilterClick("Engineering")}
           >
             Engineering
           </Badge>
           <Badge
-            className={selectedFilter === "IoT" ? "selected" : ""}
+            className={selectedFilter === "IoT" ? " bg-red-500" : " border-white"}
             onClick={() => handleFilterClick("IoT")}
           >
             IoT
           </Badge>
           <Badge
-            className={selectedFilter === "3D Modeling" ? "selected" : ""}
+            className={selectedFilter === "3D Modeling" ? " bg-red-500" : " border-white"}
             onClick={() => handleFilterClick("3D Modeling")}
           >
             3D Modeling
@@ -102,7 +107,7 @@ const ProjectPage: React.FC = () => {
             </Card>
           ))}
       </div>
-      <Slideshow />
+      <Slideshow isDarkMode={isDarkMode} />
     </div>
   );
 };
