@@ -12,6 +12,7 @@ import { SiHuawei } from "react-icons/si";
 import { MdLocationCity } from "react-icons/md";
 import SocialMedia from './socialMedia';
 
+
 interface Props {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
