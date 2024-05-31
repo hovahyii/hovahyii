@@ -67,7 +67,7 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
         <div className="mt-4 flex w-full max-w-xs flex-col sm:flex-row sm:space-x-4">
           <Input
             placeholder="Your enquiry..."
-            className="shadow border border-gray-300"
+            className=" dark:border-white"
             value={enquiry}
             onChange={handleInputChange}
           />
