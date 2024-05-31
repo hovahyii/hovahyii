@@ -88,12 +88,12 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ isDarkMode }) => {
                     </Badge>
                   </div>
                   {project.revenue && (
-                    <Badge variant="default" className="bg-gray-200 hover:bg-gray-400 hover:text-white dark:bg-gray-400 text-black dark:text-white ">
+                    <Badge variant="default" className="dark:border-0 dark:hover:bg-slate-300 dark:hover:text-white bg-gray-200 hover:bg-gray-400 hover:text-white dark:bg-gray-400 text-black dark:text-white ">
                       {project.revenue}
                     </Badge>
                   )}
                   {project.award && (
-                    <Badge variant="default" className="bg-yellow-500 dark:bg-yellow-500 text-white dark:text-white ">
+                    <Badge variant="default" className="dark:border-0 dark:hover:bg-slate-300 dark:hover:text-white bg-yellow-500 dark:bg-yellow-500 text-white dark:text-white ">
                       {project.award}
                     </Badge>
                   )}
