@@ -19,6 +19,7 @@ export default function main() {
         {/* About Page */}
         <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
+
         {/* Cards Section */}
         <ProjectPage isDarkMode={isDarkMode} />
       </div>

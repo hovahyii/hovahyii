@@ -104,10 +104,21 @@
         "website": "https://www.linkedin.com/feed/update/urn:li:activity:7196313348429291520/",
         "logo": "/logo/flutter.png",
         "status": "Completed",
-        "type": ["IoT", "Flutter", "ESP32", "Smart Home", "Exhibition"],
+        "type": ["IoT", " Flutter", " ESP32", " Smart Home", " Exhibition"],
         "award": "",
         "revenue": "",
         "filter":  ["IoT",  "Engineering"]
+      },
+      {
+        "name": "CanteenBuddy",
+        "description": "Smart food ordering system using ESP32 to streamline school cafeteria orders",
+        "website": "https://github.com/hovahyii/CanteenBuddy",
+        "logo": "/logo/chumbaka.png",
+        "status": "Completed",
+        "type": ["IoT", " ESP32", " PHP", " MySQL"],
+        "award": "",
+        "revenue": "",
+        "filter":  ["IoT",  "Engineering", "Web"]
       }
   ]
   

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",
     images: [
       {
-        url: "https://hovahyii.vercel.app/hovah.jpeg",
+        url: "https://hovahyii.vercel.app/hovah.png",
         width: 800,
         height: 600,
         alt: "Hovah Yii Avatar",

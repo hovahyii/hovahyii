@@ -15,7 +15,7 @@ const Photos: React.FC<CarouselProps> = ({ isDarkMode }) => {
   return (
     <div className="md:ml-8  overflow-y-auto">
       <div className="mt-6 lg:mt-8">
-        <h1 className={`text-4xl font-bold mb-4 text-center md:text-left  ${isDarkMode ? 'text-white' : 'text-black'}`}>Photos</h1>
+        <h1 className={`text-4xl font-bold mb-4 text-center md:text-left dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Photos</h1>
       </div>
       <Carousel showThumbs={false} infiniteLoop useKeyboardArrows autoPlay>
         {projectData.map((project, index) => (

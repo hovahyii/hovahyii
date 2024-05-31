@@ -29,29 +29,30 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ isDarkMode }) => {
 
   return (
     <div className={`lg:w-2/3 overflow-y-auto ${isDarkMode ? 'dark' : ''}`}>
+      <figure className="md:ml-6 mt-6 w-auto "><embed src="https://wakatime.com/share/@hovahyii/54de50e2-54fe-4a74-8c74-38e23afa7cf8.svg"></embed></figure>
       <div className="mt-6 lg:mt-8 lg:ml-6">
-        <h1 className={`text-4xl font-bold mb-4 text-center md:text-left ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h1>
+        <h1 className={`text-4xl font-bold mb-4 text-center dark:text-white md:text-left ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h1>
         <div className="flex space-x-4 mb-2">
           <Badge
-            className={selectedFilter === "Web" ? " bg-red-500" : " border-white"}
+            className={selectedFilter === "Web" ? " bg-red-500 dark:bg-red-500 dark:text-white " : " border-white hover:bg-red-400"}
             onClick={() => handleFilterClick("Web")}
           >
             Web
           </Badge>
           <Badge
-            className={selectedFilter === "Engineering" ? " bg-red-500" : " border-white"}
+            className={selectedFilter === "Engineering" ? " bg-red-500 dark:bg-red-500 dark:text-white " : " border-white hover:bg-red-400"}
             onClick={() => handleFilterClick("Engineering")}
           >
             Engineering
           </Badge>
           <Badge
-            className={selectedFilter === "IoT" ? " bg-red-500" : " border-white"}
+            className={selectedFilter === "IoT" ? " bg-red-500 dark:bg-red-500 dark:text-white " : " border-white hover:bg-red-400"}
             onClick={() => handleFilterClick("IoT")}
           >
             IoT
           </Badge>
           <Badge
-            className={selectedFilter === "3D Modeling" ? " bg-red-500" : " border-white"}
+            className={selectedFilter === "3D Modeling" ? " bg-red-500 dark:bg-red-500 dark:text-white " : " border-white hover:bg-red-400"}
             onClick={() => handleFilterClick("3D Modeling")}
           >
             3D Modeling

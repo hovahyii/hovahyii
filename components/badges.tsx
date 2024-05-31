@@ -12,8 +12,8 @@ interface BadgeProps {
 function Badge({ isDarkMode }: BadgeProps) {
   return (
     <div className={`mt-12 flex  rounded-lg border shadow p-6 flex-col items-center md:items-start text-center md:text-left ${isDarkMode ? 'bg-white text-black' : 'bg-gray-100 text-black'}`}>
-      <div className="w-full  dark:border-zinc-700/40">
-        <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <div className="w-full  ">
+        <h2 className="flex text-sm font-semibold text-zinc-900">
           <SlBadge className="h-6 w-6 flex-none" />
           <span className="ml-3">Certificates & Achievements</span>
         </h2>

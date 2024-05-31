@@ -48,7 +48,7 @@
 ## Stats
 
 <div  align="center">
-  <a href="https://wakatime.com/@222632e8-daa2-44e3-aefc-8011e640fb58"><img src="https://wakatime.com/badge/user/222632e8-daa2-44e3-aefc-8011e640fb58/project/9982180f-2eb6-425f-bde2-dbaaa6d2493c.svg" alt="Total time coded since May 27 2024" /></a>
+  <a href="https://wakatime.com/@222632e8-daa2-44e3-aefc-8011e640fb58"><img src="https://wakatime.com/badge/user/222632e8-daa2-44e3-aefc-8011e640fb58.svg" alt="Total time coded since May 27 2024" /></a>
 </div>
 
 <div align="center">
