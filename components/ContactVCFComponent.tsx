@@ -10,17 +10,21 @@ interface ContactVCFProps {
 const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
   const handleDownloadVCF = () => {
     const vcfData = `
-    BEGIN:VCARD
-    VERSION:3.0
-    FN:Jehovah Yii Zui Hon
-    TEL;TYPE=WORK,VOICE:01110501375
-    EMAIL;TYPE=PREF,INTERNET:hovahyii@gmail.com
-    ORG:Huawei Technologies Malaysia Sdn. Bhd
-    TITLE:RF Engineer
-    URL;WORK:https://hovahyii.vercel.app
-    URL;WORK:https://tapnex-card.vercel.app
-    PHOTO;VALUE=URL;TYPE=JPEG:https://hovahyii.vercel.app/hovah.png
-    END:VCARD
+        BEGIN:VCARD
+        VERSION:3.0
+        PRODID:-//Apple Inc.//macOS 11.5.2//EN
+        N:Yii; Hovah;;;
+        FN:Jehovah Yii Zui Hon;  
+        PHOTO;VALUE=URL;TYPE=JPEG:https://hovahyii.vercel.app/hovah.png
+        ORG:Huawei Technologies Malaysia Sdn. Bhd;
+        EMAIL;type=INTERNET;type=HOME;type=pref:hovahyii@gmail.com
+        EMAIL;type=INTERNET;type=WORK:support@tapnex-card.com
+        TEL;type=CELL;type=VOICE;type=pref:01110501375
+        ADR;type=WORK:;;Menara Exchange 106, Lingkaran TRX;Businesstown;KL;55188;Malaysia
+        NOTE:Discover the Future of Networking with TapNex E-Card!        
+        URL;WORK:https://hovahyii.vercel.app
+        URL;WORK:https://tapnex-card.vercel.app
+        END:VCARD
     `;
     const blob = new Blob([vcfData], { type: 'text/vcard' });
     const url = URL.createObjectURL(blob);
