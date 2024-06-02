@@ -19,7 +19,7 @@ const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
         PHOTO;TYPE=:https://hovahyii.vercel.app/hovah.png
         TITLE;CHARSET=UTF-8:RF Engineer
         ORG;CHARSET=UTF-8:Huawei Technologies Malaysia Sdn. Bhd.
-        NOTE;CHARSET=UTF-8:"E-COMMERCE\nTapNex\n\nDiscover the Future of Networking with TapNex E-Card!\n\nWith just one tap\, share your personal website\, portfolio\, and contact information instantly with anyone\, anywhere\.\n\n🚀 Order Now and Make a Lasting Impression\n\nContact Hovah - 01110501375\n"
+        NOTE;CHARSET=UTF-8:Order TapNex Now, WhatsApp 01110501375 
         REV:2024-06-23:00:50.864Z
         TEL;TYPE=Personal 01110501375:+601110501375
         item0.URL:https://hovahyii.vercel.app
