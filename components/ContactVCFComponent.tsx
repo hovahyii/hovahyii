@@ -12,18 +12,19 @@ const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
     const vcfData = `
         BEGIN:VCARD
         VERSION:3.0
-        PRODID:-//Apple Inc.//macOS 11.5.2//EN
-        N:Yii; Hovah;;;
-        FN:Jehovah Yii Zui Hon;  
-        PHOTO;VALUE=URL;TYPE=JPEG:https://hovahyii.vercel.app/hovah.png
-        ORG:Huawei Technologies Malaysia Sdn. Bhd;
-        EMAIL;type=INTERNET;type=HOME;type=pref:hovahyii@gmail.com
-        EMAIL;type=INTERNET;type=WORK:support@tapnex-card.com
-        TEL;type=CELL;type=VOICE;type=pref:01110501375
-        ADR;type=WORK:;;Menara Exchange 106, Lingkaran TRX;Businesstown;KL;55188;Malaysia
-        NOTE:Discover the Future of Networking with TapNex E-Card!        
-        URL;WORK:https://hovahyii.vercel.app
-        URL;WORK:https://tapnex-card.vercel.app
+        FN;CHARSET=UTF-8:Jehovah Yii Zui Hon
+        N;CHARSET=UTF-8:Hovah;Yii;;;
+        EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:hovahyii@gmail.com
+        EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:tapnex-card@gmail.com
+        PHOTO;TYPE=:https://hovahyii.vercel.app/hovah.png
+        TITLE;CHARSET=UTF-8:RF Engineer
+        ORG;CHARSET=UTF-8:Huawei Technologies Malaysia Sdn. Bhd.
+        NOTE;CHARSET=UTF-8:E-COMMERCE\nTapNex\n\nDiscover the Future of Networking with TapNex E-Card!\n\nthe ultimate solution for modern professionals. With just one tap, share your personal website, portfolio, and contact information instantly with anyone, anywhere.\n\n🚀 Order Now and Make a Lasting Impression!\n\nContact Hovah - 01110501375\n
+        TEL;TYPE=Personal 01110501375:+601110501375
+        item0.URL:https://hovahyii.vercel.app
+        item0.X-ABLabel:Personal Website
+        item2.URL:https://tapnex.vercel.app/
+        item2.X-ABLabel:Company Website
         END:VCARD
     `;
     const blob = new Blob([vcfData], { type: 'text/vcard' });
