@@ -11,7 +11,7 @@ const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
   const handleDownloadVCF = () => {
     const vcfData = `
         BEGIN:VCARD
-        VERSION:1.0
+        VERSION:3.0
         FN:Jehovah Yii Zui Hon
         TEL;TYPE=WORK,VOICE:01110501375
         EMAIL;TYPE=PREF,INTERNET:hovahyii@gmail.com
