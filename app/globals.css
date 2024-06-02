@@ -1,8 +1,23 @@
-/* globals.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+  /* styles/globals.css */
+
+@font-face {
+  font-family: 'Mokoto';
+  src: url('/fonts/mokoto-mokoto-regular-400.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Ensure the custom font is applied globally */
+body {
+   color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,11 +31,6 @@
     --background-start-rgb: 34, 34, 34; /* Dark gray background */
     --background-end-rgb: 34, 34, 34; /* Dark gray background */
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
 }
 
 .dark body {
@@ -79,4 +89,15 @@ body {
 .toggle-button.dark .toggle-icon {
   color: #4b6cb7;
   transform: translateX(30px);
+}
+  
+  .button {
+  display: flex;
+  align-items: center;
+  color: #1e40af; /* Tailwind blue-600 */
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #1e3a8a; /* Tailwind blue-800 */
 }

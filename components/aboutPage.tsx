@@ -18,10 +18,9 @@ interface Props {
   toggleDarkMode: () => void;
 }
 
-
 const ToggleButton: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
   return (
-    <div className={`toggle-button ${isDarkMode ? 'dark' : 'light'}`} onClick={toggleDarkMode}>
+    <div  className={`mt-2 mb-2 toggle-button ${isDarkMode ? 'dark' : 'light'}`} onClick={toggleDarkMode}>
       <div className="toggle-icon">{isDarkMode ? '🌙' : '☀️'}</div>
     </div>
   );
@@ -36,7 +35,6 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
 
   const whatsappLink = `https://api.whatsapp.com/send?phone=601110501375&text=Hi,%20Hovah.${encodeURIComponent(enquiry)}`;
 
-
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
@@ -47,12 +45,13 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
 
   return (
     <div className={`lg:block lg:w-1/3 overflow-y-auto ${isDarkMode ? 'dark' : ''}`}>
-      <div className="mt-12 flex flex-col items-center md:items-start text-center md:text-left">
+
+      <div className="flex flex-col items-center lg:items-start text-center md:text-left">
         <Avatar className="w-1/3 h-1/2">
           <Image alt="Hovah Yii" width={512} height={512} src="/formal.png" priority />
         </Avatar>
         <h1 className={`mt-4 text-4xl  font-bold dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Jehovah Yii Zui Hon</h1>
-        <ToggleButton isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        <ToggleButton  isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
         <div className="mt-2 flex items-center">
           <MdLocationCity className={`text-gray-500  ${isDarkMode ? 'text-gray-300 ' : 'text-gray-500'}`} size="1.2em" />
@@ -78,7 +77,6 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
         <SocialMedia isDarkMode={isDarkMode} />
       </div>
 
-
       <div className={`mt-8 p-4 rounded-lg ${isDarkMode ? 'bg-white text-black' : 'bg-gray-100 text-black'}`}>
         <h2 className="text-2xl font-bold text-center text-black">Professional Summary</h2>
         <p className="mt-4 text-black">
@@ -95,7 +93,7 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
         </p>
       </div>
 
-      <Work  isDarkMode={isDarkMode} />
+      <Work isDarkMode={isDarkMode} />
       <Badge isDarkMode={isDarkMode} />
     </div>
   );
