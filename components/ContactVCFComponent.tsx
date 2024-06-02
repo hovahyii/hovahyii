@@ -10,7 +10,7 @@ interface ContactVCFProps {
 const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
   const handleDownloadVCF = () => {
     const vcfData = `
-        BEGIN:TapNex
+        BEGIN:VCARD
         VERSION:1.0
         FN:Jehovah Yii Zui Hon
         TEL;TYPE=WORK,VOICE:01110501375
@@ -19,7 +19,7 @@ const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
         TITLE:RF Engineer
         URL;TYPE=WORK:https://hovahyii.vercel.app
         URL;TYPE=WORK:https://tapnex-card.vercel.app
-        END:TapNex
+        END:VCARD
     `;
     const blob = new Blob([vcfData], { type: 'text/vcard' });
     const url = URL.createObjectURL(blob);
