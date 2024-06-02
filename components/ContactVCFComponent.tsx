@@ -9,8 +9,7 @@ interface ContactVCFProps {
 
 const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
   const handleDownloadVCF = () => {
-    const vcfData = `
-        BEGIN:VCARD
+    const vcfData = `BEGIN:VCARD
         VERSION:3.0
         FN;CHARSET=UTF-8:Jehovah Yii Zui Hon
         N;CHARSET=UTF-8:Hovah;Yii;;;
@@ -26,8 +25,7 @@ const ContactVCFComponent: React.FC<ContactVCFProps> = ({ isDarkMode }) => {
         item0.X-ABLabel:Personal Website
         item2.URL:https://tapnex.vercel.app/
         item2.X-ABLabel:Company Website
-        END:VCARD
-    `;
+        END:VCARD`;
     const blob = new Blob([vcfData], { type: 'text/vcard' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
