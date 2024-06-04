@@ -14,7 +14,7 @@ VERSION:3.0
 FN;CHARSET=UTF-8:Jehovah Yii Zui Hon
 N;CHARSET=UTF-8:Hovah;Yii;;;
 EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:hovahyii@gmail.com
-EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:tapnex-card@gmail.com
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:tapnexcard@gmail.com
 PHOTO;VALUE=URI;TYPE=PNG:http://hovahyii.vercel.app/hovah.png
 TITLE;CHARSET=UTF-8:RF Engineer
 ORG;CHARSET=UTF-8:Huawei Technologies Malaysia Sdn. Bhd.
