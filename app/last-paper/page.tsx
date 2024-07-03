@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const CountdownPage = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date('July 4, 2024 12:00:00');
+    const targetDate = new Date('July 4, 2024 09:00:00');
     const now = new Date();
     const difference = targetDate.getTime() - now.getTime();
 
