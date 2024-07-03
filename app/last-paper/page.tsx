@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 
 const CountdownPage = () => {
   const calculateTimeLeft = () => {
@@ -42,10 +42,16 @@ const CountdownPage = () => {
 
   return (
     <div>
+      <nav className="p-4 bg-gray-800 text-white">
+        <Link href="/">
+          <a className="text-lg font-semibold">Home</a>
+        </Link>
+      </nav>
       <main className="text-center p-6 md:p-12">
         <h1 className="text-3xl md:text-4xl font-bold">My Last Paper</h1>
         <h2 className="text-xl md:text-3xl mt-4">Conclude My 4 Years of Studies at UMPSA (Universiti Malaysia Pahang Al-Sultan Abdullah)</h2>
         <h2 className="text-xl md:text-3xl mt-2">Wish me luck</h2>
+        <h2 className="text-xl md:text-3xl mt-2">Pray for me</h2>
         <div className="mb-8"></div>
         <h3 className="text-2xl md:text-4xl font-bold">Countdown</h3>
         <div className="flex flex-col md:flex-row justify-center text-4xl md:text-5xl mt-8">
