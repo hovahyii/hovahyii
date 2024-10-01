@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: "Meet Hovah Yii | Explore His Portfolio",
   referrer: "origin-when-cross-origin",
   applicationName: "Meet Hovah Yii | Explore His Portfolio",
-  description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",
-  keywords: ["jehovah yii zui hon", "Jehovah Yii Zui Hon", "Jehovah Yii", "hovahyii", "Hovah Yii", "Hovah", "hovah yii", "Yii"],
+  description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET, SQL, web and mobile app development. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",
+  keywords: ["Jehovah Yii Zui Hon", "Hovah Yii", "Full Stack Developer", ".NET", "SQL", "Web Development", "Mobile App Development", "Backend Solutions", "Software Engineer", "Portfolio"],
   authors: [{ name: "Hovah Yii", url: "https://hovahyii.vercel.app/" }],
   creator: "Hovah Yii",
   formatDetection: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://hovahyii.vercel.app/",
     siteName: "Hovah Yii",
     title: "Meet Hovah Yii | Explore His Portfolio",
-    description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",
+    description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET, SQL, web and mobile app development. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",
     images: [
       {
         url: "https://hovahyii.vercel.app/hovah.png",
@@ -48,26 +48,25 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "app",
+    card: "summary_large_image",
     title: "Meet Hovah Yii | Explore His Portfolio",
-    description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET and SQL. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",
+    description: "Explore Hovah Yii's portfolio: a results-driven developer and mentor with expertise in .NET, SQL, web and mobile app development. Discover his role in creating over 7 web and 2 mobile apps, including backend solutions for successful businesses.",
     creator: "@HovahYii",
     creatorId: "913234211418468352",
     images: {
       url: "https://hovahyii.vercel.app/icon/android-chrome-512x512.png",
       alt: "Hovah Yii Avatar",
     },
-    app: {
-      name: "twitter_app",
-      id: {
-        iphone: "twitter_app://iphone",
-        ipad: "twitter_app://ipad",
-        googleplay: "twitter_app://googleplay",
-      },
-      url: {
-        iphone: "https://iphone_url",
-        ipad: "https://ipad_url",
-      },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 };
