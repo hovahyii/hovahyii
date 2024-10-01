@@ -1,8 +1,16 @@
 [
   {
-    "name": "Hari Ulang Tahun TUDM Ke-66",
-    "photo": "/carousel/photo8.jpg"
-  },  
+    "name": "Pertauliahan Leftenan Muda",
+    "photo": "/carousel/pertauliahan.jpg"
+  },    
+  {
+      "name": "Commissiong Ball Night",
+      "photo": "/carousel/commissiong-ball.jpg"
+    },  
+    {
+      "name": "Hari Ulang Tahun TUDM Ke-66",
+      "photo": "/carousel/photo8.jpg"
+    },  
     {
       "name": "Chumbaka TTT Workshop 2024",
       "photo": "/carousel/photo7.jpg"
@@ -22,10 +30,6 @@
     {
         "name": "Site Visit to UPC Chemicals",
         "photo": "/carousel/photo5.jpg"
-    },
-    {
-        "name": "Navy ROTU Pekan",
-        "photo": "/carousel/photo6.jpg"
     },
     {
         "name": "FIMIEX 2023",
