@@ -23,7 +23,7 @@ REV:2024-06-23:46:50.864Z
 TEL;TYPE=Personal 01110501375:+601110501375
 item0.URL:https://hovahyii.vercel.app
 item0.X-ABLabel:Personal Website
-item2.URL:https://tapnex.vercel.app/
+item2.URL:https://tapnex-card.com/
 item2.X-ABLabel:Company Website
 END:VCARD`;
     const blob = new Blob([vcfData], { type: 'text/vcard' });

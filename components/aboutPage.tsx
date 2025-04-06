@@ -59,7 +59,7 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
           <SiHuawei className="ml-2 md:ml-4 text-red-500" size="1.2em" />
           <span className={`ml-1 text-sm md:text-lg dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Radio Frequency Engineer</span>
         </div>
-        <p className={`mt-4 text-xl font-semibold dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Master's Student in Engineering, Mentor, Developer</p>
+        <p className={`mt-4 text-xl font-semibold dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Master's Student, Mentor, Developer</p>
         <p className={`mt-2 dark:text-red-400 ${isDarkMode ? 'text-red-400' : 'text-gray-600'}`}>
           Need a solution designed by me? 🚀
         </p>
