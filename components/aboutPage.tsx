@@ -57,9 +57,9 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
           <MdLocationCity className={`text-gray-500  ${isDarkMode ? 'text-gray-300 ' : 'text-gray-500'}`} size="1.2em" />
           <span className={`ml-1 text-sm md:text-lg dark:text-white ${isDarkMode ? 'text-white ' : 'text-black'}`}>Selangor, Malaysia</span>
           <SiHuawei className="ml-2 md:ml-4 text-red-500" size="1.2em" />
-          <span className={`ml-1 text-sm md:text-lg dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>RF Engineer Intern</span>
+          <span className={`ml-1 text-sm md:text-lg dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Radio Frequency Engineer</span>
         </div>
-        <p className={`mt-4 text-xl font-semibold dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Student, Mentor, Developer</p>
+        <p className={`mt-4 text-xl font-semibold dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Master's Student in Engineering, Mentor, Developer</p>
         <p className={`mt-2 dark:text-red-400 ${isDarkMode ? 'text-red-400' : 'text-gray-600'}`}>
           Need a solution designed by me? 🚀
         </p>
@@ -80,16 +80,19 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
       <div className={`mt-8 p-4 rounded-lg ${isDarkMode ? 'bg-white text-black' : 'bg-gray-100 text-black'}`}>
         <h2 className="text-2xl font-bold text-center text-black">Professional Summary</h2>
         <p className="mt-4 text-black">
-          I was honoured with the <strong>"Best of the Best" Staff award</strong> at Citrex 2024 for my final year project DISTILWISE IoT 🏆. I have been a mentor at Chumbaka since my second year, teaching secondary students about Arduino and programming 👨‍🏫. I have developed more than seven web and two mobile applications 🌐📱.
+          Awarded the "Best of the Best" Staff Award at CITREX 2024 for my final year innovation, DISTILWISE IoT, I've built a career defined by technical depth, mentorship, and cross-border collaboration. As a Radio Frequency Engineer at Huawei Malaysia, I specialize in optimizing 4G and 5G network performance across diverse global regions using advanced tools like QGIS, ThreeCloud, and GeneCloud—delivering real-time diagnostics, performance insights, and infrastructure strategy.
         </p>
         <p className="mt-4 text-black">
-          I developed the Leica Official Store Malaysia Shopify website at Go-Emerge Sdn Bhd, resulting in increased web traffic and more customer subscriptions 📈. Additionally, I achieved a threefold increase in daily web traffic and enhanced SEO at Go E-Merge Sdn Bhd 🔍. During my tenure at Mahiran Digital Sdn Bhd, I successfully completed five Laravel projects, enhancing system integration and ensuring client satisfaction 👍.
+          In tandem with my engineering career, I serve as a mentor at CodingBar, nurturing young tech minds through hands-on teaching and project guidance. I'm also the founder of Hovah Digital Solutions, a growing tech company dedicated to crafting smart digital ecosystems for SMEs—recently delivering websites for HLF Cooling and Panca Hydrau-Pneumatic Sdn Bhd.
         </p>
         <p className="mt-4 text-black">
-          I also actively involved in volunteer work 🤝. I was appointed as the Backend Team Lead for TEDxPetalingStreet this year, leading an Agile team to upgrade the web infrastructure 💻. I am certified in Google Project Management, HCIA-AI, and Microsoft Azure AI Fundamentals.
+          From building performance dashboards across the Asia Pacific, Middle East, Southern Africa, and Latin America during my internship to launching 7+ web apps and 2 mobile apps, my work spans continents and codebases. At Go-Emerge Sdn Bhd, I developed the Leica Official Store Malaysia Shopify site and tripled web traffic through SEO and design. At Mahiran Digital, I completed five Laravel systems that streamlined business operations.
         </p>
         <p className="mt-4 text-black">
-          I am proficient in Chinese, English, and Malay 📜. I am dedicated to continuous learning and ready for future technological challenges and achievements 🚀.
+          I've led Agile backend teams at TEDxPetalingStreet, mentored through Chumbaka, and earned certifications in Google Project Management, HCIA-AI, and Microsoft Azure AI Fundamentals. Fluent in Chinese, English, and Malay, I thrive in multicultural, cross-functional teams.
+        </p>
+        <p className="mt-4 text-black">
+          Whether leading, coding, teaching, or building—I move with vision. I'm not just chasing innovation. I'm engineering the future, one connection, one line of code, one bold step at a time. 🚀
         </p>
       </div>
 
