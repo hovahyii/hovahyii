@@ -64,7 +64,6 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 Unlock the Gates: Student Email Login
               </h2>
               <p className="mt-3 mb-2">This is where your .edu email becomes your golden ticket! Log in with your student credentials and watch as the digital red carpet rolls out for you.</p>
-              <p className="italic text-gray-600 dark:text-gray-400">"I couldn't believe how easy this was. Took me less than 30 seconds!" - CS Student at MIT</p>
               <div className="my-4 flex justify-center">
                 <Image 
                   src="/blog/cursor/unlock-cursor-freemium.png" 
@@ -133,7 +132,6 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 The Waiting Game: Verification in Progress
               </h2>
               <p className="mt-3 mb-2">SheerID is working their magic behind the scenes. Soon, your inbox will ping with the good news!</p>
-              <p className="italic text-gray-600 dark:text-gray-400">"The verification was surprisingly quick. I got approved in under 10 minutes!" - Computer Engineering Student</p>
               <div className="my-4 flex justify-center">
                 <Image 
                   src="/blog/cursor/SheerID-verification.png" 
@@ -212,13 +210,6 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </div>
             </div>
             
-            <div className="bg-blue-100 dark:bg-blue-900/40 p-6 rounded-lg shadow-md mb-10">
-              <h3 className="text-xl font-bold mb-3">Student Testimonial</h3>
-              <blockquote className="italic">
-                "I was struggling with my final year project until I got Cursor Premium. The AI pair programming literally saved my degree. And now it's free? This is the best news for CS students this year!"
-                <footer className="mt-2 font-medium">— Computer Science Senior, Stanford University</footer>
-              </blockquote>
-            </div>
             
             <div className="text-center mt-10 mb-6">
               <a 
