@@ -5,6 +5,7 @@ import ProjectPage from "@/components/projects";
 import Footer from "@/components/footer";
 import ContactVCFComponent from "@/components/ContactVCFComponent";
 import QRCodeDrawer from "@/components/QRCodeDrawer";
+import WelcomePopup from "@/components/WelcomePopup";
 import { useState } from "react";
 
 export default function Main() {
@@ -16,6 +17,7 @@ export default function Main() {
 
   return (
     <>
+      <WelcomePopup />
       <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow p-4 flex justify-center space-x-12 md:space-x-24 ">
         <ContactVCFComponent isDarkMode={isDarkMode} />
         <QRCodeDrawer isDarkMode={isDarkMode} />
