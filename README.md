@@ -5,9 +5,10 @@
 
 ## I'm a Student, Developer, and Teacher!!
 
-- 🌱 I’m currently learning everything 🤣
-- 👯 I’m looking to collaborate with other content creators
-- 🥅 2 Years Goals: Graduate Degree with First Class and great hard skills
+- 🌱 I'm currently learning everything 🤣
+- 👯 I'm looking to collaborate with other content creators
+- ~~🥅 2 Years Goals: Graduate Degree with First Class and great hard skills~~ ✅
+- 🎯 5 Years Goals: Become content creator, financially freedom, trust God more
 - ⚡ Fun fact: I love to read and learn new things
 
 
