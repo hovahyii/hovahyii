@@ -26,5 +26,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     author: 'Hovah Yii',
     description: 'Complete step-by-step guide on how to publish your Android app to Huawei AppGallery store, including beta testing setup and tips to speed up the review process.',
     ogImage: '/blog/appgallery/app-services.png',
+  },
+  'qwen-app-public-beta': {
+    slug: 'qwen-app-public-beta',
+    title: 'Qwen App Public Beta: Branding the Strongest Chinese Personal AI',
+    date: '17 November 2025',
+    author: 'Hovah Yii',
+    description: 'Alibaba renames its consumer AI app to Qwen, unifying its trillion-parameter models and personal assistant experience into one brand that aims to become China’s ChatGPT.',
+    ogImage: '/blog/qwen/qwen-app.png',
   }
 };

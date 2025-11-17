@@ -388,6 +388,166 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'qwen-app-public-beta') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 via-white to-slate-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Field Notes • 17/11/2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Alibaba launches the Qwen App public beta—one brand, one flagship personal AI.</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">The codename project is now official: the former Tongyi app has been reborn as <strong>Qwen App</strong>, powered by the same trillion-parameter Qwen3-Max model that already leads open benchmarks. The mission is blunt: build the Chinese equivalent of ChatGPT by aligning the strongest model and the most visible consumer entry point under the exact same name.</p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">Brand discipline: from scattered squads to one battalion</h3>
+            <p>Alibaba’s AI stack used to sound like a field manual: Tongyi, Qwen, Wan, Qwen Chat. Each name belonged to a different team, surface, or repo. The Qwen App announcement translates the original Chinese briefing into a single takeaway—<em>brand consolidation concentrates attention</em>. Models keep their codenames, but now the consumer interface shares the model’s public identity. “Have a question? Ask Qwen.”</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Same badge for every layer:</strong> the top open-source models are Qwen, and the app you tap on your phone is also Qwen.</li>
+              <li><strong>Unified storytelling:</strong> developers and everyday users finally talk under the same keyword instead of juggling Tongyi vs. Qwen vs. Wan.</li>
+              <li><strong>Attention routing:</strong> fewer entry points mean cleaner data loops and clearer default habits—exactly what a consumer AI war requires.</li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/qwen/qwen-app.png"
+                alt="Qwen App icon preview"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl ring-1 ring-slate-100 dark:ring-slate-800"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">First look: quieter palette, louder intent</h3>
+            <p>The visual refresh strips away Tongyi’s dual gradients in favor of a single Qwen cyan tone. Inside, the interface goes ultra-minimal: one chat box, a horizontal tray of intents, and a persistent search toggle that defaults to “on.”</p>
+            <div className="my-10 grid md:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-4">
+                <Image
+                  src="/blog/qwen/qwen-app-ui.png"
+                  alt="Qwen App UI walkthrough"
+                  width={800}
+                  height={600}
+                  className="rounded-xl"
+                />
+                <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-3">The new single-tone UI: “one prompt bar to rule them all.”</p>
+              </div>
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-4">
+                <Image
+                  src="/blog/qwen/qwen-features.png"
+                  alt="Qwen App feature lineup"
+                  width={800}
+                  height={600}
+                  className="rounded-xl"
+                />
+                <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-3">Feature trays bundle chat, Wan image tools, Omni video, math kits, and more.</p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Why people call it “China’s ChatGPT”</h3>
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-4">
+              <p>Translated from the original memo, here are the parallels:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Super-app ambition:</strong> daily personal assistant spanning work notes, creative writing, search, coding, shopping, and multimodal creation from one entry point.</li>
+                <li><strong>Latest models, no lag:</strong> Qwen App exposes <em>the</em> strongest internal models (Qwen3-Max, Qwen3-Omni, Qwen3-VL) on day one, just like ChatGPT ships OpenAI’s newest releases directly.</li>
+                <li><strong>Default to online reasoning:</strong> search stays enabled because consumer users expect fresh knowledge without toggles—an answer to the hallucination complaints heard during the DeepSeek news cycle.</li>
+                <li><strong>Chinese-native UX:</strong> in Chinese contexts the assistant feels smoother than ChatGPT; intents, idioms, and policies read naturally.</li>
+              </ul>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">What the models are actually doing</h3>
+            <p>Alibaba’s open brief emphasized that the tech card matters as much as the brand card. The new stack includes:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Qwen3-Max:</strong> 1+ trillion parameters, 36T-token pretrain mix, capable of 69.6 on SWE-Bench and 74.8 on Tau2 Bench—both first-tier scores.</li>
+              <li><strong>Qwen3-VL & Omni:</strong> 32/36 publicly reported audiovisual benchmarks at SOTA across speech, vision, and video understanding.</li>
+              <li><strong>Qwen3-Coder:</strong> accelerated reasoning plus safer completions for IDE workflows.</li>
+              <li><strong>Open ecosystem:</strong> 300+ models released, 600M cumulative downloads, 170k derivative checkpoints—making Qwen arguably the world’s largest open-model matrix.</li>
+            </ul>
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/qwen/ranking.png"
+                alt="Leaderboards featuring Qwen models"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/qwen/qwen-family.png"
+                alt="Qwen model family"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+            <p>The callout from Alibaba’s comms team made it explicit: technology earns attention, but brand keeps it. Without a recognizable flag, trillion-parameter feats are just GitHub release notes.</p>
+
+            <h3 className="text-2xl font-bold mt-12">Putting the assistant to the test</h3>
+            <p>I ran the same narrative-writing request that originally circulated inside Alibaba (“Write an Oppenheimer confession right before the Trinity test”). Qwen3-Max responded with startlingly human cadence—especially the closing line, “before the night has fully ended.”</p>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/qwen/qwen-conversation.png"
+                alt="Qwen conversation sample"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p>The math and vision sandbox is equally confident. Need a 3×3 grid meme or annotated homework sheet? Just drop the photo, describe the edit, and Qwen routes to Wan image edit or Omni reasoning without manual mode switching.</p>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/qwen/qwen-math.png"
+                alt="Qwen math helper"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Product decisions that matter</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Search-on by default:</strong> prevents outdated answers without asking for user literacy about cutoff dates.</li>
+              <li><strong>Intent routing in one chat box:</strong> no need to “find the AI photo button”; just describe the edit.</li>
+              <li><strong>Access to Qwen3-Max:</strong> first time regular users can run Alibaba’s flagship model inside an official app–with system prompts tuned for friendliness.</li>
+              <li><strong>Wan + Omni integration:</strong> image editing, video calls, real-time transcription, and AI video generation now share the same conversation log.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mt-12">Timeline recap: Tongyi → Qwen</h3>
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow divide-y divide-slate-100 dark:divide-slate-800">
+              <div className="p-5">
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">2023</p>
+                <p className="mt-1"><strong>April:</strong> Tongyi Qianwen debuts; August sees Qwen-7B open-sourced; September welcomes the Tongyi App public launch.</p>
+              </div>
+              <div className="p-5">
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">2023 Q4 – 2024</p>
+                <p className="mt-1">Org reshuffles move the Tongyi app from Alibaba Cloud to the Intelligent Information Group; April 2024 ships Tongyi App 3 with Thousand-Question 3 models.</p>
+              </div>
+              <div className="p-5">
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">January 2025</p>
+                <p className="mt-1">Qwen Chat launches on the web (chat.qwen.ai) under Alibaba Cloud’s Tongyi Lab—serving as the playground for raw model capability demos.</p>
+              </div>
+              <div className="p-5">
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">March – October 2025</p>
+                <p className="mt-1">Quark (Ali’s information app) is redefined as the AI flagship, adds conversation modes, and incubates “Project C” (C for Chat) around Qwen models.</p>
+              </div>
+              <div className="p-5">
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">November 2025</p>
+                <p className="mt-1">Tongyi App renames to Qwen App; version jumps from 3.60.0 straight to 5.0.0; public beta opens simultaneously on web, desktop, and mobile with free access.</p>
+              </div>
+            </div>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/qwen/apsara.png"
+                alt="Qwen ecosystem overview"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Brand lesson for the rest of us</h3>
+            <p>The translated closing thought from the original piece hits home: technology lets you speak; brand makes anyone remember the sentence. Every article you post, every product rename, every UI accent becomes a line in your personal brand statement. Alibaba now plays both the tech card (Qwen3-Max) and the brand card (Qwen App) with equal conviction. The obvious question is: who places the next bet?</p>
+            <p className="font-semibold text-slate-900 dark:text-white">So yes, Qwen App might be “China’s ChatGPT.” But the deeper story is that even trillion-parameter breakthroughs need a name people can tap on. Have a question? Ask Qwen.</p>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 
