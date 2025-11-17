@@ -548,6 +548,145 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'gpt-5-1-emotional-upgrade') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-rose-200 dark:border-rose-800 bg-gradient-to-br from-rose-50 via-white to-slate-50 dark:from-rose-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-rose-500 font-semibold">Release log • 17/11/2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">GPT-5.1 stops chasing leaderboards and starts chasing “good vibes.”</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">OpenAI’s surprise drop focuses on EQ: GPT-5.1 Instant and GPT-5.1 Thinking now adapt their tone, pick personalities, and spend the right amount of time thinking before they respond. The update reads more like a lifestyle product launch than a benchmark dump—and that’s the point.</p>
+            </div>
+
+            <h3 className="text-2xl font-bold">Two brains, both warmer</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>GPT-5.1 Instant</strong>: the model you touch most often. Still fast, now more playful, more obedient, and capable of <em>adaptive reasoning</em> (quick answers for easy asks, a beat of silent thinking for hard ones).</li>
+              <li><strong>GPT-5.1 Thinking</strong>: the “deep work” brain. It dials up reasoning time only when needed, trims jargon, and sounds less robotic without abandoning rigor.</li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/chatgpt5.1/new.png"
+                alt="GPT-5.1 feature overview"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold">Preset moods + DIY personalities</h3>
+            <p>The headline feature: you can now treat ChatGPT like a phone theme store. Beyond the classic Default/Friendly/Efficient trio, OpenAI added three official modes:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Professional</strong> for work reports.</li>
+              <li><strong>Candid</strong> when you want straight answers.</li>
+              <li><strong>Quirky</strong> for memes and gossip breaks.</li>
+            </ul>
+            <p>Fan favorites from the beta (<em>Techie</em> and <em>Snarky</em>) stay. You can also manually tune sliders for brevity, enthusiasm, scannability, and emoji frequency. Change it once, and the vibe sticks across every new thread.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/chatgpt5.1/personalization.png"
+                alt="ChatGPT personalization controls"
+                width={900}
+                height={560}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold">Rollout plan</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Pro/Plus/Go/Business:</strong> rolling out from 12 Nov onward.</li>
+              <li><strong>Free + logged-out:</strong> follow after premium wave completes.</li>
+              <li><strong>Enterprise & Education:</strong> 7-day early-access toggle (off by default) before auto-upgrading.</li>
+              <li><strong>API devs:</strong> GPT-5.1 Instant and GPT-5.1 Thinking land later this week as `gpt-5.1-chat-latest` and `gpt-5.1`.</li>
+              <li><strong>Legacy GPT-5</strong>: sticks around for paid users for ~3 months.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold">Instant vs. Thinking: what actually changed?</h3>
+            <div className="grid md:grid-cols-2 gap-6 my-8">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6">
+                <h4 className="text-xl font-semibold mb-2">GPT-5.1 Instant</h4>
+                <ul className="list-disc pl-5 space-y-2 text-sm">
+                  <li>Conversation style mirrors human banter; no more “classmate reading from a script.”</li>
+                  <li>Adaptive reasoning toggles extra thought only when questions warrant it.</li>
+                  <li>Better jailbreak resistance vs. GPT-5 (per StrongReject tests).</li>
+                  <li>Still the default model in the ChatGPT UI.</li>
+                </ul>
+              </div>
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6">
+                <h4 className="text-xl font-semibold mb-2">GPT-5.1 Thinking</h4>
+                <ul className="list-disc pl-5 space-y-2 text-sm">
+                  <li>Dynamic reasoning budget: ~2× faster on trivial tasks, up to 71% longer on gnarly ones.</li>
+                  <li>Plain-language explanations with fewer acronyms.</li>
+                  <li>Slight safety regressions on harassment/hate filters—flagged in the system card.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/chatgpt5.1/chatgpt5.1-instant.png"
+                alt="GPT-5.1 Instant UI"
+                width={900}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/chatgpt5.1/response.png"
+                alt="GPT-5.1 Thinking response timing"
+                width={900}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold">Safety: new dimensions</h3>
+            <p>OpenAI’s system card expands beyond typical abuse filters. GPT-5.1 now evaluates:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Mental health cues</strong> — can the assistant respond responsibly to isolation, delusion, or mania signals?</li>
+              <li><strong>Emotional reliance</strong> — does the conversation accidentally encourage unhealthy attachment?</li>
+            </ul>
+            <p>Overall safety matches GPT-5, except for the Thinking model’s “light regressions” around harassment/hate moderation. Meanwhile, Instant improves jailbreak resistance.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/chatgpt5.1/paper.png"
+                alt="GPT-5.1 system card excerpt"
+                width={900}
+                height={560}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold">Why this update matters</h3>
+            <p>No benchmark chart, no “+XX% on MMLU.” Instead, OpenAI quotes users: “A great AI isn’t just smart—it’s enjoyable.” GPT-5.1 is the first release to treat personality, tone, and empathy as first-class features. After the GPT-5 backlash, this feels like a tacit admission: accuracy wins respect, but warmth wins retention.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/chatgpt5.1/asking.png"
+                alt="Adaptive reasoning example"
+                width={900}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold">How to use it today</h3>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>Update to the latest ChatGPT app (web or native). Instant becomes the new default once your account gets the rollout.</li>
+              <li>Visit Settings → Personalization to pick a preset or tune your own sliders.</li>
+              <li>Tell ChatGPT mid-conversation how you want it to sound; it may offer to save that preference automatically.</li>
+              <li>For API work, swap to `gpt-5.1-chat-latest` (Instant) or `gpt-5.1` (Thinking) as soon as they show up in your account.</li>
+            </ol>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 mt-12">
+              <h4 className="text-xl font-semibold mb-3">TL;DR</h4>
+              <p>GPT-5.1 is a minor-number bump with a major attitude change. It adapts how long it thinks, how it speaks, and even how cheeky it feels—because OpenAI finally admits the chat part of ChatGPT matters as much as the GPT. IQ + EQ, one update.</p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 
@@ -561,9 +700,14 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <Link href="/" className="text-blue-600 hover:text-blue-800 mb-4 block">
-        ← Back to Main Page
-      </Link>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+        <Link href="/" className="text-blue-600 hover:text-blue-800">
+          ← Back to Main Page
+        </Link>
+        <Link href="/blog" className="text-blue-600 hover:text-blue-800 text-right">
+          Back to Blog →
+        </Link>
+      </div>
       <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
       <div className="flex items-center mb-6">
         <div className="relative w-8 h-8 mr-2 overflow-hidden rounded-full border border-gray-200 shadow-sm">

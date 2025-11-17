@@ -34,5 +34,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     author: 'Hovah Yii',
     description: 'Alibaba renames its consumer AI app to Qwen, unifying its trillion-parameter models and personal assistant experience into one brand that aims to become China’s ChatGPT.',
     ogImage: '/blog/qwen/qwen-app.png',
+  },
+  'gpt-5-1-emotional-upgrade': {
+    slug: 'gpt-5-1-emotional-upgrade',
+    title: 'GPT-5.1 Goes Emotional: Warmth, Styles, and Adaptive Reasoning',
+    date: '14 November 2025',
+    author: 'Hovah Yii',
+    description: 'OpenAI’s GPT-5.1 Instant and Thinking focus on EQ as much as IQ, shipping preset personalities, custom tone controls, adaptive reasoning, and new safety dimensions.',
+    ogImage: '/blog/chatgpt5.1/new.png',
   }
 };

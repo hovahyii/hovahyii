@@ -14,32 +14,15 @@ function BlogSection({ isDarkMode }: BlogSectionProps) {
           <FaBlog className="h-6 w-6 flex-none" />
           <span className="ml-3">Blog & Articles</span>
         </h2>
-        <div className="mt-4 space-y-4">
-          <Link 
-            href="/blog/how-to-publish-app-into-appgallery-store" 
-            className="block p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-          >
-            <h3 className="font-medium text-zinc-900 hover:text-blue-600">
-              How to Publish Your App into AppGallery Store
-            </h3>
-            <p className="text-sm text-zinc-600 mt-1">
-              Complete step-by-step guide on how to publish your Android app to Huawei AppGallery store.
-            </p>
-            <span className="text-xs text-zinc-500 mt-2 block">January 2025</span>
-          </Link>
-          <Link 
-            href="/blog/how-to-get-free-cursor-using-student-email" 
-            className="block p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-          >
-            <h3 className="font-medium text-zinc-900 hover:text-blue-600">
-              How to Get Cursor Premium for Free as a Student for 1 Year
-            </h3>
-            <p className="text-sm text-zinc-600 mt-1">
-              Step-by-step guide with screenshots to claim your free AI-powered code editor.
-            </p>
-            <span className="text-xs text-zinc-500 mt-2 block">May 8, 2025</span>
-          </Link>
-        </div>
+        <p className="mt-4 text-sm text-zinc-600">
+          Deep dives into launches, practical how-tos, and product notes—updated whenever something new ships.
+        </p>
+        <Link 
+          href="/blog"
+          className="mt-6 inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow"
+        >
+          Explore the Blog →
+        </Link>
       </div>
     </div>
   );
