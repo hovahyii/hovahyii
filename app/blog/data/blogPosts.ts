@@ -40,7 +40,15 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     title: 'GPT-5.1 Goes Emotional: Warmth, Styles, and Adaptive Reasoning',
     date: '14 November 2025',
     author: 'Hovah Yii',
-    description: 'OpenAI’s GPT-5.1 Instant and Thinking focus on EQ as much as IQ, shipping preset personalities, custom tone controls, adaptive reasoning, and new safety dimensions.',
+    description: 'OpenAI\’s GPT-5.1 Instant and Thinking focus on EQ as much as IQ, shipping preset personalities, custom tone controls, adaptive reasoning, and new safety dimensions.',
     ogImage: '/blog/chatgpt5.1/new.png',
+  },
+  'gemini-3-ultimate-ai': {
+    slug: 'gemini-3-ultimate-ai',
+    title: '👑 The Strongest AI of the Year: Google Gemini 3 Is Here!',
+    date: '20 November 2025',
+    author: 'Hovah Yii',
+    description: 'Google\'s ultimate weapon Gemini 3 launches with Pro version, claiming to be the strongest AI combining reasoning, multimodal, and vibe coding capabilities. Benchmark tests dominate the competition, even surpassing GPT-5.1.',
+    ogImage: '/blog/gemini-3/gemini-3-pro.png',
   }
 };

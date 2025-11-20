@@ -687,6 +687,291 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'gemini-3-ultimate-ai') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-purple-200 dark:border-purple-800 bg-gradient-to-br from-purple-50 via-white to-slate-50 dark:from-purple-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-purple-600 dark:text-purple-300 font-semibold">AI News • 20 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Google Gemini 3 launches as the ultimate AI powerhouse</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">In the early hours, Google's ultimate weapon Gemini 3 made its grand debut, launching straight with the top-tier Pro version. Claiming to be "the strongest reasoning + multimodal + vibe coding" three-in-one AI champion! Benchmark tests sweep the board, even defeating GPT-5.1, ushering in the next era of AI.</p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Executive Summary</h2>
+            <p>The model is trained on Google TPU with a 1 million token context window, suitable for applications requiring: Agent capabilities, advanced programming, long context, multimodal understanding, and algorithm development.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/gemini-3-pro.png"
+                alt="Gemini 3 Pro announcement"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">Dominating the Leaderboards</h3>
+            <p>Upon release, Gemini 3 practically dominated all benchmark tests, ranking first on the LMArena large model arena with an Elo score of 1501.</p>
+            
+            <p>To summarize Google's words, Gemini 3 Pro's top-tier core lies in these three points:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Dominating LMArena (1501 points) and WebDev (1487 points)</strong></li>
+              <li><strong>Humanity's Last Exam (HLE) achieving 45.8% highest score</strong> — PhD-level human reasoning</li>
+              <li><strong>King of long-term task planning on Vending-Bench 2</strong></li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/ranking.png"
+                alt="Gemini 3 benchmark rankings"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Full Availability</h3>
+            <p>Gemini 3 is now fully open. Starting today:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Regular and subscription users can use the new model through the Gemini App and Search AI mode</li>
+              <li>Developers and enterprise customers can access it through AI Studio, Vertex AI, and other channels</li>
+              <li>The highly anticipated "Deep Think Mode" is expected to be exclusively available to Google AI Ultra subscribers in the coming weeks</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Pure Power: Sam Altman's Response</h2>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/sam-altman.png"
+                alt="Sam Altman's congratulations"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Sam Altman sends his congratulations (Fun fact: Logan used to work with Sam)</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Vibe Coding: One Prompt, Full Stack</h2>
+            <p>Before writing this article, I threw this prompt to the just-released Gemini 3 Pro:</p>
+            
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm">
+                "Create a single-file HTML realistic GBA emulator with CSS-drawn exquisite purple console. Game content is Chinese version Pokémon turn-based battle (Pikachu VS Bulbasaur), must reference original GitHub pixel assets and use Web Audio to synthesize sound effects"
+              </p>
+            </div>
+
+            <p>Without multi-turn dialogue, it produced a complete project:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/pokemon.jpg"
+                alt="Pokemon GBA emulator created by Gemini 3"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>Of course... the world can be even more wild. This elementary school handwriting practice was also generated in one shot:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/typography.jpg"
+                alt="Typography example"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>There are even more outrageous examples from Twitter users:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/brick-builder.jpg"
+                alt="Brick builder app by @YiTayML"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-center text-gray-600 dark:text-gray-400">Created by @YiTayML</p>
+
+            <p className="mt-8">And this portfolio website from designer Zang:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/porfolio.png"
+                alt="Portfolio website design"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-gray-600 dark:text-gray-400">"If a big tech frontend developer can write code like this from a Figma design during the first review, I'd be burning incense in gratitude."</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">What's New Besides Gemini 3?</h2>
+            <ul className="list-disc pl-6 space-y-3">
+              <li><strong>Gemini 3 Pro:</strong> The world's strongest model, supporting multimodal reasoning, long context, and Agentic Coding</li>
+              <li><strong>Google Antigravity:</strong> A platform natively supporting Agent development, managing Agent tasks</li>
+              <li><strong>Generative UI:</strong> Directly generates interactive interfaces in Google Search</li>
+              <li><strong>Full-line deployment:</strong> Android Studio, Firebase, Gemini CLI all integrated, with extremely aggressive pricing</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Real Stats: The Numbers Don't Lie</h2>
+            <p>First, let's look at the benchmarks. Gemini 3 Pro achieved 1501 Elo on LMArena Leaderboard, leading by a significant margin:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/gemini-3-pro.png"
+                alt="LMArena leaderboard"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>Across various benchmarks, it comprehensively surpasses previous champions.</p>
+
+            <p>For longer time-span planning capabilities, Gemini leads even more significantly, such as on the Vending-Bench 2 test (you could call it the "business acumen leaderboard"):</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/vending-bench.png"
+                alt="Vending Bench 2 results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Deep Think Mode</h2>
+            <p>To support this execution capability, Google has productized Chain of Thought, introducing Deep Think mode:</p>
+
+            <ul className="list-disc pl-6 space-y-3 mb-6">
+              <li><strong>Thought Signatures:</strong> API returns include encrypted "thought processes" where the model performs multi-step reasoning, reflection, and verification before output. This solves the problem of models "going off track" in long-chain logic</li>
+              <li><strong>Thinking Levels:</strong> Developers configure in the API how long the model should "think." Choose quick responses for simple tasks, and deep thinking for complex logic</li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/deep-think.png"
+                alt="Deep Think mode visualization"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>The results are immediate:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>On Humanity's Last Exam, with Deep Think mode enabled, Gemini 3 Pro's score jumped from 37.5% to 41.0%</li>
+              <li>On the GPQA Diamond test, it reached 93.8%. This is achieved purely through model reasoning without any external tool assistance</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Coding Tools: The Age of Vibe Coding</h2>
+            <p>A popular term lately: Vibe Coding — you only need to describe the "feeling" (Vibe) and functionality you want, and the model can implement it.</p>
+            <p>Currently, Gemini 3 Pro is also the strongest Vibe Coding model.</p>
+
+            <p className="mt-6">More impressively, Google delivered two heavyweight productivity tools for this: Google Antigravity and Gemini CLI.</p>
+
+            <h3 className="text-2xl font-bold mt-10">Google Antigravity: IDE for the Agent Era</h3>
+            <p>This platform's positioning is the IDE for the Agent era. If VS Code is designed for "humans," Antigravity is designed for "humans + Agents."</p>
+
+            <p>As a brand new development platform (MacOS/Windows/Linux preview), its underlying logic is completely different from traditional IDEs:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Task-Oriented:</strong> The operation unit changes from "files" to "tasks." Developers issue requirements in the Inbox</li>
+              <li><strong>Multi-Agent Collaboration:</strong> The system supports multiple Agents in parallel. Open one Agent for frontend on the left, another for backend testing on the right, and a middle Agent for documentation</li>
+              <li><strong>Autonomy:</strong> Agents have control over editors, terminals, and browsers. They write code, automatically run terminals, automatically open browsers for testing, and fix errors themselves</li>
+              <li><strong>Artifacts:</strong> Agents deliver not just conversations but standardized "artifacts" — task lists, implementation plans, screenshots, code changes</li>
+            </ul>
+
+            <p>You become the AI's manager, reviewing its plans, approving its operations, and accepting its deliverables.</p>
+
+            <h3 className="text-2xl font-bold mt-10">Gemini CLI: Command-Line AI Power</h3>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/gemini-3/gemini-cli.jpg"
+                alt="Gemini CLI in action"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>Install with:</p>
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-4">
+              <code>npm install -g @google/gemini-cli@latest</code>
+            </div>
+
+            <p>Gemini CLI is Google's equivalent to Claude Code/OpenAI Codex, a command-line AI tool:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Natural Language to Shell:</strong> Input <code>gemini "find the git commit I broke last week"</code>, and it automatically parses and executes the git bisect process</li>
+              <li><strong>System-Level Operations:</strong> It can read and write local files, refactor code, and even parse images through visual capabilities to generate engineering files</li>
+            </ul>
+
+            <p>In the official demo, a developer asked it to create a 3D Golden Gate Bridge... and it was done.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Generative UI: Search Becomes Application</h2>
+            <p>Google Search has undergone a major interaction-level upgrade.</p>
+            <p>In the past, users searching for "mortgage calculator" would get ten links. Now Gemini 3 in AI Mode writes you a calculator on the spot.</p>
+
+            <p>This is called Generative UI (Generative User Interface):</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Dynamic Generation:</strong> The model writes HTML/JS/CSS in real-time based on specific questions and renders interactive components directly on the frontend</li>
+              <li><strong>Personalized:</strong> User asks "compare cars A and B," generates a static comparison table; user asks "which is more cost-effective," generates an interactive decision tool with filtering, sorting, and highlighting</li>
+              <li><strong>Complex Simulation:</strong> User asks "how does three-body gravity work," model directly generates a physics simulator where users can drag planets to observe orbital changes</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Full-Stack Ecosystem: Android Studio & Firebase</h2>
+            
+            <h3 className="text-2xl font-bold mt-8">Android Studio "Otter"</h3>
+            <p>In the latest Android Studio Otter version, Gemini 3 Pro is integrated into the IDE's core workflow, called Agent Mode.</p>
+            <p>Beyond code completion, you can directly issue vague instructions like "refactor the login module to support the new authentication protocol," and Gemini 3 will analyze the entire project structure, locate relevant files, and execute cross-file code modifications.</p>
+
+            <h3 className="text-2xl font-bold mt-8">Firebase AI Logic</h3>
+            <p>Previously, mobile developers needed to set up backend services to access large models (to hide API Keys and handle authentication). The Firebase AI Logic SDK release changes this architecture.</p>
+            <p>Developers can now directly call Gemini 3 Pro Preview through iOS, Android, Flutter, or Web client SDKs. Google hosts authentication logic at the Firebase level, so developers don't need to maintain middleware servers to securely access the model.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Hard Specs: Pricing & Specifications</h2>
+            <p>No nonsense, straight to the numbers:</p>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
+              <h4 className="text-xl font-bold mb-4">Model Version</h4>
+              <p className="mb-2"><strong>gemini-3-pro-preview</strong></p>
+              
+              <h4 className="text-lg font-semibold mt-4 mb-2">Context Window</h4>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Context: 1 million Tokens</li>
+                <li>Max Output: 64k Tokens</li>
+              </ul>
+
+              <h4 className="text-lg font-semibold mt-4 mb-2">Pricing Strategy</h4>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Input: $2.00 / 1 million Tokens</li>
+                <li>Output: $12.00 / 1 million Tokens</li>
+                <li>Applicable for contexts within 200k</li>
+              </ul>
+
+              <h4 className="text-lg font-semibold mt-4 mb-2">Multimodal</h4>
+              <p>Native support for text, image, audio, video, PDF</p>
+
+              <h4 className="text-lg font-semibold mt-4 mb-2">Availability</h4>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Developers: Google AI Studio / Vertex AI now open</li>
+                <li>Enterprise Users: Gemini Enterprise integration</li>
+                <li>Regular Users: US region Google AI Pro/Ultra subscribers can experience in Search and App</li>
+              </ul>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: Google, Amazing!</h2>
+            
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
+              <p className="text-lg">Gemini 3 has achieved godlike status through pure power. This is not just an AI model upgrade, but a comprehensive revolution in development tools, search experience, and mobile ecosystems. From Vibe Coding to Deep Think Mode, from Antigravity to Generative UI, Google has proven that the next era of AI has truly arrived.</p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 
