@@ -50,5 +50,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     author: 'Hovah Yii',
     description: 'Google\'s ultimate weapon Gemini 3 launches with Pro version, claiming to be the strongest AI combining reasoning, multimodal, and vibe coding capabilities. Benchmark tests dominate the competition, even surpassing GPT-5.1.',
     ogImage: '/blog/gemini-3/gemini-3-pro.png',
+  },
+  'openai-gpt-5-1-pro-codex-max': {
+    slug: 'openai-gpt-5-1-pro-codex-max',
+    title: '🚀 OpenAI Strikes Back: GPT-5.1 Pro and GPT-5.1-Codex-Max',
+    date: '21 November 2025',
+    author: 'Hovah Yii',
+    description: 'OpenAI releases GPT-5.1 Pro and GPT-5.1-Codex-Max, the most powerful coding model yet. With 30% fewer thinking tokens, 24-hour autonomous coding, and 77.9% on SWE-bench Verified, the AI coding war intensifies.',
+    ogImage: '/blog/openai/gpt-5.1-announcement.png',
   }
 };

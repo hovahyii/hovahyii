@@ -12,6 +12,8 @@ interface BlogPostClientProps {
 
 export default function BlogPostClient({ slug, postData }: BlogPostClientProps) {
   const [post, setPost] = useState<BlogPost | null>(null);
+  const [views, setViews] = useState<number>(0);
+  const [isLoadingViews, setIsLoadingViews] = useState(true);
   
   useEffect(() => {
     // In a real application, you would fetch this data from an API or CMS
@@ -972,8 +974,739 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'openai-gpt-5-1-pro-codex-max') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 via-white to-slate-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Breaking News • 21 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">OpenAI can't sit still! Late-night release of GPT-5.1 Pro and GPT-5.1-Codex-Max</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Today, OpenAI released its latest agentic programming model GPT-5.1 Codex Max, built on OpenAI's newest reasoning model and specifically trained for complex tasks in software engineering, research, and mathematics. Simultaneously, OpenAI upgraded GPT-5 Pro to GPT-5.1 Pro, claiming stronger capabilities in writing and data analysis.</p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/gpt-5.1-announcement.png"
+                alt="GPT-5.1 announcement"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Summary from the Experts</h2>
+            <ul className="list-disc pl-6 space-y-3">
+              <li><strong>Slow but incredibly smart:</strong> Like talking to a super brain, requires patience to wait.</li>
+              <li><strong>Strong instruction-following:</strong> Not like an assistant, more like an outsourced engineer who strictly follows requirements.</li>
+              <li><strong>Weakness in frontend and creative writing:</strong> Gemini 3 is still stronger in these areas.</li>
+              <li><strong>Biggest shortcoming is the interface:</strong> Only available in ChatGPT, can't integrate into programming tools.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mt-10">How Experts Use AI Now</h3>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>For daily small tasks, UI work, urgent deadlines:</strong> Use Gemini 3 — fast, accurate, and efficient!</li>
+              <li><strong>For super difficult problems that must be done right the first time:</strong> Call on GPT-5.1 Pro, let it think slowly, stable!</li>
+            </ul>
+
+            <p className="text-gray-600 dark:text-gray-400 italic mt-6">The AI world updates daily — truly hard to keep up...</p>
+
+            <p>Just two days ago, Grok 4.1 and Gemini 3 Pro were released. Today, OpenAI GPT-5.1 Pro quietly launched!</p>
+            <p>No blog post, just a two-sentence announcement.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/openai-developers-announcement.png"
+                alt="OpenAI Developers announcement"
+                width={900}
+                height={560}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>As we all know, GPT-5.1 emphasizes "both EQ and IQ." Pro undoubtedly pushes these two advantages to an even higher level.</p>
+            <p>On the same day, OpenAI's brand new ace coding model <strong>GPT-5.1-Codex-Max</strong> officially launched on the Codex platform!</p>
+
+            <p>From the naming, it's clear it's based on GPT-5.1 and specifically trained for agent tasks in software, engineering, mathematics, and research.</p>
+            <p>Therefore, GPT-5.1-Codex-Max is more capable, faster to respond, and more token-efficient to use.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Designed for Long-Duration, High-Intensity Development</h2>
+            <p>The new model is specifically designed for "long-duration, high-intensity" development tasks.</p>
+            <p>Put simply, it can work autonomously for over 24 hours continuously, processing millions of tokens in one go and delivering working results.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/benchmarks.png"
+                alt="Performance benchmarks"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>This validates that the Scaling Law continues to hold.</p>
+            <p>This is because GPT-5.1-Codex-Max is OpenAI's first model with native "compression" mechanism support, capable of working across multiple contexts.</p>
+            <p>Now, tasks like project refactoring, deep debugging, and multi-hour agent loops can be handled steadily.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Current Availability</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>GPT-5.1 Pro is now available to all Pro subscription users</li>
+              <li>GPT-5.1-Codex-Max is supported in Codex for CLI, IDE extensions, cloud, and code review usage</li>
+              <li>API interfaces will be online soon</li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/meme.png"
+                alt="AI battle meme"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">As 2025 nears its end, the ultimate AI showdown is imminent. Between GPT-5.1 Pro and Gemini 3 Pro, who will claim victory?</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">OpenAI's Strongest Programming Model</h2>
+            <p>This GPT-5.1-Codex-Max was forged on the "real battlefield"!</p>
+            <p>It has been specifically trained for common engineering tasks such as PR creation, code review, frontend development, and Q&A.</p>
+            <p>In multiple cutting-edge coding evaluations, it easily surpasses all previous OpenAI models.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/swe-bench.png"
+                alt="SWE-bench results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>On SWE-bench Verified evaluation, GPT-5.1-Codex-Max achieved a high score of <strong>77.9%</strong>.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/swe-bench-verified.png"
+                alt="SWE-bench Verified detailed results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>GPT-5.1-Codex-Max not only scores high but also offers a major upgrade in actual experience!</p>
+            <p>It's OpenAI's first model that can run in Windows environments, with training optimized for Codex CLI collaboration scenarios, making it more user-friendly.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">30% Reduction in Thinking Tokens</h2>
+            <p>Moreover, GPT-5.1-Codex-Max is more cost-effective to use.</p>
+            <p>At the same "medium" reasoning intensity, it not only performs better than GPT-5.1-Codex but also uses approximately 30% fewer thinking tokens.</p>
+
+            <p>For tasks not sensitive to latency, the new "Extra High" (xhigh) reasoning intensity can spend more time to get quality answers.</p>
+            <p>However, for daily use, OpenAI still recommends medium.</p>
+
+            <p>Saved tokens mean significantly reduced costs in actual development — a blessing for developers.</p>
+
+            <h3 className="text-2xl font-bold mt-10">Demo Comparisons</h3>
+            <p>The following demos clearly show the token usage differences between GPT-5.1-Codex-Max and GPT-5.1-Codex. Even with reduced tokens, the former doesn't compromise on functionality or visual appeal in frontend design.</p>
+
+            <p>For example, asking them to generate a browser application — an interactive CartPole reinforcement learning sandbox that includes a small policy gradient controller, metrics panel, and an SVG network visualizer:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/cartpole.gif"
+                alt="CartPole demo comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-center text-gray-600 dark:text-gray-400">Top: GPT-5.1-Codex-Max; Bottom: GPT-5.1-Codex</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/codex-max.png"
+                alt="Codex-Max token usage"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>GPT-5.1-Codex-Max completed the task with only 27k thinking tokens, and the code is more concise.</p>
+
+            <p>Another demo requirement: Create a solar system gravity well sandbox that visualizes object movement in a 2D gravitational potential field and supports drag-to-pan view and orbit observation:</p>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/openai/sandbox.gif"
+                alt="Sandbox demo"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/openai/test-particles.gif"
+                alt="Test particles"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow"
+              />
+            </div>
+            <p className="text-center text-gray-600 dark:text-gray-400">Top: GPT-5.1-Codex-Max; Bottom: GPT-5.1-Codex</p>
+
+            <p>GPT-5.1-Codex-Max again used fewer tokens and more streamlined code to complete the task.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Run Wild for 24 Hours: It's All "Compression"</h2>
+            <p>GPT-5.1-Codex-Max is this powerful because it employs a brand new mechanism.</p>
+
+            <h3 className="text-2xl font-bold mt-8">The Compression Breakthrough</h3>
+            <p>The "compression" mechanism allows GPT-5.1-Codex-Max to break through limitations and handle tasks that would otherwise be impossible due to excessive context length.</p>
+            <p>For example, complex refactoring and long-duration agent loops.</p>
+
+            <p>It automatically organizes historical content, filters and retains the most critical context, thereby achieving coherence over long time spans.</p>
+
+            <p>In Codex, when approaching the context limit, GPT-5.1-Codex-Max automatically executes session compression, refreshes the context, and repeats this process multiple times until the task is complete.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/terminal.gif"
+                alt="Terminal demo showing compression"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Video has been edited and accelerated to show the process more clearly</p>
+
+            <p>In the case above, GPT-5.1-Codex-Max is autonomously refactoring Codex CLI's open-source repository.</p>
+            <p>You can see that when the context nears capacity, it automatically compresses to free up space, thereby completing the task without losing progress.</p>
+
+            <p>Internal testing shows that GPT-5.1-Codex-Max can work autonomously for over <strong>24 hours continuously</strong>.</p>
+            <p>During this time, it can continuously iterate implementations, fix test failures, and ultimately deliver usable results.</p>
+
+            <p>This long-duration, coherent task capability is a foundational building block toward more general and reliable AI systems.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/new-sota.png"
+                alt="New SOTA on METR"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>On METR evaluation, GPT-5.1-Codex-Max's long-range task capability became the new SOTA.</p>
+
+            <p>Inside OpenAI, 95% of engineers use Codex every week. Since its introduction, the team's Pull Request count has increased by approximately 70%.</p>
+            <p>Now, GPT-5.1-Codex-Max paired with continuously upgraded CLI, IDE extensions, cloud integration, and code review tools makes programming efficiency skyrocket.</p>
+
+            <h3 className="text-2xl font-bold mt-10">First Impressions from Users</h3>
+            <p>Some users were instantly amazed by their first experience:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/peter-gostev.png"
+                alt="Peter Gostev's review"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/bridge.gif"
+                alt="Bridge demo"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">GPT-5.1 Pro Launch: First Tests Are In</h2>
+            <p>As for GPT-5.1 Pro, as mentioned at the beginning, OpenAI only wrote two paragraphs of introduction in the version update log.</p>
+            <p>Although there was no dedicated blog post, experts who got early access were very excited to share their first-hand experiences.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/blog-chatgpt.png"
+                alt="ChatGPT blog announcement"
+                width={900}
+                height={560}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>After third-party evaluation by Epoch AI, GPT-5.1's performance after iteration is almost equivalent to GPT-5.</p>
+            <p>In "high" reasoning mode, both achieved an Efficiency Capability Index (ECI) score of 151.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/epoch-ai.png"
+                alt="Epoch AI comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">Expert Reviews</h3>
+            <p>Jackson Laboratory Professor and human immunologist Derya Unutmaz stated that GPT-5.1 Pro, with its significantly improved performance over GPT-5.0 Pro, is now his favorite model.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/questions.png"
+                alt="Immunology questions comparison"
+                width={900}
+                height={800}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>In the example above, he asked both 5.0 and 5.1 Pro about the most important unsolved mysteries in immunology and requested both models to explain each question in depth so that people without an immunology degree could understand its importance.</p>
+
+            <p>The first two responses are from GPT-5.1 Pro, followed by the two shorter responses from GPT-5.0.</p>
+
+            <p>Clearly, GPT-5.1 Pro is superior because it makes these explanations easier for people without immunology backgrounds to understand while clearly articulating the importance and potential value of these questions.</p>
+
+            <p>In comparison, GPT-5.1 Pro shows qualitative improvements in both clarity and insight. Its responses maintain depth while being more complete, coherent, vivid, and easier to understand.</p>
+
+            <p>Although GPT-5.0's responses are also excellent in content, they lack thorough analysis.</p>
+
+            <h3 className="text-2xl font-bold mt-10">HyperWrite AI CEO's In-Depth Review</h3>
+            <p>HyperWrite AI CEO Matt Shumer also stated in an extremely long experience report: GPT-5.1 Pro is currently the best "brain," although slow, it's deeply thoughtful.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/matt-shumer.png"
+                alt="Matt Shumer's review"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p><a href="https://shumer.dev/gpt51proreview" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Read full review here</a></p>
+
+            <h4 className="text-xl font-semibold mt-6">Key Takeaways:</h4>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-6">
+              <h5 className="text-lg font-bold mb-3">🧠 Slow Response, But Incredibly Smart</h5>
+              <p>It's not only better at reasoning than most humans, but also smarter than any other model when handling truly tricky problems.</p>
+              <p>Within days, we expect to see examples of it solving problems that people thought were beyond current AI systems' capabilities.</p>
+            </div>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-6">
+              <h5 className="text-lg font-bold mb-3">✅ Instruction Following is the Biggest Highlight</h5>
+              <p>It truly strictly follows your requirements without deviating.</p>
+              <p>For serious coding tasks, it feels less like an "assistant" and more like an outsourced engineer working from specifications (even if your specifications are a bit vague).</p>
+            </div>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-6">
+              <h5 className="text-lg font-bold mb-3">🎨 Frontend and UX Design, and Writing Are Weaknesses</h5>
+              <p>Whether it's creative writing or designing beautiful UIs, Gemini 3 is still superior.</p>
+            </div>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-6">
+              <h5 className="text-lg font-bold mb-3">⚠️ But the Biggest Weakness Is Still the Interface</h5>
+              <p>It can only be used in ChatGPT, can't integrate into IDEs, and can't connect to other toolchains. This is identical to GPT-5 Pro.</p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: Programming Models Enter the "Agent Era"</h2>
+            
+            <div className="bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
+              <p className="text-lg mb-4">From GPT-5.1-Codex-Max, we can see that the new generation of programming models are no longer simple code generators, but programming agents capable of continuous work, automatic debugging, and proactive planning. Their long-term reasoning, context compression, and self-repair capabilities allow models to independently complete project-level tasks.</p>
+              <p className="text-lg">As running costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also change — shifting from "writing code" to "describing requirements + reviewing results," with agents expected to undertake more implementation and iteration work.</p>
+            </div>
+          </div>
+        )
+      });
+    } else if (slug === 'openai-gpt-5-1-pro-codex-max') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-green-200 dark:border-green-800 bg-gradient-to-br from-green-50 via-white to-slate-50 dark:from-green-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Breaking News • 21 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">OpenAI couldn't sit still—GPT-5.1 Pro and GPT-5.1-Codex-Max released overnight!</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Today, OpenAI released its latest agentic programming model, GPT-5.1-Codex-Max, built on OpenAI's newest reasoning model and specifically trained for complex tasks in software engineering, research, and mathematics. Meanwhile, OpenAI upgraded GPT-5 Pro to GPT-5.1 Pro, reportedly stronger in writing and data analysis than its predecessor.</p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/gpt-5.1-announcement.png"
+                alt="GPT-5.1 announcement"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">What the Experts Are Saying</h2>
+            
+            <div className="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 mb-8">
+              <ul className="list-disc pl-6 space-y-3">
+                <li><strong>Slow but incredibly smart:</strong> Like talking to a super brain, requires patience.</li>
+                <li><strong>Strong instruction-following:</strong> Less like an assistant, more like a contract engineer who strictly follows specifications.</li>
+                <li><strong>Weaknesses in frontend and creative writing:</strong> Gemini 3 is still stronger in these areas.</li>
+                <li><strong>Biggest shortcoming is the interface:</strong> Only available in ChatGPT, can't be integrated into coding tools.</li>
+              </ul>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">How Experts Use AI Now</h3>
+            <ul className="list-disc pl-6 space-y-2 mb-8">
+              <li><strong>Daily tasks, UI design, time-sensitive work:</strong> Use Gemini 3—fast and precise!</li>
+              <li><strong>Super difficult problems that must be done right the first time:</strong> Call on GPT-5.1 Pro, let it think slowly and get it right!</li>
+            </ul>
+
+            <p className="text-gray-600 dark:text-gray-400 italic mb-8">The AI world updates daily—it's getting hard to keep up... Just two days ago, Grok 4.1 and Gemini 3 Pro were released, and today OpenAI's GPT-5.1 Pro quietly launched!</p>
+
+            <p>No blog post, just a two-sentence announcement. As everyone knows, GPT-5.1 emphasizes both "EQ and IQ," and Pro undoubtedly takes these advantages to an even higher level.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">GPT-5.1-Codex-Max: The New Coding Champion</h2>
+            
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/openai-developers-announcement.png"
+                alt="OpenAI Codex announcement"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>On the same day, OpenAI's brand new flagship coding model, GPT-5.1-Codex-Max, officially launched on the Codex platform!</p>
+
+            <p>As the name suggests, it's built on GPT-5.1 and specifically trained for agentic tasks in software engineering, mathematics, and research.</p>
+
+            <p>As a result, GPT-5.1-Codex-Max is more capable, responds faster, and uses fewer tokens. The new model is designed for "long-duration, high-intensity" development tasks.</p>
+
+            <p className="font-semibold">Here's the thing: it can work autonomously for over 24 hours continuously, processing millions of tokens in one go and delivering finished results.</p>
+
+            <h3 className="text-2xl font-bold mt-10">Scaling Law Still Holds</h3>
+            <p>GPT-5.1-Codex-Max is OpenAI's first model with native "compression" support, allowing it to work across multiple contexts. Tasks like project refactoring, deep debugging, and multi-hour agent loops—it can handle them all steadily.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/benchmarks.png"
+                alt="Benchmark results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">Availability</h3>
+            <ul className="list-disc pl-6 space-y-2 mb-8">
+              <li>GPT-5.1 Pro is now available to all Pro subscribers</li>
+              <li>GPT-5.1-Codex-Max is supported in Codex for CLI, IDE extensions, cloud, and code review</li>
+              <li>API access coming soon</li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/meme.png"
+                alt="GPT-5.1 Pro vs Gemini 3 Pro showdown"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">As 2025 nears its end, the ultimate AI showdown is imminent. Between GPT-5.1 Pro and Gemini 3 Pro, who will emerge victorious?</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">OpenAI's Strongest Programming Model</h2>
+            
+            <p>This time's GPT-5.1-Codex-Max was forged on the "real battlefield"! It has been specifically trained on common engineering tasks such as PR creation, code review, frontend development, and Q&A.</p>
+
+            <p>In multiple cutting-edge coding evaluations, it easily surpasses all of OpenAI's previous models.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/swe-bench.png"
+                alt="SWE-bench results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>On SWE-bench Verified evaluation, GPT-5.1-Codex-Max achieved a high score of 77.9%.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/swe-bench-verified.png"
+                alt="SWE-bench Verified detailed results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>GPT-5.1-Codex-Max not only scores high on benchmarks but also provides a major upgrade in real-world experience! It's OpenAI's first model that can run in Windows environments, and it was optimized during training for Codex CLI collaboration scenarios, making it more user-friendly.</p>
+
+            <h3 className="text-2xl font-bold mt-10">30% Fewer Thinking Tokens</h3>
+            <p>Not only that, GPT-5.1-Codex-Max is also more cost-effective to use.</p>
+
+            <p>At the same "medium" reasoning intensity, it not only performs better than GPT-5.1-Codex but also reduces thinking token usage by approximately 30%.</p>
+
+            <p>For latency-insensitive tasks, the new "Extra High" (xhigh) reasoning intensity can spend more time to get better answers. However, for daily use, OpenAI still recommends medium.</p>
+
+            <p>Saving tokens means significantly lower costs in actual development—a blessing for developers!</p>
+
+            <h3 className="text-2xl font-bold mt-10">Demo: CartPole Reinforcement Learning</h3>
+            <p>The following demos clearly show the token usage difference between GPT-5.1-Codex-Max and GPT-5.1-Codex. Even with reduced tokens, the former doesn't compromise on functionality or aesthetics in frontend design.</p>
+
+            <p>For example, generating an interactive CartPole reinforcement learning sandbox browser app, including a small policy gradient controller, metrics panel, and an SVG network visualizer:</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/cartpole.gif"
+                alt="CartPole demo comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-center text-gray-600 dark:text-gray-400">Top: GPT-5.1-Codex-Max; Bottom: GPT-5.1-Codex</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/codex-max.png"
+                alt="Token usage comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>GPT-5.1-Codex-Max completed the task using only 27k thinking tokens, with more concise code.</p>
+
+            <h3 className="text-2xl font-bold mt-10">Demo: Solar System Gravity Well</h3>
+            <p>This demo requires creating a solar system gravity well sandbox that visualizes object motion in a 2D gravitational potential field, supporting drag-to-pan view and orbit observation:</p>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/openai/sandbox.gif"
+                alt="Gravity sandbox demo"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/openai/test-particles.gif"
+                alt="Test particles demo"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Top: GPT-5.1-Codex-Max; Bottom: GPT-5.1-Codex</p>
+
+            <p>GPT-5.1-Codex-Max again used fewer tokens and more refined code to complete the task.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Running for a Full Day: It's All About "Compression"</h2>
+
+            <p>The "compression" mechanism allows GPT-5.1-Codex-Max to break through limitations and handle tasks that were previously impossible due to excessive context length, such as complex refactoring and long-running agent loops.</p>
+
+            <p>It automatically organizes historical content, filters and retains the most critical context, thus maintaining coherence over long time spans.</p>
+
+            <p>In Codex, when approaching the context limit, GPT-5.1-Codex-Max automatically performs session compression, refreshes the context, and repeats this process multiple times until the task is complete.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/terminal.gif"
+                alt="Terminal session with compression"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Video has been edited and accelerated to better demonstrate the process</p>
+
+            <p>In the case above, GPT-5.1-Codex-Max is autonomously refactoring Codex CLI's open-source repository. When the context is nearly full, it automatically compresses to free up space, completing the task without losing progress.</p>
+
+            <p className="font-semibold">Internal testing shows GPT-5.1-Codex-Max can work autonomously for over 24 hours continuously, iterating implementations, fixing test failures, and ultimately delivering usable results.</p>
+
+            <p>This long-duration, coherent task capability is a foundational building block toward more general and reliable AI systems.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/new-sota.png"
+                alt="METR evaluation - new SOTA"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>In METR evaluation, GPT-5.1-Codex-Max's long-range task capability became the new SOTA.</p>
+
+            <p>Within OpenAI, 95% of engineers already use Codex weekly, and since its introduction, the team's Pull Request count has increased by approximately 70%.</p>
+
+            <p>Now, with GPT-5.1-Codex-Max paired with continuously upgraded CLI, IDE extensions, cloud integration, and code review tools, programming efficiency is taking off.</p>
+
+            <h3 className="text-2xl font-bold mt-10">First Impressions from Users</h3>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/peter-gostev.png"
+                alt="User testimonial"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/bridge.gif"
+                alt="Bridge demo"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">GPT-5.1 Pro Launch: First Reviews</h2>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/blog-chatgpt.png"
+                alt="ChatGPT blog announcement"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>As mentioned at the beginning, OpenAI only wrote two paragraphs in the version update log. Although there's no dedicated blog post, those with early access are excitedly sharing their first impressions.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/epoch-ai.png"
+                alt="Epoch AI evaluation"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>According to third-party evaluation by Epoch AI, the performance of the updated GPT-5.1 is almost on par with GPT-5. In high reasoning mode, both scored 151 on the capability index (ECI).</p>
+
+            <h3 className="text-2xl font-bold mt-10">Expert Reviews</h3>
+
+            <p>Derya Unutmaz, professor at Jackson Laboratory and human immunologist, says GPT-5.0 Pro—which significantly improved performance over previous versions—is now his favorite model.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/questions.png"
+                alt="Immunology questions comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>In the example above, he asked both 5.0 and 5.1 Pro about the most important unsolved mysteries in immunology, requesting that both models explain each question in depth so that people without immunology degrees could understand their importance.</p>
+
+            <p>The first two responses are from GPT-5.1 Pro, and the next two shorter responses are from GPT-5.0.</p>
+
+            <p>You can see that GPT-5.1 Pro is clearly superior, as it makes these explanations easier to understand for those without immunology backgrounds while clearly articulating the importance and potential value of these questions.</p>
+
+            <p>In comparison, GPT-5.1 Pro shows qualitative improvements in both clarity and insight. While maintaining depth, its responses are more complete, coherent, vivid, and easier to understand. Although GPT-5.0's responses are also excellent in content, they lack thorough analysis.</p>
+
+            <h3 className="text-2xl font-bold mt-10">HyperWrite AI CEO's Review</h3>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/openai/matt-shumer.png"
+                alt="Matt Shumer's review"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>Matt Shumer, CEO of HyperWrite AI, also stated in a super long experience report: GPT-5.1 Pro is currently the best "brain," though slow, it's thoughtful and deliberate.</p>
+
+            <p><strong>Review link:</strong> <a href="https://shumer.dev/gpt51proreview" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://shumer.dev/gpt51proreview</a></p>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
+              <h4 className="text-xl font-bold mb-4">Key Takeaways</h4>
+              
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold text-lg mb-2">Slow but incredibly smart</h5>
+                  <p>It's not just better at reasoning than most humans—it's smarter than any other model when handling truly tricky problems. Within days, we'll likely see examples of it solving problems people thought today's AI systems couldn't handle.</p>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold text-lg mb-2">Instruction-following is the biggest highlight</h5>
+                  <p>It really strictly executes your requirements without going off track. For serious coding tasks, it feels less like an "assistant" and more like a contract engineer working from specifications (even if your specs are a bit vague).</p>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold text-lg mb-2">Frontend, UX design, and writing are weaknesses</h5>
+                  <p>Whether it's creative writing or designing beautiful UIs, Gemini 3 is superior. For most daily work, Gemini 3 is better—after all, waiting 10 minutes for an answer in a standalone interface is clearly not ideal.</p>
+                  <p className="mt-2">But for any task requiring deep thinking, planning, and research, and anything that must be done right the first time, GPT-5.1 Pro is better.</p>
+                </div>
+
+                <div>
+                  <h5 className="font-semibold text-lg mb-2">The biggest weakness is still the interface</h5>
+                  <p>It can only be used in ChatGPT, cannot be integrated into IDEs, and cannot connect to other tool chains. This is identical to GPT-5 Pro.</p>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: Programming Models Enter the "Agent Era"</h2>
+            
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
+              <p className="text-lg mb-4">From GPT-5.1-Codex-Max, we can see that the new generation of programming models is no longer a simple code generator but a programming agent capable of continuous work, automatic debugging, and active planning. Its long-term reasoning, context compression, and self-repair capabilities enable the model to independently complete project-level tasks.</p>
+              
+              <p className="text-lg">As operating costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also change—shifting from "writing code" to "describing requirements + reviewing results," with agents taking on more implementation and iteration work.</p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
+
+  // Track and fetch view count
+  useEffect(() => {
+    const trackView = async () => {
+      try {
+        // Check if this view has been counted in this session
+        const viewedKey = `blog_viewed_${slug}`;
+        const hasViewed = sessionStorage.getItem(viewedKey);
+
+        if (!hasViewed) {
+          // Increment view count
+          await fetch('/api/views', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ slug }),
+          });
+          sessionStorage.setItem(viewedKey, 'true');
+        }
+
+        // Fetch current view count
+        const response = await fetch(`/api/views?slug=${slug}`);
+        const data = await response.json();
+        setViews(data.views || 0);
+        setIsLoadingViews(false);
+      } catch (error) {
+        console.error('Error tracking views:', error);
+        setIsLoadingViews(false);
+      }
+    };
+
+    trackView();
+  }, [slug]);
 
   if (!post) {
     return (
@@ -994,16 +1727,42 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         </Link>
       </div>
       <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
-      <div className="flex items-center mb-6">
-        <div className="relative w-8 h-8 mr-2 overflow-hidden rounded-full border border-gray-200 shadow-sm">
-          <Image 
-            src="/hovah.png" 
-            alt="Hovah Yii" 
-            fill
-            className="object-cover"
-          />
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center">
+          <div className="relative w-8 h-8 mr-2 overflow-hidden rounded-full border border-gray-200 shadow-sm">
+            <Image 
+              src="/hovah.png" 
+              alt="Hovah Yii" 
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-gray-600 dark:text-gray-400">{post.author} • {post.date}</p>
         </div>
-        <p className="text-gray-600">{post.author} • {post.date}</p>
+        <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            strokeWidth={1.5} 
+            stroke="currentColor" 
+            className="w-5 h-5"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" 
+            />
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" 
+            />
+          </svg>
+          <span className="text-sm font-medium">
+            {isLoadingViews ? '...' : views.toLocaleString()}
+          </span>
+        </div>
       </div>
       
       {post.content}
