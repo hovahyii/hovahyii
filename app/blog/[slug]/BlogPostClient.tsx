@@ -1680,22 +1680,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
   useEffect(() => {
     const trackView = async () => {
       try {
-        // Check if this view has been counted in this session
-        const viewedKey = `blog_viewed_${slug}`;
-        const hasViewed = sessionStorage.getItem(viewedKey);
+        // Increment view count every time the page loads
+        const response = await fetch('/api/views', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ slug }),
+        });
 
-        if (!hasViewed) {
-          // Increment view count
-          await fetch('/api/views', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ slug }),
-          });
-          sessionStorage.setItem(viewedKey, 'true');
-        }
-
-        // Fetch current view count
-        const response = await fetch(`/api/views?slug=${slug}`);
         const data = await response.json();
         setViews(data.views || 0);
         setIsLoadingViews(false);
