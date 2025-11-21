@@ -10,9 +10,10 @@ interface BlogCardProps {
   date: string;
   description: string;
   ogImage: string;
+  categories: string[];
 }
 
-export default function BlogCard({ slug, title, date, description, ogImage }: BlogCardProps) {
+export default function BlogCard({ slug, title, date, description, ogImage, categories }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${slug}`}
@@ -38,6 +39,16 @@ export default function BlogCard({ slug, title, date, description, ogImage }: Bl
         <h2 className="text-2xl font-bold mt-1 mb-2 text-slate-900 dark:text-white group-hover:text-blue-600">
           {title}
         </h2>
+        <div className="flex flex-wrap gap-2 mb-3">
+          {categories.map((category) => (
+            <span 
+              key={category}
+              className="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+            >
+              {category}
+            </span>
+          ))}
+        </div>
         <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-3 flex-1">
           {description}
         </p>

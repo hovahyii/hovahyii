@@ -1673,6 +1673,419 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'google-nano-banana-pro-gemini-3-image') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-yellow-200 dark:border-yellow-800 bg-gradient-to-br from-yellow-50 via-white to-slate-50 dark:from-yellow-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-yellow-600 dark:text-yellow-300 font-semibold">Breaking News • 22 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Google Nano Banana Pro launches—designers' jobs are really at risk? Deep integration with Gemini 3, Google gives competitors no breathing room</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Shortly after Gemini 3 Pro's dazzling debut, a new generation model follows immediately. Last night, Google officially unveiled its strongest image generation model—Nano Banana Pro, built on the latest Gemini 3 Pro. Officially called Gemini 3 Pro Image.</p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Core Features</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Resolution Support:</strong> Up to 4K resolution image output</li>
+              <li><strong>Multi-Round Editing:</strong> Supports conversational, multi-round image editing workflows</li>
+              <li><strong>Multi-Image Composition:</strong> Combine up to 14 input images into 1 output image</li>
+              <li><strong>Search Enhancement:</strong> Integrated Google Search capabilities for more precise, up-to-date knowledge support</li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/sundar-pichai.png"
+                alt="Sundar Pichai announcement"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>As rumored, Nano Banana Pro is the new "god" of AI imaging. Whether in image editing or generation, it has achieved epic-level evolution. Its knowledge base is broader, text rendering is super strong, and detail control is precise to the "pixel level."</p>
+
+            <p>Not only that, Nano Banana Pro is simply cheating at making complex infographics, approaching the world as engineers see it.</p>
+
+            <p>In benchmark tests, the new Nano Banana shows significantly improved performance over the previous generation, with GPT-Image and Flux Pro Kontext Max unable to compare.</p>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/nano-banana/text-to-image.png"
+                alt="Text-to-image benchmarks"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/nano-banana/image-editing.png"
+                alt="Image editing benchmarks"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/nano-banana/single-line-text-rendering.png"
+                alt="Single line text rendering"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/nano-banana/gemini-3-pro-image.png"
+                alt="Gemini 3 Pro Image model"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <p className="font-semibold text-lg">In short, Nano Banana Pro is mainly "Pro" in: unprecedented control, perfect text rendering, and stronger world knowledge, with the ability to create studio-level design works.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Core Capabilities Overview</h2>
+
+            <h3 className="text-2xl font-bold mt-10">1. High Fidelity & Professional-Grade Control</h3>
+            <p>For professional tools requiring high precision, Nano Banana Pro provides fine control over physical effects (such as lighting, camera, focus, color grading) and image composition, ensuring professional-quality output. The model supports 2K and 4K resolutions, meeting professional production clarity standards. Additionally, it supports powerful local editing features, such as replacing volumetric lighting with bokeh effects.</p>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: Replace volumetric lighting with bokeh</p>
+            </div>
+
+            <p>For image composition, Nano Banana Pro can easily combine various elements such as product images, logos, and reference images into coherent advertisements. It can maintain facial consistency for up to 5 people in a single composite image, or blend up to 6 high-fidelity photos and 14 standard inputs.</p>
+
+            <p>Through enhanced creative capabilities, you can transform sketches into products or turn blueprints into realistic 3D structures, easily applying desired visual styles to models, ensuring seamless brand consistency across every touchpoint.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/brands.png"
+                alt="Brand consistency examples"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: Combine these images into one appropriately arranged cinematic image in 16:9 format and change the dress on the mannequin to the dress in the image</p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">2. Improved Text Rendering & Localization</h3>
+            <p>Compared to 2.5 Flash Image, Nano Banana Pro achieves a significant leap in text rendering, capable of generating clear, accurate embedded text, whether short slogans or long paragraphs. It excels at handling logic and language, can generate text with various textures, fonts, and calligraphic styles, transforming abstract image generation into functional assets, perfect for creating marketing materials, educational content, and more.</p>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: Make 8 sophisticated minimalistic logos, each is a fun food word, and make letters from realistic food to express the meaning of this word. composition: a rendering of all logos on a single solid white background</p>
+            </div>
+
+            <p>The model also breaks down barriers between image generation and localization logic. With Gemini's multilingual reasoning capabilities, it can understand the semantic context of images, easily generating or translating multilingual text on elements like menus, signs, or documents while maintaining original artistic style and layout.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/can-design.png"
+                alt="Can design translation example"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: Translate to French</p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">3. Connected World Knowledge & Real-Time Information</h3>
+            <p>Based on Gemini 3 Pro, Nano Banana Pro connects to a vast knowledge base, capable of generating more factual content than previous models. When enabled, grounding through Google Search connects the model with real-time web content, enabling data-driven outputs. This is especially valuable for applications requiring precise representation (such as biological diagrams, historical maps, or real-time weather infographics). You can use it to create customized infographics about any topic.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/poster-cardamon-tea.png"
+                alt="Plant infographic example"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: Create an infographic about this plant focusing on interesting information</p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">How to Experience Nano Banana Pro</h2>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
+              <h4 className="text-xl font-bold mb-4">For Consumers & Students</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>✅ In Gemini App, when you select "Create images" and use "Thinking" model, rolling out globally</li>
+                <li>✅ Free users get limited free quota, reverting to original Nano Banana after depletion</li>
+                <li>✅ Google AI Plus, Pro, and Ultra subscribers get higher quotas</li>
+                <li>✅ In Search's AI Mode, available to US subscribers</li>
+                <li>✅ In NotebookLM, available to global subscribers</li>
+              </ul>
+
+              <h4 className="text-xl font-bold mt-6 mb-4">For Professionals</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>✅ Image generation in Google Ads upgraded to Nano Banana Pro</li>
+                <li>✅ Rolling out to Workspace users in Google Slides and Vids</li>
+              </ul>
+
+              <h4 className="text-xl font-bold mt-6 mb-4">For Developers & Enterprises</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>✅ Rolling out in Gemini API, Google AI Studio, and Google Antigravity</li>
+                <li>✅ Enterprise users can start building in Vertex AI today</li>
+                <li>✅ Coming soon to Gemini Enterprise</li>
+              </ul>
+
+              <h4 className="text-xl font-bold mt-6 mb-4">For Creative Workers</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>✅ Rolling out to Flow (AI filmmaking tool) for Google AI Ultra subscribers</li>
+                <li>✅ Provides creators, directors, and marketing teams with more precise, controllable shot and scene generation</li>
+              </ul>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">AI-Generated Image Identification</h3>
+            <p>All media generated by Google tools is embedded with imperceptible SynthID digital watermarks. Now, users can upload images directly in the Gemini app and ask if they were generated by Google AI. This feature currently supports images and will soon expand to audio and video.</p>
+
+            <p>Additionally, images generated by free and Google AI Pro tier users retain visible Gemini star watermarks. To meet professional work's visual purity needs, Google AI Ultra subscribers and images generated in Google AI Studio will have this visible watermark removed.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">7 Tips to Master Nano Banana Pro</h2>
+
+            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 p-6 rounded-xl shadow-md mb-10">
+              <ol className="list-decimal pl-6 space-y-3">
+                <li><strong>Generate visuals with clear text:</strong> Leverage its excellent text rendering for posters, charts, etc.</li>
+                <li><strong>Create with real-world knowledge:</strong> Utilize Gemini 3 Pro's knowledge and reasoning for precise, rich image results</li>
+                <li><strong>Translate and localize your ideas:</strong> Generate or translate text within images for different markets</li>
+                <li><strong>Edit with studio-level control:</strong> Directly control lighting, camera angles, focus, color, and other parameters</li>
+                <li><strong>Precisely adjust dimensions:</strong> Try different aspect ratios and generate clear images up to 4K</li>
+                <li><strong>Blend images and maintain multi-character consistency:</strong> Fuse up to 14 inputs while maintaining consistency across multiple characters</li>
+                <li><strong>Create and maintain brand visual style:</strong> Seamlessly apply patterns, logos, etc. to 3D objects, maintaining natural textures</li>
+              </ol>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/input-output-images.png"
+                alt="Input output image examples"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Change the look and feel of an image for a range of platforms by adapting the aspect ratio</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Current Limitations</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Visual and text fidelity:</strong> Rendering small text, fine details, and precise spelling may not be perfect</li>
+              <li><strong>Data and factual accuracy:</strong> Be sure to verify factual accuracy of data-driven visuals like charts</li>
+              <li><strong>Translation and localization:</strong> Multilingual text generation may have grammatical errors or cultural nuances</li>
+              <li><strong>Complex editing and image fusion:</strong> Advanced editing tasks may sometimes produce unnatural artifacts</li>
+              <li><strong>Character features:</strong> Character consistency is generally reliable but may vary across edits</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Creative Use Cases</h2>
+
+            <h3 className="text-2xl font-bold mt-10">1. Complete Comic Workflow</h3>
+            <p>The first use case, and what I think is Nano Banana Pro's most impressive feature, is giving black and white manga a complete makeover: translation, colorization, and material changes all in one go. I used panels from Demon Slayer as my source.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/comic.png"
+                alt="Original black and white comic"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>With a simple prompt: "Transform this image to color, translate to Chinese and place in corresponding dialogue boxes, keep everything else unchanged, output as an image."</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/comic-colour.png"
+                alt="Colored translated comic"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>Much better! You can also change styles continuously.</p>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: Transform this comic into 3D plush texture</p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/comic-3d.png"
+                alt="3D plush style comic"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">2. Complete Poster Design Workflow</h3>
+            <p>After the first use case, you should notice that Nano Banana Pro's text capabilities are now very strong, especially for Chinese. It's no longer that model where Chinese characters gave me uncanny valley vibes.</p>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/nano-banana/poster-dreams.png"
+                alt="Robot Dreams movie poster"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/nano-banana/chinese-poster.png"
+                alt="Chinese traditional poster"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">3. Knowledge Explanation Graphics</h3>
+            <p>Because Nano Banana Pro is built on Gemini 3, its world knowledge and reasoning capabilities are naturally strong. Thanks to its greatly enhanced text rendering, you can even have it create knowledge explanation graphics.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/component-dissemble.png"
+                alt="Cyber eye component breakdown"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">4. Writing Solution Processes</h3>
+            <p>Thanks to Nano Banana Pro's extremely strong reasoning abilities, you can even use it to solve problems. Not just solve them, but draw out the solution process directly.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/drawing-with-answer.png"
+                alt="Math problem solution drawn"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: Draw a draft paper with the solution to this problem</p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">5. Paper to Image Conversion</h3>
+            <p>An amazing use case discovered by a user on X: Convert papers or very long articles into detailed whiteboard photos.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/pietro-schirano.png"
+                alt="Pietro Schirano tweet"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/whiteboard-nano-banana.png"
+                alt="Whiteboard conversion example"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">6. Generate Game Interfaces</h3>
+            <p>This time, Nano Banana Pro is exceptionally stable at generating game UI interfaces. You really don't know how much game material this thing has consumed.</p>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/nano-banana/game-interface.png"
+                alt="Game interface example"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/nano-banana/HoK.png"
+                alt="MOBA game interface"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">7. Product Rendering</h3>
+            <p>Thanks to this time's extremely stable text capabilities, modifying text is basically a very small task. And for product consistency with lots of Chinese text, the effect is also excellent.</p>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/nano-banana/jay-chou.png"
+                alt="Jay Chou CD design"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/nano-banana/concert.png"
+                alt="Concert scene product placement"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">8. Bead Art (Bonus Find!)</h3>
+            <p>During the generation process, I inadvertently discovered a style that Nano Banana Pro supports particularly well: bead art. Really, super stable and beautiful.</p>
+
+            <div className="my-8 grid md:grid-cols-2 gap-6">
+              <Image
+                src="/blog/nano-banana/lego.png"
+                alt="Bead art figure"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+              <Image
+                src="/blog/nano-banana/cat-lego.png"
+                alt="Cat bead art color palette"
+                width={800}
+                height={560}
+                className="rounded-2xl shadow"
+              />
+            </div>
+
+            <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
+              <p className="font-mono text-sm italic">Prompt: 3D bead art, exquisite figurine in a box</p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Third-Party Access</h2>
+            <p>And... our friend Orange has already integrated it into his Listen Hub website. Visit <a href="https://banana.listenhub.ai/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://banana.listenhub.ai/</a> to use it now!</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/nano-banana/banana-2.png"
+                alt="Banana Listen Hub"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: The Designer's Dilemma</h2>
+            
+            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 p-6 rounded-xl shadow-md mb-10">
+              <p className="text-lg mb-4">Nano Banana Pro represents a paradigm shift in AI image generation. With unprecedented control over lighting, composition, and text rendering, combined with Gemini 3's world knowledge and reasoning capabilities, it's becoming clear that AI tools are no longer just assistants—they're becoming creative partners capable of studio-quality work.</p>
+              
+              <p className="text-lg">From transforming manga to generating complex infographics, from solving math problems visually to creating multilingual marketing materials, Nano Banana Pro demonstrates that the line between "AI-assisted" and "AI-created" is blurring rapidly. The question isn't whether designers' jobs are at risk—it's how designers will adapt to work alongside these powerful tools.</p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 

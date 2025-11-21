@@ -6,13 +6,23 @@ import Footer from "@/components/footer";
 import ContactVCFComponent from "@/components/ContactVCFComponent";
 import QRCodeDrawer from "@/components/QRCodeDrawer";
 import WelcomePopup from "@/components/WelcomePopup";
-import { useState } from "react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function Main() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { theme, setTheme, systemTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Ensure component is mounted before checking theme to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const isDarkMode = mounted && currentTheme === 'dark';
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setTheme(isDarkMode ? 'light' : 'dark');
   };
 
   return (
