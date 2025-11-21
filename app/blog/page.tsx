@@ -51,12 +51,30 @@ export default function BlogIndexPage() {
             Quick dives into launches, lessons, and playbooks—so you learn, build, and ship faster.
           </p>
         </div>
-        <Link
-          href="/"
-          className="mt-4 sm:mt-0 inline-flex items-center justify-center px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition"
-        >
-          ← Back to Main Page
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 mt-4 sm:mt-0">
+          <Link
+            href="/feed.xml"
+            target="_blank"
+            className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-orange-500 dark:border-orange-400 text-sm font-semibold text-orange-600 dark:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-950 transition"
+          >
+            <svg 
+              className="w-4 h-4 mr-2" 
+              fill="currentColor" 
+              viewBox="0 0 20 20"
+              aria-hidden="true"
+            >
+              <path d="M5 3a1 1 0 000 2c5.523 0 10 4.477 10 10a1 1 0 102 0C17 8.373 11.627 3 5 3z"/>
+              <path d="M4 9a1 1 0 011-1 7 7 0 017 7 1 1 0 11-2 0 5 5 0 00-5-5 1 1 0 01-1-1zM3 15a2 2 0 114 0 2 2 0 01-4 0z"/>
+            </svg>
+            RSS Feed
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition"
+          >
+            ← Back to Main Page
+          </Link>
+        </div>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
