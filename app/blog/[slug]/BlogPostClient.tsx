@@ -2331,14 +2331,82 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </div>
             </div>
 
+            <h2 className="text-3xl font-bold mt-12 mb-6">📞 Need Help? Contact BEM</h2>
+
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-xl font-bold mb-4">Board of Engineers Malaysia (BEM) Contact Information</h3>
+              <p className="mb-4">If you have questions or need assistance with your application, you can reach BEM through the following channels:</p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                  <h4 className="font-semibold mb-2 flex items-center">
+                    <svg className="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Hotline (Most Direct)
+                  </h4>
+                  <p className="font-mono text-blue-600 dark:text-blue-400">+603-7804 9851</p>
+                  <p className="font-mono text-blue-600 dark:text-blue-400">+603-7804 9776</p>
+                </div>
+
+                <div className="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                  <h4 className="font-semibold mb-2 flex items-center">
+                    <svg className="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Email
+                  </h4>
+                  <p className="text-sm break-all">
+                    <a href="mailto:eac@bem.org.my" className="text-green-600 dark:text-green-400 hover:underline">eac@bem.org.my</a>
+                  </p>
+                  <p className="text-sm break-all">
+                    <a href="mailto:etac@bem.org.my" className="text-green-600 dark:text-green-400 hover:underline">etac@bem.org.my</a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-yellow-100 dark:bg-yellow-900/50 p-4 rounded-lg mt-4">
+                <p className="font-medium">💡 Tip: Calling the hotline is the most direct way to reach the BEM Secretariat Office for immediate assistance.</p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Need Help? Contact BEM</h2>
+
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold mb-4">📞 BEM Contact Information</h3>
+              <p className="mb-4">If you have questions or need assistance with your application, you can reach the Board of Engineers Malaysia (BEM) through:</p>
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                  <h4 className="font-bold mb-2 text-blue-600 dark:text-blue-400">📱 Phone (Hotline)</h4>
+                  <p><a href="tel:+60378049851" className="text-blue-600 hover:underline">+603-7804 9851</a></p>
+                  <p><a href="tel:+60378049776" className="text-blue-600 hover:underline">+603-7804 9776</a></p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">☎️ Calling is the most direct way to reach the Secretariat Office</p>
+                </div>
+                
+                <div className="bg-white dark:bg-slate-800 p-4 rounded-lg">
+                  <h4 className="font-bold mb-2 text-blue-600 dark:text-blue-400">✉️ Email</h4>
+                  <p><a href="mailto:eac@bem.org.my" className="text-blue-600 hover:underline">eac@bem.org.my</a> (EAC enquiries)</p>
+                  <p><a href="mailto:etac@bem.org.my" className="text-blue-600 hover:underline">etac@bem.org.my</a> (ETAC enquiries)</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">📧 For Engineering Technologist matters, use ETAC email</p>
+                </div>
+              </div>
+            </div>
+
             <h2 className="text-3xl font-bold mt-12 mb-6">Frequently Asked Questions (FAQ)</h2>
 
             <div className="space-y-6">
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
                 <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: What is EAC and ETAC? What is their relationship with BEM?</h4>
-                <p><strong>EAC</strong> (Engineering Accreditation Council) accredits engineering programmes (for Professional Engineer pathway).</p>
-                <p className="mt-2"><strong>ETAC</strong> (Engineering Technology Accreditation Council) accredits engineering technology programmes (for Engineering Technologist pathway).</p>
-                <p className="mt-2">Both work under BEM to ensure quality education standards for engineering professionals in Malaysia.</p>
+                <p className="mb-2"><strong>EAC</strong> (Engineering Accreditation Council) - Accredits <strong>engineering programmes</strong> that lead to the Professional Engineer (PE) pathway. Graduates can become "Ir." (Professional Engineers).</p>
+                <p className="mb-2"><strong>ETAC</strong> (Engineering Technology Accreditation Council) - Accredits <strong>engineering technology programmes</strong> that lead to the Engineering Technologist pathway.</p>
+                <p className="mt-3"><strong>Key Differences:</strong></p>
+                <ul className="list-disc pl-6 space-y-1 mt-2">
+                  <li>EAC programmes are more theoretical and research-focused</li>
+                  <li>ETAC programmes are more practical and application-focused</li>
+                  <li>Both councils work under BEM to ensure quality education standards</li>
+                  <li>Both pathways are equally valuable but serve different roles in the engineering industry</li>
+                </ul>
               </div>
 
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
@@ -2370,6 +2438,103 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                   <li>Any other supporting documents as specified in the portal</li>
                 </ul>
               </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
+                <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: What's the difference between Graduate Engineer and Engineering Technologist?</h4>
+                <p className="mb-3">These are two different registration pathways with BEM:</p>
+                
+                <div className="grid md:grid-cols-2 gap-4 mt-3">
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+                    <h5 className="font-bold mb-2">Graduate Engineer (GE)</h5>
+                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                      <li>From <strong>EAC-accredited</strong> engineering programmes</li>
+                      <li>Stepping stone to "Ir." (Professional Engineer)</li>
+                      <li>More theoretical/research-oriented background</li>
+                      <li>Pathway: GE → PE (Ir.)</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg">
+                    <h5 className="font-bold mb-2">Engineering Technologist (ET)</h5>
+                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                      <li>From <strong>ETAC-accredited</strong> engineering technology programmes</li>
+                      <li>Currently no direct professional pathway with BEM</li>
+                      <li>More practical/application-oriented background</li>
+                      <li>Better pathway: ET → MBOT (Ts.)</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <p className="mt-3 text-sm"><strong>Both are valuable:</strong> Graduate Engineers focus on design and innovation, while Engineering Technologists focus on implementation and optimization. Different roles, both essential to the industry.</p>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
+                <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: Why does the Sydney Accord recognize Engineering Technologists, but BEM doesn't provide a professional pathway?</h4>
+                <p className="mb-3">This is a common frustration among Engineering Technology graduates. Here's the situation:</p>
+                
+                <div className="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg mb-3">
+                  <p className="font-semibold mb-2">🌏 International Recognition (Sydney Accord)</p>
+                  <p className="text-sm">The <strong>Sydney Accord</strong> is an international agreement that recognizes engineering technology qualifications across member countries. Malaysia is a signatory, meaning our ETAC-accredited degrees are internationally recognized.</p>
+                </div>
+                
+                <div className="bg-red-50 dark:bg-red-900/30 p-4 rounded-lg mb-3">
+                  <p className="font-semibold mb-2">🇲🇾 Local Reality (BEM)</p>
+                  <p className="text-sm mb-2">However, BEM currently does <strong>not have a "Professional Engineering Technologist" registration tier</strong>. You can register as "Engineering Technologist" but:</p>
+                  <ul className="list-disc pl-5 space-y-1 text-sm">
+                    <li>No professional prefix title (no "Ir." equivalent for ET)</li>
+                    <li>No clear career progression pathway within BEM</li>
+                    <li>Must go through BEM GAP to become Graduate Engineer if you want "Ir." eventually</li>
+                  </ul>
+                </div>
+                
+                <p className="mb-3"><strong>Why this gap exists:</strong></p>
+                <ul className="list-disc pl-6 space-y-2 text-sm">
+                  <li>BEM's registration acts focus primarily on Professional Engineers (PE)</li>
+                  <li>Engineering Technologist registration was added later without a full professional framework</li>
+                  <li>Industry and regulatory bodies are still evolving to recognize ET contributions</li>
+                  <li>There's ongoing discussion about creating a professional pathway, but nothing concrete yet</li>
+                </ul>
+                
+                <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg mt-3">
+                  <p className="font-semibold mb-2">✅ Practical Solution: Go to MBOT</p>
+                  <p className="text-sm">Since BEM doesn't offer a professional pathway for Engineering Technologists, <strong>most graduates register with MBOT</strong> (Malaysia Board of Technologists) instead. MBOT offers:</p>
+                  <ul className="list-disc pl-5 space-y-1 text-sm mt-2">
+                    <li>Professional Technologist registration</li>
+                    <li><strong>"Ts." title</strong> that you can use as a prefix</li>
+                    <li>Clear professional recognition and career pathway</li>
+                    <li>Industry acceptance and respect</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
+                <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: Should I register with BEM or MBOT as an Engineering Technologist?</h4>
+                <p className="mb-3"><strong>Honest recommendation: Register with BOTH if possible, but prioritize MBOT.</strong></p>
+                
+                <div className="space-y-3">
+                  <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg">
+                    <p className="font-semibold mb-2">✅ MBOT (Recommended Priority)</p>
+                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                      <li>Get the <strong>"Ts."</strong> professional title</li>
+                      <li>Clear professional recognition in industry</li>
+                      <li>Career progression pathway</li>
+                      <li>Better return on investment for Engineering Technology graduates</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+                    <p className="font-semibold mb-2">✅ BEM (Secondary/Optional)</p>
+                    <ul className="list-disc pl-5 space-y-1 text-sm">
+                      <li>Official recognition by the engineering board</li>
+                      <li>Useful if working with government projects or contracts</li>
+                      <li>Can list "Engineering Technologist (BEM)" on credentials</li>
+                      <li>Keeps option open for BEM GAP if you want "Ir." later</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <p className="mt-3 text-sm italic">Many successful Engineering Technologists have both registrations for maximum professional credibility and flexibility.</p>
+              </div>
             </div>
 
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mt-12 mb-10">
@@ -2381,18 +2546,22 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 <li>Budget RM 50 for processing fee</li>
                 <li>Allow 1 month for board approval</li>
                 <li>Use title correctly: "[Name], Engineering Technologist (BEM)"</li>
-                <li>Consider MBOT registration for "Ts." title if desired</li>
+                <li><strong>Strongly consider MBOT registration for "Ts." title</strong> - better professional pathway</li>
                 <li>Stay compliant with professional regulations</li>
+                <li>Save BEM hotline: +603-7804 9851 or +603-7804 9776 for quick help</li>
               </ul>
             </div>
 
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold mb-4">🎓 Final Thoughts</h3>
-              <p className="text-lg">
-                Obtaining your Engineering Technologist registration is a valuable professional credential that recognizes your technical expertise and opens doors to career advancement in Malaysia's engineering industry. Follow the steps carefully, ensure all documentation is complete, and maintain professional ethics in using your title.
+              <p className="text-lg mb-3">
+                Obtaining your Engineering Technologist registration with BEM is a valuable professional credential that recognizes your technical expertise and opens doors to career advancement in Malaysia's engineering industry. Follow the steps carefully, ensure all documentation is complete, and maintain professional ethics in using your title.
               </p>
-              <p className="text-lg mt-4">
-                Good luck with your application! If you have any questions, feel free to reach out or consult with BEM directly.
+              <p className="text-lg mb-3">
+                <strong>Important consideration:</strong> While BEM registration is good to have, seriously consider registering with <strong>MBOT as a Professional Technologist (Ts.)</strong> as well. Since BEM currently doesn't offer a professional pathway for Engineering Technologists, MBOT provides better career progression and professional recognition with the "Ts." title.
+              </p>
+              <p className="text-lg">
+                Good luck with your application! If you have any questions, don't hesitate to call BEM at <strong>+603-7804 9851</strong> or <strong>+603-7804 9776</strong>, or email <strong>etac@bem.org.my</strong> for Engineering Technologist enquiries.
               </p>
             </div>
           </div>
