@@ -2380,28 +2380,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6">Need Help? Contact BEM</h2>
-
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 p-6 rounded-xl shadow-md mb-10">
-              <h3 className="text-2xl font-bold mb-4">📞 BEM Contact Information</h3>
-              <p className="mb-4">If you have questions or need assistance with your application, you can reach the Board of Engineers Malaysia (BEM) through:</p>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-white dark:bg-slate-800 p-4 rounded-lg">
-                  <h4 className="font-bold mb-2 text-blue-600 dark:text-blue-400">📱 Phone (Hotline)</h4>
-                  <p><a href="tel:+60378049851" className="text-blue-600 hover:underline">+603-7804 9851</a></p>
-                  <p><a href="tel:+60378049776" className="text-blue-600 hover:underline">+603-7804 9776</a></p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">☎️ Calling is the most direct way to reach the Secretariat Office</p>
-                </div>
-                
-                <div className="bg-white dark:bg-slate-800 p-4 rounded-lg">
-                  <h4 className="font-bold mb-2 text-blue-600 dark:text-blue-400">✉️ Email</h4>
-                  <p><a href="mailto:eac@bem.org.my" className="text-blue-600 hover:underline">eac@bem.org.my</a> (EAC enquiries)</p>
-                  <p><a href="mailto:etac@bem.org.my" className="text-blue-600 hover:underline">etac@bem.org.my</a> (ETAC enquiries)</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">📧 For Engineering Technologist matters, use ETAC email</p>
-                </div>
-              </div>
-            </div>
+          
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Frequently Asked Questions (FAQ)</h2>
 
