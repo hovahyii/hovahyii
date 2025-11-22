@@ -2086,6 +2086,318 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'how-to-get-bem-engineering-technologist-approval') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-green-200 dark:border-green-800 bg-gradient-to-br from-green-50 via-white to-slate-50 dark:from-green-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Professional Development • 23 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Your Complete Guide to BEM Engineering Technologist Registration</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Learn how to obtain your Engineering Technologist registration with the Board of Engineers Malaysia (BEM). This step-by-step guide covers ETAC accreditation verification, application process, documentation requirements, and important regulations about title usage.</p>
+            </div>
+
+            <p className="text-xl font-medium mb-6">
+              Becoming a registered Engineering Technologist with BEM is an important milestone in your engineering career in Malaysia. Here's my complete journey and everything you need to know to successfully obtain your registration.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Step 1: Verify ETAC Accreditation</h2>
+            
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold flex items-center mb-4">
+                <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
+                Check Your Course Accreditation
+              </h3>
+              <p className="mt-3 mb-4">
+                First, you need to verify if your university's engineering course is accredited by ETAC (Engineering Technology Accreditation Council). Visit the <a href="https://etac.org.my/list-of-accredited-engineering-programme-malaysia/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">ETAC official website</a> to check the list of accredited engineering programmes in Malaysia.
+              </p>
+              <div className="my-4 flex justify-center">
+                <Image 
+                  src="/blog/eng-tech/etac.PNG" 
+                  alt="ETAC Accredited Programme List" 
+                  width={800} 
+                  height={450} 
+                  className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                />
+              </div>
+              <div className="bg-blue-100 dark:bg-blue-900/50 p-4 rounded-lg mt-4">
+                <p className="font-medium">⚠️ Important: Only graduates from ETAC-accredited programmes are eligible to apply for Engineering Technologist registration with BEM.</p>
+              </div>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image 
+                src="/blog/eng-tech/umpsa-eng-tech.PNG" 
+                alt="UMPSA Engineering Technology Programme" 
+                width={800} 
+                height={450} 
+                className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              />
+            </div>
+
+            <p>If your course is accredited by ETAC, congratulations! You can proceed to start your application for the Engineering Technologist (BEM) title.</p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Step 2: Register on BEM Portal</h2>
+
+            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold flex items-center mb-4">
+                <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
+                Create Your BEM Account
+              </h3>
+              <p className="mt-3 mb-4">
+                Go to <a href="https://engineer.org.my/Account/Login" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">https://engineer.org.my/Account/Login</a> and sign up for an account.
+              </p>
+              <div className="bg-purple-100 dark:bg-purple-900/50 p-4 rounded-lg">
+                <p className="font-medium">💡 Pro Tip: Use your IC (Identity Card) number for registration. This is important for verification purposes.</p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Step 3: Submit Your Application</h2>
+
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold flex items-center mb-4">
+                <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">3</span>
+                Navigate to Applications
+              </h3>
+              <p className="mt-3 mb-4">
+                Once logged in, go to the <strong>Applications</strong> section and click on <strong>"Apply As Engineering Technologist"</strong>.
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Step 4: Prepare Required Documentation</h2>
+
+            <div className="bg-gradient-to-r from-pink-50 to-red-50 dark:from-pink-900/30 dark:to-red-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold flex items-center mb-4">
+                <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">4</span>
+                Upload All Necessary Documents
+              </h3>
+              <p className="mt-3 mb-4">Follow the instructions carefully and upload all necessary documentation. Here's the crucial part:</p>
+              
+              <div className="bg-red-100 dark:bg-red-900/50 p-4 rounded-lg my-4">
+                <h4 className="text-xl font-bold mb-3 text-red-700 dark:text-red-300">⚠️ CRITICAL REQUIREMENT</h4>
+                <p className="font-medium mb-2">Your documentation MUST include:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Personal signature from a registered <strong>Ir. (Professional Engineer)</strong></li>
+                  <li>Official BEM chop/stamp from the Ir. proving their Professional Engineer status</li>
+                  <li>This serves as your guarantor/referee</li>
+                </ul>
+              </div>
+
+              <div className="my-4 flex justify-center">
+                <Image 
+                  src="/blog/eng-tech/important.PNG" 
+                  alt="Important Documentation Requirements" 
+                  width={800} 
+                  height={450} 
+                  className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                />
+              </div>
+
+              <p className="mt-4">
+                <strong>How to get an Ir. signature:</strong> Ask a university professor or lecturer who holds the Ir. (Professional Engineer) title to be your guarantor. They must be registered with BEM as a Professional Engineer.
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Step 5: Pay Processing Fee</h2>
+
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/30 dark:to-orange-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold flex items-center mb-4">
+                <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">5</span>
+                Processing Fee Payment
+              </h3>
+              <p className="mt-3 mb-4">
+                A <strong>RM 50</strong> processing fee is required for your application. Follow the payment instructions provided in the portal.
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Step 6: Wait for Board Approval</h2>
+
+            <div className="bg-gradient-to-r from-orange-50 to-yellow-50 dark:from-orange-900/30 dark:to-yellow-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold flex items-center mb-4">
+                <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">6</span>
+                The Approval Process
+              </h3>
+              <p className="mt-3 mb-4">
+                After submitting all required documentation, here's what happens next:
+              </p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Board Meeting:</strong> The BEM board meets at the end of each month to review applications</li>
+                <li><strong>Review Period:</strong> Your application will be discussed and evaluated by the board members</li>
+                <li><strong>Approval Timeline:</strong> If everything is in order, your application is typically approved by the <strong>3rd or 4th week</strong> after the board meeting</li>
+                <li><strong>Notification:</strong> You'll receive notification via email once your application is approved</li>
+              </ul>
+              
+              <div className="bg-yellow-100 dark:bg-yellow-900/50 p-4 rounded-lg mt-4">
+                <p className="font-medium">📅 Timeline Tip: Plan accordingly as the approval process usually takes about 1 month from submission to approval.</p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Step 7: Congratulations! 🎉</h2>
+
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold mb-4">You're Now a Registered Engineering Technologist!</h3>
+              <div className="my-4 flex justify-center">
+                <Image 
+                  src="/blog/eng-tech/engineering-technologist.jpg" 
+                  alt="Engineering Technologist Certificate" 
+                  width={800} 
+                  height={450} 
+                  className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                />
+              </div>
+              <p className="mt-4 text-lg">
+                Congratulations on obtaining your Engineering Technologist registration with BEM! This is a significant achievement in your professional engineering career.
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-red-600 dark:text-red-400">⚠️ IMPORTANT: Title Usage Regulations</h2>
+
+            <p className="text-xl font-semibold mb-6">
+              Before you start using your new qualification, please read this section carefully to ensure you comply with Malaysian professional regulations.
+            </p>
+
+            <div className="bg-red-50 dark:bg-red-900/30 border-l-4 border-red-500 p-6 rounded-lg mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-red-700 dark:text-red-300">You CANNOT Use "Eng Tech" or "Engr." as a Pre-nominal Title</h3>
+              
+              <div className="my-4 flex justify-center">
+                <Image 
+                  src="/blog/eng-tech/title.jpg" 
+                  alt="Professional Title Regulations" 
+                  width={800} 
+                  height={450} 
+                  className="rounded-lg shadow-md"
+                />
+              </div>
+
+              <p className="mb-4">
+                Based on current regulations by the Board of Engineers Malaysia (BEM), being a registered Engineering Technologist does <strong>NOT</strong> grant you a prefix title (like "Dr.", "Ir.", or "Ts.") to place in front of your name.
+              </p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">How Professional Titles Work in Malaysia</h3>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
+              <h4 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400">1. No Pre-nominal Title for BEM Engineering Technologists</h4>
+              <p className="mb-4">Being a registered Engineering Technologist with BEM does not grant you a prefix.</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>"Ir."</strong> is strictly reserved for <strong>Professional Engineers (PE)</strong> registered with BEM</li>
+                <li><strong>"Ts."</strong> is strictly reserved for <strong>Professional Technologists</strong> registered with MBOT (Malaysia Board of Technologists)</li>
+              </ul>
+            </div>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
+              <h4 className="text-xl font-bold mb-4 text-green-600 dark:text-green-400">2. ✅ Correct Usage: Post-nominal (After Your Name)</h4>
+              <p className="mb-4">You can and should list the qualification after your name or in your professional descriptions.</p>
+              
+              <div className="bg-green-100 dark:bg-green-900/50 p-4 rounded-lg mb-4">
+                <p className="font-semibold mb-2">Correct Examples:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li><code>Jehovah Yii Zui Hon, Engineering Technologist (BEM)</code></li>
+                  <li><code>Jehovah Yii Zui Hon, B.Eng Tech</code> (depending on your specific degree)</li>
+                </ul>
+              </div>
+
+              <div className="bg-red-100 dark:bg-red-900/50 p-4 rounded-lg">
+                <p className="font-semibold mb-2">❌ Incorrect Examples:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li><code>Eng Tech Jehovah Yii</code> (Wrong - no pre-nominal)</li>
+                  <li><code>Engr. Jehovah Yii</code> (Wrong - not recognized)</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">If You Want a Title in Front of Your Name...</h3>
+
+            <div className="grid md:grid-cols-2 gap-6 my-8">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6">
+                <h4 className="text-xl font-bold mb-4 text-purple-600 dark:text-purple-400">Option 1: Get "Ts." Title</h4>
+                <p className="mb-3">Register with <strong>MBOT</strong> (Malaysia Board of Technologists) as a Professional Technologist.</p>
+                <ul className="list-disc pl-6 space-y-2 text-sm">
+                  <li>As a BEM Engineering Technologist, you likely qualify for MBOT registration</li>
+                  <li>Once approved, you can legally use <strong>Ts. [Your Name]</strong></li>
+                  <li>This is the most common pathway for engineering technology graduates</li>
+                </ul>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6">
+                <h4 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400">Option 2: Get "Ir." Title</h4>
+                <p className="mb-3">Become a <strong>Professional Engineer (PE)</strong> with BEM.</p>
+                <ul className="list-disc pl-6 space-y-2 text-sm">
+                  <li>Must complete <strong>BEM GAP</strong> (Graduate Application Programme)</li>
+                  <li>Register as Graduate Engineer first</li>
+                  <li>Complete required experience and assessments</li>
+                  <li>Then proceed to Professional Engineer registration</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Frequently Asked Questions (FAQ)</h2>
+
+            <div className="space-y-6">
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
+                <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: What is EAC and ETAC? What is their relationship with BEM?</h4>
+                <p><strong>EAC</strong> (Engineering Accreditation Council) accredits engineering programmes (for Professional Engineer pathway).</p>
+                <p className="mt-2"><strong>ETAC</strong> (Engineering Technology Accreditation Council) accredits engineering technology programmes (for Engineering Technologist pathway).</p>
+                <p className="mt-2">Both work under BEM to ensure quality education standards for engineering professionals in Malaysia.</p>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
+                <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: How can I become a Professional Engineer (Ir.) as an Engineering Technologist?</h4>
+                <p>If you want to obtain the <strong>Ir.</strong> title, you need to:</p>
+                <ol className="list-decimal pl-6 space-y-2 mt-2">
+                  <li>Undergo the <strong>BEM GAP</strong> (Graduate Application Programme)</li>
+                  <li>Register as a <strong>Graduate Engineer</strong> first</li>
+                  <li>Gain required professional experience</li>
+                  <li>Pass professional assessments</li>
+                  <li>Then apply for Professional Engineer (PE) registration</li>
+                </ol>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
+                <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: Is there a Professional Engineering Technology pathway with BEM?</h4>
+                <p className="mb-2">Unfortunately, <strong>currently BEM does not have a dedicated Professional Engineering Technology pathway</strong>.</p>
+                <p>Your best option for obtaining a professional title is to apply for <strong>MBOT registration</strong> to be accredited with the <strong>"Ts."</strong> (Professional Technologist) title.</p>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
+                <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: What documents do I need to prepare?</h4>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Academic transcripts (ETAC-accredited programme)</li>
+                  <li>Degree certificate</li>
+                  <li>IC (Identity Card) copy</li>
+                  <li>Professional photos</li>
+                  <li><strong>Ir. guarantor's signature and BEM chop</strong> (most important!)</li>
+                  <li>Any other supporting documents as specified in the portal</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mt-12 mb-10">
+              <h3 className="text-2xl font-bold mb-4">📌 Summary & Quick Tips</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Verify ETAC accreditation before applying</li>
+                <li>Use your IC number for BEM portal registration</li>
+                <li>Get an Ir. guarantor early in the process</li>
+                <li>Budget RM 50 for processing fee</li>
+                <li>Allow 1 month for board approval</li>
+                <li>Use title correctly: "[Name], Engineering Technologist (BEM)"</li>
+                <li>Consider MBOT registration for "Ts." title if desired</li>
+                <li>Stay compliant with professional regulations</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-6 rounded-xl shadow-md mb-10">
+              <h3 className="text-2xl font-bold mb-4">🎓 Final Thoughts</h3>
+              <p className="text-lg">
+                Obtaining your Engineering Technologist registration is a valuable professional credential that recognizes your technical expertise and opens doors to career advancement in Malaysia's engineering industry. Follow the steps carefully, ensure all documentation is complete, and maintain professional ethics in using your title.
+              </p>
+              <p className="text-lg mt-4">
+                Good luck with your application! If you have any questions, feel free to reach out or consult with BEM directly.
+              </p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 

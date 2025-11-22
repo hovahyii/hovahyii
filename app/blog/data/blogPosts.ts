@@ -74,5 +74,14 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     description: 'Google launches Nano Banana Pro (Gemini 3 Pro Image), the most powerful image generation model yet. With 4K resolution, multi-round editing, perfect text rendering, and real-time Google Search integration—design work will never be the same.',
     ogImage: '/blog/nano-banana/gemini-3-pro-image.png',
     categories: ['AI'],
+  },
+  'how-to-get-bem-engineering-technologist-approval': {
+    slug: 'how-to-get-bem-engineering-technologist-approval',
+    title: 'How to Get Your Engineering Technologist (BEM) Approval in Malaysia',
+    date: '22 November 2025',
+    author: 'Hovah Yii',
+    description: 'Complete guide on how to apply for and obtain your Engineering Technologist registration with the Board of Engineers Malaysia (BEM). Learn about ETAC accreditation, application process, required documents, title usage, and the pathway to Professional Engineer status.',
+    ogImage: '/blog/eng-tech/engineering-technologist.jpg',
+    categories: ['BEM', 'Engineering'],
   }
 };
