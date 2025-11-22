@@ -2227,6 +2227,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 <li><strong>Notification:</strong> You'll receive notification via email once your application is approved</li>
               </ul>
               
+              <div className="my-4 flex justify-center">
+                <Image 
+                  src="/blog/eng-tech/email-approval.PNG" 
+                  alt="BEM Approval Email Notification" 
+                  width={800} 
+                  height={450} 
+                  className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                />
+              </div>
+              
               <div className="bg-yellow-100 dark:bg-yellow-900/50 p-4 rounded-lg mt-4">
                 <p className="font-medium">📅 Timeline Tip: Plan accordingly as the approval process usually takes about 1 month from submission to approval.</p>
               </div>
