@@ -2092,7 +2092,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-green-200 dark:border-green-800 bg-gradient-to-br from-green-50 via-white to-slate-50 dark:from-green-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Professional Development • 23 November 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Professional Development • 22 November 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Your Complete Guide to BEM Engineering Technologist Registration</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">Learn how to obtain your Engineering Technologist registration with the Board of Engineers Malaysia (BEM). This step-by-step guide covers ETAC accreditation verification, application process, documentation requirements, and important regulations about title usage.</p>
             </div>
