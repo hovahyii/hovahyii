@@ -83,5 +83,14 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     description: 'Complete guide on how to apply for and obtain your Engineering Technologist registration with the Board of Engineers Malaysia (BEM). Learn about ETAC accreditation, application process, required documents, title usage, and the pathway to Professional Engineer status.',
     ogImage: '/blog/eng-tech/engineering-technologist.jpg',
     categories: ['BEM', 'Engineering'],
+  },
+  'trae-solo-china-launch-free-features': {
+    slug: 'trae-solo-china-launch-free-features',
+    title: '🔥 All Features Free! TRAE SOLO China Version Launches',
+    date: '27 November 2025',
+    author: 'Hovah Yii',
+    description: 'TRAE SOLO officially launches in China with all features completely free. Introducing SOLO Coder, Plan mode, multi-task parallel processing, DiffView code change tool, and context compression—the future of AI programming is here.',
+    ogImage: '/blog/trae/solo-china.png',
+    categories: ['AI', 'Programming'],
   }
 };

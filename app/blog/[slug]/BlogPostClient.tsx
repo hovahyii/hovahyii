@@ -2556,6 +2556,382 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'trae-solo-china-launch-free-features') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-orange-200 dark:border-orange-800 bg-gradient-to-br from-orange-50 via-white to-slate-50 dark:from-orange-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-orange-600 dark:text-orange-300 font-semibold">AI Programming • 27 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">🔥 All Features Free! TRAE SOLO China Version Launches</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">TRAE SOLO officially lands in China with all features completely free. Introducing SOLO Coder, Plan mode, multi-task parallel processing, DiffView code change tool, and context compression—the future of AI programming is here.</p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Summary</h2>
+            <p className="text-xl font-medium mb-6">
+              Today, TRAE SOLO officially launches in China, bringing:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-lg">
+              <li><strong>SOLO Coder:</strong> Professional intelligent agent specialized for complex projects</li>
+              <li><strong>Plan Mode:</strong> Let AI create a plan first, then you approve</li>
+              <li><strong>Multi-task Parallel Processing:</strong> Frontend and backend development simultaneously, doubling efficiency</li>
+              <li><strong>Code Change Tool DiffView:</strong> See exactly what AI changed at a glance</li>
+              <li><strong>Context Compression:</strong> Discard unnecessary content, focus on the core</li>
+            </ul>
+
+            <p className="mt-8 text-lg">
+              AI programming is getting stronger, and AI coding tools are proliferating. Cursor, Claude Code, Codex, GitHub Copilot, and various CLI tools and VSCode plugins. But to be strict, there aren't many tools that can truly make developers feel "confident and hands-off" in production environments.
+            </p>
+
+            <p className="mt-6 text-lg">
+              For developers who "make a living with code," solving complex problems, maintaining full control over code, and high automation are the core requirements. AI is getting stronger, and future development will definitely be AI-led, with developers orchestrating globally and giving orders—not through basic AI models showing off, leaving behind "un-debuggable" AI black box code.
+            </p>
+
+            <p className="mt-6 text-lg">
+              Among so many tools, TRAE International's SOLO mode has always been unique. Its core design philosophy is: <strong>All in One</strong>.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/solo.png"
+                alt="TRAE SOLO unified development environment"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Unifying all elements involved in the development process: IDE, terminal, browser, documentation, etc.</p>
+
+            <p className="mt-6 text-lg">
+              Very exciting news: TRAE's China version has finally launched SOLO mode, and it's completely free!
+            </p>
+
+            <p className="mt-6 text-lg font-semibold">
+              On November 25, TRAE SOLO officially landed in China, bringing core capabilities including SOLO Coder, Plan mode, multi-task parallel processing, code change tool DiffView, context compression, and most importantly:
+            </p>
+
+            <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/30 dark:to-red-900/30 p-6 rounded-xl shadow-md my-8">
+              <h3 className="text-2xl font-bold text-center mb-4">🔥 All Features Are Completely Free!</h3>
+            </div>
+
+            <p className="mt-6 text-lg">
+              TRAE is really going all out with this release!
+            </p>
+
+            <p className="mt-6 text-lg">
+              The SOLO mode interface is shown below, with task management panel, AI conversation panel, and tool panel from left to right.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/solo-china.png"
+                alt="TRAE SOLO China version interface"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">TRAE China Version: Solving Developers' Biggest Headaches</h2>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">SOLO: The Developer's Solo Performance with TRAE</h3>
+
+            <p className="text-lg mb-6">
+              SOLO mode, TRAE defines it as "The Responsive Coding Agent"—a responsive, perceptive programming intelligent agent that can perceive in real-time, be controlled at any time, and handle multiple tasks in parallel.
+            </p>
+
+            <p className="text-lg mb-6">
+              In IDEs like Cursor, VSCode+plugins, AI coding may be limited to Q&A, code auto-completion, or a single AI agent like Cursor Agent. But in actual programming, they all fall short of that "Iron Man JARVIS" feeling—they can't perceive human intent, and every step requires users to push forward themselves.
+            </p>
+
+            <p className="text-lg mb-6">
+              In a sense, this only reduces the learning cost of programming, not true AI programming. For example, developers used to joke that developers are "CTRL+C/V" engineers, and ordinary AI programming tools only solve the time-consuming part of that work.
+            </p>
+
+            <p className="text-lg mb-6">
+              AI foundation models are already very powerful and will become even more powerful. How can developers, or even ordinary users, rely on AI programming to truly create a complex product or complete a complex task?
+            </p>
+
+            <p className="text-lg mb-6">
+              We're talking about truly complex engineering, like a complete e-commerce website, a backend management system involving complex business flows. And most of the work requires learning third-party APIs, such as integrating operational systems that need third-party cameras, or course websites that need payment modules.
+            </p>
+
+            <p className="text-lg mb-6">
+              Actually, the name TRAE SOLO is very good, and it's also an answer. SOLO means solo, solo performance, alone—TRAE is the instrument in the developer's hands.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/solo-meaning.png"
+                alt="SOLO meaning explanation"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">SOLO Feature Details</h2>
+
+            <p className="text-lg mb-6">
+              TRAE SOLO China version brings rich features, including SOLO Coder, Plan mode, multi-task parallel processing, code change tool DiffView, and context compression.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/solo-coder.png"
+                alt="SOLO Coder interface"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">SOLO Coder: Built for Complex Development</h3>
+
+            <p className="text-lg mb-6">
+              SOLO Coder is the built-in professional intelligent agent in SOLO mode. For professional developers, the tasks they face are not "create a cool aircraft flying from Earth to Mars" or "create a pelican that can ride a bicycle" type simple pages.
+            </p>
+
+            <p className="text-lg mb-6">
+              The projects they face are likely based on existing, more complex repositories. SOLO Coder is built for this.
+            </p>
+
+            <p className="text-lg mb-6">
+              SOLO Coder brings better context management: Currently, after multiple rounds of user questions, as the context becomes longer, the model tends to lose focus, causing hallucinations and affecting AI effectiveness. Users can use the context compression function to manage and refine the context, improving model output effectiveness.
+            </p>
+
+            <p className="text-lg mb-6">
+              In TRAE SOLO, in addition to the built-in intelligent agent, you can also create new intelligent agents suitable for daily work tasks. When creating an intelligent agent, you can not only customize it, but also generate an intelligent agent with one sentence—this experience is very AI.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">Sub Agent: Using AI to Manage and Call AI</h3>
+
+            <p className="text-lg mb-6">
+              Another interesting feature is Sub Agent. Sub Agent belongs to the main Agent and is good at specific vertical task areas. Developers can customize an Agent and decide whether it can be called by other AIs.
+            </p>
+
+            <p className="text-lg mb-6">
+              This design can improve AI output effectiveness in complex projects. Because the main Agent (such as the built-in SOLO Coder) usually executes and handles more complex tasks, when the context is long, it's easy to have inaccurate execution of specific tasks.
+            </p>
+
+            <p className="text-lg mb-6">
+              Introducing Sub Agent allows the AI's "work scope" to be clearer, because Sub Agent works in an isolated context. This master-slave intelligent agent mode can avoid contamination from irrelevant context, letting professional Agents do professional things.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">Plan: Let Developers Control the Big Picture</h3>
+
+            <p className="text-lg mb-6">
+              In complex development tasks, development planning is a crucial part. Before AI, the development process had waterfall, agile development, etc. When AI is the leading role in development, "AI itself" also needs a development plan.
+            </p>
+
+            <p className="text-lg mb-6">
+              Another feature of TRAE SOLO is the ability to enable "Plan." When users use the SOLO Coder intelligent agent, users can check Plan during conversation, and AI will first output a high-quality plan after receiving the task.
+            </p>
+
+            <p className="text-lg mb-6">
+              Before entering formal development, developers can continuously communicate with AI about the plan until satisfied. For example, when developing a body data management system, but don't want AI to directly develop specific business pages. Want to prioritize building all underlying architecture, such as internationalization, API support, login/logout system, you can clearly define development phases and tasks for each phase in the plan.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/agent.gif"
+                alt="Plan mode demonstration"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-lg mb-6">
+              Through custom intelligent agents and Plan mode, TRAE SOLO achieves its first concept: making code "controllable at any time."
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">Context Management</h3>
+
+            <p className="text-lg mb-6">
+              TRAE SOLO has super-strong context capabilities, supporting retrieval of 100,000 code files at once—no matter how large the project, it's no problem. In addition to reserving ultra-long context, context compression is particularly important during the AI programming process.
+            </p>
+
+            <p className="text-lg mb-6">
+              As tasks progress, a lot of early communication or process code may become less important, but still occupies the "resources" of communication between developers and AI.
+            </p>
+
+            <p className="text-lg mb-6">
+              TRAE SOLO provides the following methods for context compression and management:
+            </p>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Automatic Trigger:</strong> When context exceeds window limits, the system automatically triggers context compression</li>
+              <li><strong>Manual User Trigger:</strong> When users see that the generated conversation content has used a lot of context window, they can perform compression operations</li>
+            </ul>
+
+            <p className="text-lg mt-6 mb-6">
+              After compression, previously unimportant conversations are reduced from 14% to 1%. This way, redundant context is discarded, more valuable content is retained, and the intelligent agent doesn't lose focus, staying focused on core tasks.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">New Three-Column Layout</h3>
+
+            <p className="text-lg mb-6">
+              TRAE SOLO China version brings a brand new three-column layout. Multi-task + conversation flow + tool panel, a clearer, more efficient development space design that makes AI development more efficient and controllable.
+            </p>
+
+            <p className="text-lg mb-6">
+              Like a control center and dispatch station, developers still have that feeling of controlling the big picture, leaving the work to AI.
+            </p>
+
+            <p className="text-lg mb-6">
+              On the left, you can see all parallel tasks; in the middle is the conversation with AI; on the right is the code structure and specific code. After SOLO Coder completes a key step or function module, it automatically folds the process into a concise summary, making complex execution processes clear and organized, with AI execution processes visible at a glance.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/chat.gif"
+                alt="TRAE SOLO conversation flow"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-lg mb-6">
+              From tasks to conversations, then from conversations to specific tools and corresponding code, progressing layer by layer.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">Code Change (DiffView) Tool</h3>
+
+            <p className="text-lg mb-6">
+              If you want to have global control over the project, you must know exactly where AI changed things. The "DiffView" tool can centrally display code change history.
+            </p>
+
+            <p className="text-lg mb-6">
+              After changes in the project are completed, you can click the view changes button in the conversation panel to open the code change window. In the middle column AI conversation window, you can see specific files.
+            </p>
+
+            <p className="text-lg mb-6">
+              For example, in one task, AI modified 2 files according to a requirement. After the task is completed, developers click the "View Changes" summary card at the end of the conversation flow, and can review all file change contents at once in the code changes.
+            </p>
+
+            <p className="text-lg mb-6">
+              Through the new three-column layout and code change tool, TRAE SOLO achieves its second design concept: "real-time perception" of the coding process.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10 mb-4">Support for Multi-Task Parallel Processing</h3>
+
+            <p className="text-lg mb-6">
+              This TRAE SOLO mode also supports multiple intelligent agent tasks running in parallel. For example, when developing a large backend management system for an airport, you can simultaneously develop multiple modules asynchronously: personnel management, vehicle management, material management, etc.
+            </p>
+
+            <p className="text-lg mb-6">
+              Or in frontend-backend separation scenarios, one session develops React frontend, while another session simultaneously develops Node.js backend. This is TRAE SOLO's third concept: "multi-task parallel" development process.
+            </p>
+
+            <p className="text-lg mb-6">
+              Developers can push work forward in multiple threads. Whether it's a full-stack project or a project composed of multiple subtasks, efficiency can be greatly improved. In the past, when writing code, when you were writing backend logic, you couldn't write the frontend login page. Now with TRAE SOLO, developers can switch between multiple tasks at any time and clearly grasp the real-time progress of each task.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Revisiting SOLO: How "One Person" Can Better Program with AI</h2>
+
+            <p className="text-lg mb-6">
+              Since Karpathy proposed vibe coding at the beginning of the year, plus the rapid advancement of AI foundation model capabilities this year, it's particularly popular now: one-person companies, one-person enterprises, one-person startups—this "one person" concept.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/david-ondrej.png"
+                alt="David Ondrej example"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-lg mb-6">
+              Many big names even livestream using vibe coding to write applications, not stopping until they earn 1 million, and they succeeded.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/riley-brown.png"
+                alt="Riley Brown example"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p className="text-lg mb-6">
+              And AI programming-related company valuations are also rising. Cursor's latest valuation has exceeded $29 billion.
+            </p>
+
+            <p className="text-lg mb-6">
+              SOLO mode fits the current trend of rapid evolution of AI programming tools. It can be seen that AI tools have moved from simplifying single-step development to "restructuring the development process."
+            </p>
+
+            <p className="text-lg mb-6">
+              Now anyone can use AI tools to write code and show off. But "hardcore programmers" still need a real productivity tool.
+            </p>
+
+            <p className="text-lg mb-6">
+              TRAE officials also mentioned that in the past six months, AI programming products have gradually transitioned from the "tool enhancement" stage to the "process restructuring" stage. Good AI programming tools are no longer satisfied with single code generation, but pursue highly automated end-to-end development experience.
+            </p>
+
+            <p className="text-lg mb-6">
+              On the other hand, TRAE SOLO's concept also lowers the usage threshold and adapts to a wider range of development scenarios. Whether it's a simple project or a complex project, the system can automatically manage multi-dimensional context.
+            </p>
+
+            <p className="text-lg mb-6">
+              SOLO can support ultra-large context retrieval of "100,000 source code files," allowing AI to still accurately locate and schedule resources in large codebases. 100,000 source files is already the scale of a super-large project.
+            </p>
+
+            <p className="text-lg mb-6">
+              From a developer's peripheral tool to a true productivity tool that dominates the development process, after nearly a year of evolution of AI coding tools, TRAE SOLO shows the prototype of future AI programming.
+            </p>
+
+            <p className="text-lg mb-6">
+              In the future of writing code, developers may not even need to manually organize background information, just focus on guiding and supervising AI's work.
+            </p>
+
+            <p className="text-lg mb-6">
+              OpenAI Codex team's "Product Lead" Alexander Embiricos proposed a vision for the future interface of programming tools in an interview. Developers no longer "pair" with AI programming assistants in real-time, but "delegate" tasks to AI, and the tool interface might be "like Tinder or TikTok's subscription feed."
+            </p>
+
+            <p className="text-lg mb-6">
+              Humans swipe/select various needs, then AI solves and pushes progress. The future software development interface may no longer be an IDE, but like Tinder or TikTok's subscription feed. Intelligent agents continuously push work progress, humans just swipe to decide Approve or Not.
+            </p>
+
+            <p className="text-lg mb-6">
+              TRAE SOLO goes further, not just satisfied with one AI "delivery," but through reasonable planning and multi-task parallel processing, making one person's development more like an "AI team delivering results" process.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">One More Thing</h2>
+
+            <p className="text-lg mb-6">
+              TRAE also has a dashboard function, with a heatmap like GitHub. From registering a TRAE account, the system will start recording usage. Through the data dashboard, you can intuitively view daily activity. Based on cumulative active days, the system will automatically grant corresponding user titles, reflecting usage frequency and continuous investment.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/trae/dashboard.png"
+                alt="TRAE dashboard with heatmap"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mt-12 mb-10">
+              <h3 className="text-2xl font-bold mb-4">🎉 Summary</h3>
+              <p className="text-lg mb-3">
+                TRAE SOLO China version is officially here, and all features are completely free! With SOLO Coder, Plan mode, multi-task parallel processing, DiffView, and context compression, the future of AI programming has arrived. Whether you're a solo developer or part of a team, TRAE SOLO provides the tools you need to build complex projects with confidence and control.
+              </p>
+              <p className="text-lg">
+                The era of AI-led development is here, and TRAE SOLO is leading the way.
+              </p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 
