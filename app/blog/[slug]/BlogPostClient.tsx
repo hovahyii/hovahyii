@@ -2932,6 +2932,200 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'qwen-neurips-2025-best-paper') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-rose-200 dark:border-rose-800 bg-gradient-to-br from-rose-50 via-white to-slate-50 dark:from-rose-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-rose-600 dark:text-rose-300 font-semibold">NeurIPS 2025 • 27 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">💐 Qwen Wins Best Paper! NeurIPS 2025 Awards Recap</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Four Best Papers, three runner-ups, the Faster R-CNN Test of Time recognition, and the very first Sejnowski-Hinton Prize&mdash;here is the complete English digest of what just happened at the world&apos;s top AI conference.</p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/qwen/neruips.png"
+                alt="NeurIPS 2025 award highlights"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-10">
+              <div className="p-5 rounded-2xl border border-rose-100 dark:border-rose-900 bg-white/70 dark:bg-rose-950/30 shadow-sm">
+                <p className="text-sm uppercase tracking-wider text-rose-500 dark:text-rose-200">Best Papers</p>
+                <p className="text-4xl font-bold text-rose-600 dark:text-rose-200">4</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">Diffusion theory, gated attention, 1000-layer self-supervised RL, and open-ended diversity research</p>
+              </div>
+              <div className="p-5 rounded-2xl border border-indigo-100 dark:border-indigo-900 bg-white/70 dark:bg-indigo-950/30 shadow-sm">
+                <p className="text-sm uppercase tracking-wider text-indigo-500 dark:text-indigo-200">Runner-Ups</p>
+                <p className="text-4xl font-bold text-indigo-600 dark:text-indigo-200">3</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">RL reasoning audits, transductive online learning bounds, neural scaling via superposition</p>
+              </div>
+              <div className="p-5 rounded-2xl border border-emerald-100 dark:border-emerald-900 bg-white/70 dark:bg-emerald-950/30 shadow-sm">
+                <p className="text-sm uppercase tracking-wider text-emerald-500 dark:text-emerald-200">Submissions</p>
+                <p className="text-4xl font-bold text-emerald-600 dark:text-emerald-200">21,575</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">5,290 accepted • 24.52% acceptance after dual-city event in San Diego &amp; Mexico City</p>
+              </div>
+              <div className="p-5 rounded-2xl border border-amber-100 dark:border-amber-900 bg-white/70 dark:bg-amber-950/30 shadow-sm">
+                <p className="text-sm uppercase tracking-wider text-amber-500 dark:text-amber-200">Legacy Honors</p>
+                <p className="text-4xl font-bold text-amber-600 dark:text-amber-200">2</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">Faster R-CNN receives the Test of Time Award; Sejnowski-Hinton Prize debuts with the Feedback Alignment team</p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Why This Announcement Matters</h2>
+            <ul className="list-disc pl-6 space-y-3 text-lg">
+              <li>The Qwen research team not only secured a Best Paper slot but also open-sourced gated-attention upgrades already powering Qwen3-Next models.</li>
+              <li>Rewards highlight two of 2025&apos;s hottest debates: LLM reasoning beyond RLHF, and how far self-supervised RL can scale.</li>
+              <li>Legacy awards remind the community where today&apos;s breakthroughs began: Faster R-CNN and biologically plausible learning theories.</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Best Paper Winners (4)</h2>
+
+            <div className="space-y-10">
+              <div className="border-l-4 border-rose-300 pl-6">
+                <h3 className="text-2xl font-bold">1. Artificial Hivemind: The Open-Ended Homogeneity of Language Models</h3>
+                <p className="text-sm uppercase tracking-wide text-slate-500">University of Washington • CMU • AI2 • Lila Sciences • Stanford</p>
+                <p className="mt-4 text-lg">Infinity-Chat, a 26K-prompt dataset with 31K human annotations, exposes how open-ended prompts trigger mode collapse: single models repeat themselves while different models converge to similar answers.</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Six prompt families and seventeen sub-categories capture brainstorming, creative writing, and speculative reasoning.</li>
+                  <li>Findings show most reward models cannot distinguish between globally liked outputs and highly personalized niche favorites.</li>
+                  <li>Offers a rigorous framework for measuring LLM diversity beyond random sampling nerfs.</li>
+                </ul>
+                <div className="my-6 flex flex-col gap-4">
+                  <Image src="/blog/qwen/write-metaphor-about-time.png" alt="Infinity-Chat cluster visualization" width={900} height={540} className="rounded-2xl shadow-lg" />
+                  <Image src="/blog/qwen/degree-of-repetition.png" alt="Artificial hivemind repetition chart" width={900} height={540} className="rounded-2xl shadow-lg" />
+                </div>
+                <p className="text-sm">Paper: <a href="https://openreview.net/forum?id=saDOrrnNTz" target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold">openreview.net/forum?id=saDOrrnNTz</a></p>
+              </div>
+
+              <div className="border-l-4 border-orange-300 pl-6">
+                <h3 className="text-2xl font-bold">2. Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free</h3>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Qwen Team • Edinburgh • Stanford • MIT • Tsinghua</p>
+                <p className="mt-4 text-lg">Qwen&apos;s engineers trained 30 MoE variants (15B) and a 1.7B dense baseline to isolate what head-specific sigmoid gates do when placed after scaled dot-product attention.</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Simple change: apply query-dependent sparse gating directly on SDPA outputs.</li>
+                  <li>Benefits: higher stability, bigger learning rates, and relief from attention sinks or activation spikes.</li>
+                  <li>Already deployed in Qwen3-Next production models powering China&apos;s leading consumer AI apps.</li>
+                </ul>
+                <div className="my-6 flex flex-col gap-4">
+                  <Image src="/blog/qwen/gated-attention-for-llm.png" alt="Gated attention paper illustration" width={900} height={540} className="rounded-2xl shadow-lg" />
+                  <Image src="/blog/qwen/sdpa.png" alt="SDPA gating comparisons" width={900} height={540} className="rounded-2xl shadow-lg" />
+                </div>
+                <p className="text-sm">Paper: <a href="https://openreview.net/pdf?id=1b7whO4SfY" target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold">openreview.net/pdf?id=1b7whO4SfY</a></p>
+              </div>
+
+              <div className="border-l-4 border-emerald-300 pl-6">
+                <h3 className="text-2xl font-bold">3. 1000 Layer Networks for Self-Supervised RL</h3>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Princeton • Warsaw University of Technology</p>
+                <p className="mt-4 text-lg">Scaling depth to 1,024 layers in goal-conditioned self-supervised RL unlocks a qualitative jump in behaviors, improving contrastive RL agents by up to 50x versus 2&ndash;5 layer baselines.</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>No demonstrations or reward signals&mdash;agents explore from scratch yet learn to reach complex locomotion and manipulation targets.</li>
+                  <li>Depth expansion reshapes latent dynamics, increasing success rates while preserving stability.</li>
+                  <li>Signals that RL can finally adopt the same scaling playbook that pushed LLMs into the mainstream.</li>
+                </ul>
+                <div className="my-6 flex flex-col gap-4">
+                  <Image src="/blog/qwen/scaling-depth.png" alt="1000 layer network scaling" width={900} height={540} className="rounded-2xl shadow-lg" />
+                  <Image src="/blog/qwen/humanoid-ant-u4-maze.gif" alt="Self-supervised RL goal reaching demo" width={900} height={540} className="rounded-2xl shadow-lg" />
+                </div>
+                <p className="text-sm">Paper: <a href="https://openreview.net/pdf?id=s0JVsx3bx1" target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold">openreview.net/pdf?id=s0JVsx3bx1</a></p>
+              </div>
+
+              <div className="border-l-4 border-indigo-300 pl-6">
+                <h3 className="text-2xl font-bold">4. Why Diffusion Models Don&apos;t Memorize</h3>
+                <p className="text-sm uppercase tracking-wide text-slate-500">PSL University • Bocconi University</p>
+                <p className="mt-4 text-lg">By studying the implicit dynamical regularization of diffusion training, the authors identify two critical timescales: τ<sub>gen</sub> (good samples emerge) and τ<sub>mem</sub> (memorization kicks in).</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>τ<sub>gen</sub> stays roughly constant, while τ<sub>mem</sub> increases linearly with dataset size&mdash;widening a safe training window.</li>
+                  <li>Explains how over-parameterized U-Nets can still generalize in long training runs.</li>
+                  <li>Validated via real + synthetic datasets and a solvable random-features model.</li>
+                </ul>
+                <div className="my-6 flex flex-col gap-4">
+                  <Image src="/blog/qwen/why-diffusion.png" alt="Diffusion generalization regimes" width={900} height={540} className="rounded-2xl shadow-lg" />
+                  <Image src="/blog/qwen/memorization-transition.png" alt="Memorization transition visualization" width={900} height={540} className="rounded-2xl shadow-lg" />
+                </div>
+                <p className="text-sm">Paper: <a href="https://openreview.net/pdf?id=BSZqpqgqM0" target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold">openreview.net/pdf?id=BSZqpqgqM0</a></p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-16 mb-6">Runner-Up Awards (3)</h2>
+
+            <div className="space-y-8">
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+                <h3 className="text-2xl font-semibold mb-2">Does Reinforcement Learning Really Incentivize Reasoning Capacity?</h3>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Tsinghua LeapLab • Shanghai Jiao Tong University</p>
+                <p className="text-lg mb-4">Large-k pass@k evaluations show RLVR mostly boosts sampling efficiency (small k). At large k, base models still win, implying RL does not yet invent new reasoning trajectories.</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Coverage + perplexity analysis reveals RL samples were already present in the original model distribution.</li>
+                  <li>Six RLVR algorithms exhibit marginal differences; distillation from stronger teachers adds more headroom.</li>
+                </ul>
+                <div className="my-5 flex justify-center">
+                  <Image src="/blog/qwen/does-reinforcement-learning.png" alt="RLVR evaluation results" width={900} height={540} className="rounded-2xl shadow-lg" />
+                </div>
+                <p className="text-sm">Paper: <a href="https://openreview.net/pdf?id=4OsgYD7em5" target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold">openreview.net/pdf?id=4OsgYD7em5</a></p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+                <h3 className="text-2xl font-semibold mb-2">Optimal Mistake Bounds for Transductive Online Learning</h3>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Kent State • Purdue • Google Research • MIT</p>
+                <p className="text-lg mb-4">Settles a 30-year question: the exact optimal mistake bound for concept classes with Littlestone dimension d is Θ(√d) in the transductive setting, cutting errors quadratically compared to standard online learning.</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Lower bound uses adversarial tree-path construction balancing mistakes against version-space shrinkage.</li>
+                  <li>Upper bound mixes sparse encodings, danger-zone minimization, and multiplicative-weights experts.</li>
+                </ul>
+                <div className="my-5 flex justify-center">
+                  <Image src="/blog/qwen/optimal-mistake-bounds.png" alt="Transductive online learning bounds" width={900} height={540} className="rounded-2xl shadow-lg" />
+                </div>
+                <p className="text-sm">Paper: <a href="https://openreview.net/pdf?id=EoebmBe9fG" target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold">openreview.net/pdf?id=EoebmBe9fG</a></p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+                <h3 className="text-2xl font-semibold mb-2">Superposition Yields Robust Neural Scaling</h3>
+                <p className="text-sm uppercase tracking-wide text-slate-500">MIT</p>
+                <p className="text-lg mb-4">Anthropic model probes show that strong representational superposition enforces 1/dimensional scaling, aligning with Chinchilla-like laws and clarifying when scaling curves break.</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Weak superposition demands power-law feature frequencies; strong superposition generalizes to broader distributions.</li>
+                  <li>Provides knobs (regularization, feature spectra, representation budgets) to engineer better scaling.</li>
+                </ul>
+                <div className="my-5 flex justify-center">
+                  <Image src="/blog/qwen/superposition-yield.png" alt="Superposition-driven scaling law" width={900} height={540} className="rounded-2xl shadow-lg" />
+                </div>
+                <p className="text-sm">Paper: <a href="https://openreview.net/pdf?id=knPz7gtjPW" target="_blank" rel="noopener noreferrer" className="text-rose-600 font-semibold">openreview.net/pdf?id=knPz7gtjPW</a></p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-16 mb-6">Test of Time: Faster R-CNN Turns 10</h2>
+            <p className="text-lg">Ren Shaoqing, He Kaiming, Ross Girshick, and Sun Jian&apos;s 2015 breakthrough that unified region proposal networks with detection heads still anchors modern vision stacks, surpassing 56,700 citations.</p>
+            <div className="my-6 flex flex-col gap-4">
+              <Image src="/blog/qwen/faster-r-cnn.png" alt="Faster R-CNN original paper highlight" width={900} height={540} className="rounded-2xl shadow-lg" />
+              <Image src="/blog/qwen/faster-rcnn-diagram.png" alt="Faster R-CNN architecture diagram" width={900} height={540} className="rounded-2xl shadow-lg" />
+            </div>
+            <p className="text-lg">The committee also paid tribute to the late Dr. Sun Jian for reshaping industrial-scale computer vision. Faster R-CNN proved learning-based two-stage detectors could hit 5 FPS while delivering unmatched accuracy&mdash;the blueprint for today&apos;s transformer detectors.</p>
+
+            <h2 className="text-3xl font-bold mt-16 mb-6">Sejnowski-Hinton Prize Debuts</h2>
+            <p className="text-lg">Timothy Lillicrap, Daniel Cownden, Douglas Tweed, and Colin Akerman won the inaugural prize for the 2016 paper <em>Random synaptic feedback weights support error backpropagation for deep learning</em>, better known for inventing Feedback Alignment.</p>
+            <p className="text-lg">The award traces back to Hinton and Sejnowski&apos;s 1983 pact to share any Boltzmann Machine Nobel winnings. After Hinton shared his 2024 Nobel honorarium, NeurIPS created this prize to celebrate biologically plausible learning.</p>
+            <div className="my-6 flex justify-center">
+              <Image src="/blog/qwen/ranking.png" alt="Sejnowski-Hinton prize announcement" width={900} height={540} className="rounded-2xl shadow-lg" />
+            </div>
+            <p className="text-lg">Feedback Alignment showed multilayer networks can learn effectively even when backward paths use random weights. As training progresses, forward weights align with noisy feedback signals, yielding a biased yet useful gradient estimate aligned with biological learning constraints.</p>
+
+            <div className="bg-gradient-to-r from-rose-50 to-amber-50 dark:from-rose-900/30 dark:to-amber-900/30 p-6 rounded-2xl shadow-md mt-16">
+              <h3 className="text-2xl font-bold mb-4">Quick Recap</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Qwen&apos;s gated attention work cements Chinese model labs at the NeurIPS main stage.</li>
+                <li>Infinity-Chat becomes the go-to benchmark for measuring open-ended diversity and hivemind effects.</li>
+                <li>RL scaling is finally real: 1,000-layer self-supervised agents dramatically improve success rates.</li>
+                <li>Legacy honors underline enduring ideas&mdash;region proposals and feedback alignment remain foundational.</li>
+              </ul>
+              <p className="text-lg mt-4">Bookmark this page to stay updated as NeurIPS 2025 sessions continue across San Diego and Mexico City.</p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 

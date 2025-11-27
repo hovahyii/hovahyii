@@ -92,5 +92,14 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     description: 'TRAE SOLO officially launches in China with all features completely free. Introducing SOLO Coder, Plan mode, multi-task parallel processing, DiffView code change tool, and context compression—the future of AI programming is here.',
     ogImage: '/blog/trae/solo-china.png',
     categories: ['AI', 'Programming'],
+  },
+  'qwen-neurips-2025-best-paper': {
+    slug: 'qwen-neurips-2025-best-paper',
+    title: '💐 Qwen Wins Best Paper! NeurIPS 2025 Awards Recap',
+    date: '27 November 2025',
+    author: 'Hovah Yii',
+    description: 'Four NeurIPS 2025 Best Papers, three runner-ups, a Faster R-CNN Test of Time win, and the first Sejnowski-Hinton Prize—here is the full English recap with Qwen’s gated attention breakthrough front and center.',
+    ogImage: '/blog/qwen/neruips.png',
+    categories: ['AI', 'Research'],
   }
 };
