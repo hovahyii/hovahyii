@@ -101,5 +101,14 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     description: 'Four NeurIPS 2025 Best Papers, three runner-ups, a Faster R-CNN Test of Time win, and the first Sejnowski-Hinton Prize—here is the full English recap with Qwen’s gated attention breakthrough front and center.',
     ogImage: '/blog/qwen/neruips.png',
     categories: ['AI', 'Research'],
-  }
+  },
+  'deepseek-math-v2-self-verifiable-reasoning': {
+    slug: 'deepseek-math-v2-self-verifiable-reasoning',
+    title: 'DeepSeek Makes History Again! Open Source IMO Gold Level Math Model, AI Learns to Reflect for the First Time',
+    date: '29 November 2025',
+    author: 'Hovah Yii',
+    description: 'DeepSeek team\'s breakthrough lies in finding a new direction—making AI not only solve problems but also check if its reasoning process is rigorous.',
+    ogImage: '/blog/deepseek/github.png',
+    categories: ['AI', 'DeepSeek', 'Math'],
+  },
 };

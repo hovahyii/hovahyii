@@ -14,7 +14,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
   const [post, setPost] = useState<BlogPost | null>(null);
   const [views, setViews] = useState<number>(0);
   const [isLoadingViews, setIsLoadingViews] = useState(true);
-  
+
   useEffect(() => {
     // In a real application, you would fetch this data from an API or CMS
     // For now, we'll hardcode the blog post content
@@ -26,9 +26,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p className="text-xl font-medium mb-6">
               Publishing your Android app to Huawei AppGallery can seem daunting at first, but with this step-by-step guide, you'll have your app live in no time. Let's walk through the entire process together.
             </p>
-            
+
             <h2 className="text-3xl font-bold mt-12 mb-6">How to Publish Your App into AppGallery Store</h2>
-            
+
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
@@ -36,16 +36,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">Start by navigating to the <a href="https://developer.huawei.com/consumer/en/console/service/AppService" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">App Service Console</a> on Huawei Developer.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/appgallery/app-services.png" 
-                  alt="App Service Console" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/appgallery/app-services.png"
+                  alt="App Service Console"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
@@ -53,16 +53,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">Once you're in the console, locate and click on the "App Release" option to begin the publishing process.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/appgallery/workspace.png" 
-                  alt="App Release Workspace" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/appgallery/workspace.png"
+                  alt="App Release Workspace"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">3</span>
@@ -70,7 +70,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">Navigate to Version/Update and select "Distribute" to start configuring your app release.</p>
             </div>
-            
+
             <div className="bg-gradient-to-r from-pink-50 to-red-50 dark:from-pink-900/30 dark:to-red-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">4</span>
@@ -78,23 +78,23 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">Complete all required information. If you're releasing for Beta Testing, make sure to fill up the Open Testing section with all necessary details.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/appgallery/open-testing.png" 
-                  alt="Open Testing Configuration" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/appgallery/open-testing.png"
+                  alt="Open Testing Configuration"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/30 dark:to-orange-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">5</span>
                 Upload Your APK
               </h3>
               <p className="mt-3 mb-4">Upload your APK using your released version APK in the App version section. Assign the version number for your application release.</p>
-              
+
               <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md my-4">
                 <h4 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">Understanding Version Numbers</h4>
                 <p className="mb-3">You may use the following information for assigning the app version. Here's a simple breakdown of the <strong>1.0.2</strong> example:</p>
@@ -105,7 +105,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 </ul>
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 dark:from-orange-900/30 dark:to-yellow-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">6</span>
@@ -113,7 +113,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">Make sure you setup a landing page for Privacy Policy URL in the Privacy Statement section. This is a required field for app submission.</p>
             </div>
-            
+
             <div className="bg-gradient-to-r from-yellow-50 to-green-50 dark:from-yellow-900/30 dark:to-green-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">7</span>
@@ -121,9 +121,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">For Release, select "Immediately once Approved" and then click submit. Your app will now be queued for review by the AppGallery team.</p>
             </div>
-            
+
             <h2 className="text-3xl font-bold mt-12 mb-6">How to Boost Your Progress</h2>
-            
+
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
@@ -131,16 +131,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">Go to <a href="https://developer.huawei.com/consumer/cn/support/feedback/#/ticketlist" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">Huawei Developer Support</a> and submit a ticket to expedite the review process.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/appgallery/ticket.png" 
-                  alt="Submit Support Ticket" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/appgallery/ticket.png"
+                  alt="Submit Support Ticket"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
@@ -148,7 +148,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">The fastest it will take is 3 days for the app to be released. Be patient and ensure all your app details are correct before submission.</p>
             </div>
-            
+
             <div className="bg-gradient-to-r from-teal-50 to-cyan-50 dark:from-teal-900/30 dark:to-cyan-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">3</span>
@@ -156,7 +156,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">Also check the Audit Report for what's going wrong: <a href="https://developer.huawei.com/consumer/en/service/josp/agc/index.html#/auditReportView" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">View Audit Report</a></p>
             </div>
-            
+
             <div className="bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">4</span>
@@ -164,16 +164,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h3>
               <p className="mt-3 mb-4">If your app is released, you can actually search for it in AppGallery. Congratulations on your successful app launch!</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/appgallery/bilcekap.jpeg" 
-                  alt="App Search in AppGallery" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/appgallery/bilcekap.jpeg"
+                  alt="App Search in AppGallery"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold mb-4">🎉 Congratulations!</h2>
               <p className="mt-3">You've successfully learned how to publish your app to Huawei AppGallery. Follow these steps carefully, and your app will be available to millions of users in no time!</p>
@@ -191,21 +191,21 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <p className="text-lg font-semibold mb-2">Cursor just dropped this bombshell:</p>
               <blockquote className="pl-4 italic border-l-2 border-blue-300 dark:border-blue-700 my-2">
                 "Cursor is now free for students. Enjoy!"
-                </blockquote>
-              <a 
-                href="https://x.com/cursor_ai/status/1919846420234031146" 
-                target="_blank" 
+              </blockquote>
+              <a
+                href="https://x.com/cursor_ai/status/1919846420234031146"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
               >
                 See the Official Announcement on X
               </a>
             </div>
-            
+
             <p className="text-xl font-medium mb-6">
               This is HUGE news for students everywhere! As someone who's used both the free and premium versions, I can tell you the difference is night and day. And now you can get all those premium features <span className="font-bold text-blue-600 dark:text-blue-400">absolutely free for an entire year</span>. Here's my step-by-step guide to claiming this amazing offer:
             </p>
-            
+
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold flex items-center">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
@@ -213,16 +213,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h2>
               <p className="mt-3 mb-2">First stop on your journey to free premium features! Head over to the <a href="https://www.cursor.com/cn/students" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">Cursor education verification page</a> where the magic begins.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/cursor-student.png" 
-                  alt="Cursor Student Program Page" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/cursor-student.png"
+                  alt="Cursor Student Program Page"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold flex items-center">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
@@ -230,16 +230,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h2>
               <p className="mt-3 mb-2">This is where your .edu email becomes your golden ticket! Log in with your student credentials and watch as the digital red carpet rolls out for you.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/unlock-cursor-freemium.png" 
-                  alt="Unlock Cursor Freemium Page" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/unlock-cursor-freemium.png"
+                  alt="Unlock Cursor Freemium Page"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold flex items-center">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">3</span>
@@ -247,16 +247,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h2>
               <p className="mt-3 mb-2">Submit the form and check your inbox! Cursor will send you a special email faster than you can say "AI-powered coding."</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/unlock-cursor-freemium-email.png" 
-                  alt="Confirmation Email" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/unlock-cursor-freemium-email.png"
+                  alt="Confirmation Email"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold flex items-center">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">4</span>
@@ -264,16 +264,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h2>
               <p className="mt-3 mb-2">That big, beautiful verify button is calling your name! One click and you're one step closer to coding nirvana.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/verify-email.png" 
-                  alt="Verify Email" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/verify-email.png"
+                  alt="Verify Email"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-pink-50 to-red-50 dark:from-pink-900/30 dark:to-red-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold flex items-center">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">5</span>
@@ -281,16 +281,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h2>
               <p className="mt-3 mb-2">Time to flash that student ID (digitally, of course)! SheerID will verify you're actually hitting the books and not just claiming to be for the sweet, sweet premium features.</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/verify-academic-status.png" 
-                  alt="Verify Academic Status" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/verify-academic-status.png"
+                  alt="Verify Academic Status"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/30 dark:to-orange-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold flex items-center">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">6</span>
@@ -298,16 +298,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h2>
               <p className="mt-3 mb-2">SheerID is working their magic behind the scenes. Soon, your inbox will ping with the good news!</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/SheerID-verification.png" 
-                  alt="SheerID Verification" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/SheerID-verification.png"
+                  alt="SheerID Verification"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-orange-50 to-yellow-50 dark:from-orange-900/30 dark:to-yellow-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold flex items-center">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">7</span>
@@ -318,68 +318,68 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 <p className="font-medium">⚠️ Pro Tip: Set a calendar reminder for 11 months from now to review your subscription if you don't want it to auto-renew.</p>
               </div>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/checkout-page.png" 
-                  alt="Checkout Page" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/checkout-page.png"
+                  alt="Checkout Page"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-6 rounded-xl shadow-md mb-10">
               <h2 className="text-2xl font-bold mb-4">🎉 Mission Accomplished: Welcome to Premium! 🎉</h2>
               <p className="mt-3 mb-2">Congratulations! You've successfully unlocked a full year of Cursor Premium without spending a dime. Check your email for confirmation and start enjoying those premium features immediately!</p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/result-email.png" 
-                  alt="Result Email" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/result-email.png"
+                  alt="Result Email"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/cursor/result.png" 
-                  alt="Final Result" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/cursor/result.png"
+                  alt="Final Result"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
             </div>
-            
+
             <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Why This Is a Game-Changer for Students</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-6 mb-10">
               <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">Supercharged Productivity</h3>
                 <p>Cursor's AI features help you write code faster than ever before. What used to take hours now takes minutes.</p>
               </div>
-              
+
               <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">Learn While You Code</h3>
                 <p>The AI doesn't just write code for you - it explains concepts and helps you understand what's happening under the hood.</p>
               </div>
-              
+
               <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">Premium Features Unlocked</h3>
                 <p>Access to GPT-4, longer context windows, and advanced code generation that the free version simply doesn't offer.</p>
               </div>
-              
+
               <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">Real-World Preparation</h3>
                 <p>Using professional-grade tools now prepares you for industry work later. Add this to your resume!</p>
               </div>
             </div>
-            
-            
+
+
             <div className="text-center mt-10 mb-6">
-              <a 
-                href="https://www.cursor.com/cn/students" 
-                target="_blank" 
+              <a
+                href="https://www.cursor.com/cn/students"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-md hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-bold text-lg shadow-lg hover:shadow-xl"
               >
@@ -715,7 +715,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <h3 className="text-2xl font-bold mt-10">Dominating the Leaderboards</h3>
             <p>Upon release, Gemini 3 practically dominated all benchmark tests, ranking first on the LMArena large model arena with an Elo score of 1501.</p>
-            
+
             <p>To summarize Google's words, Gemini 3 Pro's top-tier core lies in these three points:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Dominating LMArena (1501 points) and WebDev (1487 points)</strong></li>
@@ -755,7 +755,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Vibe Coding: One Prompt, Full Stack</h2>
             <p>Before writing this article, I threw this prompt to the just-released Gemini 3 Pro:</p>
-            
+
             <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
               <p className="font-mono text-sm">
                 "Create a single-file HTML realistic GBA emulator with CSS-drawn exquisite purple console. Game content is Chinese version Pokémon turn-based battle (Pikachu VS Bulbasaur), must reference original GitHub pixel assets and use Web Audio to synthesize sound effects"
@@ -926,7 +926,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </ul>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Full-Stack Ecosystem: Android Studio & Firebase</h2>
-            
+
             <h3 className="text-2xl font-bold mt-8">Android Studio "Otter"</h3>
             <p>In the latest Android Studio Otter version, Gemini 3 Pro is integrated into the IDE's core workflow, called Agent Mode.</p>
             <p>Beyond code completion, you can directly issue vague instructions like "refactor the login module to support the new authentication protocol," and Gemini 3 will analyze the entire project structure, locate relevant files, and execute cross-file code modifications.</p>
@@ -941,7 +941,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
               <h4 className="text-xl font-bold mb-4">Model Version</h4>
               <p className="mb-2"><strong>gemini-3-pro-preview</strong></p>
-              
+
               <h4 className="text-lg font-semibold mt-4 mb-2">Context Window</h4>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Context: 1 million Tokens</li>
@@ -967,7 +967,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: Google, Amazing!</h2>
-            
+
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
               <p className="text-lg">Gemini 3 has achieved godlike status through pure power. This is not just an AI model upgrade, but a comprehensive revolution in development tools, search experience, and mobile ecosystems. From Vibe Coding to Deep Think Mode, from Antigravity to Generative UI, Google has proven that the next era of AI has truly arrived.</p>
             </div>
@@ -1314,7 +1314,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: Programming Models Enter the "Agent Era"</h2>
-            
+
             <div className="bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
               <p className="text-lg mb-4">From GPT-5.1-Codex-Max, we can see that the new generation of programming models are no longer simple code generators, but programming agents capable of continuous work, automatic debugging, and proactive planning. Their long-term reasoning, context compression, and self-repair capabilities allow models to independently complete project-level tasks.</p>
               <p className="text-lg">As running costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also change — shifting from "writing code" to "describing requirements + reviewing results," with agents expected to undertake more implementation and iteration work.</p>
@@ -1344,7 +1344,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">What the Experts Are Saying</h2>
-            
+
             <div className="bg-slate-100 dark:bg-slate-800 rounded-xl p-6 mb-8">
               <ul className="list-disc pl-6 space-y-3">
                 <li><strong>Slow but incredibly smart:</strong> Like talking to a super brain, requires patience.</li>
@@ -1365,7 +1365,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p>No blog post, just a two-sentence announcement. As everyone knows, GPT-5.1 emphasizes both "EQ and IQ," and Pro undoubtedly takes these advantages to an even higher level.</p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">GPT-5.1-Codex-Max: The New Coding Champion</h2>
-            
+
             <div className="my-8 flex justify-center">
               <Image
                 src="/blog/openai/openai-developers-announcement.png"
@@ -1417,7 +1417,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p className="text-center text-gray-600 dark:text-gray-400 mb-8">As 2025 nears its end, the ultimate AI showdown is imminent. Between GPT-5.1 Pro and Gemini 3 Pro, who will emerge victorious?</p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">OpenAI's Strongest Programming Model</h2>
-            
+
             <p>This time's GPT-5.1-Codex-Max was forged on the "real battlefield"! It has been specifically trained on common engineering tasks such as PR creation, code review, frontend development, and Q&A.</p>
 
             <p>In multiple cutting-edge coding evaluations, it easily surpasses all of OpenAI's previous models.</p>
@@ -1638,7 +1638,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
               <h4 className="text-xl font-bold mb-4">Key Takeaways</h4>
-              
+
               <div className="space-y-4">
                 <div>
                   <h5 className="font-semibold text-lg mb-2">Slow but incredibly smart</h5>
@@ -1664,10 +1664,10 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: Programming Models Enter the "Agent Era"</h2>
-            
+
             <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
               <p className="text-lg mb-4">From GPT-5.1-Codex-Max, we can see that the new generation of programming models is no longer a simple code generator but a programming agent capable of continuous work, automatic debugging, and active planning. Its long-term reasoning, context compression, and self-repair capabilities enable the model to independently complete project-level tasks.</p>
-              
+
               <p className="text-lg">As operating costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also change—shifting from "writing code" to "describing requirements + reviewing results," with agents taking on more implementation and iteration work.</p>
             </div>
           </div>
@@ -2077,10 +2077,10 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: The Designer's Dilemma</h2>
-            
+
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 p-6 rounded-xl shadow-md mb-10">
               <p className="text-lg mb-4">Nano Banana Pro represents a paradigm shift in AI image generation. With unprecedented control over lighting, composition, and text rendering, combined with Gemini 3's world knowledge and reasoning capabilities, it's becoming clear that AI tools are no longer just assistants—they're becoming creative partners capable of studio-quality work.</p>
-              
+
               <p className="text-lg">From transforming manga to generating complex infographics, from solving math problems visually to creating multilingual marketing materials, Nano Banana Pro demonstrates that the line between "AI-assisted" and "AI-created" is blurring rapidly. The question isn't whether designers' jobs are at risk—it's how designers will adapt to work alongside these powerful tools.</p>
             </div>
           </div>
@@ -2102,7 +2102,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Step 1: Verify ETAC Accreditation</h2>
-            
+
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold flex items-center mb-4">
                 <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
@@ -2112,11 +2112,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 First, you need to verify if your university's engineering course is accredited by ETAC (Engineering Technology Accreditation Council). Visit the <a href="https://etac.org.my/list-of-accredited-engineering-programme-malaysia/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">ETAC official website</a> to check the list of accredited engineering programmes in Malaysia.
               </p>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/eng-tech/etac.PNG" 
-                  alt="ETAC Accredited Programme List" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/eng-tech/etac.PNG"
+                  alt="ETAC Accredited Programme List"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
@@ -2126,11 +2126,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <div className="my-8 flex justify-center">
-              <Image 
-                src="/blog/eng-tech/umpsa-eng-tech.PNG" 
-                alt="UMPSA Engineering Technology Programme" 
-                width={800} 
-                height={450} 
+              <Image
+                src="/blog/eng-tech/umpsa-eng-tech.PNG"
+                alt="UMPSA Engineering Technology Programme"
+                width={800}
+                height={450}
                 className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               />
             </div>
@@ -2172,7 +2172,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 Upload All Necessary Documents
               </h3>
               <p className="mt-3 mb-4">Follow the instructions carefully and upload all necessary documentation. Here's the crucial part:</p>
-              
+
               <div className="bg-red-100 dark:bg-red-900/50 p-4 rounded-lg my-4">
                 <h4 className="text-xl font-bold mb-3 text-red-700 dark:text-red-300">⚠️ CRITICAL REQUIREMENT</h4>
                 <p className="font-medium mb-2">Your documentation MUST include:</p>
@@ -2184,11 +2184,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </div>
 
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/eng-tech/important.PNG" 
-                  alt="Important Documentation Requirements" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/eng-tech/important.PNG"
+                  alt="Important Documentation Requirements"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
@@ -2226,17 +2226,17 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 <li><strong>Approval Timeline:</strong> If everything is in order, your application is typically approved by the <strong>3rd or 4th week</strong> after the board meeting</li>
                 <li><strong>Notification:</strong> You'll receive notification via email once your application is approved</li>
               </ul>
-              
+
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/eng-tech/email-approval.PNG" 
-                  alt="BEM Approval Email Notification" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/eng-tech/email-approval.PNG"
+                  alt="BEM Approval Email Notification"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
-              
+
               <div className="bg-yellow-100 dark:bg-yellow-900/50 p-4 rounded-lg mt-4">
                 <p className="font-medium">📅 Timeline Tip: Plan accordingly as the approval process usually takes about 1 month from submission to approval.</p>
               </div>
@@ -2247,11 +2247,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-2xl font-bold mb-4">You're Now a Registered Engineering Technologist!</h3>
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/eng-tech/engineering-technologist.jpg" 
-                  alt="Engineering Technologist Certificate" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/eng-tech/engineering-technologist.jpg"
+                  alt="Engineering Technologist Certificate"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 />
               </div>
@@ -2268,13 +2268,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <div className="bg-red-50 dark:bg-red-900/30 border-l-4 border-red-500 p-6 rounded-lg mb-8">
               <h3 className="text-2xl font-bold mb-4 text-red-700 dark:text-red-300">You CANNOT Use "Eng Tech" or "Engr." as a Pre-nominal Title</h3>
-              
+
               <div className="my-4 flex justify-center">
-                <Image 
-                  src="/blog/eng-tech/title.jpg" 
-                  alt="Professional Title Regulations" 
-                  width={800} 
-                  height={450} 
+                <Image
+                  src="/blog/eng-tech/title.jpg"
+                  alt="Professional Title Regulations"
+                  width={800}
+                  height={450}
                   className="rounded-lg shadow-md"
                 />
               </div>
@@ -2298,7 +2298,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
               <h4 className="text-xl font-bold mb-4 text-green-600 dark:text-green-400">2. ✅ Correct Usage: Post-nominal (After Your Name)</h4>
               <p className="mb-4">You can and should list the qualification after your name or in your professional descriptions.</p>
-              
+
               <div className="bg-green-100 dark:bg-green-900/50 p-4 rounded-lg mb-4">
                 <p className="font-semibold mb-2">Correct Examples:</p>
                 <ul className="list-disc pl-6 space-y-1">
@@ -2346,7 +2346,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 p-6 rounded-xl shadow-md mb-10">
               <h3 className="text-xl font-bold mb-4">Board of Engineers Malaysia (BEM) Contact Information</h3>
               <p className="mb-4">If you have questions or need assistance with your application, you can reach BEM through the following channels:</p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white dark:bg-slate-800 p-4 rounded-lg">
                   <h4 className="font-semibold mb-2 flex items-center">
@@ -2380,7 +2380,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </div>
             </div>
 
-          
+
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Frequently Asked Questions (FAQ)</h2>
 
@@ -2431,7 +2431,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
                 <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: What's the difference between Graduate Engineer and Engineering Technologist?</h4>
                 <p className="mb-3">These are two different registration pathways with BEM:</p>
-                
+
                 <div className="grid md:grid-cols-2 gap-4 mt-3">
                   <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
                     <h5 className="font-bold mb-2">Graduate Engineer (GE)</h5>
@@ -2442,7 +2442,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                       <li>Pathway: GE → PE (Ir.)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg">
                     <h5 className="font-bold mb-2">Engineering Technologist (ET)</h5>
                     <ul className="list-disc pl-5 space-y-1 text-sm">
@@ -2453,19 +2453,19 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                     </ul>
                   </div>
                 </div>
-                
+
                 <p className="mt-3 text-sm"><strong>Both are valuable:</strong> Graduate Engineers focus on design and innovation, while Engineering Technologists focus on implementation and optimization. Different roles, both essential to the industry.</p>
               </div>
 
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
                 <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: Why does the Sydney Accord recognize Engineering Technologists, but BEM doesn't provide a professional pathway?</h4>
                 <p className="mb-3">This is a common frustration among Engineering Technology graduates. Here's the situation:</p>
-                
+
                 <div className="bg-yellow-50 dark:bg-yellow-900/30 p-4 rounded-lg mb-3">
                   <p className="font-semibold mb-2">🌏 International Recognition (Sydney Accord)</p>
                   <p className="text-sm">The <strong>Sydney Accord</strong> is an international agreement that recognizes engineering technology qualifications across member countries. Malaysia is a signatory, meaning our ETAC-accredited degrees are internationally recognized.</p>
                 </div>
-                
+
                 <div className="bg-red-50 dark:bg-red-900/30 p-4 rounded-lg mb-3">
                   <p className="font-semibold mb-2">🇲🇾 Local Reality (BEM)</p>
                   <p className="text-sm mb-2">However, BEM currently does <strong>not have a "Professional Engineering Technologist" registration tier</strong>. You can register as "Engineering Technologist" but:</p>
@@ -2475,7 +2475,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                     <li>Must go through BEM GAP to become Graduate Engineer if you want "Ir." eventually</li>
                   </ul>
                 </div>
-                
+
                 <p className="mb-3"><strong>Why this gap exists:</strong></p>
                 <ul className="list-disc pl-6 space-y-2 text-sm">
                   <li>BEM's registration acts focus primarily on Professional Engineers (PE)</li>
@@ -2483,7 +2483,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                   <li>Industry and regulatory bodies are still evolving to recognize ET contributions</li>
                   <li>There's ongoing discussion about creating a professional pathway, but nothing concrete yet</li>
                 </ul>
-                
+
                 <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg mt-3">
                   <p className="font-semibold mb-2">✅ Practical Solution: Go to MBOT</p>
                   <p className="text-sm">Since BEM doesn't offer a professional pathway for Engineering Technologists, <strong>most graduates register with MBOT</strong> (Malaysia Board of Technologists) instead. MBOT offers:</p>
@@ -2499,7 +2499,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow p-6">
                 <h4 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">Q: Should I register with BEM or MBOT as an Engineering Technologist?</h4>
                 <p className="mb-3"><strong>Honest recommendation: Register with BOTH if possible, but prioritize MBOT.</strong></p>
-                
+
                 <div className="space-y-3">
                   <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg">
                     <p className="font-semibold mb-2">✅ MBOT (Recommended Priority)</p>
@@ -2510,7 +2510,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                       <li>Better return on investment for Engineering Technology graduates</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
                     <p className="font-semibold mb-2">✅ BEM (Secondary/Optional)</p>
                     <ul className="list-disc pl-5 space-y-1 text-sm">
@@ -2521,7 +2521,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                     </ul>
                   </div>
                 </div>
-                
+
                 <p className="mt-3 text-sm italic">Many successful Engineering Technologists have both registrations for maximum professional credibility and flexibility.</p>
               </div>
             </div>
@@ -3126,6 +3126,122 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'deepseek-math-v2-self-verifiable-reasoning') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News • 29 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">DeepSeek Makes History Again! Open Source IMO Gold Level Math Model</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">The DeepSeek team&apos;s breakthrough lies in finding a new direction—making AI not only solve problems but also check if its reasoning process is rigorous. AI learns to reflect for the first time.</p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">DeepSeekMath-V2: What does it mean?</h3>
+            <p>AI is evolving from &quot;imitating human speech&quot; to &quot;imitating human thinking&quot;. True thinking is often accompanied by self-doubt. When we see AI starting to stop before outputting the final result and say to itself &quot;This doesn&apos;t look right, let me calculate it again&quot;, that is the moment it truly transcends the attribute of a tool. True wisdom lies not only in giving an answer instantly, but also in having the courage and ability to overturn oneself.</p>
+
+            <h3 className="text-2xl font-bold mt-12">The Magic of DeepSeekMath-V2</h3>
+            <p>Yesterday, something interesting happened, it was really magical, I feel like a script wouldn&apos;t be written so coincidentally. Just last night, DeepSeek quietly launched a new model, DeepSeekMath-V2.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/github.png"
+                alt="DeepSeekMath-V2 GitHub"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Paper Title:</strong> DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning</li>
+              <li><strong>Model Address:</strong> <a href="https://huggingface.co/deepseek-ai/DeepSeek-Math-V2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">HuggingFace</a></li>
+              <li><strong>Paper Address:</strong> <a href="https://github.com/deepseek-ai/DeepSeek-Math-V2/blob/main/DeepSeekMath_V2.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PDF</a></li>
+              <li><strong>Core Authors:</strong> Zhihong Shao, Yuxiang Luo, Chengda Lu, Z.Z. Ren</li>
+            </ul>
+
+            <p className="mt-4">The first author of this paper, Zhihong Shao, was also the first author of DeepSeek&apos;s previous math model DeepSeekMath 7B. It is worth mentioning that it was in the DeepSeekMath 7B paper that he and his team proposed the classic GRPO (Group Relative Policy Optimization). Similarly, he is also a core contributor to DeepSeek-R1.</p>
+
+            <h3 className="text-2xl font-bold mt-12">Performance: Olympic Gold Level</h3>
+            <p>A 685B math-specific model built on DeepSeek-V3.2-Exp-Base. The special point of this model, in plain English, is that it can not only give the answer, but also check its own problem-solving steps, pick out its own mistakes, debate with itself, until it feels that its entire reasoning process is flawless. Moreover, in terms of ability, it has reached the Olympic gold medal level.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/proofbench.png"
+                alt="DeepSeekMath-V2 Benchmark"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>IMO 2025:</strong> Cracked 5 problems (6 in total), reaching gold medal level.</li>
+              <li><strong>CMO 2024 (Chinese Mathematical Olympiad):</strong> Reached gold medal level.</li>
+              <li><strong>Putnam 2024:</strong> Scored 118, close to full score (120 points), surpassing the highest score of human contestants (90 points).</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mt-12">Ilya Sutskever&apos;s Concern</h3>
+            <p>Just 2 days ago, Ilya Sutskever, one of the godfathers of AI and former chief scientist of OpenAI, expressed a concern in a podcast.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/ilya-sutskever.png"
+                alt="Ilya Sutskever Podcast"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>He said that current AI models are like a specialized student A who spent 10,000 hours brushing through all competition questions to become the king of the field. But there is also a generalist student B who spent less time on questions but more on understanding the world. Ilya asked: Which student will have better career development? The answer is student B. Student A&apos;s strength is exam-oriented, while Student B possesses &quot;the &apos;it&apos;&quot;—a more profound and generalized understanding.</p>
+
+            <h3 className="text-2xl font-bold mt-12">DeepSeek&apos;s Answer: Self-Verifiable Reasoning</h3>
+            <p>Before DeepSeekMath-V2, AI was result-oriented. Like a sales report, only the final number mattered. But in math, the process is everything.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/whiteboard.png"
+                alt="Math Process"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>DeepSeekMath-V2 introduces a &quot;Generator&quot; (the student) and a &quot;Verifier&quot; (the strict teacher). The Verifier checks every step of the Generator, deducting points for logical loopholes. The Generator learns to modify and improve its proof process to satisfy the Verifier. This is &quot;reflection&quot;.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/mean-proof.png"
+                alt="Generator and Verifier"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>They also added &quot;Meta-Verification&quot;—a general dean to check if the teacher (Verifier) is grading correctly. This creates a positive cycle where the Generator writes better proofs, and the Verifier becomes more accurate.</p>
+
+            <h3 className="text-2xl font-bold mt-12">The Putnam Miracle</h3>
+            <p>The Putnam Competition is recognized as hell difficulty. The median score is usually 0 or 1. Last year&apos;s highest human score was 90. DeepSeekMath-V2 scored <strong>118</strong> out of 120.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/william-lowell.png"
+                alt="Putnam Competition"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Conclusion</h3>
+            <p>DeepSeek&apos;s paper suggests that to bridge the gap between evaluation and reality, we should teach AI to look inward—to pursue logical self-consistency rather than just external rewards. This is AI&apos;s &quot;extending conscience&quot;.</p>
+            <p>DeepSeekMath-V2 is using unimaginable computing power to walk every step of logic that we humans might skip through inspiration. It walks a slower, clumsier, but perhaps closer-to-essence road.</p>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 
@@ -3174,9 +3290,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center">
           <div className="relative w-8 h-8 mr-2 overflow-hidden rounded-full border border-gray-200 shadow-sm">
-            <Image 
-              src="/hovah.png" 
-              alt="Hovah Yii" 
+            <Image
+              src="/hovah.png"
+              alt="Hovah Yii"
               fill
               className="object-cover"
             />
@@ -3184,23 +3300,23 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           <p className="text-gray-600 dark:text-gray-400">{post.author} • {post.date}</p>
         </div>
         <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            strokeWidth={1.5} 
-            stroke="currentColor" 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
             className="w-5 h-5"
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
             />
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" 
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
           <span className="text-sm font-medium">
@@ -3208,7 +3324,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </span>
         </div>
       </div>
-      
+
       {post.content}
     </div>
   );

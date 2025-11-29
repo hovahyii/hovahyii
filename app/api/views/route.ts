@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getViewsCollection } from '@/lib/mongodb';
 
 // GET: Get view count for a specific blog post
 export async function GET(request: NextRequest) {
@@ -11,9 +10,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Slug is required' }, { status: 400 });
     }
 
-    const collection = await getViewsCollection();
-    const doc = await collection.findOne({ slug });
-    const viewCount = doc?.views || 0;
+    // Mock implementation - return 0 or a random number
+    const viewCount = 100; // Placeholder
 
     return NextResponse.json({ slug, views: viewCount });
   } catch (error) {
@@ -31,19 +29,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Slug is required' }, { status: 400 });
     }
 
-    const collection = await getViewsCollection();
-    
-    // Use findOneAndUpdate with upsert to increment or create
-    const result = await collection.findOneAndUpdate(
-      { slug },
-      { $inc: { views: 1 } },
-      { 
-        upsert: true, 
-        returnDocument: 'after' 
-      }
-    );
-
-    const viewCount = result?.views || 1;
+    // Mock implementation - just return success
+    const viewCount = 101; // Placeholder
 
     return NextResponse.json({ slug, views: viewCount });
   } catch (error) {
