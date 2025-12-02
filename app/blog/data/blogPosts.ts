@@ -111,4 +111,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/deepseek/github.png',
     categories: ['AI', 'DeepSeek', 'Math'],
   },
+  'deepseek-v3-2-gpt-5-killer': {
+    slug: 'deepseek-v3-2-gpt-5-killer',
+    title: '👑 DeepSeek-V3.2 is Here! The Strongest Yet! Performance Approaches Gemini 3, Tears Apart GPT-5 High',
+    date: '2 December 2025',
+    author: 'Hovah Yii',
+    description: 'DeepSeek releases V3.2 and V3.2-Speciale, achieving GPT-5 level performance. A detailed look at the technical report and benchmarks.',
+    ogImage: '/blog/deepseek/accuracy.png',
+    categories: ['AI', 'DeepSeek', 'LLM'],
+  },
 };
