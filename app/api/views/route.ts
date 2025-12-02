@@ -2,7 +2,16 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 
-const DATA_FILE_PATH = path.join(process.cwd(), 'data', 'blog-views.json');
+const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_FILE_PATH = path.join(DATA_DIR, 'blog-views.json');
+
+async function ensureDataDir() {
+  try {
+    await fs.access(DATA_DIR);
+  } catch {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+  }
+}
 
 async function getViewsData() {
   try {
@@ -15,6 +24,7 @@ async function getViewsData() {
 }
 
 async function saveViewsData(data: Record<string, number>) {
+  await ensureDataDir();
   await fs.writeFile(DATA_FILE_PATH, JSON.stringify(data, null, 2), 'utf-8');
 }
 
@@ -31,7 +41,14 @@ export async function GET(request: NextRequest) {
     const viewsData = await getViewsData();
     const viewCount = viewsData[slug] || 0;
 
-    return NextResponse.json({ slug, views: viewCount });
+    return NextResponse.json(
+      { slug, views: viewCount },
+      {
+        headers: {
+          'Cache-Control': 'no-store, max-age=0',
+        },
+      }
+    );
   } catch (error) {
     console.error('Error reading views:', error);
     return NextResponse.json({ error: 'Failed to read views' }, { status: 500 });
@@ -49,10 +66,17 @@ export async function POST(request: NextRequest) {
 
     const viewsData = await getViewsData();
     viewsData[slug] = (viewsData[slug] || 0) + 1;
-    
+
     await saveViewsData(viewsData);
 
-    return NextResponse.json({ slug, views: viewsData[slug] });
+    return NextResponse.json(
+      { slug, views: viewsData[slug] },
+      {
+        headers: {
+          'Cache-Control': 'no-store, max-age=0',
+        },
+      }
+    );
   } catch (error) {
     console.error('Error updating views:', error);
     return NextResponse.json({ error: 'Failed to update views' }, { status: 500 });
