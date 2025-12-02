@@ -3243,324 +3243,324 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         )
       });
     }
-  } else if (slug === 'deepseek-v3-2-gpt-5-killer') {
-    setPost({
-      ...postData,
-      content: (
-        <div className="prose lg:prose-xl max-w-none">
-          <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
-            <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News • 2 December 2025</p>
-            <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">DeepSeek-V3.2 is Here! The Strongest Yet!</h2>
-            <p className="text-lg text-slate-700 dark:text-slate-200">Performance Approaches Gemini 3, Tears Apart GPT-5 High (Technical Report Interpretation)</p>
-          </div>
+    else if (slug === 'deepseek-v3-2-gpt-5-killer') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News • 2 December 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">DeepSeek-V3.2 is Here! The Strongest Yet!</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Performance Approaches Gemini 3, Tears Apart GPT-5 High (Technical Report Interpretation)</p>
+            </div>
 
-          <h3 className="text-2xl font-bold mt-10">Summary</h3>
-          <p>DeepSeek released two new models: DeepSeek-V3.2 and DeepSeek-V3.2-Speciale.</p>
-          <p>Official web, App, and API updated to V3.2. Speciale is available via temporary API for evaluation.</p>
+            <h3 className="text-2xl font-bold mt-10">Summary</h3>
+            <p>DeepSeek released two new models: DeepSeek-V3.2 and DeepSeek-V3.2-Speciale.</p>
+            <p>Official web, App, and API updated to V3.2. Speciale is available via temporary API for evaluation.</p>
 
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/accuracy.png"
-              alt="DeepSeek Accuracy"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/accuracy.png"
+                alt="DeepSeek Accuracy"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
 
-          <h4 className="text-xl font-bold mt-6">1. DeepSeek-V3.2: Daily "All-rounder"</h4>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Public reasoning tests reached GPT-5 level!</strong> Slightly weaker than Gemini-3.0-Pro, but definitely tier 1.</li>
-            <li><strong>No verbosity:</strong> Compared to Kimi-K2-Thinking, output length is drastically reduced. Concise, precise, no waiting! Perfect for daily Q&A and general Agent tasks.</li>
-          </ul>
-
-          <h4 className="text-xl font-bold mt-6">2. V3.2-Speciale: "Logic Monster" Exploring Limits</h4>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Long-thinking Buff:</strong> This is the "deep thinking version" of V3.2, combined with Math-V2's theorem proving capability, logic rigor Max!</li>
-            <li><strong>Rivaling Top Tier:</strong> Performance directly benchmarks Gemini-3.0-Pro in various reasoning benchmarks.</li>
-            <li><strong>Competition Harvester:</strong> It actually won Gold in IMO 2025 (Math Olympiad), CMO 2025, ICPC 2025 (Programming), and IOI 2025!</li>
-          </ul>
-
-          <h3 className="text-2xl font-bold mt-12">Detailed Breakdown</h3>
-          <p>Last night, DeepSeek released two new models: DeepSeek-V3.2 and DeepSeek-V3.2-Speciale. This is DeepSeek's most powerful model to date, achieving global open-source model #1 performance in reasoning, agents, and other fields.</p>
-          <p>DeepSeek claims that the standard version of DeepSeek-V3.2 reached the level of GPT-5 in public reasoning benchmarks, only slightly lower than Gemini-3.0-Pro; compared to Kimi-K2-Thinking, V3.2's output length is significantly reduced, significantly reducing computational overhead and user waiting time. The long-thinking enhanced version DeepSeek-V3.2-Speciale combines the theorem proving capability of DeepSeek-Math-V2, possessing strong instruction following, mathematical proof, and logical verification capabilities, and its performance on mainstream reasoning benchmarks rivals Gemini-3.0-Pro.</p>
-
-          <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg my-6">
-            <h4 className="font-bold mb-2">TL;DR Version</h4>
+            <h4 className="text-xl font-bold mt-6">1. DeepSeek-V3.2: Daily "All-rounder"</h4>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>DeepSeek-V3.2 (Standard Edition):</strong> Focuses on cost-effectiveness and daily use, reasoning ability reaches GPT-5 level, shorter output than Kimi-K2-Thinking, faster and more cost-saving, and realizes "thinking while using tools" for the first time. Official website, APP, and API have all been upgraded to this version, suitable for daily Q&A, writing, and Agent tasks.</li>
-              <li><strong>DeepSeek-V3.2-Speciale (Ultimate Enhanced Edition):</strong> Oriented towards exploring the upper limit of AI capabilities, performance rivals Gemini-3.0-Pro, won gold medals in 2025 IMO, IOI, ICPC (IOI ranked 10th in humans, ICPC ranked 2nd). Only provides temporary API, long thinking chain, large Token consumption, high cost, does not support tool calling, and has not optimized daily dialogue, service ends on December 15, 2025.</li>
+              <li><strong>Public reasoning tests reached GPT-5 level!</strong> Slightly weaker than Gemini-3.0-Pro, but definitely tier 1.</li>
+              <li><strong>No verbosity:</strong> Compared to Kimi-K2-Thinking, output length is drastically reduced. Concise, precise, no waiting! Perfect for daily Q&A and general Agent tasks.</li>
             </ul>
-          </div>
 
-          <p>In the open-source world, DeepSeek-V3.2 is also a leader. According to data from the authoritative large model evaluation platform Artificial Analysis, before including DeepSeek-V3.2, the open-source model with the highest intelligence level in the industry was Kimi-K2-Thinking.</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/artificial-analysis-intelligence-index.png"
-              alt="Artificial Analysis Intelligence Index"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-
-          <p>On benchmarks where both DeepSeek-V3.2 and Kimi-K2-Thinking announced results and the test settings were the same, DeepSeek-V3.2 led Kimi-K2-Thinking.</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/intelligence-score.png"
-              alt="Intelligence Score"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-          <p className="text-center text-sm text-gray-500">DeepSeek-V3.2 and Kimi-K2-Thinking benchmark comparison, data source: official channels</p>
-
-          <p>DeepSeek-V3.2 is also the first model launched by DeepSeek that integrates thinking into tool use, and supports tool calling in both thinking mode and non-thinking mode.</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/prompting.gif"
-              alt="Prompting GIF"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-
-          <p>The DeepSeek-V3.2 model reached the highest level of current open-source models in agent evaluation, significantly narrowing the gap between open-source models and closed-source models. It is worth noting that V3.2 did not conduct special training for the tools of these test sets, which means that V3.2 can show strong generalization in real application scenarios.</p>
-
-          <p>In addition, the DeepSeek-V3.2-Speciale model also successfully won gold medals in IMO 2025 (International Mathematical Olympiad), CMO 2025 (Chinese Mathematical Olympiad), ICPC World Finals 2025 (International Collegiate Programming Contest World Finals), and IOI 2025 (International Olympiad in Informatics). Among them, ICPC and IOI scores reached the level of the second and tenth human contestants respectively.</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/benchmark.png"
-              alt="Benchmark Results"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-
-          <p>On highly complex tasks, the Speciale model is significantly better than the standard version, but the Tokens consumed are also significantly more, and the cost is higher. Currently, DeepSeek-V3.2-Speciale is only for research use, does not support tool calling, and has not been specially optimized for daily dialogue and writing tasks. Currently, DeepSeek official web, App, and API have all been updated to the official version DeepSeek-V3.2. The Speciale version is currently only open in the form of a temporary API service for community evaluation and research. The DeepSeek-V3.2 series models have been open-sourced, and the technical report was released at the same time.</p>
-
-          <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg my-6">
-            <p><strong>Technical Report:</strong> <a href="https://modelscope.cn/models/deepseek-ai/DeepSeek-V3.2/resolve/master/assets/paper.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PDF Link</a></p>
-            <p><strong>Open Source Links:</strong></p>
-            <ul className="list-disc pl-6">
-              <li>DeepSeek-V3.2: <a href="https://modelscope.cn/models/deepseek-ai/DeepSeek-V3.2" className="text-blue-600 hover:underline">ModelScope</a>, <a href="https://huggingface.co/deepseek-ai/DeepSeek-V3.2" className="text-blue-600 hover:underline">HuggingFace</a></li>
-              <li>DeepSeek-V3.2-Speciale: <a href="https://modelscope.cn/models/deepseek-ai/DeepSeek-V3.2-Speciale" className="text-blue-600 hover:underline">ModelScope</a>, <a href="https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale" className="text-blue-600 hover:underline">HuggingFace</a></li>
+            <h4 className="text-xl font-bold mt-6">2. V3.2-Speciale: "Logic Monster" Exploring Limits</h4>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Long-thinking Buff:</strong> This is the "deep thinking version" of V3.2, combined with Math-V2's theorem proving capability, logic rigor Max!</li>
+              <li><strong>Rivaling Top Tier:</strong> Performance directly benchmarks Gemini-3.0-Pro in various reasoning benchmarks.</li>
+              <li><strong>Competition Harvester:</strong> It actually won Gold in IMO 2025 (Math Olympiad), CMO 2025, ICPC 2025 (Programming), and IOI 2025!</li>
             </ul>
+
+            <h3 className="text-2xl font-bold mt-12">Detailed Breakdown</h3>
+            <p>Last night, DeepSeek released two new models: DeepSeek-V3.2 and DeepSeek-V3.2-Speciale. This is DeepSeek's most powerful model to date, achieving global open-source model #1 performance in reasoning, agents, and other fields.</p>
+            <p>DeepSeek claims that the standard version of DeepSeek-V3.2 reached the level of GPT-5 in public reasoning benchmarks, only slightly lower than Gemini-3.0-Pro; compared to Kimi-K2-Thinking, V3.2's output length is significantly reduced, significantly reducing computational overhead and user waiting time. The long-thinking enhanced version DeepSeek-V3.2-Speciale combines the theorem proving capability of DeepSeek-Math-V2, possessing strong instruction following, mathematical proof, and logical verification capabilities, and its performance on mainstream reasoning benchmarks rivals Gemini-3.0-Pro.</p>
+
+            <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg my-6">
+              <h4 className="font-bold mb-2">TL;DR Version</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>DeepSeek-V3.2 (Standard Edition):</strong> Focuses on cost-effectiveness and daily use, reasoning ability reaches GPT-5 level, shorter output than Kimi-K2-Thinking, faster and more cost-saving, and realizes "thinking while using tools" for the first time. Official website, APP, and API have all been upgraded to this version, suitable for daily Q&A, writing, and Agent tasks.</li>
+                <li><strong>DeepSeek-V3.2-Speciale (Ultimate Enhanced Edition):</strong> Oriented towards exploring the upper limit of AI capabilities, performance rivals Gemini-3.0-Pro, won gold medals in 2025 IMO, IOI, ICPC (IOI ranked 10th in humans, ICPC ranked 2nd). Only provides temporary API, long thinking chain, large Token consumption, high cost, does not support tool calling, and has not optimized daily dialogue, service ends on December 15, 2025.</li>
+              </ul>
+            </div>
+
+            <p>In the open-source world, DeepSeek-V3.2 is also a leader. According to data from the authoritative large model evaluation platform Artificial Analysis, before including DeepSeek-V3.2, the open-source model with the highest intelligence level in the industry was Kimi-K2-Thinking.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/artificial-analysis-intelligence-index.png"
+                alt="Artificial Analysis Intelligence Index"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>On benchmarks where both DeepSeek-V3.2 and Kimi-K2-Thinking announced results and the test settings were the same, DeepSeek-V3.2 led Kimi-K2-Thinking.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/intelligence-score.png"
+                alt="Intelligence Score"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500">DeepSeek-V3.2 and Kimi-K2-Thinking benchmark comparison, data source: official channels</p>
+
+            <p>DeepSeek-V3.2 is also the first model launched by DeepSeek that integrates thinking into tool use, and supports tool calling in both thinking mode and non-thinking mode.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/prompting.gif"
+                alt="Prompting GIF"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>The DeepSeek-V3.2 model reached the highest level of current open-source models in agent evaluation, significantly narrowing the gap between open-source models and closed-source models. It is worth noting that V3.2 did not conduct special training for the tools of these test sets, which means that V3.2 can show strong generalization in real application scenarios.</p>
+
+            <p>In addition, the DeepSeek-V3.2-Speciale model also successfully won gold medals in IMO 2025 (International Mathematical Olympiad), CMO 2025 (Chinese Mathematical Olympiad), ICPC World Finals 2025 (International Collegiate Programming Contest World Finals), and IOI 2025 (International Olympiad in Informatics). Among them, ICPC and IOI scores reached the level of the second and tenth human contestants respectively.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/benchmark.png"
+                alt="Benchmark Results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>On highly complex tasks, the Speciale model is significantly better than the standard version, but the Tokens consumed are also significantly more, and the cost is higher. Currently, DeepSeek-V3.2-Speciale is only for research use, does not support tool calling, and has not been specially optimized for daily dialogue and writing tasks. Currently, DeepSeek official web, App, and API have all been updated to the official version DeepSeek-V3.2. The Speciale version is currently only open in the form of a temporary API service for community evaluation and research. The DeepSeek-V3.2 series models have been open-sourced, and the technical report was released at the same time.</p>
+
+            <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg my-6">
+              <p><strong>Technical Report:</strong> <a href="https://modelscope.cn/models/deepseek-ai/DeepSeek-V3.2/resolve/master/assets/paper.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PDF Link</a></p>
+              <p><strong>Open Source Links:</strong></p>
+              <ul className="list-disc pl-6">
+                <li>DeepSeek-V3.2: <a href="https://modelscope.cn/models/deepseek-ai/DeepSeek-V3.2" className="text-blue-600 hover:underline">ModelScope</a>, <a href="https://huggingface.co/deepseek-ai/DeepSeek-V3.2" className="text-blue-600 hover:underline">HuggingFace</a></li>
+                <li>DeepSeek-V3.2-Speciale: <a href="https://modelscope.cn/models/deepseek-ai/DeepSeek-V3.2-Speciale" className="text-blue-600 hover:underline">ModelScope</a>, <a href="https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale" className="text-blue-600 hover:underline">HuggingFace</a></li>
+              </ul>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Technical Report Interpretation</h3>
+            <h4 className="text-xl font-bold mt-6">Conclusion First</h4>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>DeepSeek-V3.2 ties with GPT-5-High in reasoning ability, surpassing it in some indicators.</li>
+              <li>DeepSeek-V3.2-Speciale (High Compute Version) won gold medals in 2025 IMO and IOI, reasoning ability close to Gemini-3.0-Pro.</li>
+            </ul>
+
+            <p><strong>How was it done? Three things:</strong></p>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li><strong>DSA (DeepSeek Sparse Attention):</strong> A sparse attention mechanism that significantly reduces the calculation cost of long context.</li>
+              <li><strong>Post-training overweighting:</strong> Increased the calculation budget of post-training to more than 10% of pre-training.</li>
+              <li><strong>Large-scale synthetic data:</strong> Generated 1,800 environments and 85,000 tasks, all synthetic.</li>
+            </ol>
+
+            <h4 className="text-xl font-bold mt-6">1. DSA: Reducing attention from O(L²) to O(Lk)</h4>
+            <p>Traditional Transformer attention mechanism is O(L²) complexity, L refers to sequence length. In long context scenarios, this complexity becomes a big problem, reasoning is slow, and post-training is also difficult.</p>
+            <p>DeepSeek's solution is DSA, the core idea is: Not every token looks at all context, only look at the most relevant k tokens. Thus the calculation amount becomes O(Lk), k is a fixed value (2048), no longer growing explosively with text length.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/multi-query-attention.png"
+                alt="DSA Architecture"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500">Figure 2 | DSA Architecture. Lightning Indexer quickly filters, Top-k Selector selects 2048 tokens for attention calculation</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/inference-cost.png"
+                alt="Inference Cost"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500">Figure 3 | Inference cost comparison. V3.2 cost is almost flat in long sequence scenarios, V3.1 is linear growth</p>
+
+            <h4 className="text-xl font-bold mt-6">2. Post-training overweighting: Budget exceeds 10% of pre-training</h4>
+            <p>In the past, the post-training investment of open-source models was generally insufficient, which limited their performance on difficult tasks. DeepSeek's approach is: Miracles come from great effort. The specific number is: The calculation budget for post-training exceeds 10% of the pre-training cost.</p>
+
+            <h4 className="text-xl font-bold mt-6">3. Large-scale agent data synthesis</h4>
+            <p>Generalization ability is another shortcoming of large models in agent scenarios. The reason is simple: not enough diverse training environments. DeepSeek's solution is: Synthesize it yourself.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/synthesized-task.png"
+                alt="Synthesized Task"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500">Synthesized task example: Three-day travel planning. Complex constraints, easy verification, large search space—typical "hard to solve, easy to verify" problem</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/RL-training.png"
+                alt="RL Training"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500">Figure 5 | Synthetic data RL effect, blue line is RL-Synthetic-Data</p>
+
+            <h3 className="text-2xl font-bold mt-12">Thinking in Tool-Use</h3>
+            <p>Integrating reasoning and tool calling is a key design of v3.2 in engineering. DeepSeek-R1 proved that "thinking" is very helpful for solving complex problems. But R1's strategy is: When the second round of messages arrives, discard the previous reasoning content. This is very wasteful in tool calling scenarios—every time the tool returns a result, the model has to reason again.</p>
+            <p>DeepSeek-V3.2's design is:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Only discard reasoning content when a new user message arrives</li>
+              <li>If it is just a tool returning a result, keep the reasoning content</li>
+              <li>When discarding reasoning content, keep the tool calling history</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mt-12">Result Comparison</h3>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/comparison.png"
+                alt="Comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500">Table 2 | Full benchmark comparison. DeepSeek-V3.2-Thinking is basically tied with GPT-5-High, Speciale version surpasses in mathematics</p>
+
+            <h3 className="text-2xl font-bold mt-12">Context Management Strategy</h3>
+            <p>Search agent scenarios have a problem: often hitting the 128K context limit. DeepSeek tried several strategies, and the result is a bit counter-intuitive: The simplest Discard-all effect is the best, BrowseComp improved from 53.4% to 67.6%.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/deepseek/accuracy-of-browsecomp.png"
+                alt="Accuracy of BrowseComp"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+            <p className="text-center text-sm text-gray-500">Figure 6 | Context management effect. Discard-all is simple but best effect, 67.6% vs baseline 53.4%</p>
+
+            <h3 className="text-2xl font-bold mt-12">What's Missing</h3>
+            <p>The DeepSeek team frankly stated three limitations:</p>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li><strong>World knowledge is not rich enough:</strong> Training computing power is limited, knowledge breadth is not as good as Gemini-3.0-Pro. Plan to expand pre-training scale in the future.</li>
+              <li><strong>Low Token efficiency:</strong> To achieve the same output quality, more tokens need to be generated. Need to optimize the "intelligence density" of the reasoning chain.</li>
+              <li><strong>Gap in the hardest tasks:</strong> On the top complex tasks, there is still a gap with Gemini-3.0-Pro.</li>
+            </ol>
+
+            <h3 className="text-2xl font-bold mt-12">Conclusion</h3>
+            <p>This paper roughly said these three things:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>DSA solved the efficiency problem, making large-scale post-training possible.</li>
+              <li>Large-scale post-training brought higher training returns.</li>
+              <li>Large-scale synthetic data made the generalization of agent capabilities possible.</li>
+            </ul>
+            <p>Connecting these three things allowed DeepSeek v3.2 to catch up with GPT-5 in reasoning ability.</p>
           </div>
-
-          <h3 className="text-2xl font-bold mt-12">Technical Report Interpretation</h3>
-          <h4 className="text-xl font-bold mt-6">Conclusion First</h4>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>DeepSeek-V3.2 ties with GPT-5-High in reasoning ability, surpassing it in some indicators.</li>
-            <li>DeepSeek-V3.2-Speciale (High Compute Version) won gold medals in 2025 IMO and IOI, reasoning ability close to Gemini-3.0-Pro.</li>
-          </ul>
-
-          <p><strong>How was it done? Three things:</strong></p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li><strong>DSA (DeepSeek Sparse Attention):</strong> A sparse attention mechanism that significantly reduces the calculation cost of long context.</li>
-            <li><strong>Post-training overweighting:</strong> Increased the calculation budget of post-training to more than 10% of pre-training.</li>
-            <li><strong>Large-scale synthetic data:</strong> Generated 1,800 environments and 85,000 tasks, all synthetic.</li>
-          </ol>
-
-          <h4 className="text-xl font-bold mt-6">1. DSA: Reducing attention from O(L²) to O(Lk)</h4>
-          <p>Traditional Transformer attention mechanism is O(L²) complexity, L refers to sequence length. In long context scenarios, this complexity becomes a big problem, reasoning is slow, and post-training is also difficult.</p>
-          <p>DeepSeek's solution is DSA, the core idea is: Not every token looks at all context, only look at the most relevant k tokens. Thus the calculation amount becomes O(Lk), k is a fixed value (2048), no longer growing explosively with text length.</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/multi-query-attention.png"
-              alt="DSA Architecture"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-          <p className="text-center text-sm text-gray-500">Figure 2 | DSA Architecture. Lightning Indexer quickly filters, Top-k Selector selects 2048 tokens for attention calculation</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/inference-cost.png"
-              alt="Inference Cost"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-          <p className="text-center text-sm text-gray-500">Figure 3 | Inference cost comparison. V3.2 cost is almost flat in long sequence scenarios, V3.1 is linear growth</p>
-
-          <h4 className="text-xl font-bold mt-6">2. Post-training overweighting: Budget exceeds 10% of pre-training</h4>
-          <p>In the past, the post-training investment of open-source models was generally insufficient, which limited their performance on difficult tasks. DeepSeek's approach is: Miracles come from great effort. The specific number is: The calculation budget for post-training exceeds 10% of the pre-training cost.</p>
-
-          <h4 className="text-xl font-bold mt-6">3. Large-scale agent data synthesis</h4>
-          <p>Generalization ability is another shortcoming of large models in agent scenarios. The reason is simple: not enough diverse training environments. DeepSeek's solution is: Synthesize it yourself.</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/synthesized-task.png"
-              alt="Synthesized Task"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-          <p className="text-center text-sm text-gray-500">Synthesized task example: Three-day travel planning. Complex constraints, easy verification, large search space—typical "hard to solve, easy to verify" problem</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/RL-training.png"
-              alt="RL Training"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-          <p className="text-center text-sm text-gray-500">Figure 5 | Synthetic data RL effect, blue line is RL-Synthetic-Data</p>
-
-          <h3 className="text-2xl font-bold mt-12">Thinking in Tool-Use</h3>
-          <p>Integrating reasoning and tool calling is a key design of v3.2 in engineering. DeepSeek-R1 proved that "thinking" is very helpful for solving complex problems. But R1's strategy is: When the second round of messages arrives, discard the previous reasoning content. This is very wasteful in tool calling scenarios—every time the tool returns a result, the model has to reason again.</p>
-          <p>DeepSeek-V3.2's design is:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Only discard reasoning content when a new user message arrives</li>
-            <li>If it is just a tool returning a result, keep the reasoning content</li>
-            <li>When discarding reasoning content, keep the tool calling history</li>
-          </ul>
-
-          <h3 className="text-2xl font-bold mt-12">Result Comparison</h3>
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/comparison.png"
-              alt="Comparison"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-          <p className="text-center text-sm text-gray-500">Table 2 | Full benchmark comparison. DeepSeek-V3.2-Thinking is basically tied with GPT-5-High, Speciale version surpasses in mathematics</p>
-
-          <h3 className="text-2xl font-bold mt-12">Context Management Strategy</h3>
-          <p>Search agent scenarios have a problem: often hitting the 128K context limit. DeepSeek tried several strategies, and the result is a bit counter-intuitive: The simplest Discard-all effect is the best, BrowseComp improved from 53.4% to 67.6%.</p>
-
-          <div className="my-8 flex justify-center">
-            <Image
-              src="/blog/deepseek/accuracy-of-browsecomp.png"
-              alt="Accuracy of BrowseComp"
-              width={900}
-              height={620}
-              className="rounded-2xl shadow-xl"
-            />
-          </div>
-          <p className="text-center text-sm text-gray-500">Figure 6 | Context management effect. Discard-all is simple but best effect, 67.6% vs baseline 53.4%</p>
-
-          <h3 className="text-2xl font-bold mt-12">What's Missing</h3>
-          <p>The DeepSeek team frankly stated three limitations:</p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li><strong>World knowledge is not rich enough:</strong> Training computing power is limited, knowledge breadth is not as good as Gemini-3.0-Pro. Plan to expand pre-training scale in the future.</li>
-            <li><strong>Low Token efficiency:</strong> To achieve the same output quality, more tokens need to be generated. Need to optimize the "intelligence density" of the reasoning chain.</li>
-            <li><strong>Gap in the hardest tasks:</strong> On the top complex tasks, there is still a gap with Gemini-3.0-Pro.</li>
-          </ol>
-
-          <h3 className="text-2xl font-bold mt-12">Conclusion</h3>
-          <p>This paper roughly said these three things:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>DSA solved the efficiency problem, making large-scale post-training possible.</li>
-            <li>Large-scale post-training brought higher training returns.</li>
-            <li>Large-scale synthetic data made the generalization of agent capabilities possible.</li>
-          </ul>
-          <p>Connecting these three things allowed DeepSeek v3.2 to catch up with GPT-5 in reasoning ability.</p>
-        </div>
-      )
-    });
-  }
-}, [slug, postData]);
-
-// Track and fetch view count
-useEffect(() => {
-  const trackView = async () => {
-    try {
-      // Increment view count every time the page loads
-      const response = await fetch('/api/views', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug }),
+        )
       });
-
-      const data = await response.json();
-      setViews(data.views || 0);
-      setIsLoadingViews(false);
-    } catch (error) {
-      console.error('Error tracking views:', error);
-      setIsLoadingViews(false);
     }
-  };
+  }, [slug, postData]);
 
-  trackView();
-}, [slug]);
+  // Track and fetch view count
+  useEffect(() => {
+    const trackView = async () => {
+      try {
+        // Increment view count every time the page loads
+        const response = await fetch('/api/views', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ slug }),
+        });
 
-if (!post) {
+        const data = await response.json();
+        setViews(data.views || 0);
+        setIsLoadingViews(false);
+      } catch (error) {
+        console.error('Error tracking views:', error);
+        setIsLoadingViews(false);
+      }
+    };
+
+    trackView();
+  }, [slug]);
+
+  if (!post) {
+    return (
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
+        <h1 className="text-3xl font-bold mb-6">Loading...</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-3xl font-bold mb-6">Loading...</h1>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+        <Link href="/" className="text-blue-600 hover:text-blue-800">
+          ← Back to Main Page
+        </Link>
+        <Link href="/blog" className="text-blue-600 hover:text-blue-800 text-right">
+          Back to Blog →
+        </Link>
+      </div>
+      <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center">
+          <div className="relative w-8 h-8 mr-2 overflow-hidden rounded-full border border-gray-200 shadow-sm">
+            <Image
+              src="/hovah.png"
+              alt="Hovah Yii"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-gray-600 dark:text-gray-400">{post.author} • {post.date}</p>
+        </div>
+        <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <span className="text-sm font-medium">
+            {isLoadingViews ? '...' : views.toLocaleString()}
+          </span>
+        </div>
+      </div>
+
+      {post.content}
     </div>
   );
-}
-
-return (
-  <div className="container mx-auto px-4 py-8 max-w-4xl">
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-      <Link href="/" className="text-blue-600 hover:text-blue-800">
-        ← Back to Main Page
-      </Link>
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 text-right">
-        Back to Blog →
-      </Link>
-    </div>
-    <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
-    <div className="flex items-center justify-between mb-6">
-      <div className="flex items-center">
-        <div className="relative w-8 h-8 mr-2 overflow-hidden rounded-full border border-gray-200 shadow-sm">
-          <Image
-            src="/hovah.png"
-            alt="Hovah Yii"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <p className="text-gray-600 dark:text-gray-400">{post.author} • {post.date}</p>
-      </div>
-      <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-5 h-5"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-        <span className="text-sm font-medium">
-          {isLoadingViews ? '...' : views.toLocaleString()}
-        </span>
-      </div>
-    </div>
-
-    {post.content}
-  </div>
-);
 }
