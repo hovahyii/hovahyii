@@ -3477,6 +3477,151 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'mistral-3-series-release') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News • 3 December 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">🚀 "European DeepSeek" Releases Mistral 3 Series</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Benchmarking directly against Chinese models. Is this Europe's return to the AI race?</p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">Abstract</h3>
+            <p>The series includes multiple models:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>"The world's best small model":</strong> Ministral 3 (14B, 8B, 3B), each with Base, Instruct, and Reasoning versions.</li>
+              <li><strong>A frontier-class open-source MoE:</strong> Mistral Large 3, 675B parameters, 41B active.</li>
+            </ul>
+
+            <p className="mt-4">Mistral states: "All models are released under Apache 2.0 license. Open-sourcing our models in multiple compressed formats empowers the developer community and puts AI in people's hands through distributed intelligence."</p>
+            <p>The company also claims: "Ministral models represent the best price-performance ratio in their class. Meanwhile, Mistral Large 3 joins the ranks of frontier instruction-tuned open-source models."</p>
+            <p>The release has attracted massive attention, with some saying it marks Europe's return to the AI race dominated by China and the US.</p>
+
+            <h3 className="text-2xl font-bold mt-12">Mistral Released Mistral 3 Series</h3>
+            <p>Last year, they were the darlings of open source. Then... they hadn't released a model for over a year.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/mistral/base-model-benchmark.png"
+                alt="Base Model Benchmark"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Base Model Comparison: Benchmarking DeepSeek and Kimi</h3>
+            <p>Their official comparison is interesting. They no longer benchmark against GPT/Claude/Gemini. Only Chinese models: DeepSeek-3.1 and Kimi-K2.</p>
+            <p>Fun fact... Mistral is a French company, considered the hope of Europe. Valuation... 14 billion USD.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/mistral/problem.png"
+                alt="Problem"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p className="mt-4">Something must be wrong.</p>
+
+            <h3 className="text-2xl font-bold mt-12">Mistral Large 3: The Flagship</h3>
+            <p>Mistral Large 3, 675B total parameters, 41B active, MoE architecture, all Apache 2.0 open source, reasoning version coming soon.</p>
+            <p>LMArena ranking: 2nd in open-source non-reasoning models, 6th overall.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/mistral/lmarena-elo-score.png"
+                alt="LMArena Elo Score"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p className="mt-4">Training used 3000 NVIDIA H200s.</p>
+
+            <h3 className="text-2xl font-bold mt-12">Evaluation Info</h3>
+            <p>For Mistral Large 3, official data compares with DeepSeek V3.1 and Kimi K2.</p>
+            <p>Mistral Large 3 is Mistral's first MoE model since the groundbreaking Mixtral series, representing a significant step in pre-training. After post-training, it matches the best instruction-tuned open-weight models on the market in general prompts, shows image understanding capabilities, and performs top-tier in multi-lingual conversations (non-English/Chinese).</p>
+            <p>Notably, Mistral didn't compare against the DeepSeek-V3.2 released just days ago, possibly because DeepSeek hasn't released general language benchmarks, only reasoning and agent benchmarks.</p>
+
+            <h3 className="text-2xl font-bold mt-12">Third-party Human Evaluation</h3>
+            <p>Mistral win rate vs DeepSeek: 53%, vs Kimi: 55%.</p>
+            <p>Larger gap in multi-lingual tasks: vs DeepSeek 57%, vs Kimi 60%.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/mistral/model-performance-comparison.png"
+                alt="Model Performance Comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Ministral 3 Series: Small Models</h3>
+            <p>Ministral 3 series has 3B, 8B, 14B sizes, all dense models. Each has pretraining, instruct, reasoning versions. All support image understanding, 40+ languages.</p>
+            <p>Official claim: Ministral instruct generates tokens an order of magnitude less than comparable models.</p>
+            <p>14B reasoning version reached 85% on AIME '25.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/mistral/gpqa.png"
+                alt="GPQA Diamond Accuracy"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <h4 className="text-xl font-bold mt-6">14B Series Scores</h4>
+            <div className="my-6 flex flex-col gap-4">
+              <Image src="/blog/mistral/pretraining-benchmarks.png" alt="Ministral 14B Pretraining" width={900} height={540} className="rounded-2xl shadow-lg" />
+              <Image src="/blog/mistral/instruction.png" alt="Ministral 14B Instruct" width={900} height={540} className="rounded-2xl shadow-lg" />
+              <Image src="/blog/mistral/reasoning.png" alt="Ministral 14B Reasoning" width={900} height={540} className="rounded-2xl shadow-lg" />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Deployment</h3>
+            <p>Optimized with NVIDIA, vLLM, Red Hat.</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Large 3 runs on Blackwell NVL72 or single 8x A100/H100 node.</li>
+              <li>Ministral series runs on DGX Spark, RTX PC, Jetson.</li>
+              <li>API available on major platforms, custom training offered.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mt-12">Conclusion</h3>
+            <p>An interesting point. When Mistral 2 was released, the comparison was all overseas models.</p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/mistral/comparison.png"
+                alt="Mistral 2 Comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p className="mt-4">But Mistral 3 chose Chinese models. Perhaps... Chinese open-source models are now the global benchmark... (Of course, we must admit the gap with top closed-source models).</p>
+
+            <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl mt-12">
+              <h3 className="text-xl font-bold mb-4">Appendix: Partnership & Availability</h3>
+              <p><strong>Mistral, NVIDIA, vLLM, and Red Hat Partnership:</strong></p>
+              <ul className="list-disc pl-6 space-y-2 mt-2">
+                <li>NVFP4 checkpoint for vLLM.</li>
+                <li>NVIDIA collaboration for optimization on Hopper GPUs.</li>
+                <li>Support for TensorRT-LLM and SGLang.</li>
+              </ul>
+              <p className="mt-4"><strong>Availability:</strong></p>
+              <p>Mistral 3 is available on Mistral AI Studio, Amazon Bedrock, Azure Foundry, Hugging Face, Modal, IBM WatsonX, OpenRouter, Fireworks, Unsloth AI, and Together AI.</p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 

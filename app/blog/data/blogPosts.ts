@@ -120,4 +120,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/deepseek/accuracy.png',
     categories: ['AI', 'DeepSeek', 'LLM'],
   },
+  'mistral-3-series-release': {
+    slug: 'mistral-3-series-release',
+    title: '🚀 "European DeepSeek" Releases Mistral 3 Series, Benchmarking Against Chinese Models',
+    date: '3 December 2025',
+    author: 'Hovah Yii',
+    description: 'Mistral releases the Mistral 3 series, including Ministral 3 and Mistral Large 3, directly benchmarking against Chinese models like DeepSeek and Kimi. Is this Europe\'s return to the AI race?',
+    ogImage: '/blog/mistral/base-model-benchmark.png',
+    categories: ['AI', 'Mistral', 'LLM'],
+  },
 };

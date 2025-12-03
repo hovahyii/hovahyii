@@ -1,32 +1,5 @@
+import { kv } from '@vercel/kv';
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const DATA_FILE_PATH = path.join(DATA_DIR, 'blog-views.json');
-
-async function ensureDataDir() {
-  try {
-    await fs.access(DATA_DIR);
-  } catch {
-    await fs.mkdir(DATA_DIR, { recursive: true });
-  }
-}
-
-async function getViewsData() {
-  try {
-    const data = await fs.readFile(DATA_FILE_PATH, 'utf-8');
-    return JSON.parse(data);
-  } catch (error) {
-    // If file doesn't exist or is invalid, return empty object
-    return {};
-  }
-}
-
-async function saveViewsData(data: Record<string, number>) {
-  await ensureDataDir();
-  await fs.writeFile(DATA_FILE_PATH, JSON.stringify(data, null, 2), 'utf-8');
-}
 
 // GET: Get view count for a specific blog post
 export async function GET(request: NextRequest) {
@@ -38,8 +11,25 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Slug is required' }, { status: 400 });
     }
 
-    const viewsData = await getViewsData();
-    const viewCount = viewsData[slug] || 0;
+    // Key format: views:{slug}
+    const key = `views:${slug}`;
+    let viewCount = await kv.get(key) as number | null;
+
+    // If view count doesn't exist, seed it with a random number
+    if (viewCount === null) {
+      if (
+        slug === 'how-to-get-bem-engineering-technologist-approval' ||
+        slug === 'how-to-publish-app-into-appgallery-store'
+      ) {
+        // Higher views for specific posts (40-60)
+        viewCount = Math.floor(Math.random() * (60 - 40 + 1)) + 40;
+      } else {
+        // Random views for other posts (10-50)
+        viewCount = Math.floor(Math.random() * (50 - 10 + 1)) + 10;
+      }
+
+      await kv.set(key, viewCount);
+    }
 
     return NextResponse.json(
       { slug, views: viewCount },
@@ -64,13 +54,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Slug is required' }, { status: 400 });
     }
 
-    const viewsData = await getViewsData();
-    viewsData[slug] = (viewsData[slug] || 0) + 1;
-
-    await saveViewsData(viewsData);
+    // Key format: views:{slug}
+    const key = `views:${slug}`;
+    const viewCount = await kv.incr(key);
 
     return NextResponse.json(
-      { slug, views: viewsData[slug] },
+      { slug, views: viewCount },
       {
         headers: {
           'Cache-Control': 'no-store, max-age=0',
