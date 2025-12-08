@@ -129,4 +129,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/mistral/base-model-benchmark.png',
     categories: ['AI', 'Mistral', 'LLM'],
   },
+  'deepseek-technology-evolution': {
+    slug: 'deepseek-technology-evolution',
+    title: '🐋 DeepSeek Technology Evolution Explained: V3 → R1 → V3.2',
+    date: '8 December 2025',
+    author: 'Hovah Yii',
+    description: 'A comprehensive look at DeepSeek\'s evolution from V3 to R1 and V3.2, covering architecture changes (MoE, MLA), training methods (RLVR, GRPO), and the new V3.2 features like DSA sparse attention.',
+    ogImage: '/blog/deepseek/timeline.png',
+    categories: ['AI', 'DeepSeek', 'LLM'],
+  },
 };

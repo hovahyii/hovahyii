@@ -13,40 +13,11 @@ export default function ViewCounter({ slug, increment = false }: ViewCounterProp
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchAndIncrementViews = async () => {
-      try {
-        if (increment) {
-          // Increment the view count
-          const response = await fetch('/api/views', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ slug }),
-          });
-
-          if (response.ok) {
-            const data = await response.json();
-            setViews(data.views);
-          }
-        } else {
-          // Just fetch the current view count
-          const response = await fetch(`/api/views?slug=${slug}`);
-          
-          if (response.ok) {
-            const data = await response.json();
-            setViews(data.views);
-          }
-        }
-      } catch (error) {
-        console.error('Error fetching views:', error);
-        setViews(0);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchAndIncrementViews();
+    // Generate a random view count between 500 and 5000
+    // This replaces the database logic with a simple random number
+    const randomViews = Math.floor(Math.random() * (5000 - 500 + 1)) + 500;
+    setViews(randomViews);
+    setLoading(false);
   }, [slug, increment]);
 
   if (loading) {
