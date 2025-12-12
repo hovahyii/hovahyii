@@ -15,7 +15,7 @@ export default function ViewCounter({ slug, increment = false }: ViewCounterProp
   useEffect(() => {
     // Generate a random view count between 500 and 5000
     // This replaces the database logic with a simple random number
-    const randomViews = Math.floor(Math.random() * (5000 - 500 + 1)) + 500;
+    const randomViews = Math.floor(Math.random() * (300 - 200 + 1)) + 200;
     setViews(randomViews);
     setLoading(false);
   }, [slug, increment]);

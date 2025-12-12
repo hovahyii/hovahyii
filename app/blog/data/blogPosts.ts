@@ -138,4 +138,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/deepseek/timeline.png',
     categories: ['AI', 'DeepSeek', 'LLM'],
   },
+  'gpt-5-2-openai-strikes-back': {
+    slug: 'gpt-5-2-openai-strikes-back',
+    title: '🚀 GPT-5.2 Released! OpenAI Strikes Back! Surpasses Google Gemini 3 Pro',
+    date: '12 December 2025',
+    author: 'Hovah Yii',
+    description: 'OpenAI releases GPT-5.2 Instant, Thinking, and Pro. A massive leap in reasoning, coding, and agentic capabilities, regaining the AI throne from Gemini 3.',
+    ogImage: '/blog/chatgpt5.2/breaking.png',
+    categories: ['AI', 'OpenAI', 'GPT-5.2'],
+  },
 };
