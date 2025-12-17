@@ -147,4 +147,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/chatgpt5.2/breaking.png',
     categories: ['AI', 'OpenAI', 'GPT-5.2'],
   },
+  'why-chinese-ai-is-rising': {
+    slug: 'why-chinese-ai-is-rising',
+    title: '💪 Why is Chinese AI Making a Comeback? The Rise of Domestic Open Source Models',
+    date: '17 December 2025',
+    author: 'Hovah Yii',
+    description: 'A deep dive into how Chinese open-source models like DeepSeek, Qwen, and MiniMax are challenging global AI giants and becoming the default choice for developers worldwide.',
+    ogImage: '/blog/china/all-ai.png',
+    categories: ['AI', 'Open Source', 'China'],
+  },
 };

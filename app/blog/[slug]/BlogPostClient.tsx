@@ -550,6 +550,332 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'why-chinese-ai-is-rising') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-red-200 dark:border-red-800 bg-gradient-to-br from-red-50 via-white to-slate-50 dark:from-red-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-red-600 dark:text-red-300 font-semibold">Market Analysis • 17/12/2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Why Are Domestic Open Source Models Risen?</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">
+                A tier list of open-source models has gone viral on X recently. DeepSeek, Qwen, Kimi, Zhipu, and MiniMax—domestic models are taking top spots. Meanwhile, Llama, backed by Meta's massive silicon investment, only got an honorable mention. This isn't self-promotion; it's the new reality of the global AI landscape according to researchers like Nathan Lambert.
+              </p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/all-ai.png"
+                alt="Global Open Source Model Rankings"
+                width={1000}
+                height={640}
+                className="rounded-2xl shadow-xl"
+              />
+              <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">Image Source: <a href="https://www.interconnects.ai/p/2025-open-models-year-in-review" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">interconnects.ai</a></p>
+            </div>
+
+            <p>
+              Nathan Lambert (ex-Meta/DeepMind/Hugging Face) and Florian Brand detailed this global shift. Domestic open-source models, led by DeepSeek and Qwen, are changing how the AI industry operates. 2024 might have been Llama's year, but 2025 sees domestic models crushing it on performance, price, ecosystem, and usability.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/nathan-lambert.png"
+                alt="Nathan Lambert Article"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/the-open-model-timeline.png"
+                alt="Timeline of Open Models"
+                width={1000}
+                height={400}
+                className="rounded-2xl shadow-lg"
+              />
+              <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">Global open source model release history, 2024.01-2025.11, Source: <a href="https://www.atomproject.ai" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">atomproject.ai</a></p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Why is the world using Chinese open-source models?</h3>
+            <p>
+              The update rhythm has been relentless. In November, Kimi released <strong>Kimi K2 Thinking</strong>, a trillion-parameter MoE model that topped multiple leaderboards, beating GPT-5 and Claude 4.5.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/bench-telecom.png"
+                alt="Benchmark Scores"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>
+              In late October, <strong>MiniMax M2</strong> (also MoE) launched and open-sourced, ranking fifth globally, surpassing Gemini 2.5 Pro and Claude Opus 4.1. In September, Alibaba released a seven-model combo at the Apsara Conference, covering vision, voice, reasoning, and coding.
+            </p>
+
+            <p>
+              On social media, the praise is everywhere: "Easy to use, cheap, the first choice for small companies." Users praise Kimi K2 Thinking's writing style and "depth over tokens" approach.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/telegram.png"
+                alt="Social Media Feedback"
+                width={800}
+                height={600}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              One user even noted that MiniMax M2 could generate a fully functional website in one go, where Claude Sonnet 4 failed.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/vas.png"
+                alt="MiniMax vs Claude Comparison"
+                width={800}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              <strong>Qwen</strong> is everywhere—from the massive 480B parameter model to the tiny 6B one, from Qwen 3 VL for vision to Qwen 3 Coder. Even the Airbnb CEO stated that while OpenAI is good, it didn't fit them, and Qwen was excellent, practical, and cheaper.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/rcanand.png"
+                alt="Airbnb CEO on Qwen"
+                width={800}
+                height={400}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">MiniMax M2: The New Default?</h3>
+            <p>
+              We tested M2 with a real-world task: processing a 10MB Excel file with 20,000 civil service job listings to build a screening tool.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/minimax.png"
+                alt="MiniMax Excel Task"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              M2 uses "Interleaved Thinking"—pausing to think before acting, then thinking again. This loop helps it handle complex tasks better than a "think once, do all" approach.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/skyler-miao.png"
+                alt="Interleaved Thinking Explanation"
+                width={800}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              The result? Extremely accurate processing of job requirements for fresh graduates, years of experience, and location constraints.
+            </p>
+
+            <p>
+              We also asked it to research M2 itself and make a PPT.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/ppt.png"
+                alt="MiniMax Generated PPT"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              For developers, MiniMax provides tutorials for connecting to Claude Code, Cursor, and VS Code.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/minimaxm2.png"
+                alt="MiniMax Developer Tools"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Full Attention vs. Sparse Attention</h3>
+            <p>
+              While DeepSeek drove costs down with sparse/mixed attention, MiniMax M2 surprisingly went back to <strong>Full Attention</strong>. Why? Quality and reliability. As context needs grow, sparse attention might hit limits. M2 balances quality, speed, and price with just 230B parameters.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/artificial-analysis.png"
+                alt="Artificial Analysis Report"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              Artificial Analysis confirmed: "Chinese AI laboratories continue to maintain a leading position in the open-source field."
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/intelligence-index.png"
+                alt="Intelligence Index"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/hugging-face.png"
+                alt="Hugging Face Trending"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+            <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">Top 4 trending models on Hugging Face are Chinese.</p>
+
+
+            <h3 className="text-2xl font-bold mt-12">Only Open Source Can Break Barriers</h3>
+            <p>
+              Open source has lowered the cost of AI for society. DeepSeek showed the world a new training logic. It proved that in an AI world dominated by the US, open source is the way to be seen.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/open-ai.png"
+                alt="OpenAI vs Open Source"
+                width={600}
+                height={400}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              While US giants close their doors to protect commercial interests, Chinese models faced a different reality: scarce compute and chips. If they didn't share, no one could reuse the compute. Now, Baidu has open-sourced Wenxin 4.5. The competition is fierce—if you don't open source, someone else will.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/open-model-of-choice.png"
+                alt="Open Model Adoption"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+            <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">Source: <a href="https://a16z.substack.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">a16z</a></p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/lmsys.png"
+                alt="LMSYS Leaderboard"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              A complete ecosystem is forming. DeepSeek for low-cost inference, Qwen for fine-tuning, MiniMax for agent validation.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/community-elo-rankings.png"
+                alt="Community Elo Rankings"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Jensen Huang: "China is Winning"</h3>
+            <p>
+              Nvidia CEO Jensen Huang has repeatedly mentioned China's strong position. He noted that Alibaba's Qwen is #1 in the global model open source market.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/nvidia.png"
+                alt="Jensen Huang"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/open-source-models.png"
+                alt="Open Source Market Share"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <p>
+              Meanwhile, Meta's Llama strategy is facing hurdles—Llama 4's "Behemoth" version seems abandoned, and top talent is leaving. Llama is caught in the middle: too open to profit, not open enough to beat the crowd.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/llama4.png"
+                alt="Llama 4 Versions"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/china/derivatives-per-base-model.png"
+                alt="Derivatives per Base Model"
+                width={900}
+                height={500}
+                className="rounded-xl shadow"
+              />
+            </div>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 mt-12">
+              <p className="font-semibold italic text-slate-700 dark:text-slate-300">
+                "Open source turns your competitors into your children; no son fights his father."
+              </p>
+              <p className="mt-4">
+                Chinese open-source models have become the foundation of the AI ecosystem. This wave is changing who defines future AI—making top-tier AI accessible, cheap, and fast for everyone.
+              </p>
+            </div>
+          </div>
+        )
+      });
     } else if (slug === 'gpt-5-1-emotional-upgrade') {
       setPost({
         ...postData,
