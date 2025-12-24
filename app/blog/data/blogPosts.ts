@@ -156,4 +156,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/china/all-ai.png',
     categories: ['AI', 'Open Source', 'China'],
   },
+  'zhipu-glm-4-7-vibe-coding': {
+    slug: 'zhipu-glm-4-7-vibe-coding',
+    title: '🚀 Zhipu Releases GLM-4.7: #1 Global Open Source Vibe Coding Model!',
+    date: '24 December 2025',
+    author: 'Hovah Yii',
+    description: 'Zhipu officially releases and open-sources GLM-4.7, ranking #1 globally for open source vibe coding. With benchmark scores rivaling GPT-5.1 and Claude Sonnet 4.5, and subscription prices starting at just ¥20/month, the era of accessible AI programming is here.',
+    ogImage: '/blog/glm4.7/intro.png',
+    categories: ['AI', 'Zhipu', 'Open Source', 'Coding'],
+  },
 };

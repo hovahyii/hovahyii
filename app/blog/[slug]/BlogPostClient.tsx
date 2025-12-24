@@ -876,6 +876,248 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'zhipu-glm-4-7-vibe-coding') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 via-white to-slate-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Breaking News • 24/12/2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Zhipu Releases GLM-4.7: The Era of Coding for Everyone Has Arrived!</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">
+                Today, Zhipu officially launched and open-sourced its new GLM-4.7 model, with benchmark scores placing it firmly in the first tier of open-source models. This is also a critical move by Zhipu on the eve of their IPO.
+              </p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/intro.png"
+                alt="GLM-4.7 Introduction"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>
+              GLM-4.7 has achieved alignment with or even surpassed GPT-5.1 and Claude Sonnet 4.5 across more than ten agent and reasoning benchmarks including SWE-bench, Terminal Bench 2.0, τ²-Bench, and HLE.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/llm-performance.png"
+                alt="GLM-4.7 LLM Performance Comparison"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>
+              When it comes to subscription pricing, GLM-4.7 is a true "price killer": starting at just ¥20 per month, you get three times the usage of Claude Pro. The keyword here is <strong>"affordable."</strong>
+            </p>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-8">
+              <h4 className="text-lg font-bold mb-3">🔗 Quick Links</h4>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>GitHub:</strong> <a href="https://github.com/zai-org/GLM-4.5" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">github.com/zai-org/GLM-4.5</a></li>
+                <li><strong>Hugging Face:</strong> <a href="https://huggingface.co/zai-org/GLM-4.7" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">huggingface.co/zai-org/GLM-4.7</a></li>
+                <li><strong>ModelScope:</strong> <a href="https://modelscope.cn/models/ZhipuAI/GLM-4.7" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">modelscope.cn/models/ZhipuAI/GLM-4.7</a></li>
+                <li><strong>API:</strong> BigModel.cn, GLM Coding Plan has been upgraded</li>
+                <li><strong>Online Experience:</strong> z.ai full-stack development, with built-in Skills module</li>
+              </ul>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">01. From "Writing Code" to "Managing Tasks" - All Technical Metrics Soaring</h2>
+
+            <p>
+              According to Code Arena's professional coding blind test leaderboard for global developers, GLM-4.7 ranks <strong>6th in Web Development</strong>, making it the highest-ranking open-source model globally. It surpasses GPT-5.2 and Claude Sonnet 4.5, claiming the #1 spot among Chinese domestic models.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/webdev.png"
+                alt="GLM-4.7 Web Development Ranking"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>
+              Looking at more detailed benchmark tests, GLM-4.7's most significant upgrades are concentrated in three areas: <strong>code, tool calling, and reasoning capabilities</strong>.
+            </p>
+
+            <ul className="list-disc pl-6 space-y-2 my-4">
+              <li><strong>Code Capability:</strong> 73.8% on SWE-bench Verified, 84.9% on LiveCodeBench V6, on par with Claude Sonnet 4.5, placing it in the first tier of open-source models.</li>
+              <li><strong>Reasoning:</strong> HLE ("Humanity's Last Exam") scores improved significantly—42.8% with tool assistance, over 12 percentage points higher than GLM 4.6, also surpassing GPT 5.1 High.</li>
+              <li><strong>Tool Calling:</strong> 87.4% on τ² Bench, BrowseComp improved to 67.5% with context management enabled, showing stable performance in multi-turn web tasks and interactive tool calling scenarios.</li>
+            </ul>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/benchmark.png"
+                alt="GLM-4.7 Benchmark Results"
+                width={900}
+                height={620}
+                className="rounded-2xl shadow-xl"
+              />
+            </div>
+
+            <p>
+              Corresponding to these score improvements are adjustments to its internal thinking mechanism. Building on the previous "interleaved thinking" approach, GLM 4.7 introduces <strong>retained thinking</strong> and <strong>turn-level thinking control</strong>: the model reasons before each generation and tool call, and automatically retains previous reasoning results in multi-turn tasks instead of starting from scratch every time.
+            </p>
+
+            <p>
+              Developers can also decide whether to enable reasoning on a per-turn basis—reducing latency for simple requests while gaining stability for complex tasks. This design emphasizes consistency and controllability in long-task execution, and it's precisely these mechanism changes that support its overall leap in code agents, terminal tasks, and tool collaboration benchmarks.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">02. Higher Win Rate on 100 Real Tasks - Multimodal Skill Orchestration Closing the Development Loop</h2>
+
+            <p>
+              To validate GLM 4.7's performance in actual development tasks, Zhipu conducted comparative tests on 100 real programming tasks, covering frontend development, backend logic, and instruction following.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/vs.png"
+                alt="GLM-4.7 vs GLM-4.6 Comparison"
+                width={800}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <p>
+              Results show that in frontend tasks, GLM 4.7's win rate against version 4.6 improved to <strong>64.6%</strong>, and in instruction-following scenarios, it reached <strong>58.3%</strong>. Even in the most engineering-complex backend direction, its win rate stabilized at <strong>46.7%</strong>.
+            </p>
+
+            <p>
+              Beyond single-point generation capability, GLM 4.7 has further strengthened its <strong>multi-skill orchestration ability</strong>. GLM-4.7 has launched a full-stack skills environment on Z.ai, connecting to a new Skills module that supports unified orchestration of ASR speech recognition, TTS speech synthesis, GLM 4.6V vision model, and multiple other modules. In multimodal tasks, it can both plan paths and execute actions—the "orchestration logic" between tools is now connected.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">03. Real Tests: From 3D Christmas Trees to Switch Mini-Games - Frontend Effects Rival Gemini 3</h2>
+
+            <p>
+              We tested GLM-4.7's capabilities through three interactive tasks on the Z.ai platform, examining its performance in 3D control, UI generation, and frontend code implementation.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8 mb-4">Scenario 1: 3D Christmas Tree Exploding into a Photo Wall - Hand Gesture Control</h3>
+
+            <p>
+              This was one of the most immersive interactive experiences in our testing. GLM-4.7 output a complete HTML code snippet that runs directly, including 3D scene construction, particle interaction, gesture recognition, and UI feedback logic.
+            </p>
+
+            <p>
+              The initial screen shows a Christmas tree made of over 5,000 particles, with a star featuring glow effects at the top.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/christmas-tree.gif"
+                alt="3D Christmas Tree Demo"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg"
+                unoptimized
+              />
+            </div>
+
+            <p>
+              Moving the mouse creates natural repulsion ripples among particles, presenting a flowing visual response. In the interaction phase, the system calls the camera to recognize user hand gestures. When the user opens their palm, the entire Christmas tree suddenly explodes, transforming into a ring of floating photo wall, with photos arranged in polaroid format surrounding the user.
+            </p>
+
+            <p>
+              Continuing to move the palm left and right rotates the photo wall. When making a fist again, all elements collapse back, and the photo wall contracts back into the Christmas tree form, completing a full open-close animation cycle.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/card-slideshow.gif"
+                alt="Photo Wall Animation"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg"
+                unoptimized
+              />
+            </div>
+
+            <p>
+              Additionally, GLM-4.7 integrated performance optimization mechanisms in the code, such as using InstancedMesh to render large quantities of particles. The entire page maintains high frame rates and smooth performance without relying on build tools.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8 mb-4">Scenario 2: iOS Home Screen Clone - Icons Present, Interface Clickable</h3>
+
+            <p>
+              With the prompt "1:1 clone iOS system," GLM-4.7 created an iOS-mimicking home page: Safari, Siri, Health, Wallet, and other icons are all clickable.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/app.gif"
+                alt="iOS Clone Demo"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg"
+                unoptimized
+              />
+            </div>
+
+            <p>
+              Calendar, Weather, Calculator, and other function pages can be entered for interaction, and the calculator can perform basic arithmetic input. While there are still detail differences compared to the latest iOS, the overall experience is smooth and usable, with icon styles and color matching showing basic aesthetic sense.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8 mb-4">Scenario 3: Switch Fighting Mini-Game - Controller Interface + Button Linkage</h3>
+
+            <p>
+              We also tested a two-player fighting game task. GLM-4.7 generated a complete two-player battle interface, with the overall style highly replicating the Switch console's Joy-Con controller colors and layout: blue controller on the left, red controller on the right, game main screen in the center.
+            </p>
+
+            <p>
+              Upon entering the game, two stick figure characters appear on screen—one blue player, one red enemy—with dynamic health bars displayed above their heads. The UI shows current wave and enemy count information in the upper left corner.
+            </p>
+
+            <p>
+              In terms of controls, the left player can use keyboard A/D to move, J to attack, K to jump; the right player uses U/I/O keys to release skills respectively. While hit detection and skill effects haven't been implemented yet, the overall interface structure, character logic, and key responses are very complete, possessing the framework feel of a real game.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/glm4.7/game.gif"
+                alt="Switch Fighting Game Demo"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg"
+                unoptimized
+              />
+            </div>
+
+            <p>
+              The entire game includes a rhythm-heavy fighting BGM. Clearly, GLM-4.7 demonstrates considerable usability and stability in key frontend modules like UI construction, keyboard listening, and animation driving.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">04. Conclusion: Chinese SOTA Models in Full Sprint Stage</h2>
+
+            <p>
+              From three major benchmark dimensions to real task testing, GLM-4.7 has entered the first tier of global open-source models, becoming a key breakthrough point for Chinese models in the Agent tool track.
+            </p>
+
+            <p>
+              Whether it's the open-source code being downloaded over 60 million times globally, or the paid API usage consistently ranking in the top ten globally on OpenRouter, it shows that GLM has gradually entered developers' actual tool lists.
+            </p>
+
+            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 p-6 rounded-xl shadow-md my-8">
+              <p className="font-semibold text-slate-900 dark:text-white">
+                Behind GLM-4.7's launch timing is Zhipu's imminent listing on the Hong Kong Stock Exchange—a microcosm of Chinese large model enterprises transitioning from research models and open-source ecosystems to "real usage" and "market validation."
+              </p>
+              <p className="mt-4 text-slate-700 dark:text-slate-300">
+                In this new stage, Chinese open-source models are moving from "benchmarking international standards" to "leading and being practical," and GLM-4.7 is a key representative in this process.
+              </p>
+            </div>
+
+          </div>
+        )
+      });
     } else if (slug === 'gpt-5-1-emotional-upgrade') {
       setPost({
         ...postData,
