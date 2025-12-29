@@ -165,4 +165,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/glm4.7/intro.png',
     categories: ['AI', 'Zhipu', 'Open Source', 'Coding'],
   },
+  'ai-killing-programmers-2026-crisis': {
+    slug: 'ai-killing-programmers-2026-crisis',
+    title: '😲 Is AI "Killing" Programmers? Karpathy\'s Warning & The 2026 Grad Crisis',
+    date: '29 December 2025',
+    author: 'Hovah Yii',
+    description: 'US programmer employment drops 27.5%. Andrej Karpathy warns of a "Level 9 Earthquake" in the industry. As AI "kills" junior roles, what does the future hold for the Class of 2026?',
+    ogImage: '/blog/programmer/losing-jobs.png',
+    categories: ['AI', 'Career', 'Programming', 'Industry Analysis'],
+  },
 };
