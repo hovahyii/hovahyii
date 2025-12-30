@@ -5399,6 +5399,203 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'manus-meta-acquisition') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">Breaking News • 30/12/2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">WHAAAT? Manus Acquired by Meta!</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">
+                Meta and Manus have simultaneously announced: "Manus will join Meta." This is a massive move, with the acquisition price rumored to be upwards of $5 billion. Founder Red Xiao will join Meta as VP.
+              </p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/meta/manus x meta.PNG"
+                alt="Manus Joins Meta"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Boosting General Agent Capabilities</h3>
+            <p>
+              According to the announcement, Meta's acquisition of Manus is primarily aimed at enhancing the capabilities of general-purpose Agents.
+              Manus' official post states that they will continue to provide products and subscription services to users via their app and website, while the company will continue to operate in Singapore.
+            </p>
+            <p>
+              This is absolutely another heavy-hitting acquisition for Meta, following Scale AI.
+            </p>
+
+            <blockquote className="pl-4 border-l-4 border-blue-500 italic my-6">
+              "This investment has caught the attention of CEO Mark Zuckerberg and has become a top priority for the company." — Bloomberg
+            </blockquote>
+
+            <p>
+              Meta's current AI lead, Alexandr Wang, has already posted on 𝕏 welcoming the Manus team and one of its founding members, Red Xiao.
+            </p>
+            <p>
+              Once the team starts working together, it will be interesting to see the reporting lines. After the acquisition is complete, Manus founder Red Xiao will serve as Vice President at Meta.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/meta/alexandr wang.png"
+                alt="Alexandr Wang Welcomes Manus"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Third Largest Acquisition in Meta's History</h3>
+            <p>
+              According to <em>LatePost</em>, the cost of Meta's acquisition of Manus is in the billions of dollars.
+            </p>
+            <p>
+              While not the "sky-high" price of some other deals, in Meta's acquisition history, this ranks in the top three.
+            </p>
+
+            <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-4 my-6">
+              <ul className="list-disc pl-6 space-y-2">
+                <li>
+                  <strong>1. WhatsApp ($19B):</strong> February 2014. Keyword: Mobile Internet Ticket.
+                </li>
+                <li>
+                  <strong>2. Scale AI ($15B):</strong> June 2025. Keyword: Alexandr Wang.
+                </li>
+                <li>
+                  <strong>3. Manus (~$5B+):</strong> December 2025. Keyword: Agent Ticket.
+                </li>
+              </ul>
+            </div>
+
+            <p>
+              Manus' annual revenue had already reached $125 million earlier this year. Bloomberg speculates that this money-making ability allows Meta to recoup costs faster (after spending heavily on AI this year), which is one of the important reasons for this "lightning" acquisition.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-12">Red Xiao's Statement</h3>
+            <p>
+              Manus founder Red Xiao released an emotional tweet:
+            </p>
+
+            <div className="my-6 p-6 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg italic">
+              "Today will be an unforgettable moment in my life.
+              <br /><br />
+              When we started building Manus, few believed a General AI Agent could work. We were told it was too early, too ambitious, too hard. But we kept building. Through doubts, setbacks, and endless nights wondering if we were chasing the impossible.
+              <br /><br />
+              We weren't.
+              <br /><br />
+              This isn't just an acquisition. It's validation of the future we strove to build, arriving faster than anyone expected.
+              <br /><br />
+              But this isn't the end. An era of AI that can not just chat, but act, create, and deliver is just beginning. And now, we get to build it at a scale we never imagined.
+              <br /><br />
+              To everyone who believed in us when it wasn't obvious: Thank you. The best is yet to come."
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/meta/red xiao.png"
+                alt="Red Xiao Tweet"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">The Team in Singapore</h3>
+            <p>
+              Alexandr Wang also used this opportunity to recruit for the MSL Singapore office. It was revealed that the Manus team in Singapore has about 100 people.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/meta/MSL.png"
+                alt="MSL Information"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">The Core Founding Team</h3>
+            <p>
+              Manus, which made Zuckerberg drop billions, was just released this March. Its core product narrative is the "First General Agent".
+            </p>
+            <p>
+              There are three well-known key figures in the founding team:
+            </p>
+
+            <ul className="list-disc pl-6 space-y-4 my-6">
+              <li>
+                <strong>Founder: Red Xiao (Xiao Hong)</strong>. Graduated from Huazhong University of Science and Technology. Founded Nightingale Tech 10 years ago. In 2022, founded Butterfly Effect and launched the Monica browser plugin.
+              </li>
+              <li>
+                <strong>Co-founder & Chief Scientist: Peak Ji (Ji Yichao)</strong>. Early creator of Mammoth 4 iOS browser, Peak Labs, and Magi knowledge graph.
+                <div className="my-4">
+                  <Image src="/blog/meta/peak.png" alt="Peak Ji" width={600} height={350} className="rounded-xl shadow-md" />
+                </div>
+              </li>
+              <li>
+                <strong>Partner: Hidecloud (Zhang Tao)</strong>. Responsible for product strategy. Previously a product lead at ByteDance and Light Years Beyond.
+                <div className="my-4">
+                  <Image src="/blog/meta/hidecloud.png" alt="Hidecloud" width={600} height={350} className="rounded-xl shadow-md" />
+                </div>
+              </li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6">Manus: A 10-Month Legend</h2>
+            <p>If you look at the timeline, it's a "from 0 to endgame" speedrun in just 10 months.</p>
+
+            <h3 className="text-xl font-bold mt-6 text-gray-800 dark:text-gray-200">Start: Rejection of $30M</h3>
+            <p>
+              In early 2024, ByteDance executives met Red Xiao in Hong Kong and offered $30 million to acquire the team (then working on Monica). Xiao refused.
+            </p>
+
+            <h3 className="text-xl font-bold mt-6 text-gray-800 dark:text-gray-200">March: Explosion</h3>
+            <p>
+              launched on March 5th. Invite codes were scalped for thousands of dollars. Waitlist breached 2.6 million people.
+            </p>
+            <div className="my-8 flex justify-center">
+              <Image src="/blog/meta/activation.png" alt="Manus Activation" width={900} height={500} className="rounded-2xl shadow-lg" />
+            </div>
+
+            <h3 className="text-xl font-bold mt-6 text-gray-800 dark:text-gray-200">April: Benchmark Enters</h3>
+            <p>
+              Manus raised $75M Series B from Benchmark at a $500M valuation.
+            </p>
+
+            <h3 className="text-xl font-bold mt-6 text-gray-800 dark:text-gray-200">June: Move to Singapore</h3>
+            <p>
+              The team moved HQ to Singapore. Domestic offices faced layoffs (claimed N+3 compensation), while core technical staff relocated.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image src="/blog/meta/timeline.png" alt="Manus Timeline" width={900} height={500} className="rounded-2xl shadow-lg" />
+            </div>
+
+            <h3 className="text-xl font-bold mt-6 text-gray-800 dark:text-gray-200">December: The Exit</h3>
+            <p>
+              By December, Manus ARR broke $100M.
+            </p>
+            <div className="my-8 flex justify-center">
+              <Image src="/blog/meta/manus ARR.png" alt="Manus ARR" width={900} height={500} className="rounded-2xl shadow-lg" />
+            </div>
+            <p>
+              And now, acquired by Meta for billions.
+            </p>
+
+            <div className="mt-12 p-6 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-white shadow-xl text-center">
+              <p className="text-xl font-bold mb-2">From a $30M rejection to a Multi-Billion Dollar Exit.</p>
+              <p className="text-lg opacity-90">What a thrilling era we live in.</p>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 

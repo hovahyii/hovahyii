@@ -174,4 +174,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/programmer/losing-jobs.png',
     categories: ['AI', 'Career', 'Programming', 'Industry Analysis'],
   },
+  'manus-meta-acquisition': {
+    slug: 'manus-meta-acquisition',
+    title: '💰 Manus Acquired by Meta! Deal valued over $5B! Founder Red Xiao Appointed VP',
+    date: '30 December 2025',
+    author: 'Hovah Yii',
+    description: 'Meta acquires Manus for billions. Founder Red Xiao becomes VP. A detailed look at the 10-month journey from launch to exit.',
+    ogImage: '/blog/meta/manus x meta.PNG',
+    categories: ['AI', 'Meta', 'Manus', 'Acquisition'],
+  },
 };
