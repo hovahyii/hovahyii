@@ -5596,6 +5596,175 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'andrew-ng-2025-ai-summary') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
+              <h1 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Andrew Ng's 2025 AI Summary: The Dawn of the AI Industrial Age!</h1>
+              <p className="text-lg text-slate-700 dark:text-slate-200">
+                2025 is drawing to a close. It has been a year of "clash of the titans" in AI, fierce talent wars, and white-hot infrastructure construction. To wrap up this incredible year, our old friend Andrew Ng has published his annual letter and review of the year.
+              </p>
+              <div className="mt-4 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm">
+                <p className="font-bold text-slate-900 dark:text-white mb-2">Andrew Ng's Key Takeaways:</p>
+                <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
+                  <li><strong>"Reasoning"</strong> is no longer a privilege of a few models, but a standard feature.</li>
+                  <li>The <strong>Talent War</strong> ignited by Meta has reshaped pricing in the tech industry.</li>
+                  <li>The heat of <strong>Data Centers</strong> signals the arrival of a new industrial age.</li>
+                  <li><strong>Agentic AI</strong>-driven automated programming is reshaping how software is built.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/2025/andrew ng.png"
+                alt="Andrew Ng 2025 Summary"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-12">Year-End Message: Three Golden Keys</h3>
+            <p className="my-4">
+              With the holidays approaching, Andrew Ng shares his insights on what to do and how to do it for those seeking opportunities in the highly competitive AI field.
+            </p>
+            <p className="font-semibold italic my-4">To truly possess the ability to build AI systems, I suggest you do three things:</p>
+            <ol className="list-decimal pl-6 space-y-2 mb-6 text-lg font-medium">
+              <li>Systematically take AI courses</li>
+              <li>Continuously build AI systems hands-on</li>
+              <li>(Optional) Read research papers</li>
+            </ol>
+
+            <div className="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-xl border border-yellow-200 dark:border-yellow-800 my-6">
+              <h4 className="font-bold text-lg mb-2 text-yellow-800 dark:text-yellow-200">1. Why Coursework First?</h4>
+              <p>
+                Andrew warns against the advice of "just start building." Without understanding AI foundations, you risk reinventing the wheel—or ensuring that the wheel you invent is a mess.
+              </p>
+              <blockquote className="italic border-l-4 border-yellow-400 pl-4 my-3 text-slate-600 dark:text-slate-400">
+                "I've seen many candidates reinvent standard RAG slicing strategies or write messy LLM context management code. If they had taken a few relevant courses, they would know which 'blocks' already exist in the industry."
+              </blockquote>
+            </div>
+
+            <p>
+              <strong>2. Hands-on practice is crucial.</strong> You can't learn to fly a plane just by sitting in a classroom. The good news is that with highly agentic coding assistants, the barrier to building is lower than ever.
+            </p>
+            <p className="mt-4">
+              <strong>3. (Optional) Read Papers.</strong> Finally, reading papers is the "extra mile." While tougher than courses, they contain cutting-edge knowledge not yet translated into easier forms. It's a grind, but the flashes of insight are delightful.
+            </p>
+
+            <hr className="my-10 border-slate-200 dark:border-slate-800" />
+
+            <h2 className="text-3xl font-bold mb-6">Annual Summary: The Dawn of the AI Industrial Age</h2>
+            <p>
+              2025 will be remembered as the dawn of the AI Industrial Age. Let's follow Andrew Ng's perspective to explore the most representative AI events of 2025.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/2025/top ai story.png"
+                alt="Top AI Stories 2025"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mt-8">1. Thinking Models Solve Bigger Problems</h3>
+            <p>
+              OpenAI's o1 kicked off the reasoning era late last year, and DeepSeek-R1 showed the world how to build it in January. Now, reasoning is the default. Models like o4-mini with tools can achieve 17.7% accuracy on high-difficulty multimodal tests (vs 14% without tools).
+            </p>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/2025/snowman.png"
+                alt="Thinking Models"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p>
+              Reasoning improves performance but comes with costs. Gemini 3 Flash consumes 1.6 billion tokens with reasoning on, vs 7.4 million off. However, efficiency is improving rapidly—Claude Opus 4.5 achieves high scores with significantly fewer tokens than GPT-5.1.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8">2. Huge Paychecks for Top AI Talent</h3>
+            <p>
+              Meta ignited a talent war, offering packages worth hundreds of millions. Zuckerberg personally recruited talent, reportedly bringing homemade soup to their doors!
+            </p>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/2025/snow.png"
+                alt="Talent War"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p>
+              The market value for AI talent has been pushed to unprecedented heights. OpenAI responded with faster vesting schedules and massive retention bonuses. Despite "bubble" talks, for companies spending billions on hardware, paying top dollar for the brains to run it is a rational choice.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8">3. Data Center Construction Frenzy</h3>
+            <p>
+              Top companies are pouring trillions into infrastructure. OpenAI's "Stargate" project aims for 5000 billion dollars. Microsoft, Amazon, and Google are all announcing 100-billion-dollar scale plans worldwide.
+            </p>
+            <p className="mt-4">
+              This infrastructure boom is real economic growth. As Harvard economist Jason Furman noted, almost all of US GDP growth in the first half of 2025 came from data centers and AI investment. <strong>2025 kicked off the new industrial age.</strong>
+            </p>
+
+            <h3 className="text-2xl font-bold mt-8">4. Agents Make Coding More Efficient</h3>
+            <p>
+              Coding is the most commercially direct application for agents. Claude Code, Gemini CLI, and OpenAI Codex have turned "coding agents" into a battlefield.
+            </p>
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/blog/2025/coding.png"
+                alt="Agentic Coding"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p>
+              By the end of 2025, Gemini 3 Pro, Claude Opus 4.5, and GPT-5.2 have become the top models for coding workflows. Companies report automating more senior-level tasks. Microsoft, Google, Amazon, and Anthropic all state that more and more of their own code is generated by AI.
+            </p>
+
+            <hr className="my-10 border-slate-200 dark:border-slate-800" />
+
+            <h3 className="text-2xl font-bold mt-8">Conclusion: Go Build the Future</h3>
+            <p>
+              While 2025 was the year AI became "heavy" (infrastructure, energy, capital), it was also the year AI development became "light." Reasoning models and coding agents have drastically lowered the barrier to creation.
+            </p>
+            <p className="font-semibold text-xl text-center my-6">
+              "The best way to predict the future is to build it yourself."
+            </p>
+
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl mt-8 mb-8 border border-blue-100 dark:border-blue-900">
+              <h4 className="font-bold text-lg mb-3 text-blue-800 dark:text-blue-200">🚀 Software Development Tips from Andrew</h4>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  <span><strong>Don't skip the basics:</strong> Structured learning is vital. Don't be the person who writes messy context management code because they skipped the theory.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  <span><strong>Get your hands dirty:</strong> Theory is like flight school ground training; building projects is the actual flying. You need both.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">✅</span>
+                  <span><strong>Read papers (if you can):</strong> It's hard and dry, but it's where the bleeding edge lives. Even occasional reading sets you apart.</span>
+                </li>
+              </ul>
+            </div>
+
+            <p className="mt-6 font-medium text-center text-slate-500">
+              Happy New Year! Keep curious, and never stop learning.
+            </p>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 

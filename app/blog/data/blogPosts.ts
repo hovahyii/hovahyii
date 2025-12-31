@@ -183,4 +183,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/meta/manus x meta.PNG',
     categories: ['AI', 'Meta', 'Manus', 'Acquisition'],
   },
+  'andrew-ng-2025-ai-summary': {
+    slug: 'andrew-ng-2025-ai-summary',
+    title: 'Andrew Ng\'s 2025 AI Summary: The Dawn of the AI Industrial Age!',
+    date: '31 December 2025',
+    author: 'Hovah Yii',
+    description: 'Andrew Ng\'s annual letter and AI summary for 2025 covering reasoning models, the talent war, data center boom, and agentic coding.',
+    ogImage: '/blog/2025/andrew ng.png',
+    categories: ['AI', 'Andrew Ng', 'Industry Analysis'],
+  },
 };
