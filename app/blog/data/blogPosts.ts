@@ -192,4 +192,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/2025/andrew ng.png',
     categories: ['AI', 'Andrew Ng', 'Industry Analysis'],
   },
+  'goodbye-programmers-2026-singularity': {
+    slug: 'goodbye-programmers-2026-singularity',
+    title: '💥 Goodbye, Programmers! 2026, The Year of Singularity? 1 Person, 1 Holiday, 10 Years of Code',
+    date: '5 January 2026',
+    author: 'Hovah Yii',
+    description: 'Midjourney founder wrote 10 years of code in one holiday. Musk declares 2026 as the Singularity. Claude Code is changing everything.',
+    ogImage: '/blog/claude-code/elon-musk.png',
+    categories: ['AI', 'Singularity', 'Programming', 'Industry Analysis'],
+  },
 };
