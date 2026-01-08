@@ -201,6 +201,15 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/claude-code/elon-musk.png',
     categories: ['AI', 'Singularity', 'Programming', 'Industry Analysis'],
   },
+  'nvidia-ces-2026-vera-rubin': {
+    slug: 'nvidia-ces-2026-vera-rubin',
+    title: '🚀 NVIDIA CES 2026: Vera Rubin Chip Architecture Officially Unveiled & In Full Production',
+    date: '6 January 2026',
+    author: 'Hovah Yii',
+    description: 'NVIDIA releases next-gen Vera Rubin platform with 6 new chips (CPU, GPU, NVLink 6, etc.), Alpamayo autonomous driving model, and Cosmos physical AI platform.',
+    ogImage: '/blog/nvidia/rubin.png',
+    categories: ['AI', 'NVIDIA', 'Hardware', 'CES 2026'],
+  },
   'ces-2026-ai-hardware-revolution': {
     slug: 'ces-2026-ai-hardware-revolution',
     title: '🔥 CES 2026: AI Is No Longer a Concept—It Lives in Wild Hardware! Flying AI Pets, Robot Bartenders & More',

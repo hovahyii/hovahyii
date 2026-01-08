@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BlogPost } from '../data/blogPosts';
 import CES2026Content from './CES2026Content';
+import NvidiaCES2026Content from './NvidiaCES2026Content';
 
 interface BlogPostClientProps {
   slug: string;
@@ -6147,6 +6148,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               If all this really happens, "learning to write code" itself won't be that important anymore.
             </p>
           </div>
+        )
+      });
+    } else if (slug === 'nvidia-ces-2026-vera-rubin') {
+      setPost({
+        ...postData,
+        content: (
+          <NvidiaCES2026Content />
         )
       });
     } else if (slug === 'ces-2026-ai-hardware-revolution') {
