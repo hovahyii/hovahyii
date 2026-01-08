@@ -6154,6 +6154,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         ...postData,
         content: (
           <CES2026Content />
+        )
       });
     }
   }, [slug, postData]);
