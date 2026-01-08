@@ -207,7 +207,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     date: '8 January 2026',
     author: 'Hovah Yii',
     description: 'Explore the 9 biggest highlights from CES 2026: flying AI pets, emotion-reading devices, 38.5g AI glasses, humanoid robots, and Chinese companies dominating the show floor.',
-    ogImage: '/ces2026/venue.png',
+    ogImage: '/blog/ces2026/venue.png',
     categories: ['AI', 'CES', 'Hardware', 'Robotics', 'Consumer Electronics'],
   },
 };

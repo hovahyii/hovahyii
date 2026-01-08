@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -316,7 +316,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </h2>
               <p className="mt-3 mb-2">Here's the only small catch - you'll need to add a payment method. <span className="font-bold">But don't panic!</span> You won't be charged for the full year, and you can always remove it before renewal.</p>
               <div className="bg-yellow-100 dark:bg-yellow-900/50 p-3 rounded-md my-3">
-                <p className="font-medium">âš ï¸ Pro Tip: Set a calendar reminder for 11 months from now to review your subscription if you don't want it to auto-renew.</p>
+                <p className="font-medium">&larr;š ï¸ Pro Tip: Set a calendar reminder for 11 months from now to review your subscription if you don't want it to auto-renew.</p>
               </div>
               <div className="my-4 flex justify-center">
                 <Image
@@ -397,17 +397,17 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 via-white to-slate-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Field Notes â€¢ 17/11/2025</p>
-              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Alibaba launches the Qwen App public betaâ€”one brand, one flagship personal AI.</h2>
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Field Notes &larr;€¢ 17/11/2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Alibaba launches the Qwen App public beta&larr;€”one brand, one flagship personal AI.</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">The codename project is now official: the former Tongyi app has been reborn as <strong>Qwen App</strong>, powered by the same trillion-parameter Qwen3-Max model that already leads open benchmarks. The mission is blunt: build the Chinese equivalent of ChatGPT by aligning the strongest model and the most visible consumer entry point under the exact same name.</p>
             </div>
 
             <h3 className="text-2xl font-bold mt-10">Brand discipline: from scattered squads to one battalion</h3>
-            <p>Alibabaâ€™s AI stack used to sound like a field manual: Tongyi, Qwen, Wan, Qwen Chat. Each name belonged to a different team, surface, or repo. The Qwen App announcement translates the original Chinese briefing into a single takeawayâ€”<em>brand consolidation concentrates attention</em>. Models keep their codenames, but now the consumer interface shares the modelâ€™s public identity. â€œHave a question? Ask Qwen.â€</p>
+            <p>Alibaba&larr;€™s AI stack used to sound like a field manual: Tongyi, Qwen, Wan, Qwen Chat. Each name belonged to a different team, surface, or repo. The Qwen App announcement translates the original Chinese briefing into a single takeaway&larr;€”<em>brand consolidation concentrates attention</em>. Models keep their codenames, but now the consumer interface shares the model&larr;€™s public identity. &larr;€œHave a question? Ask Qwen.&larr;€</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Same badge for every layer:</strong> the top open-source models are Qwen, and the app you tap on your phone is also Qwen.</li>
               <li><strong>Unified storytelling:</strong> developers and everyday users finally talk under the same keyword instead of juggling Tongyi vs. Qwen vs. Wan.</li>
-              <li><strong>Attention routing:</strong> fewer entry points mean cleaner data loops and clearer default habitsâ€”exactly what a consumer AI war requires.</li>
+              <li><strong>Attention routing:</strong> fewer entry points mean cleaner data loops and clearer default habits&larr;€”exactly what a consumer AI war requires.</li>
             </ul>
 
             <div className="my-8 flex justify-center">
@@ -421,7 +421,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h3 className="text-2xl font-bold mt-12">First look: quieter palette, louder intent</h3>
-            <p>The visual refresh strips away Tongyiâ€™s dual gradients in favor of a single Qwen cyan tone. Inside, the interface goes ultra-minimal: one chat box, a horizontal tray of intents, and a persistent search toggle that defaults to â€œon.â€</p>
+            <p>The visual refresh strips away Tongyi&larr;€™s dual gradients in favor of a single Qwen cyan tone. Inside, the interface goes ultra-minimal: one chat box, a horizontal tray of intents, and a persistent search toggle that defaults to &larr;€œon.&larr;€</p>
             <div className="my-10 grid md:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-4">
                 <Image
@@ -431,7 +431,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                   height={600}
                   className="rounded-xl"
                 />
-                <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-3">The new single-tone UI: â€œone prompt bar to rule them all.â€</p>
+                <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-3">The new single-tone UI: &larr;€œone prompt bar to rule them all.&larr;€</p>
               </div>
               <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-4">
                 <Image
@@ -445,24 +445,24 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold mt-12">Why people call it â€œChinaâ€™s ChatGPTâ€</h3>
+            <h3 className="text-2xl font-bold mt-12">Why people call it &larr;€œChina&larr;€™s ChatGPT&larr;€</h3>
             <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-4">
               <p>Translated from the original memo, here are the parallels:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Super-app ambition:</strong> daily personal assistant spanning work notes, creative writing, search, coding, shopping, and multimodal creation from one entry point.</li>
-                <li><strong>Latest models, no lag:</strong> Qwen App exposes <em>the</em> strongest internal models (Qwen3-Max, Qwen3-Omni, Qwen3-VL) on day one, just like ChatGPT ships OpenAIâ€™s newest releases directly.</li>
-                <li><strong>Default to online reasoning:</strong> search stays enabled because consumer users expect fresh knowledge without togglesâ€”an answer to the hallucination complaints heard during the DeepSeek news cycle.</li>
+                <li><strong>Latest models, no lag:</strong> Qwen App exposes <em>the</em> strongest internal models (Qwen3-Max, Qwen3-Omni, Qwen3-VL) on day one, just like ChatGPT ships OpenAI&larr;€™s newest releases directly.</li>
+                <li><strong>Default to online reasoning:</strong> search stays enabled because consumer users expect fresh knowledge without toggles&larr;€”an answer to the hallucination complaints heard during the DeepSeek news cycle.</li>
                 <li><strong>Chinese-native UX:</strong> in Chinese contexts the assistant feels smoother than ChatGPT; intents, idioms, and policies read naturally.</li>
               </ul>
             </div>
 
             <h3 className="text-2xl font-bold mt-12">What the models are actually doing</h3>
-            <p>Alibabaâ€™s open brief emphasized that the tech card matters as much as the brand card. The new stack includes:</p>
+            <p>Alibaba&larr;€™s open brief emphasized that the tech card matters as much as the brand card. The new stack includes:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Qwen3-Max:</strong> 1+ trillion parameters, 36T-token pretrain mix, capable of 69.6 on SWE-Bench and 74.8 on Tau2 Benchâ€”both first-tier scores.</li>
+              <li><strong>Qwen3-Max:</strong> 1+ trillion parameters, 36T-token pretrain mix, capable of 69.6 on SWE-Bench and 74.8 on Tau2 Bench&larr;€”both first-tier scores.</li>
               <li><strong>Qwen3-VL & Omni:</strong> 32/36 publicly reported audiovisual benchmarks at SOTA across speech, vision, and video understanding.</li>
               <li><strong>Qwen3-Coder:</strong> accelerated reasoning plus safer completions for IDE workflows.</li>
-              <li><strong>Open ecosystem:</strong> 300+ models released, 600M cumulative downloads, 170k derivative checkpointsâ€”making Qwen arguably the worldâ€™s largest open-model matrix.</li>
+              <li><strong>Open ecosystem:</strong> 300+ models released, 600M cumulative downloads, 170k derivative checkpoints&larr;€”making Qwen arguably the world&larr;€™s largest open-model matrix.</li>
             </ul>
             <div className="my-8 grid md:grid-cols-2 gap-6">
               <Image
@@ -480,10 +480,10 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 className="rounded-2xl shadow"
               />
             </div>
-            <p>The callout from Alibabaâ€™s comms team made it explicit: technology earns attention, but brand keeps it. Without a recognizable flag, trillion-parameter feats are just GitHub release notes.</p>
+            <p>The callout from Alibaba&larr;€™s comms team made it explicit: technology earns attention, but brand keeps it. Without a recognizable flag, trillion-parameter feats are just GitHub release notes.</p>
 
             <h3 className="text-2xl font-bold mt-12">Putting the assistant to the test</h3>
-            <p>I ran the same narrative-writing request that originally circulated inside Alibaba (â€œWrite an Oppenheimer confession right before the Trinity testâ€). Qwen3-Max responded with startlingly human cadenceâ€”especially the closing line, â€œbefore the night has fully ended.â€</p>
+            <p>I ran the same narrative-writing request that originally circulated inside Alibaba (&larr;€œWrite an Oppenheimer confession right before the Trinity test&larr;€). Qwen3-Max responded with startlingly human cadence&larr;€”especially the closing line, &larr;€œbefore the night has fully ended.&larr;€</p>
             <div className="my-8 flex justify-center">
               <Image
                 src="/blog/qwen/qwen-conversation.png"
@@ -507,28 +507,28 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <h3 className="text-2xl font-bold mt-12">Product decisions that matter</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Search-on by default:</strong> prevents outdated answers without asking for user literacy about cutoff dates.</li>
-              <li><strong>Intent routing in one chat box:</strong> no need to â€œfind the AI photo buttonâ€; just describe the edit.</li>
-              <li><strong>Access to Qwen3-Max:</strong> first time regular users can run Alibabaâ€™s flagship model inside an official appâ€“with system prompts tuned for friendliness.</li>
+              <li><strong>Intent routing in one chat box:</strong> no need to &larr;€œfind the AI photo button&larr;€; just describe the edit.</li>
+              <li><strong>Access to Qwen3-Max:</strong> first time regular users can run Alibaba&larr;€™s flagship model inside an official app&larr;€“with system prompts tuned for friendliness.</li>
               <li><strong>Wan + Omni integration:</strong> image editing, video calls, real-time transcription, and AI video generation now share the same conversation log.</li>
             </ul>
 
-            <h3 className="text-2xl font-bold mt-12">Timeline recap: Tongyi â†’ Qwen</h3>
+            <h3 className="text-2xl font-bold mt-12">Timeline recap: Tongyi &rarr; Qwen</h3>
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow divide-y divide-slate-100 dark:divide-slate-800">
               <div className="p-5">
                 <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">2023</p>
                 <p className="mt-1"><strong>April:</strong> Tongyi Qianwen debuts; August sees Qwen-7B open-sourced; September welcomes the Tongyi App public launch.</p>
               </div>
               <div className="p-5">
-                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">2023 Q4 â€“ 2024</p>
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">2023 Q4 &larr;€“ 2024</p>
                 <p className="mt-1">Org reshuffles move the Tongyi app from Alibaba Cloud to the Intelligent Information Group; April 2024 ships Tongyi App 3 with Thousand-Question 3 models.</p>
               </div>
               <div className="p-5">
                 <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">January 2025</p>
-                <p className="mt-1">Qwen Chat launches on the web (chat.qwen.ai) under Alibaba Cloudâ€™s Tongyi Labâ€”serving as the playground for raw model capability demos.</p>
+                <p className="mt-1">Qwen Chat launches on the web (chat.qwen.ai) under Alibaba Cloud&larr;€™s Tongyi Lab&larr;€”serving as the playground for raw model capability demos.</p>
               </div>
               <div className="p-5">
-                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">March â€“ October 2025</p>
-                <p className="mt-1">Quark (Aliâ€™s information app) is redefined as the AI flagship, adds conversation modes, and incubates â€œProject Câ€ (C for Chat) around Qwen models.</p>
+                <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">March &larr;€“ October 2025</p>
+                <p className="mt-1">Quark (Ali&larr;€™s information app) is redefined as the AI flagship, adds conversation modes, and incubates &larr;€œProject C&larr;€ (C for Chat) around Qwen models.</p>
               </div>
               <div className="p-5">
                 <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">November 2025</p>
@@ -547,7 +547,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <h3 className="text-2xl font-bold mt-12">Brand lesson for the rest of us</h3>
             <p>The translated closing thought from the original piece hits home: technology lets you speak; brand makes anyone remember the sentence. Every article you post, every product rename, every UI accent becomes a line in your personal brand statement. Alibaba now plays both the tech card (Qwen3-Max) and the brand card (Qwen App) with equal conviction. The obvious question is: who places the next bet?</p>
-            <p className="font-semibold text-slate-900 dark:text-white">So yes, Qwen App might be â€œChinaâ€™s ChatGPT.â€ But the deeper story is that even trillion-parameter breakthroughs need a name people can tap on. Have a question? Ask Qwen.</p>
+            <p className="font-semibold text-slate-900 dark:text-white">So yes, Qwen App might be &larr;€œChina&larr;€™s ChatGPT.&larr;€ But the deeper story is that even trillion-parameter breakthroughs need a name people can tap on. Have a question? Ask Qwen.</p>
           </div>
         )
       });
@@ -557,7 +557,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-red-200 dark:border-red-800 bg-gradient-to-br from-red-50 via-white to-slate-50 dark:from-red-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-red-600 dark:text-red-300 font-semibold">Industry Alert â€¢ 29/12/2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-red-600 dark:text-red-300 font-semibold">Industry Alert &larr;€¢ 29/12/2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Is AI "Killing" Programmers? Karpathy's Warning & The 2026 Grad Crisis</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">
                 US programmers are undergoing a "Great Purge." Employment rates have plummeted by 27.5%, and nearly 1/3 of jobs are vanishing. For the Class of 2026 CS graduates, the path forward seems blocked. As one veteran programmer put it: "This profession is disappearing. May we leave with glory and have had a good run."
@@ -571,7 +571,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               This isn't alarmist prophecy; it's a fact happening right now. Global layoffs driven by AI reached 1.17 million in 2025, the highest record since 2020.
             </p>
             <p>
-              Computer Science graduates in 2026 are facing a hellish landscape immediately upon graduationâ€”simply finding no work!
+              Computer Science graduates in 2026 are facing a hellish landscape immediately upon graduation&larr;€”simply finding no work!
             </p>
             <p>
               Data from the US Bureau of Labor Statistics shows that the employment rate for US programmers has plummeted by 27.5%. That means almost a third have been cut.
@@ -602,7 +602,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               Researchers analyzed wage records from ADP, the largest US payroll company, tracking millions of employees across tens of thousands of firms from 2021 to July 2025.
             </p>
             <p>
-              The data shows that employment for young and older developers was consistent until late 2022. But since then, they divergedâ€”young developers started losing jobs, while older developers did not.
+              The data shows that employment for young and older developers was consistent until late 2022. But since then, they diverged&larr;€”young developers started losing jobs, while older developers did not.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -707,7 +707,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               It's AI everywhere. All companies are using AI to replace human recruitment. All you can do is adapt to this world where machines talk to machines.
             </p>
             <p>
-              Once, CS was the golden major in everyone's eyesâ€”million-dollar contracts, high benefits, fun work environments.
+              Once, CS was the golden major in everyone's eyes&larr;€”million-dollar contracts, high benefits, fun work environments.
             </p>
             <p>
               But now, due to AI, economic uncertainty, and a flood of CS grads, those legendary perfect jobs have vanished in a snap.
@@ -748,7 +748,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <h3 className="text-2xl font-bold mt-12">Karpathy: Programmers Are Facing a Size 9 Earthquake</h3>
             <p>
-              It's not just newbies feeling the AI fearâ€”the titans are too.
+              It's not just newbies feeling the AI fear&larr;€”the titans are too.
             </p>
             <p>
               Former Tesla AI Director and OpenAI Co-founder Andrej Karpathy stated he was shocked by powerful "Alien Technology"!
@@ -767,7 +767,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p>
               This "powerful alien weapon handed to humans" he speaks of is AI.
             </p>
-            <p>And he speaks bluntlyâ€”</p>
+            <p>And he speaks bluntly&larr;€”</p>
             <p className="font-bold text-lg">"I have never felt so 'left behind' as a programmer."</p>
             <p>
               He deeply feels that as the code contributed by programmers becomes sparser and more fragmented, the profession is undergoing violent change.
@@ -875,7 +875,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               Jamie Grant from UPenn's career service center hit the nail on the head. She warns students chasing software engineering:
             </p>
             <p className="font-semibold">
-              "Jobs now are no longer just about writing code. Employers demand higher-order thinking, mastery of the SDLC, and skills AI can't replaceâ€”like understanding a client's vague requirements."
+              "Jobs now are no longer just about writing code. Employers demand higher-order thinking, mastery of the SDLC, and skills AI can't replace&larr;€”like understanding a client's vague requirements."
             </p>
 
             <h4 className="text-xl font-bold mt-6">AI Code Collapse: The Mythologized "Shit Mountain" Generator</h4>
@@ -953,7 +953,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               CodeRabbit's AI Director David Loker says: AI accelerated output but introduced predictable, measurable weaknesses.
             </p>
             <p>
-              This change forces human developers to take on a new roleâ€”wiping AI's butt.
+              This change forces human developers to take on a new role&larr;€”wiping AI's butt.
             </p>
             <p>
               A July METR study revealed a counter-intuitive phenomenon: <strong>For experienced developers, AI tools actually slowed them down.</strong>
@@ -1088,10 +1088,10 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-red-200 dark:border-red-800 bg-gradient-to-br from-red-50 via-white to-slate-50 dark:from-red-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-red-600 dark:text-red-300 font-semibold">Market Analysis â€¢ 17/12/2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-red-600 dark:text-red-300 font-semibold">Market Analysis &larr;€¢ 17/12/2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Why Are Domestic Open Source Models Risen?</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">
-                A tier list of open-source models has gone viral on X recently. DeepSeek, Qwen, Kimi, Zhipu, and MiniMaxâ€”domestic models are taking top spots. Meanwhile, Llama, backed by Meta's massive silicon investment, only got an honorable mention. This isn't self-promotion; it's the new reality of the global AI landscape according to researchers like Nathan Lambert.
+                A tier list of open-source models has gone viral on X recently. DeepSeek, Qwen, Kimi, Zhipu, and MiniMax&larr;€”domestic models are taking top spots. Meanwhile, Llama, backed by Meta's massive silicon investment, only got an honorable mention. This isn't self-promotion; it's the new reality of the global AI landscape according to researchers like Nathan Lambert.
               </p>
             </div>
 
@@ -1179,7 +1179,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>
-              <strong>Qwen</strong> is everywhereâ€”from the massive 480B parameter model to the tiny 6B one, from Qwen 3 VL for vision to Qwen 3 Coder. Even the Airbnb CEO stated that while OpenAI is good, it didn't fit them, and Qwen was excellent, practical, and cheaper.
+              <strong>Qwen</strong> is everywhere&larr;€”from the massive 480B parameter model to the tiny 6B one, from Qwen 3 VL for vision to Qwen 3 Coder. Even the Airbnb CEO stated that while OpenAI is good, it didn't fit them, and Qwen was excellent, practical, and cheaper.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -1208,7 +1208,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>
-              M2 uses "Interleaved Thinking"â€”pausing to think before acting, then thinking again. This loop helps it handle complex tasks better than a "think once, do all" approach.
+              M2 uses "Interleaved Thinking"&larr;€”pausing to think before acting, then thinking again. This loop helps it handle complex tasks better than a "think once, do all" approach.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -1310,7 +1310,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>
-              While US giants close their doors to protect commercial interests, Chinese models faced a different reality: scarce compute and chips. If they didn't share, no one could reuse the compute. Now, Baidu has open-sourced Wenxin 4.5. The competition is fierceâ€”if you don't open source, someone else will.
+              While US giants close their doors to protect commercial interests, Chinese models faced a different reality: scarce compute and chips. If they didn't share, no one could reuse the compute. Now, Baidu has open-sourced Wenxin 4.5. The competition is fierce&larr;€”if you don't open source, someone else will.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -1374,7 +1374,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>
-              Meanwhile, Meta's Llama strategy is facing hurdlesâ€”Llama 4's "Behemoth" version seems abandoned, and top talent is leaving. Llama is caught in the middle: too open to profit, not open enough to beat the crowd.
+              Meanwhile, Meta's Llama strategy is facing hurdles&larr;€”Llama 4's "Behemoth" version seems abandoned, and top talent is leaving. Llama is caught in the middle: too open to profit, not open enough to beat the crowd.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -1402,7 +1402,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 "Open source turns your competitors into your children; no son fights his father."
               </p>
               <p className="mt-4">
-                Chinese open-source models have become the foundation of the AI ecosystem. This wave is changing who defines future AIâ€”making top-tier AI accessible, cheap, and fast for everyone.
+                Chinese open-source models have become the foundation of the AI ecosystem. This wave is changing who defines future AI&larr;€”making top-tier AI accessible, cheap, and fast for everyone.
               </p>
             </div>
           </div>
@@ -1414,7 +1414,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 via-white to-slate-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Breaking News â€¢ 24/12/2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Breaking News &larr;€¢ 24/12/2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Zhipu Releases GLM-4.7: The Era of Coding for Everyone Has Arrived!</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">
                 Today, Zhipu officially launched and open-sourced its new GLM-4.7 model, with benchmark scores placing it firmly in the first tier of open-source models. This is also a critical move by Zhipu on the eve of their IPO.
@@ -1432,7 +1432,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>
-              GLM-4.7 has achieved alignment with or even surpassed GPT-5.1 and Claude Sonnet 4.5 across more than ten agent and reasoning benchmarks including SWE-bench, Terminal Bench 2.0, Ï„Â²-Bench, and HLE.
+              GLM-4.7 has achieved alignment with or even surpassed GPT-5.1 and Claude Sonnet 4.5 across more than ten agent and reasoning benchmarks including SWE-bench, Terminal Bench 2.0, Ï„&larr;²-Bench, and HLE.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -1446,7 +1446,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>
-              When it comes to subscription pricing, GLM-4.7 is a true "price killer": starting at just Â¥20 per month, you get three times the usage of Claude Pro. The keyword here is <strong>"affordable."</strong>
+              When it comes to subscription pricing, GLM-4.7 is a true "price killer": starting at just &larr;¥20 per month, you get three times the usage of Claude Pro. The keyword here is <strong>"affordable."</strong>
             </p>
 
             <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-8">
@@ -1482,8 +1482,8 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <ul className="list-disc pl-6 space-y-2 my-4">
               <li><strong>Code Capability:</strong> 73.8% on SWE-bench Verified, 84.9% on LiveCodeBench V6, on par with Claude Sonnet 4.5, placing it in the first tier of open-source models.</li>
-              <li><strong>Reasoning:</strong> HLE ("Humanity's Last Exam") scores improved significantlyâ€”42.8% with tool assistance, over 12 percentage points higher than GLM 4.6, also surpassing GPT 5.1 High.</li>
-              <li><strong>Tool Calling:</strong> 87.4% on Ï„Â² Bench, BrowseComp improved to 67.5% with context management enabled, showing stable performance in multi-turn web tasks and interactive tool calling scenarios.</li>
+              <li><strong>Reasoning:</strong> HLE ("Humanity's Last Exam") scores improved significantly&larr;€”42.8% with tool assistance, over 12 percentage points higher than GLM 4.6, also surpassing GPT 5.1 High.</li>
+              <li><strong>Tool Calling:</strong> 87.4% on Ï„&larr;² Bench, BrowseComp improved to 67.5% with context management enabled, showing stable performance in multi-turn web tasks and interactive tool calling scenarios.</li>
             </ul>
 
             <div className="my-8 flex justify-center">
@@ -1501,7 +1501,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <p>
-              Developers can also decide whether to enable reasoning on a per-turn basisâ€”reducing latency for simple requests while gaining stability for complex tasks. This design emphasizes consistency and controllability in long-task execution, and it's precisely these mechanism changes that support its overall leap in code agents, terminal tasks, and tool collaboration benchmarks.
+              Developers can also decide whether to enable reasoning on a per-turn basis&larr;€”reducing latency for simple requests while gaining stability for complex tasks. This design emphasizes consistency and controllability in long-task execution, and it's precisely these mechanism changes that support its overall leap in code agents, terminal tasks, and tool collaboration benchmarks.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">02. Higher Win Rate on 100 Real Tasks - Multimodal Skill Orchestration Closing the Development Loop</h2>
@@ -1525,7 +1525,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <p>
-              Beyond single-point generation capability, GLM 4.7 has further strengthened its <strong>multi-skill orchestration ability</strong>. GLM-4.7 has launched a full-stack skills environment on Z.ai, connecting to a new Skills module that supports unified orchestration of ASR speech recognition, TTS speech synthesis, GLM 4.6V vision model, and multiple other modules. In multimodal tasks, it can both plan paths and execute actionsâ€”the "orchestration logic" between tools is now connected.
+              Beyond single-point generation capability, GLM 4.7 has further strengthened its <strong>multi-skill orchestration ability</strong>. GLM-4.7 has launched a full-stack skills environment on Z.ai, connecting to a new Skills module that supports unified orchestration of ASR speech recognition, TTS speech synthesis, GLM 4.6V vision model, and multiple other modules. In multimodal tasks, it can both plan paths and execute actions&larr;€”the "orchestration logic" between tools is now connected.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">03. Real Tests: From 3D Christmas Trees to Switch Mini-Games - Frontend Effects Rival Gemini 3</h2>
@@ -1606,7 +1606,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <p>
-              Upon entering the game, two stick figure characters appear on screenâ€”one blue player, one red enemyâ€”with dynamic health bars displayed above their heads. The UI shows current wave and enemy count information in the upper left corner.
+              Upon entering the game, two stick figure characters appear on screen&larr;€”one blue player, one red enemy&larr;€”with dynamic health bars displayed above their heads. The UI shows current wave and enemy count information in the upper left corner.
             </p>
 
             <p>
@@ -1640,7 +1640,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 p-6 rounded-xl shadow-md my-8">
               <p className="font-semibold text-slate-900 dark:text-white">
-                Behind GLM-4.7's launch timing is Zhipu's imminent listing on the Hong Kong Stock Exchangeâ€”a microcosm of Chinese large model enterprises transitioning from research models and open-source ecosystems to "real usage" and "market validation."
+                Behind GLM-4.7's launch timing is Zhipu's imminent listing on the Hong Kong Stock Exchange&larr;€”a microcosm of Chinese large model enterprises transitioning from research models and open-source ecosystems to "real usage" and "market validation."
               </p>
               <p className="mt-4 text-slate-700 dark:text-slate-300">
                 In this new stage, Chinese open-source models are moving from "benchmarking international standards" to "leading and being practical," and GLM-4.7 is a key representative in this process.
@@ -1656,15 +1656,15 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-rose-200 dark:border-rose-800 bg-gradient-to-br from-rose-50 via-white to-slate-50 dark:from-rose-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-rose-500 font-semibold">Release log â€¢ 17/11/2025</p>
-              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">GPT-5.1 stops chasing leaderboards and starts chasing â€œgood vibes.â€</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-200">OpenAIâ€™s surprise drop focuses on EQ: GPT-5.1 Instant and GPT-5.1 Thinking now adapt their tone, pick personalities, and spend the right amount of time thinking before they respond. The update reads more like a lifestyle product launch than a benchmark dumpâ€”and thatâ€™s the point.</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-rose-500 font-semibold">Release log &larr;€¢ 17/11/2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">GPT-5.1 stops chasing leaderboards and starts chasing &larr;€œgood vibes.&larr;€</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">OpenAI&larr;€™s surprise drop focuses on EQ: GPT-5.1 Instant and GPT-5.1 Thinking now adapt their tone, pick personalities, and spend the right amount of time thinking before they respond. The update reads more like a lifestyle product launch than a benchmark dump&larr;€”and that&larr;€™s the point.</p>
             </div>
 
             <h3 className="text-2xl font-bold">Two brains, both warmer</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>GPT-5.1 Instant</strong>: the model you touch most often. Still fast, now more playful, more obedient, and capable of <em>adaptive reasoning</em> (quick answers for easy asks, a beat of silent thinking for hard ones).</li>
-              <li><strong>GPT-5.1 Thinking</strong>: the â€œdeep workâ€ brain. It dials up reasoning time only when needed, trims jargon, and sounds less robotic without abandoning rigor.</li>
+              <li><strong>GPT-5.1 Thinking</strong>: the &larr;€œdeep work&larr;€ brain. It dials up reasoning time only when needed, trims jargon, and sounds less robotic without abandoning rigor.</li>
             </ul>
 
             <div className="my-8 flex justify-center">
@@ -1710,7 +1710,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6">
                 <h4 className="text-xl font-semibold mb-2">GPT-5.1 Instant</h4>
                 <ul className="list-disc pl-5 space-y-2 text-sm">
-                  <li>Conversation style mirrors human banter; no more â€œclassmate reading from a script.â€</li>
+                  <li>Conversation style mirrors human banter; no more &larr;€œclassmate reading from a script.&larr;€</li>
                   <li>Adaptive reasoning toggles extra thought only when questions warrant it.</li>
                   <li>Better jailbreak resistance vs. GPT-5 (per StrongReject tests).</li>
                   <li>Still the default model in the ChatGPT UI.</li>
@@ -1721,7 +1721,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 <ul className="list-disc pl-5 space-y-2 text-sm">
                   <li>Dynamic reasoning budget: ~2Ã— faster on trivial tasks, up to 71% longer on gnarly ones.</li>
                   <li>Plain-language explanations with fewer acronyms.</li>
-                  <li>Slight safety regressions on harassment/hate filtersâ€”flagged in the system card.</li>
+                  <li>Slight safety regressions on harassment/hate filters&larr;€”flagged in the system card.</li>
                 </ul>
               </div>
             </div>
@@ -1744,12 +1744,12 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h3 className="text-2xl font-bold">Safety: new dimensions</h3>
-            <p>OpenAIâ€™s system card expands beyond typical abuse filters. GPT-5.1 now evaluates:</p>
+            <p>OpenAI&larr;€™s system card expands beyond typical abuse filters. GPT-5.1 now evaluates:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Mental health cues</strong> â€” can the assistant respond responsibly to isolation, delusion, or mania signals?</li>
-              <li><strong>Emotional reliance</strong> â€” does the conversation accidentally encourage unhealthy attachment?</li>
+              <li><strong>Mental health cues</strong> &larr;€” can the assistant respond responsibly to isolation, delusion, or mania signals?</li>
+              <li><strong>Emotional reliance</strong> &larr;€” does the conversation accidentally encourage unhealthy attachment?</li>
             </ul>
-            <p>Overall safety matches GPT-5, except for the Thinking modelâ€™s â€œlight regressionsâ€ around harassment/hate moderation. Meanwhile, Instant improves jailbreak resistance.</p>
+            <p>Overall safety matches GPT-5, except for the Thinking model&larr;€™s &larr;€œlight regressions&larr;€ around harassment/hate moderation. Meanwhile, Instant improves jailbreak resistance.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -1762,7 +1762,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h3 className="text-2xl font-bold">Why this update matters</h3>
-            <p>No benchmark chart, no â€œ+XX% on MMLU.â€ Instead, OpenAI quotes users: â€œA great AI isnâ€™t just smartâ€”itâ€™s enjoyable.â€ GPT-5.1 is the first release to treat personality, tone, and empathy as first-class features. After the GPT-5 backlash, this feels like a tacit admission: accuracy wins respect, but warmth wins retention.</p>
+            <p>No benchmark chart, no &larr;€œ+XX% on MMLU.&larr;€ Instead, OpenAI quotes users: &larr;€œA great AI isn&larr;€™t just smart&larr;€”it&larr;€™s enjoyable.&larr;€ GPT-5.1 is the first release to treat personality, tone, and empathy as first-class features. After the GPT-5 backlash, this feels like a tacit admission: accuracy wins respect, but warmth wins retention.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -1777,14 +1777,14 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <h3 className="text-2xl font-bold">How to use it today</h3>
             <ol className="list-decimal pl-6 space-y-2">
               <li>Update to the latest ChatGPT app (web or native). Instant becomes the new default once your account gets the rollout.</li>
-              <li>Visit Settings â†’ Personalization to pick a preset or tune your own sliders.</li>
+              <li>Visit Settings &rarr; Personalization to pick a preset or tune your own sliders.</li>
               <li>Tell ChatGPT mid-conversation how you want it to sound; it may offer to save that preference automatically.</li>
               <li>For API work, swap to `gpt-5.1-chat-latest` (Instant) or `gpt-5.1` (Thinking) as soon as they show up in your account.</li>
             </ol>
 
             <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 mt-12">
               <h4 className="text-xl font-semibold mb-3">TL;DR</h4>
-              <p>GPT-5.1 is a minor-number bump with a major attitude change. It adapts how long it thinks, how it speaks, and even how cheeky it feelsâ€”because OpenAI finally admits the chat part of ChatGPT matters as much as the GPT. IQ + EQ, one update.</p>
+              <p>GPT-5.1 is a minor-number bump with a major attitude change. It adapts how long it thinks, how it speaks, and even how cheeky it feels&larr;€”because OpenAI finally admits the chat part of ChatGPT matters as much as the GPT. IQ + EQ, one update.</p>
             </div>
           </div>
         )
@@ -1795,7 +1795,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-purple-200 dark:border-purple-800 bg-gradient-to-br from-purple-50 via-white to-slate-50 dark:from-purple-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-purple-600 dark:text-purple-300 font-semibold">AI News â€¢ 20 November 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-purple-600 dark:text-purple-300 font-semibold">AI News &larr;€¢ 20 November 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Google Gemini 3 launches as the ultimate AI powerhouse</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">In the early hours, Google's ultimate weapon Gemini 3 made its grand debut, launching straight with the top-tier Pro version. Claiming to be "the strongest reasoning + multimodal + vibe coding" three-in-one AI champion! Benchmark tests sweep the board, even defeating GPT-5.1, ushering in the next era of AI.</p>
             </div>
@@ -1819,7 +1819,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p>To summarize Google's words, Gemini 3 Pro's top-tier core lies in these three points:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>Dominating LMArena (1501 points) and WebDev (1487 points)</strong></li>
-              <li><strong>Humanity's Last Exam (HLE) achieving 45.8% highest score</strong> â€” PhD-level human reasoning</li>
+              <li><strong>Humanity's Last Exam (HLE) achieving 45.8% highest score</strong> &larr;€” PhD-level human reasoning</li>
               <li><strong>King of long-term task planning on Vending-Bench 2</strong></li>
             </ul>
 
@@ -1972,7 +1972,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </ul>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Coding Tools: The Age of Vibe Coding</h2>
-            <p>A popular term lately: Vibe Coding â€” you only need to describe the "feeling" (Vibe) and functionality you want, and the model can implement it.</p>
+            <p>A popular term lately: Vibe Coding &larr;€” you only need to describe the "feeling" (Vibe) and functionality you want, and the model can implement it.</p>
             <p>Currently, Gemini 3 Pro is also the strongest Vibe Coding model.</p>
 
             <p className="mt-6">More impressively, Google delivered two heavyweight productivity tools for this: Google Antigravity and Gemini CLI.</p>
@@ -1985,7 +1985,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <li><strong>Task-Oriented:</strong> The operation unit changes from "files" to "tasks." Developers issue requirements in the Inbox</li>
               <li><strong>Multi-Agent Collaboration:</strong> The system supports multiple Agents in parallel. Open one Agent for frontend on the left, another for backend testing on the right, and a middle Agent for documentation</li>
               <li><strong>Autonomy:</strong> Agents have control over editors, terminals, and browsers. They write code, automatically run terminals, automatically open browsers for testing, and fix errors themselves</li>
-              <li><strong>Artifacts:</strong> Agents deliver not just conversations but standardized "artifacts" â€” task lists, implementation plans, screenshots, code changes</li>
+              <li><strong>Artifacts:</strong> Agents deliver not just conversations but standardized "artifacts" &larr;€” task lists, implementation plans, screenshots, code changes</li>
             </ul>
 
             <p>You become the AI's manager, reviewing its plans, approving its operations, and accepting its deliverables.</p>
@@ -2080,7 +2080,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 via-white to-slate-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Breaking News â€¢ 21 November 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-emerald-600 dark:text-emerald-300 font-semibold">Breaking News &larr;€¢ 21 November 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">OpenAI can't sit still! Late-night release of GPT-5.1 Pro and GPT-5.1-Codex-Max</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">Today, OpenAI released its latest agentic programming model GPT-5.1 Codex Max, built on OpenAI's newest reasoning model and specifically trained for complex tasks in software engineering, research, and mathematics. Simultaneously, OpenAI upgraded GPT-5 Pro to GPT-5.1 Pro, claiming stronger capabilities in writing and data analysis.</p>
             </div>
@@ -2105,11 +2105,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <h3 className="text-2xl font-bold mt-10">How Experts Use AI Now</h3>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>For daily small tasks, UI work, urgent deadlines:</strong> Use Gemini 3 â€” fast, accurate, and efficient!</li>
+              <li><strong>For daily small tasks, UI work, urgent deadlines:</strong> Use Gemini 3 &larr;€” fast, accurate, and efficient!</li>
               <li><strong>For super difficult problems that must be done right the first time:</strong> Call on GPT-5.1 Pro, let it think slowly, stable!</li>
             </ul>
 
-            <p className="text-gray-600 dark:text-gray-400 italic mt-6">The AI world updates daily â€” truly hard to keep up...</p>
+            <p className="text-gray-600 dark:text-gray-400 italic mt-6">The AI world updates daily &larr;€” truly hard to keep up...</p>
 
             <p>Just two days ago, Grok 4.1 and Gemini 3 Pro were released. Today, OpenAI GPT-5.1 Pro quietly launched!</p>
             <p>No blog post, just a two-sentence announcement.</p>
@@ -2204,12 +2204,12 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p>For tasks not sensitive to latency, the new "Extra High" (xhigh) reasoning intensity can spend more time to get quality answers.</p>
             <p>However, for daily use, OpenAI still recommends medium.</p>
 
-            <p>Saved tokens mean significantly reduced costs in actual development â€” a blessing for developers.</p>
+            <p>Saved tokens mean significantly reduced costs in actual development &larr;€” a blessing for developers.</p>
 
             <h3 className="text-2xl font-bold mt-10">Demo Comparisons</h3>
             <p>The following demos clearly show the token usage differences between GPT-5.1-Codex-Max and GPT-5.1-Codex. Even with reduced tokens, the former doesn't compromise on functionality or visual appeal in frontend design.</p>
 
-            <p>For example, asking them to generate a browser application â€” an interactive CartPole reinforcement learning sandbox that includes a small policy gradient controller, metrics panel, and an SVG network visualizer:</p>
+            <p>For example, asking them to generate a browser application &larr;€” an interactive CartPole reinforcement learning sandbox that includes a small policy gradient controller, metrics panel, and an SVG network visualizer:</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -2398,7 +2398,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-6">
-              <h5 className="text-lg font-bold mb-3">âœ… Instruction Following is the Biggest Highlight</h5>
+              <h5 className="text-lg font-bold mb-3">&larr;œ… Instruction Following is the Biggest Highlight</h5>
               <p>It truly strictly follows your requirements without deviating.</p>
               <p>For serious coding tasks, it feels less like an "assistant" and more like an outsourced engineer working from specifications (even if your specifications are a bit vague).</p>
             </div>
@@ -2409,7 +2409,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <div className="bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 my-6">
-              <h5 className="text-lg font-bold mb-3">âš ï¸ But the Biggest Weakness Is Still the Interface</h5>
+              <h5 className="text-lg font-bold mb-3">&larr;š ï¸ But the Biggest Weakness Is Still the Interface</h5>
               <p>It can only be used in ChatGPT, can't integrate into IDEs, and can't connect to other toolchains. This is identical to GPT-5 Pro.</p>
             </div>
 
@@ -2417,7 +2417,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <div className="bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
               <p className="text-lg mb-4">From GPT-5.1-Codex-Max, we can see that the new generation of programming models are no longer simple code generators, but programming agents capable of continuous work, automatic debugging, and proactive planning. Their long-term reasoning, context compression, and self-repair capabilities allow models to independently complete project-level tasks.</p>
-              <p className="text-lg">As running costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also change â€” shifting from "writing code" to "describing requirements + reviewing results," with agents expected to undertake more implementation and iteration work.</p>
+              <p className="text-lg">As running costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also change &larr;€” shifting from "writing code" to "describing requirements + reviewing results," with agents expected to undertake more implementation and iteration work.</p>
             </div>
           </div>
         )
@@ -2428,8 +2428,8 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-green-200 dark:border-green-800 bg-gradient-to-br from-green-50 via-white to-slate-50 dark:from-green-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Breaking News â€¢ 21 November 2025</p>
-              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">OpenAI couldn't sit stillâ€”GPT-5.1 Pro and GPT-5.1-Codex-Max released overnight!</h2>
+              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Breaking News &larr;€¢ 21 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">OpenAI couldn't sit still&larr;€”GPT-5.1 Pro and GPT-5.1-Codex-Max released overnight!</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">Today, OpenAI released its latest agentic programming model, GPT-5.1-Codex-Max, built on OpenAI's newest reasoning model and specifically trained for complex tasks in software engineering, research, and mathematics. Meanwhile, OpenAI upgraded GPT-5 Pro to GPT-5.1 Pro, reportedly stronger in writing and data analysis than its predecessor.</p>
             </div>
 
@@ -2456,11 +2456,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <h3 className="text-2xl font-bold mt-10">How Experts Use AI Now</h3>
             <ul className="list-disc pl-6 space-y-2 mb-8">
-              <li><strong>Daily tasks, UI design, time-sensitive work:</strong> Use Gemini 3â€”fast and precise!</li>
+              <li><strong>Daily tasks, UI design, time-sensitive work:</strong> Use Gemini 3&larr;€”fast and precise!</li>
               <li><strong>Super difficult problems that must be done right the first time:</strong> Call on GPT-5.1 Pro, let it think slowly and get it right!</li>
             </ul>
 
-            <p className="text-gray-600 dark:text-gray-400 italic mb-8">The AI world updates dailyâ€”it's getting hard to keep up... Just two days ago, Grok 4.1 and Gemini 3 Pro were released, and today OpenAI's GPT-5.1 Pro quietly launched!</p>
+            <p className="text-gray-600 dark:text-gray-400 italic mb-8">The AI world updates daily&larr;€”it's getting hard to keep up... Just two days ago, Grok 4.1 and Gemini 3 Pro were released, and today OpenAI's GPT-5.1 Pro quietly launched!</p>
 
             <p>No blog post, just a two-sentence announcement. As everyone knows, GPT-5.1 emphasizes both "EQ and IQ," and Pro undoubtedly takes these advantages to an even higher level.</p>
 
@@ -2485,7 +2485,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p className="font-semibold">Here's the thing: it can work autonomously for over 24 hours continuously, processing millions of tokens in one go and delivering finished results.</p>
 
             <h3 className="text-2xl font-bold mt-10">Scaling Law Still Holds</h3>
-            <p>GPT-5.1-Codex-Max is OpenAI's first model with native "compression" support, allowing it to work across multiple contexts. Tasks like project refactoring, deep debugging, and multi-hour agent loopsâ€”it can handle them all steadily.</p>
+            <p>GPT-5.1-Codex-Max is OpenAI's first model with native "compression" support, allowing it to work across multiple contexts. Tasks like project refactoring, deep debugging, and multi-hour agent loops&larr;€”it can handle them all steadily.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -2553,7 +2553,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <p>For latency-insensitive tasks, the new "Extra High" (xhigh) reasoning intensity can spend more time to get better answers. However, for daily use, OpenAI still recommends medium.</p>
 
-            <p>Saving tokens means significantly lower costs in actual developmentâ€”a blessing for developers!</p>
+            <p>Saving tokens means significantly lower costs in actual development&larr;€”a blessing for developers!</p>
 
             <h3 className="text-2xl font-bold mt-10">Demo: CartPole Reinforcement Learning</h3>
             <p>The following demos clearly show the token usage difference between GPT-5.1-Codex-Max and GPT-5.1-Codex. Even with reduced tokens, the former doesn't compromise on functionality or aesthetics in frontend design.</p>
@@ -2700,7 +2700,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <h3 className="text-2xl font-bold mt-10">Expert Reviews</h3>
 
-            <p>Derya Unutmaz, professor at Jackson Laboratory and human immunologist, says GPT-5.0 Proâ€”which significantly improved performance over previous versionsâ€”is now his favorite model.</p>
+            <p>Derya Unutmaz, professor at Jackson Laboratory and human immunologist, says GPT-5.0 Pro&larr;€”which significantly improved performance over previous versions&larr;€”is now his favorite model.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -2742,7 +2742,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <div className="space-y-4">
                 <div>
                   <h5 className="font-semibold text-lg mb-2">Slow but incredibly smart</h5>
-                  <p>It's not just better at reasoning than most humansâ€”it's smarter than any other model when handling truly tricky problems. Within days, we'll likely see examples of it solving problems people thought today's AI systems couldn't handle.</p>
+                  <p>It's not just better at reasoning than most humans&larr;€”it's smarter than any other model when handling truly tricky problems. Within days, we'll likely see examples of it solving problems people thought today's AI systems couldn't handle.</p>
                 </div>
 
                 <div>
@@ -2752,7 +2752,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
                 <div>
                   <h5 className="font-semibold text-lg mb-2">Frontend, UX design, and writing are weaknesses</h5>
-                  <p>Whether it's creative writing or designing beautiful UIs, Gemini 3 is superior. For most daily work, Gemini 3 is betterâ€”after all, waiting 10 minutes for an answer in a standalone interface is clearly not ideal.</p>
+                  <p>Whether it's creative writing or designing beautiful UIs, Gemini 3 is superior. For most daily work, Gemini 3 is better&larr;€”after all, waiting 10 minutes for an answer in a standalone interface is clearly not ideal.</p>
                   <p className="mt-2">But for any task requiring deep thinking, planning, and research, and anything that must be done right the first time, GPT-5.1 Pro is better.</p>
                 </div>
 
@@ -2768,7 +2768,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/30 dark:to-blue-900/30 p-6 rounded-xl shadow-md mb-10">
               <p className="text-lg mb-4">From GPT-5.1-Codex-Max, we can see that the new generation of programming models is no longer a simple code generator but a programming agent capable of continuous work, automatic debugging, and active planning. Its long-term reasoning, context compression, and self-repair capabilities enable the model to independently complete project-level tasks.</p>
 
-              <p className="text-lg">As operating costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also changeâ€”shifting from "writing code" to "describing requirements + reviewing results," with agents taking on more implementation and iteration work.</p>
+              <p className="text-lg">As operating costs decrease, security sandboxes strengthen, and capabilities comprehensively improve, future software development methods may also change&larr;€”shifting from "writing code" to "describing requirements + reviewing results," with agents taking on more implementation and iteration work.</p>
             </div>
           </div>
         )
@@ -2779,9 +2779,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-yellow-200 dark:border-yellow-800 bg-gradient-to-br from-yellow-50 via-white to-slate-50 dark:from-yellow-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-yellow-600 dark:text-yellow-300 font-semibold">Breaking News â€¢ 22 November 2025</p>
-              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Google Nano Banana Pro launchesâ€”designers' jobs are really at risk? Deep integration with Gemini 3, Google gives competitors no breathing room</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-200">Shortly after Gemini 3 Pro's dazzling debut, a new generation model follows immediately. Last night, Google officially unveiled its strongest image generation modelâ€”Nano Banana Pro, built on the latest Gemini 3 Pro. Officially called Gemini 3 Pro Image.</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-yellow-600 dark:text-yellow-300 font-semibold">Breaking News &larr;€¢ 22 November 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Google Nano Banana Pro launches&larr;€”designers' jobs are really at risk? Deep integration with Gemini 3, Google gives competitors no breathing room</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">Shortly after Gemini 3 Pro's dazzling debut, a new generation model follows immediately. Last night, Google officially unveiled its strongest image generation model&larr;€”Nano Banana Pro, built on the latest Gemini 3 Pro. Officially called Gemini 3 Pro Image.</p>
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Core Features</h2>
@@ -2916,30 +2916,30 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
               <h4 className="text-xl font-bold mb-4">For Consumers & Students</h4>
               <ul className="list-disc pl-6 space-y-2">
-                <li>âœ… In Gemini App, when you select "Create images" and use "Thinking" model, rolling out globally</li>
-                <li>âœ… Free users get limited free quota, reverting to original Nano Banana after depletion</li>
-                <li>âœ… Google AI Plus, Pro, and Ultra subscribers get higher quotas</li>
-                <li>âœ… In Search's AI Mode, available to US subscribers</li>
-                <li>âœ… In NotebookLM, available to global subscribers</li>
+                <li>&larr;œ… In Gemini App, when you select "Create images" and use "Thinking" model, rolling out globally</li>
+                <li>&larr;œ… Free users get limited free quota, reverting to original Nano Banana after depletion</li>
+                <li>&larr;œ… Google AI Plus, Pro, and Ultra subscribers get higher quotas</li>
+                <li>&larr;œ… In Search's AI Mode, available to US subscribers</li>
+                <li>&larr;œ… In NotebookLM, available to global subscribers</li>
               </ul>
 
               <h4 className="text-xl font-bold mt-6 mb-4">For Professionals</h4>
               <ul className="list-disc pl-6 space-y-2">
-                <li>âœ… Image generation in Google Ads upgraded to Nano Banana Pro</li>
-                <li>âœ… Rolling out to Workspace users in Google Slides and Vids</li>
+                <li>&larr;œ… Image generation in Google Ads upgraded to Nano Banana Pro</li>
+                <li>&larr;œ… Rolling out to Workspace users in Google Slides and Vids</li>
               </ul>
 
               <h4 className="text-xl font-bold mt-6 mb-4">For Developers & Enterprises</h4>
               <ul className="list-disc pl-6 space-y-2">
-                <li>âœ… Rolling out in Gemini API, Google AI Studio, and Google Antigravity</li>
-                <li>âœ… Enterprise users can start building in Vertex AI today</li>
-                <li>âœ… Coming soon to Gemini Enterprise</li>
+                <li>&larr;œ… Rolling out in Gemini API, Google AI Studio, and Google Antigravity</li>
+                <li>&larr;œ… Enterprise users can start building in Vertex AI today</li>
+                <li>&larr;œ… Coming soon to Gemini Enterprise</li>
               </ul>
 
               <h4 className="text-xl font-bold mt-6 mb-4">For Creative Workers</h4>
               <ul className="list-disc pl-6 space-y-2">
-                <li>âœ… Rolling out to Flow (AI filmmaking tool) for Google AI Ultra subscribers</li>
-                <li>âœ… Provides creators, directors, and marketing teams with more precise, controllable shot and scene generation</li>
+                <li>&larr;œ… Rolling out to Flow (AI filmmaking tool) for Google AI Ultra subscribers</li>
+                <li>&larr;œ… Provides creators, directors, and marketing teams with more precise, controllable shot and scene generation</li>
               </ul>
             </div>
 
@@ -3179,9 +3179,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <h2 className="text-3xl font-bold mt-12 mb-6 text-center">Conclusion: The Designer's Dilemma</h2>
 
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/30 dark:to-orange-900/30 p-6 rounded-xl shadow-md mb-10">
-              <p className="text-lg mb-4">Nano Banana Pro represents a paradigm shift in AI image generation. With unprecedented control over lighting, composition, and text rendering, combined with Gemini 3's world knowledge and reasoning capabilities, it's becoming clear that AI tools are no longer just assistantsâ€”they're becoming creative partners capable of studio-quality work.</p>
+              <p className="text-lg mb-4">Nano Banana Pro represents a paradigm shift in AI image generation. With unprecedented control over lighting, composition, and text rendering, combined with Gemini 3's world knowledge and reasoning capabilities, it's becoming clear that AI tools are no longer just assistants&larr;€”they're becoming creative partners capable of studio-quality work.</p>
 
-              <p className="text-lg">From transforming manga to generating complex infographics, from solving math problems visually to creating multilingual marketing materials, Nano Banana Pro demonstrates that the line between "AI-assisted" and "AI-created" is blurring rapidly. The question isn't whether designers' jobs are at riskâ€”it's how designers will adapt to work alongside these powerful tools.</p>
+              <p className="text-lg">From transforming manga to generating complex infographics, from solving math problems visually to creating multilingual marketing materials, Nano Banana Pro demonstrates that the line between "AI-assisted" and "AI-created" is blurring rapidly. The question isn't whether designers' jobs are at risk&larr;€”it's how designers will adapt to work alongside these powerful tools.</p>
             </div>
           </div>
         )
@@ -3192,7 +3192,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-green-200 dark:border-green-800 bg-gradient-to-br from-green-50 via-white to-slate-50 dark:from-green-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Professional Development â€¢ 22 November 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-green-600 dark:text-green-300 font-semibold">Professional Development &larr;€¢ 22 November 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Your Complete Guide to BEM Engineering Technologist Registration</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">Learn how to obtain your Engineering Technologist registration with the Board of Engineers Malaysia (BEM). This step-by-step guide covers ETAC accreditation verification, application process, documentation requirements, and important regulations about title usage.</p>
             </div>
@@ -3221,7 +3221,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 />
               </div>
               <div className="bg-blue-100 dark:bg-blue-900/50 p-4 rounded-lg mt-4">
-                <p className="font-medium">âš ï¸ Important: Only graduates from ETAC-accredited programmes are eligible to apply for Engineering Technologist registration with BEM.</p>
+                <p className="font-medium">&larr;š ï¸ Important: Only graduates from ETAC-accredited programmes are eligible to apply for Engineering Technologist registration with BEM.</p>
               </div>
             </div>
 
@@ -3274,7 +3274,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <p className="mt-3 mb-4">Follow the instructions carefully and upload all necessary documentation. Here's the crucial part:</p>
 
               <div className="bg-red-100 dark:bg-red-900/50 p-4 rounded-lg my-4">
-                <h4 className="text-xl font-bold mb-3 text-red-700 dark:text-red-300">âš ï¸ CRITICAL REQUIREMENT</h4>
+                <h4 className="text-xl font-bold mb-3 text-red-700 dark:text-red-300">&larr;š ï¸ CRITICAL REQUIREMENT</h4>
                 <p className="font-medium mb-2">Your documentation MUST include:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Personal signature from a registered <strong>Ir. (Professional Engineer)</strong></li>
@@ -3360,7 +3360,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </p>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-red-600 dark:text-red-400">âš ï¸ IMPORTANT: Title Usage Regulations</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-red-600 dark:text-red-400">&larr;š ï¸ IMPORTANT: Title Usage Regulations</h2>
 
             <p className="text-xl font-semibold mb-6">
               Before you start using your new qualification, please read this section carefully to ensure you comply with Malaysian professional regulations.
@@ -3396,7 +3396,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow p-6 my-8">
-              <h4 className="text-xl font-bold mb-4 text-green-600 dark:text-green-400">2. âœ… Correct Usage: Post-nominal (After Your Name)</h4>
+              <h4 className="text-xl font-bold mb-4 text-green-600 dark:text-green-400">2. &larr;œ… Correct Usage: Post-nominal (After Your Name)</h4>
               <p className="mb-4">You can and should list the qualification after your name or in your professional descriptions.</p>
 
               <div className="bg-green-100 dark:bg-green-900/50 p-4 rounded-lg mb-4">
@@ -3408,7 +3408,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </div>
 
               <div className="bg-red-100 dark:bg-red-900/50 p-4 rounded-lg">
-                <p className="font-semibold mb-2">âŒ Incorrect Examples:</p>
+                <p className="font-semibold mb-2">&larr;Œ Incorrect Examples:</p>
                 <ul className="list-disc pl-6 space-y-1">
                   <li><code>Eng Tech Jehovah Yii</code> (Wrong - no pre-nominal)</li>
                   <li><code>Engr. Jehovah Yii</code> (Wrong - not recognized)</li>
@@ -3539,7 +3539,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                       <li>From <strong>EAC-accredited</strong> engineering programmes</li>
                       <li>Stepping stone to "Ir." (Professional Engineer)</li>
                       <li>More theoretical/research-oriented background</li>
-                      <li>Pathway: GE â†’ PE (Ir.)</li>
+                      <li>Pathway: GE &rarr; PE (Ir.)</li>
                     </ul>
                   </div>
 
@@ -3549,7 +3549,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                       <li>From <strong>ETAC-accredited</strong> engineering technology programmes</li>
                       <li>Currently no direct professional pathway with BEM</li>
                       <li>More practical/application-oriented background</li>
-                      <li>Better pathway: ET â†’ MBOT (Ts.)</li>
+                      <li>Better pathway: ET &rarr; MBOT (Ts.)</li>
                     </ul>
                   </div>
                 </div>
@@ -3585,7 +3585,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 </ul>
 
                 <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg mt-3">
-                  <p className="font-semibold mb-2">âœ… Practical Solution: Go to MBOT</p>
+                  <p className="font-semibold mb-2">&larr;œ… Practical Solution: Go to MBOT</p>
                   <p className="text-sm">Since BEM doesn't offer a professional pathway for Engineering Technologists, <strong>most graduates register with MBOT</strong> (Malaysia Board of Technologists) instead. MBOT offers:</p>
                   <ul className="list-disc pl-5 space-y-1 text-sm mt-2">
                     <li>Professional Technologist registration</li>
@@ -3602,7 +3602,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
                 <div className="space-y-3">
                   <div className="bg-green-50 dark:bg-green-900/30 p-4 rounded-lg">
-                    <p className="font-semibold mb-2">âœ… MBOT (Recommended Priority)</p>
+                    <p className="font-semibold mb-2">&larr;œ… MBOT (Recommended Priority)</p>
                     <ul className="list-disc pl-5 space-y-1 text-sm">
                       <li>Get the <strong>"Ts."</strong> professional title</li>
                       <li>Clear professional recognition in industry</li>
@@ -3612,7 +3612,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                   </div>
 
                   <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
-                    <p className="font-semibold mb-2">âœ… BEM (Secondary/Optional)</p>
+                    <p className="font-semibold mb-2">&larr;œ… BEM (Secondary/Optional)</p>
                     <ul className="list-disc pl-5 space-y-1 text-sm">
                       <li>Official recognition by the engineering board</li>
                       <li>Useful if working with government projects or contracts</li>
@@ -3662,9 +3662,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-orange-200 dark:border-orange-800 bg-gradient-to-br from-orange-50 via-white to-slate-50 dark:from-orange-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-orange-600 dark:text-orange-300 font-semibold">AI Programming â€¢ 27 November 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-orange-600 dark:text-orange-300 font-semibold">AI Programming &larr;€¢ 27 November 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">ðŸ”¥ All Features Free! TRAE SOLO China Version Launches</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-200">TRAE SOLO officially lands in China with all features completely free. Introducing SOLO Coder, Plan mode, multi-task parallel processing, DiffView code change tool, and context compressionâ€”the future of AI programming is here.</p>
+              <p className="text-lg text-slate-700 dark:text-slate-200">TRAE SOLO officially lands in China with all features completely free. Introducing SOLO Coder, Plan mode, multi-task parallel processing, DiffView code change tool, and context compression&larr;€”the future of AI programming is here.</p>
             </div>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">Summary</h2>
@@ -3684,7 +3684,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <p className="mt-6 text-lg">
-              For developers who "make a living with code," solving complex problems, maintaining full control over code, and high automation are the core requirements. AI is getting stronger, and future development will definitely be AI-led, with developers orchestrating globally and giving ordersâ€”not through basic AI models showing off, leaving behind "un-debuggable" AI black box code.
+              For developers who "make a living with code," solving complex problems, maintaining full control over code, and high automation are the core requirements. AI is getting stronger, and future development will definitely be AI-led, with developers orchestrating globally and giving orders&larr;€”not through basic AI models showing off, leaving behind "un-debuggable" AI black box code.
             </p>
 
             <p className="mt-6 text-lg">
@@ -3738,11 +3738,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <h3 className="text-2xl font-bold mt-10 mb-4">SOLO: The Developer's Solo Performance with TRAE</h3>
 
             <p className="text-lg mb-6">
-              SOLO mode, TRAE defines it as "The Responsive Coding Agent"â€”a responsive, perceptive programming intelligent agent that can perceive in real-time, be controlled at any time, and handle multiple tasks in parallel.
+              SOLO mode, TRAE defines it as "The Responsive Coding Agent"&larr;€”a responsive, perceptive programming intelligent agent that can perceive in real-time, be controlled at any time, and handle multiple tasks in parallel.
             </p>
 
             <p className="text-lg mb-6">
-              In IDEs like Cursor, VSCode+plugins, AI coding may be limited to Q&A, code auto-completion, or a single AI agent like Cursor Agent. But in actual programming, they all fall short of that "Iron Man JARVIS" feelingâ€”they can't perceive human intent, and every step requires users to push forward themselves.
+              In IDEs like Cursor, VSCode+plugins, AI coding may be limited to Q&A, code auto-completion, or a single AI agent like Cursor Agent. But in actual programming, they all fall short of that "Iron Man JARVIS" feeling&larr;€”they can't perceive human intent, and every step requires users to push forward themselves.
             </p>
 
             <p className="text-lg mb-6">
@@ -3758,7 +3758,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <p className="text-lg mb-6">
-              Actually, the name TRAE SOLO is very good, and it's also an answer. SOLO means solo, solo performance, aloneâ€”TRAE is the instrument in the developer's hands.
+              Actually, the name TRAE SOLO is very good, and it's also an answer. SOLO means solo, solo performance, alone&larr;€”TRAE is the instrument in the developer's hands.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -3802,7 +3802,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <p className="text-lg mb-6">
-              In TRAE SOLO, in addition to the built-in intelligent agent, you can also create new intelligent agents suitable for daily work tasks. When creating an intelligent agent, you can not only customize it, but also generate an intelligent agent with one sentenceâ€”this experience is very AI.
+              In TRAE SOLO, in addition to the built-in intelligent agent, you can also create new intelligent agents suitable for daily work tasks. When creating an intelligent agent, you can not only customize it, but also generate an intelligent agent with one sentence&larr;€”this experience is very AI.
             </p>
 
             <h3 className="text-2xl font-bold mt-10 mb-4">Sub Agent: Using AI to Manage and Call AI</h3>
@@ -3850,7 +3850,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <h3 className="text-2xl font-bold mt-10 mb-4">Context Management</h3>
 
             <p className="text-lg mb-6">
-              TRAE SOLO has super-strong context capabilities, supporting retrieval of 100,000 code files at onceâ€”no matter how large the project, it's no problem. In addition to reserving ultra-long context, context compression is particularly important during the AI programming process.
+              TRAE SOLO has super-strong context capabilities, supporting retrieval of 100,000 code files at once&larr;€”no matter how large the project, it's no problem. In addition to reserving ultra-long context, context compression is particularly important during the AI programming process.
             </p>
 
             <p className="text-lg mb-6">
@@ -3933,7 +3933,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <h2 className="text-3xl font-bold mt-12 mb-6">Revisiting SOLO: How "One Person" Can Better Program with AI</h2>
 
             <p className="text-lg mb-6">
-              Since Karpathy proposed vibe coding at the beginning of the year, plus the rapid advancement of AI foundation model capabilities this year, it's particularly popular now: one-person companies, one-person enterprises, one-person startupsâ€”this "one person" concept.
+              Since Karpathy proposed vibe coding at the beginning of the year, plus the rapid advancement of AI foundation model capabilities this year, it's particularly popular now: one-person companies, one-person enterprises, one-person startups&larr;€”this "one person" concept.
             </p>
 
             <div className="my-8 flex justify-center">
@@ -4038,7 +4038,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-rose-200 dark:border-rose-800 bg-gradient-to-br from-rose-50 via-white to-slate-50 dark:from-rose-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-rose-600 dark:text-rose-300 font-semibold">NeurIPS 2025 â€¢ 27 November 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-rose-600 dark:text-rose-300 font-semibold">NeurIPS 2025 &larr;€¢ 27 November 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">ðŸ’ Qwen Wins Best Paper! NeurIPS 2025 Awards Recap</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">Four Best Papers, three runner-ups, the Faster R-CNN Test of Time recognition, and the very first Sejnowski-Hinton Prize&mdash;here is the complete English digest of what just happened at the world&apos;s top AI conference.</p>
             </div>
@@ -4067,7 +4067,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <div className="p-5 rounded-2xl border border-emerald-100 dark:border-emerald-900 bg-white/70 dark:bg-emerald-950/30 shadow-sm">
                 <p className="text-sm uppercase tracking-wider text-emerald-500 dark:text-emerald-200">Submissions</p>
                 <p className="text-4xl font-bold text-emerald-600 dark:text-emerald-200">21,575</p>
-                <p className="text-sm text-slate-600 dark:text-slate-300">5,290 accepted â€¢ 24.52% acceptance after dual-city event in San Diego &amp; Mexico City</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">5,290 accepted &larr;€¢ 24.52% acceptance after dual-city event in San Diego &amp; Mexico City</p>
               </div>
               <div className="p-5 rounded-2xl border border-amber-100 dark:border-amber-900 bg-white/70 dark:bg-amber-950/30 shadow-sm">
                 <p className="text-sm uppercase tracking-wider text-amber-500 dark:text-amber-200">Legacy Honors</p>
@@ -4088,7 +4088,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="space-y-10">
               <div className="border-l-4 border-rose-300 pl-6">
                 <h3 className="text-2xl font-bold">1. Artificial Hivemind: The Open-Ended Homogeneity of Language Models</h3>
-                <p className="text-sm uppercase tracking-wide text-slate-500">University of Washington â€¢ CMU â€¢ AI2 â€¢ Lila Sciences â€¢ Stanford</p>
+                <p className="text-sm uppercase tracking-wide text-slate-500">University of Washington &larr;€¢ CMU &larr;€¢ AI2 &larr;€¢ Lila Sciences &larr;€¢ Stanford</p>
                 <p className="mt-4 text-lg">Infinity-Chat, a 26K-prompt dataset with 31K human annotations, exposes how open-ended prompts trigger mode collapse: single models repeat themselves while different models converge to similar answers.</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Six prompt families and seventeen sub-categories capture brainstorming, creative writing, and speculative reasoning.</li>
@@ -4104,7 +4104,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
               <div className="border-l-4 border-orange-300 pl-6">
                 <h3 className="text-2xl font-bold">2. Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free</h3>
-                <p className="text-sm uppercase tracking-wide text-slate-500">Qwen Team â€¢ Edinburgh â€¢ Stanford â€¢ MIT â€¢ Tsinghua</p>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Qwen Team &larr;€¢ Edinburgh &larr;€¢ Stanford &larr;€¢ MIT &larr;€¢ Tsinghua</p>
                 <p className="mt-4 text-lg">Qwen&apos;s engineers trained 30 MoE variants (15B) and a 1.7B dense baseline to isolate what head-specific sigmoid gates do when placed after scaled dot-product attention.</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Simple change: apply query-dependent sparse gating directly on SDPA outputs.</li>
@@ -4120,7 +4120,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
               <div className="border-l-4 border-emerald-300 pl-6">
                 <h3 className="text-2xl font-bold">3. 1000 Layer Networks for Self-Supervised RL</h3>
-                <p className="text-sm uppercase tracking-wide text-slate-500">Princeton â€¢ Warsaw University of Technology</p>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Princeton &larr;€¢ Warsaw University of Technology</p>
                 <p className="mt-4 text-lg">Scaling depth to 1,024 layers in goal-conditioned self-supervised RL unlocks a qualitative jump in behaviors, improving contrastive RL agents by up to 50x versus 2&ndash;5 layer baselines.</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>No demonstrations or reward signals&mdash;agents explore from scratch yet learn to reach complex locomotion and manipulation targets.</li>
@@ -4136,7 +4136,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
               <div className="border-l-4 border-indigo-300 pl-6">
                 <h3 className="text-2xl font-bold">4. Why Diffusion Models Don&apos;t Memorize</h3>
-                <p className="text-sm uppercase tracking-wide text-slate-500">PSL University â€¢ Bocconi University</p>
+                <p className="text-sm uppercase tracking-wide text-slate-500">PSL University &larr;€¢ Bocconi University</p>
                 <p className="mt-4 text-lg">By studying the implicit dynamical regularization of diffusion training, the authors identify two critical timescales: Ï„<sub>gen</sub> (good samples emerge) and Ï„<sub>mem</sub> (memorization kicks in).</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Ï„<sub>gen</sub> stays roughly constant, while Ï„<sub>mem</sub> increases linearly with dataset size&mdash;widening a safe training window.</li>
@@ -4156,7 +4156,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="space-y-8">
               <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
                 <h3 className="text-2xl font-semibold mb-2">Does Reinforcement Learning Really Incentivize Reasoning Capacity?</h3>
-                <p className="text-sm uppercase tracking-wide text-slate-500">Tsinghua LeapLab â€¢ Shanghai Jiao Tong University</p>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Tsinghua LeapLab &larr;€¢ Shanghai Jiao Tong University</p>
                 <p className="text-lg mb-4">Large-k pass@k evaluations show RLVR mostly boosts sampling efficiency (small k). At large k, base models still win, implying RL does not yet invent new reasoning trajectories.</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Coverage + perplexity analysis reveals RL samples were already present in the original model distribution.</li>
@@ -4170,8 +4170,8 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
               <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
                 <h3 className="text-2xl font-semibold mb-2">Optimal Mistake Bounds for Transductive Online Learning</h3>
-                <p className="text-sm uppercase tracking-wide text-slate-500">Kent State â€¢ Purdue â€¢ Google Research â€¢ MIT</p>
-                <p className="text-lg mb-4">Settles a 30-year question: the exact optimal mistake bound for concept classes with Littlestone dimension d is Î˜(âˆšd) in the transductive setting, cutting errors quadratically compared to standard online learning.</p>
+                <p className="text-sm uppercase tracking-wide text-slate-500">Kent State &larr;€¢ Purdue &larr;€¢ Google Research &larr;€¢ MIT</p>
+                <p className="text-lg mb-4">Settles a 30-year question: the exact optimal mistake bound for concept classes with Littlestone dimension d is Î˜(&larr;ˆšd) in the transductive setting, cutting errors quadratically compared to standard online learning.</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Lower bound uses adversarial tree-path construction balancing mistakes against version-space shrinkage.</li>
                   <li>Upper bound mixes sparse encodings, danger-zone minimization, and multiplicative-weights experts.</li>
@@ -4232,9 +4232,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News â€¢ 29 November 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News &larr;€¢ 29 November 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">DeepSeek Makes History Again! Open Source IMO Gold Level Math Model</h2>
-              <p className="text-lg text-slate-700 dark:text-slate-200">The DeepSeek team&apos;s breakthrough lies in finding a new directionâ€”making AI not only solve problems but also check if its reasoning process is rigorous. AI learns to reflect for the first time.</p>
+              <p className="text-lg text-slate-700 dark:text-slate-200">The DeepSeek team&apos;s breakthrough lies in finding a new direction&larr;€”making AI not only solve problems but also check if its reasoning process is rigorous. AI learns to reflect for the first time.</p>
             </div>
 
             <h3 className="text-2xl font-bold mt-10">DeepSeekMath-V2: What does it mean?</h3>
@@ -4294,7 +4294,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               />
             </div>
 
-            <p>He said that current AI models are like a specialized student A who spent 10,000 hours brushing through all competition questions to become the king of the field. But there is also a generalist student B who spent less time on questions but more on understanding the world. Ilya asked: Which student will have better career development? The answer is student B. Student A&apos;s strength is exam-oriented, while Student B possesses &quot;the &apos;it&apos;&quot;â€”a more profound and generalized understanding.</p>
+            <p>He said that current AI models are like a specialized student A who spent 10,000 hours brushing through all competition questions to become the king of the field. But there is also a generalist student B who spent less time on questions but more on understanding the world. Ilya asked: Which student will have better career development? The answer is student B. Student A&apos;s strength is exam-oriented, while Student B possesses &quot;the &apos;it&apos;&quot;&larr;€”a more profound and generalized understanding.</p>
 
             <h3 className="text-2xl font-bold mt-12">DeepSeek&apos;s Answer: Self-Verifiable Reasoning</h3>
             <p>Before DeepSeekMath-V2, AI was result-oriented. Like a sales report, only the final number mattered. But in math, the process is everything.</p>
@@ -4321,7 +4321,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               />
             </div>
 
-            <p>They also added &quot;Meta-Verification&quot;â€”a general dean to check if the teacher (Verifier) is grading correctly. This creates a positive cycle where the Generator writes better proofs, and the Verifier becomes more accurate.</p>
+            <p>They also added &quot;Meta-Verification&quot;&larr;€”a general dean to check if the teacher (Verifier) is grading correctly. This creates a positive cycle where the Generator writes better proofs, and the Verifier becomes more accurate.</p>
 
             <h3 className="text-2xl font-bold mt-12">The Putnam Miracle</h3>
             <p>The Putnam Competition is recognized as hell difficulty. The median score is usually 0 or 1. Last year&apos;s highest human score was 90. DeepSeekMath-V2 scored <strong>118</strong> out of 120.</p>
@@ -4337,7 +4337,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h3 className="text-2xl font-bold mt-12">Conclusion</h3>
-            <p>DeepSeek&apos;s paper suggests that to bridge the gap between evaluation and reality, we should teach AI to look inwardâ€”to pursue logical self-consistency rather than just external rewards. This is AI&apos;s &quot;extending conscience&quot;.</p>
+            <p>DeepSeek&apos;s paper suggests that to bridge the gap between evaluation and reality, we should teach AI to look inward&larr;€”to pursue logical self-consistency rather than just external rewards. This is AI&apos;s &quot;extending conscience&quot;.</p>
             <p>DeepSeekMath-V2 is using unimaginable computing power to walk every step of logic that we humans might skip through inspiration. It walks a slower, clumsier, but perhaps closer-to-essence road.</p>
           </div>
         )
@@ -4349,7 +4349,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News â€¢ 2 December 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News &larr;€¢ 2 December 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">DeepSeek-V3.2 is Here! The Strongest Yet!</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">Performance Approaches Gemini 3, Tears Apart GPT-5 High (Technical Report Interpretation)</p>
             </div>
@@ -4469,8 +4469,8 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <li><strong>Large-scale synthetic data:</strong> Generated 1,800 environments and 85,000 tasks, all synthetic.</li>
             </ol>
 
-            <h4 className="text-xl font-bold mt-6">1. DSA: Reducing attention from O(LÂ²) to O(Lk)</h4>
-            <p>Traditional Transformer attention mechanism is O(LÂ²) complexity, L refers to sequence length. In long context scenarios, this complexity becomes a big problem, reasoning is slow, and post-training is also difficult.</p>
+            <h4 className="text-xl font-bold mt-6">1. DSA: Reducing attention from O(L&larr;²) to O(Lk)</h4>
+            <p>Traditional Transformer attention mechanism is O(L&larr;²) complexity, L refers to sequence length. In long context scenarios, this complexity becomes a big problem, reasoning is slow, and post-training is also difficult.</p>
             <p>DeepSeek's solution is DSA, the core idea is: Not every token looks at all context, only look at the most relevant k tokens. Thus the calculation amount becomes O(Lk), k is a fixed value (2048), no longer growing explosively with text length.</p>
 
             <div className="my-8 flex justify-center">
@@ -4510,7 +4510,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
                 className="rounded-2xl shadow-xl"
               />
             </div>
-            <p className="text-center text-sm text-gray-500">Synthesized task example: Three-day travel planning. Complex constraints, easy verification, large search spaceâ€”typical "hard to solve, easy to verify" problem</p>
+            <p className="text-center text-sm text-gray-500">Synthesized task example: Three-day travel planning. Complex constraints, easy verification, large search space&larr;€”typical "hard to solve, easy to verify" problem</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -4524,7 +4524,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p className="text-center text-sm text-gray-500">Figure 5 | Synthetic data RL effect, blue line is RL-Synthetic-Data</p>
 
             <h3 className="text-2xl font-bold mt-12">Thinking in Tool-Use</h3>
-            <p>Integrating reasoning and tool calling is a key design of v3.2 in engineering. DeepSeek-R1 proved that "thinking" is very helpful for solving complex problems. But R1's strategy is: When the second round of messages arrives, discard the previous reasoning content. This is very wasteful in tool calling scenariosâ€”every time the tool returns a result, the model has to reason again.</p>
+            <p>Integrating reasoning and tool calling is a key design of v3.2 in engineering. DeepSeek-R1 proved that "thinking" is very helpful for solving complex problems. But R1's strategy is: When the second round of messages arrives, discard the previous reasoning content. This is very wasteful in tool calling scenarios&larr;€”every time the tool returns a result, the model has to reason again.</p>
             <p>DeepSeek-V3.2's design is:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Only discard reasoning content when a new user message arrives</li>
@@ -4583,7 +4583,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News â€¢ 3 December 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI News &larr;€¢ 3 December 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">ðŸš€ "European DeepSeek" Releases Mistral 3 Series</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">Benchmarking directly against Chinese models. Is this Europe's return to the AI race?</p>
             </div>
@@ -4728,8 +4728,8 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI Zero Distance NO.326 â€¢ 8 December 2025</p>
-              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Understanding DeepSeek Technology Evolution: V3 â†’ R1 â†’ V3.2</h2>
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">AI Zero Distance NO.326 &larr;€¢ 8 December 2025</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">Understanding DeepSeek Technology Evolution: V3 &rarr; R1 &rarr; V3.2</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">DeepSeek releases are always a festival. From V3 to the reasoning-specialized R1, and now the GPT-5 rival V3.2. Let's decode the technology behind the timeline.</p>
             </div>
 
@@ -4793,9 +4793,9 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               </ul>
               <h4 className="font-bold mb-2">Model Relationships</h4>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>V3:</strong> Standard pipeline (Pre-train â†’ SFT â†’ RL).</li>
-                <li><strong>R1-Zero:</strong> V3-Base â†’ Pure RL (No SFT).</li>
-                <li><strong>R1:</strong> Cold Start (High Quality Data) â†’ RL.</li>
+                <li><strong>V3:</strong> Standard pipeline (Pre-train &rarr; SFT &rarr; RL).</li>
+                <li><strong>R1-Zero:</strong> V3-Base &rarr; Pure RL (No SFT).</li>
+                <li><strong>R1:</strong> Cold Start (High Quality Data) &rarr; RL.</li>
               </ul>
             </div>
 
@@ -4839,7 +4839,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <h3 className="text-2xl font-bold mt-12">V3.2 Innovation: DSA (Sparse Attention)</h3>
-            <p>Standard attention is O(LÂ²), which gets slow for long context. <strong>DSA (DeepSeek Sparse Attention)</strong> lets the model learn <em>which</em> tokens to attend to via a "Lightning Indexer" and "Token Selector", reducing complexity to O(LÃ—k).</p>
+            <p>Standard attention is O(L&larr;²), which gets slow for long context. <strong>DSA (DeepSeek Sparse Attention)</strong> lets the model learn <em>which</em> tokens to attend to via a "Lightning Indexer" and "Token Selector", reducing complexity to O(LÃ—k).</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -4886,7 +4886,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-indigo-200 dark:border-indigo-800 bg-gradient-to-br from-indigo-50 via-white to-slate-50 dark:from-indigo-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-indigo-600 dark:text-indigo-300 font-semibold">Breaking News â€¢ 12 December 2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-indigo-600 dark:text-indigo-300 font-semibold">Breaking News &larr;€¢ 12 December 2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">ðŸš€ GPT-5.2 Officially Released! Surpasses Google Gemini 3 Pro, the AI for "Workers" is Here</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">OpenAI drops a bombshell late at night! GPT-5.2 is released, reclaiming the global AI throne. Three models launched today: <strong>GPT 5.2 Instant</strong>, <strong>GPT 5.2 Thinking</strong>, and <strong>GPT 5.2 Pro</strong>.</p>
             </div>
@@ -4963,7 +4963,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </ul>
 
             <p className="mt-4">Of course, with surging performance comes surging prices. Compared to GPT-5/5.1, GPT-5.2 is <strong>40% more expensive</strong>!</p>
-            <p>Stronger reasoning, faster speeds, and higher pricesâ€”all of this seems to imply that OpenAI has not only upgraded the model scale but the underlying computing cost has likely reached a new magnitude.</p>
+            <p>Stronger reasoning, faster speeds, and higher prices&larr;€”all of this seems to imply that OpenAI has not only upgraded the model scale but the underlying computing cost has likely reached a new magnitude.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -4995,7 +4995,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>In tasks that human experts spend 4-8 hours completing, GPT-5.2's win rate in human evaluation is as high as <strong>70.9%</strong>.</p>
-            <p>GPT-5.2 lives up to expectations, performing better in multiple practical tasksâ€”creating spreadsheets, making presentations, writing code, perceiving images, understanding long contexts, using tools, and handling complex multi-step projects.</p>
+            <p>GPT-5.2 lives up to expectations, performing better in multiple practical tasks&larr;€”creating spreadsheets, making presentations, writing code, perceiving images, understanding long contexts, using tools, and handling complex multi-step projects.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -5007,7 +5007,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               />
             </div>
 
-            <p>A previous OpenAI report stated that ChatGPT saves enterprise users an average of 40â€“60 minutes per day, while heavy users say they save over 10 hours a week.</p>
+            <p>A previous OpenAI report stated that ChatGPT saves enterprise users an average of 40&larr;€“60 minutes per day, while heavy users say they save over 10 hours a week.</p>
 
             <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg my-6">
               <p className="font-medium">Extended Reading: <Link href="#" className="text-blue-600 hover:underline">OpenAI's latest report! Top 5% elite efficiency skyrockets 16x, while ordinary people are quietly eliminated</Link></p>
@@ -5217,10 +5217,10 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               />
             </div>
 
-            <p>For professionals, this translates to stronger end-to-end workflowsâ€”such as solving customer support cases, extracting data from multiple systems, running analyses, and generating final outputs, with fewer interruptions between steps.</p>
+            <p>For professionals, this translates to stronger end-to-end workflows&larr;€”such as solving customer support cases, extracting data from multiple systems, running analyses, and generating final outputs, with fewer interruptions between steps.</p>
             <p>For example, when asked a complex customer service question requiring a multi-step solution, GPT-5.2 can more effectively coordinate complete workflows between multiple agents.</p>
             <p>In the case below, a traveler reported a flight delay, missed connection, need for an overnight stay in New York, and medical seat requirements.</p>
-            <p>GPT 5.2 managed the entire task chainâ€”rebooking, special assistance seats, and compensationâ€”providing a more complete result than GPT 5.1.</p>
+            <p>GPT 5.2 managed the entire task chain&larr;€”rebooking, special assistance seats, and compensation&larr;€”providing a more complete result than GPT 5.1.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -5252,7 +5252,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
 
             <p><strong>GPT 5.2 Pro and GPT 5.2 Thinking are arguably the best models in the world for assisting and accelerating scientists' work.</strong></p>
             <p>On the graduate-level benchmark GPQA Diamond, GPT 5.2 Pro reached <strong>93.2%</strong>, closely followed by GPT 5.2 Thinking at 92.4%.</p>
-            <p>On the expert-level math evaluation FrontierMath (Tier 1â€“3), GPT 5.2 Thinking set a new record, solving 40.3% of problems.</p>
+            <p>On the expert-level math evaluation FrontierMath (Tier 1&larr;€“3), GPT 5.2 Thinking set a new record, solving 40.3% of problems.</p>
 
             <div className="my-8 flex justify-center">
               <Image
@@ -5309,7 +5309,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p>In addition, OpenAI not only released multiple benchmark scores but also cited evaluations from early testers like Box, Notion, Windsurf, and Zoom.</p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6">GPT 5.2 Family Bucket, Three Killer AIs</h2>
-            <p>Overall, in daily use, GPT 5.2 feelsâ€”more organized, more reliable, and a pleasure to talk to.</p>
+            <p>Overall, in daily use, GPT 5.2 feels&larr;€”more organized, more reliable, and a pleasure to talk to.</p>
             <p>So, what are the characteristics of the three models in the "Family Bucket"?</p>
 
             <h3 className="text-2xl font-bold mt-6">GPT 5.2 Instant: Built for Daily Office and Learning</h3>
@@ -5383,14 +5383,14 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </div>
 
             <p>Ten years ago today, December 11, 2015, OpenAI was officially established.</p>
-            <p>In these ten years, they have achieved too many breakthrough achievementsâ€”</p>
+            <p>In these ten years, they have achieved too many breakthrough achievements&larr;€”</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>2016: Open-sourced reinforcement learning platform OpenAI Gym, becoming a basic tool for RL research in academia and industry;</li>
               <li>2017: Published pioneer research of Transformer core concept: Learning to Remember Rare Events;</li>
               <li>2018: Pre-trained language model GPT was born, marking the beginning of the large model revolution;</li>
               <li>2019: 1.5B parameter GPT-2 was born, natural language iterative explosion;</li>
               <li>2020: 175B parameter GPT-3 detonated the entire network, ultra-large model era arrived;</li>
-              <li>2021: Codex & DALLÂ·E were released successively, code and image generation opened;</li>
+              <li>2021: Codex & DALL&larr;·E were released successively, code and image generation opened;</li>
               <li>2022: ChatGPT (GPT-3.5) truly detonated the worldwide large model revolution, and everyone knows the major events after that.</li>
             </ul>
 
@@ -5406,7 +5406,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">Breaking News â€¢ 30/12/2025</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">Breaking News &larr;€¢ 30/12/2025</p>
               <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">WHAAAT? Manus Acquired by Meta!</h2>
               <p className="text-lg text-slate-700 dark:text-slate-200">
                 Meta and Manus have simultaneously announced: "Manus will join Meta." This is a massive move, with the acquisition price rumored to be upwards of $5 billion. Founder Red Xiao will join Meta as VP.
@@ -5433,7 +5433,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
 
             <blockquote className="pl-4 border-l-4 border-blue-500 italic my-6">
-              "This investment has caught the attention of CEO Mark Zuckerberg and has become a top priority for the company." â€” Bloomberg
+              "This investment has caught the attention of CEO Mark Zuckerberg and has become a top priority for the company." &larr;€” Bloomberg
             </blockquote>
 
             <p>
@@ -5642,7 +5642,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-xl border border-yellow-200 dark:border-yellow-800 my-6">
               <h4 className="font-bold text-lg mb-2 text-yellow-800 dark:text-yellow-200">1. Why Coursework First?</h4>
               <p>
-                Andrew warns against the advice of "just start building." Without understanding AI foundations, you risk reinventing the wheelâ€”or ensuring that the wheel you invent is a mess.
+                Andrew warns against the advice of "just start building." Without understanding AI foundations, you risk reinventing the wheel&larr;€”or ensuring that the wheel you invent is a mess.
               </p>
               <blockquote className="italic border-l-4 border-yellow-400 pl-4 my-3 text-slate-600 dark:text-slate-400">
                 "I've seen many candidates reinvent standard RAG slicing strategies or write messy LLM context management code. If they had taken a few relevant courses, they would know which 'blocks' already exist in the industry."
@@ -5687,7 +5687,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               />
             </div>
             <p>
-              Reasoning improves performance but comes with costs. Gemini 3 Flash consumes 1.6 billion tokens with reasoning on, vs 7.4 million off. However, efficiency is improving rapidlyâ€”Claude Opus 4.5 achieves high scores with significantly fewer tokens than GPT-5.1.
+              Reasoning improves performance but comes with costs. Gemini 3 Flash consumes 1.6 billion tokens with reasoning on, vs 7.4 million off. However, efficiency is improving rapidly&larr;€”Claude Opus 4.5 achieves high scores with significantly fewer tokens than GPT-5.1.
             </p>
 
             <h3 className="text-2xl font-bold mt-8">2. Huge Paychecks for Top AI Talent</h3>
@@ -5746,15 +5746,15 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               <h4 className="font-bold text-lg mb-3 text-blue-800 dark:text-blue-200">ðŸš€ Software Development Tips from Andrew</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <span className="mr-2">âœ…</span>
+                  <span className="mr-2">&larr;œ…</span>
                   <span><strong>Don't skip the basics:</strong> Structured learning is vital. Don't be the person who writes messy context management code because they skipped the theory.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">âœ…</span>
+                  <span className="mr-2">&larr;œ…</span>
                   <span><strong>Get your hands dirty:</strong> Theory is like flight school ground training; building projects is the actual flying. You need both.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">âœ…</span>
+                  <span className="mr-2">&larr;œ…</span>
                   <span><strong>Read papers (if you can):</strong> It's hard and dry, but it's where the bleeding edge lives. Even occasional reading sets you apart.</span>
                 </li>
               </ul>
@@ -5772,7 +5772,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         content: (
           <div className="prose lg:prose-xl max-w-none">
             <div className="mb-8 p-6 rounded-2xl border border-purple-200 dark:border-purple-800 bg-gradient-to-br from-purple-50 via-white to-slate-50 dark:from-purple-950/40 dark:via-slate-900 dark:to-slate-900">
-              <p className="text-sm uppercase tracking-[0.3em] text-purple-600 dark:text-purple-300 font-semibold">AI Zero Distance â€¢ No.341</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-purple-600 dark:text-purple-300 font-semibold">AI Zero Distance &larr;€¢ No.341</p>
               <h1 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">ðŸ’¥ Goodbye, Programmers! 2026, The Year of Singularity? 1 Person, 1 Holiday, 10 Years of Code</h1>
               <p className="text-lg text-slate-700 dark:text-slate-200">
                 These past few days, Claude Code has caused quite a stir across the internet.
@@ -5843,7 +5843,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               In his latest book <em>The Singularity Is Nearer</em>, he reiterated the date: still 2045.
             </p>
             <p>
-              Who would have thought that this seemingly distant moment would be suddenly pulled into the presentâ€”2026.
+              Who would have thought that this seemingly distant moment would be suddenly pulled into the present&larr;€”2026.
               The so-called technological singularity refers to a point where technology grows slowly for a long time, but then at a critical point accelerates sharply, rising exponentially.
             </p>
 
@@ -6087,7 +6087,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p>
               Many engineers feel guilty about this, feeling like they are "cheating." In fact, they are not; they are evolving.
               Agarwal once asked a senior leader a question everyone fears: <span className="italic">Will AI replace us?</span>
-              He said thisâ€”
+              He said this&larr;€”
             </p>
             <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg border-l-4 border-slate-500 my-4">
               <p className="font-semibold text-lg">AI is an efficiency multiplier, not a substitute.</p>
@@ -6097,7 +6097,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             </p>
             <p>
               Today, the standard for measuring "productivity" has been raised overall.
-              If you refuse to use AI because you claim to be a "purist," that is not nobleâ€”you are just slow.
+              If you refuse to use AI because you claim to be a "purist," that is not noble&larr;€”you are just slow.
               AI will not replace you. But an engineer who uses AI to complete 4x the workload...
             </p>
 
@@ -6179,10 +6179,10 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
         <Link href="/" className="text-blue-600 hover:text-blue-800">
-          â† Back to Main Page
+          &larr; Back to Main Page
         </Link>
         <Link href="/blog" className="text-blue-600 hover:text-blue-800 text-right">
-          Back to Blog â†’
+          Back to Blog &rarr;
         </Link>
       </div>
       <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
@@ -6196,7 +6196,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
               className="object-cover"
             />
           </div>
-          <p className="text-gray-600 dark:text-gray-400">{post.author} â€¢ {post.date}</p>
+          <p className="text-gray-600 dark:text-gray-400">{post.author} &bull; {post.date}</p>
         </div>
         <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
           <svg
