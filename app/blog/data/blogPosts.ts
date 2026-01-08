@@ -201,4 +201,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/claude-code/elon-musk.png',
     categories: ['AI', 'Singularity', 'Programming', 'Industry Analysis'],
   },
+  'ces-2026-ai-hardware-revolution': {
+    slug: 'ces-2026-ai-hardware-revolution',
+    title: '🔥 CES 2026: AI Is No Longer a Concept—It Lives in Wild Hardware! Flying AI Pets, Robot Bartenders & More',
+    date: '8 January 2026',
+    author: 'Hovah Yii',
+    description: 'Explore the 9 biggest highlights from CES 2026: flying AI pets, emotion-reading devices, 38.5g AI glasses, humanoid robots, and Chinese companies dominating the show floor.',
+    ogImage: '/ces2026/venue.png',
+    categories: ['AI', 'CES', 'Hardware', 'Robotics', 'Consumer Electronics'],
+  },
 };

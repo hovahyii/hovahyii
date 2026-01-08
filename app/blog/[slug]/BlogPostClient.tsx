@@ -6148,6 +6148,862 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
           </div>
         )
       });
+    } else if (slug === 'ces-2026-ai-hardware-revolution') {
+      setPost({
+        ...postData,
+        content: (
+          <div className="prose lg:prose-xl max-w-none">
+            <div className="mb-8 p-6 rounded-2xl border border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 via-white to-slate-50 dark:from-blue-950/40 dark:via-slate-900 dark:to-slate-900">
+              <p className="text-sm uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300 font-semibold">CES 2026 Coverage • 08/01/2026</p>
+              <h2 className="text-3xl font-extrabold mt-3 mb-4 text-slate-900 dark:text-white">AI Is No Longer a Concept—It Lives in Mind-Blowing Hardware!</h2>
+              <p className="text-lg text-slate-700 dark:text-slate-200">
+                CES 2026, one of the world's most influential tech events and the "annual tech weathervane," has officially opened. Our team rushed into the exhibition halls, walked 20,000+ steps, and brought back fresh observations from the show floor.
+              </p>
+            </div>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/venue.png"
+                alt="CES 2026 Venue"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">CES 2026 Show Floor</p>
+
+            <p>
+              One standout impression: <strong>massive crowds and an overwhelming presence of Chinese companies!</strong> This year, CES featured 4,000+ exhibitors, with Chinese companies making up nearly 1/4. Chinese attendees were everywhere—you could hear Mandarin throughout the halls.
+            </p>
+
+            <p>
+              Exhibitors fought fiercely for prime advertising spots. Hisense and TCL grabbed huge billboards at venue entrances; Dreame cleverly secured multiple entry point ads. Intel, Lenovo, and Google Gemini took over the iconic Sphere; Intel even wrapped the light rail with Core Ultra Series 3 branding.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/intel ultra series 3.png"
+                alt="Intel Custom Light Rail"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Intel's custom light rail "skin"</p>
+
+            <p>
+              But the real winner? <strong>Insta360's big yellow bags!</strong> They conquered not just the exhibition halls but the streets of Las Vegas—turning every attendee into a walking billboard.
+            </p>
+
+            <p>
+              AI was the absolute main thread of CES 2026, running through every hall. Major Chinese AI, robotics, embodied intelligence, smart home, PC, appliance, and XR companies exhibited en masse. TCL and Hisense had booths so large you could get lost in them. XR/gaming experience zones were packed.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/robot.png"
+                alt="Humanoid Robots at CES"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Zhongqing Robots showcasing their humanoid lineup</p>
+
+            <p>
+              Physical AI is exploding. Not only did multiple tech giants focus on robotics, but the entire LVCC North Hall was filled with humanoid robots showing off their skills.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/sphere.png"
+                alt="Lenovo Sphere Event"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Lenovo's Annual Tech Innovation Conference at the iconic Sphere—stunning large-screen visuals</p>
+
+            <p className="font-semibold text-xl mt-8">
+              Now, let's dive into our summary of the <strong>9 biggest highlights from CES 2026</strong>—all substance, not to be missed!
+            </p>
+
+            {/* Section 1: AI Hardware */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">01</span>
+              Flying Pets, Emotion-Reading Art, Human-Dog Phone Calls—How Wild Is AI Hardware?
+            </h2>
+
+            <p>
+              At CES 2026, AI is entering the hardware world in more subtle yet more tangible ways. A batch of new AI hardware and creative exhibits made a strong impression.
+            </p>
+            <p>
+              Flying, cuddly AI companion pets; wearables and smart home devices that use emotions and sleep as entry points; AI pet devices from bird feeders to cat care to human-pet calls; and new forms of health and fitness from smart rings to brain-computer interfaces...
+            </p>
+            <p>
+              They no longer rush to tell you "what model I use"—instead, they simply ask: <em>Will you use me every day?</em>
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10">1. AI Companion Hardware: Some Fly, Some Crawl—They Can Look Clumsy, But Must Have High EQ</h3>
+
+            <p>
+              In this year's exploding AI hardware track, Chinese teams have a strong presence. Shenzhen startup <strong>Skyris</strong>, founded by Gen-Z entrepreneurs, created BOOBOO—an AI pet that flies, hovers, and actively approaches people. It builds emotional connections through lights, movements, and voice, like a sci-fi version of a fairy pet.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/skyris.png"
+                alt="Skyris BOOBOO Flying AI Pet"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Skyris's flying AI pet BOOBOO</p>
+
+            <p>
+              Pocket-sized and affordable are key traits of Chinese-made AI hardware. Shenzhen's <strong>X-Origin</strong> drew crowds with their "cross-device AI linkage." Yonbo X1 family companion robot and Yonbo Camera outdoor exploration camera share an AI memory system for seamless cross-scene companionship; pocket assistant AIPi comes with 100+ pre-adapted agents, starting at an almost "rule-breaking" $22.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/invitation.png"
+                alt="AIPi Pocket Assistant"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">AIPi pocket-sized AI assistant</p>
+
+            <p>
+              Hong Kong's <strong>ThingX</strong> exhibited the emotion-monitoring pendant Nuna—understated but drawing crowds. It looks like jewelry you'd wear long-term, not a device. Unlike traditional wearables that display parameters, it emphasizes long-term emotional understanding with models running on-device, prioritizing privacy.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/thingx.png"
+                alt="ThingX Nuna Emotion Pendant"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">ThingX's emotion-monitoring pendant Nuna</p>
+
+            <p>
+              Beijing's <strong>Looki</strong> (backed by Ant and Meituan) had a bustling booth. Their proactive AI hardware Looki L1 emphasizes "I can actively understand what you're doing" rather than "you tell me what to do." It judges if you're in a meeting, traveling, or on a date and automatically adjusts recording methods—focusing on long-term insights rather than instant feedback.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/looki.png"
+                alt="Looki L1"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Samsung's Ballie robot (displayed at the Looki booth area)</p>
+
+            <p>
+              Samsung's "rolling ball" robot <strong>Ballie</strong>, teased for three years, reappeared at CES. This time it's not just a rolling yellow ball—it's powered by Google Gemini 3, attempting to truly serve as a home manager. Can it understand complex commands, manage smart home devices, and build emotional connections? That's its key test at CES 2026.
+            </p>
+
+            <p>
+              Japan's Panasonic made AI look "a bit clumsy." <strong>NICOBO</strong> moves slowly and speaks mumbled, but this imperfection makes it feel more like a companion than a function collection.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/nicobo.png"
+                alt="Panasonic NICOBO"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Panasonic's NICOBO companion robot</p>
+
+            <p>
+              AI is entering more niche demographics. Shenzhen's <strong>Mind With Heart</strong> showcased the bionic panda AnAn, a CES 2026 Innovation Award winner designed for elderly and cognitively impaired individuals. It can soothe emotions, generate reminders, and even has medical certification potential—one of the rare exhibits that makes you think "AI truly has social value."
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/wuxinpanda.png"
+                alt="Bionic Panda AnAn"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Bionic Panda AnAn for elderly care</p>
+
+            <p>
+              Worldex Lab's <strong>Dex language learning camera</strong> makes AI learning light—kids just take photos and speak to trigger language learning tasks in the real world. Shenzhen's Teeni.AI also brought Mooni Pro, an AI growth companion robot with camera capabilities.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/worldex.png"
+                alt="Worldex Dex Language Camera"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Dex language learning camera</p>
+
+            <h3 className="text-2xl font-bold mt-10">2. Smart Home AI Hardware: Therapy Pods, Emotion-Reading Art, Smart Hair Clippers</h3>
+
+            <p>
+              Korea's <strong>Ceragem</strong> home therapy pod 2.0 also won a CES 2026 Innovation Award. It attempts to hide an AI psychological coach inside a private space, dynamically adjusting the environment based on emotional and physiological states—emphasizing all-local computation.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/vinabot.png"
+                alt="Ceragem Products"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Ceragem's wellness products lineup</p>
+
+            <p>
+              Dreame's smart bedding brand <strong>Stareep</strong> focuses on sleep ecosystems. Smart beds, mattresses, and linens work together, monitoring dozens of metrics to tackle the long-standing "can't sleep well" problem.
+            </p>
+
+            <p>
+              AI is moving into "picture frames." <strong>Fraimic Smart Canvas</strong> from a US startup lets users generate or modify artworks with natural language—e-ink changes in real-time on stage, easily making people stop and look. Shenzhen's <strong>Vinabot</strong> exhibited AI magic frames and AI memory albums, emphasizing emotion understanding over command response.
+            </p>
+
+            <p>
+              In beauty and cleaning, AI gets more "practical." L'Oréal's <strong>K-Scan</strong> focuses on AI scalp and hair analysis; Kiehl's <strong>Derma Reader 2.0</strong> brings skin diagnostics to retail.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/k-scan.png"
+                alt="L'Oreal K-Scan"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">L'Oréal's K-Scan for AI scalp and hair analysis</p>
+
+            <p>
+              <strong>Glyde's</strong> smart hair clipper tries to let regular people achieve fade haircuts; France's Deglace's modular vacuum emphasizes "repairability" and AI predictive maintenance.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/blower.gif"
+                alt="Dreame Giant Hair Dryer"
+                width={600}
+                height={400}
+                className="rounded-2xl shadow-lg"
+                unoptimized
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Dreame's giant hair dryer looks like a floor lamp</p>
+
+            <p>
+              <strong>SwitchBot's Obboto</strong> lamp became almost a photo spot. The spherical light displays pixel animations, weather, and time; movements and music trigger lighting effects. It supports AI-driven "mood animations"—clearly designed for younger users.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/obboto.png"
+                alt="SwitchBot Obboto Lamp"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">SwitchBot's Obboto smart lamp</p>
+
+            <h3 className="text-2xl font-bold mt-10">3. Sports & Health AI Hardware: From Smart Rings to Brain-Computer Interfaces</h3>
+
+            <p>
+              In sports and health, Chinese companies are densely clustered. Shenzhen's <strong>Ringconn</strong> smart ring emphasizes medical-grade monitoring covering sleep, blood oxygen, and apnea.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/ringcom.png"
+                alt="Ringconn Smart Ring"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Ringconn smart ring</p>
+
+            <p>
+              Beijing's <strong>Nuromova</strong>, backed by Tsinghua's BCI lab, brought a forehead brain-computer interface designed for high-dynamic sports, converting focus and fatigue into trainable metrics. They're trying to prove: mindset isn't mystical—it can be measured and trained.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/nuromova.png"
+                alt="Nuromova BCI Device"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Nuromova brain-computer interface for athletes</p>
+
+            <p>
+              Belarus's <strong>BrainBit NeuroFeedback 2.0</strong>, a CES 2026 Innovation Award winner, is an AI-driven neurofeedback system integrating human and animal brainwave data for personalized real-time cognitive training. Interestingly, it enables "cross-species information sharing"—combining human relaxation protocols with canine anxiety relief for applications in ADHD, PTSD management, and pet behavior training.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10">4. Pet Care AI Hardware: From Bird Feeding to Cat Care, AI Becomes the Smart Caretaker</h3>
+
+            <p>
+              In pet and home robotics, Shenzhen's <strong>Birdfy</strong> and Slovenia's <strong>Bird Buddy</strong> continue evolving their smart bird feeders—360° panoramic views, AI editing, auto squirrel-proofing, forming a complete ecosystem.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/birdbuddy.png"
+                alt="Bird Buddy Smart Feeder"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Bird Buddy smart bird feeder</p>
+
+            <p>
+              Suzhou's <strong>Petgugu</strong> applies AI to the most mundane pet care details: litter box, drinking, eating, cleaning—all digitized, attempting to use systematic coordination to reduce pet care burden.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/petgugu.png"
+                alt="Petgugu Products"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Petgugu's AI pet care product lineup</p>
+
+            <p>
+              Shenzhen's <strong>uCloudLink</strong> brought a somewhat "counterintuitive" product—<strong>PetPhone</strong>. It's not just a tracker but a pet "smartphone" supporting two-way human-pet calls. Pets can be trained to "dial"—owners receive calls saying "woof love you."
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10">5. Other AI Hardware: Meeting Hardware Upgrades, Autonomous Guide Dog Wins Innovation Award</h3>
+
+            <p>
+              In office scenarios, <strong>Plaud</strong> continues solving "the little matter of meetings." NotePin S adds physical buttons; Plaud Desktop records directly on computers—summaries, minutes, action items in one flow.
+            </p>
+
+            <p>
+              <strong>Mobvoi</strong> brought AI recording card TicNote, including the first 4G AI recording earbuds TicNote Pods, first AI recording watch TicNote Watch, and upgraded TicNote Cloud AI-native document collaboration platform.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/ticnote.png"
+                alt="Mobvoi TicNote"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Mobvoi's TicNote AI recording card</p>
+
+            <p>
+              In a corner of the exhibition, CES 2026 Innovation Award winner <strong>Bedivere</strong> was impressive. It's an autonomous robot guide for visually impaired people, using on-device AI to perceive and interpret the environment in real-time, helping blind users navigate around obstacles. It runs completely offline—one of those AI hardware pieces that doesn't chase hype but carries real significance.
+            </p>
+
+            {/* Section 2: AI Glasses */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">02</span>
+              38.5g Ultra-Light AI Glasses, eSIM Glasses That Make Calls—CES AI Glasses Remain China's Home Turf
+            </h2>
+
+            <p>
+              In the main hall, not a single major smart glasses player was missing—and Chinese manufacturers completely dominated. Almost every AI glasses and VR device booth was packed with experience-seekers, some with long lines.
+            </p>
+
+            <p>
+              <strong>Rokid</strong> placed a giant glasses display at their booth, visible from afar, capturing everyone's attention.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/rokid.png"
+                alt="Rokid Booth"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">Rokid's eye-catching giant glasses display</p>
+
+            <p>
+              Beyond the giant glasses, Rokid launched the screenless AI glasses <strong>Rokid Style</strong> on-site—"ultra-light and convenient" with a weight of just <strong>38.5 grams</strong>, claimed as "the lightest full-function AI glasses on the market." It supports multiple models including ChatGPT, DeepSeek, and Qwen, starting at $299.
+            </p>
+
+            <p>
+              <strong>INMO</strong> turned their CES booth into the North American debut for their two "killer" products—INMO Go3 and INMO AIR3. INMO Go3 focuses on bidirectional real-time translation, translating what you say and simulating your voice to broadcast it, supporting 261 languages.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/inmo.png"
+                alt="INMO Go3"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">INMO Go3 real-time translation glasses</p>
+
+            <p>
+              INMO AIR3 is the world's first mass-produced 1080P wireless all-in-one AR glasses—sold out immediately during 2025's 618 sale, topping JD's XR and AI glasses category.
+            </p>
+
+            <p>
+              <strong>XREAL</strong> launched the ROG Xreal R1 in partnership with ASUS at the venue—the industry's first 240Hz high-refresh-rate Micro OLED gaming glasses for esports. They also brought their flagship XREAL 1S from late 2025, featuring a proprietary X1 spatial computing chip that converts 2D content to 3D in real-time.
+            </p>
+
+            <p>
+              Smart glasses veteran <strong>RayNeo</strong> released their first eSIM smart glasses. Like wearing a phone on your face—even if your phone dies or you forget it, you can make calls with the glasses. Weighing just 78g, it connects directly to mobile cloud for 3D gaming.
+            </p>
+
+            <p>
+              <strong>Dreame</strong> unveiled AI health glasses focused on health monitoring—24/7 heart rate, blood oxygen, and temperature monitoring, essentially transforming a sports watch into glasses form.
+            </p>
+
+            <p>
+              <strong>Alibaba</strong> brought their first Qwen AI assistant-powered Quark AI Glasses S1—interact with one sentence, 7-hour comprehensive battery life. Featuring Qualcomm AR1 and Hengxuan BES2800 dual flagship chips, switchable between Android and RTOS systems.
+            </p>
+
+            <p>
+              Projection giant <strong>XGIMI</strong> debuted their AI glasses brand <strong>MemoMind</strong> at CES, launching two series: MemoMind One and MemoMind Air.
+            </p>
+
+            <div className="my-8 flex justify-center">
+              <Image
+                src="/ces2026/memomind.png"
+                alt="XGIMI MemoMind"
+                width={900}
+                height={500}
+                className="rounded-2xl shadow-lg"
+              />
+            </div>
+            <p className="text-sm text-center text-gray-500 mb-6">XGIMI's MemoMind AI glasses</p>
+
+            <p>
+              Dark horse <strong>Gyges Labs</strong> brought unexpected news: their main exhibit wasn't an iterated glasses product but the world's first AI note-taking ring. This new product doesn't go the health monitoring route—it focuses on note recording functions, is waterproof, and became another hot new product at CES.
+            </p>
+
+            {/* Section 3: Humanoid Robots */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">03</span>
+              From Tea Brewing & Bartending to Package Sorting & Housework—Humanoid Robots Explode
+            </h2>
+
+            <p>
+              At CES 2026, Chinese humanoid robots experienced a collective explosion! Compared to last year when Unitree and Galaxy General were among the few Chinese participants, CES 2026's humanoid robot zone is now more than half Chinese companies.
+            </p>
+
+            <p>
+              By our incomplete count, at least <strong>28 Chinese humanoid robot companies</strong> participated—from core components to complete machines, from demos to practical applications, showcasing China's technological confidence in this field.
+            </p>
+
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-900 my-8">
+              <p className="font-semibold">Featured Chinese Humanoid Robot Companies:</p>
+              <p className="mt-2">
+                XBOT Aika, Datamesh, Youliqi, Zhiyuan Robotics, Beijing Humanoid Robot Innovation Center, Zhongqing Robotics, Unitree, Paxini, Xingdong Era, Jike Tech, Xuheston, DOBOT, Magic Atom, Galaxy General, Aigo, PNDbotics, and many more.
+              </p>
+            </div>
+
+            <h3 className="text-2xl font-bold mt-10">Chinese Humanoid Robots Take Half the Stage</h3>
+
+            <p>
+              <strong>Zhiyuan Robotics</strong> showcased their full product lineup in the US for the first time, including star products Lingxi X2, Expedition A2, and Spirit G2—even getting a shoutout from Jensen Huang in his keynote. Lingxi X2 danced enthusiastically with attendees.
+            </p>
+
+            <p>
+              <strong>Unitree's</strong> arena remained a focal point—G1 humanoid robots performed exciting boxing matches live.
+            </p>
+
+            <p>
+              <strong>Zhongqing Robotics</strong> brought the full-size universal humanoid robot T800 (still static display); star product PM01 performed multiple high-difficulty moves on-site.
+            </p>
+
+            <p>
+              The world's first half-marathon champion robot <strong>Tiangong Ultra</strong> ran continuously on-site; Tiangong 2.0 autonomously completed parts sorting tasks based on the Huisi Kaiwu platform.
+            </p>
+
+            <p>
+              <strong>Fourier's</strong> new-gen full-size humanoid robot GR-3 focuses on interactive companionship, playing tic-tac-toe with attendees. <strong>Youliqi's</strong> new Wanda 3.0 can brew you a cup of kung fu tea and work as a cyber bartender behind the bar—looking very professional.
+            </p>
+
+            <p>
+              <strong>Acceleration Evolution's</strong> dozens of Booster K1 units formed a robot matrix—an entry-level embodied development platform.
+            </p>
+
+            <p>
+              <strong>StarSeaMap</strong> launched two new products: their first dexterous hand Dexo, and the world's first out-of-box VLA all-in-one machine supporting natural language interaction and zero-shot universal grasping.
+            </p>
+
+            <p>
+              <strong>Galaxy General's</strong> Galbot was still focused on convenience store shelf sorting. <strong>Xingdong Era</strong> brought biped L7 and wheeled Q5 humanoid robots. <strong>Keenon's</strong> wheeled humanoid XMAN-R1 specifically targets service industry scenarios.
+            </p>
+
+            <p>
+              <strong>Yunji Technology's</strong> quadruped robot Bobcat M20 Pro won a CES 2026 Robotics Innovation Award—designed for complex terrain and dangerous environments, operating normally in deserts, wetlands, and pools.
+            </p>
+
+            <p>
+              <strong>Jingshi Technology's</strong> dual-form robot BAOBAO can smoothly switch between humanoid robot and quadruped dog forms, adapting to home companion scenarios, gesture following, and children's reading companionship.
+            </p>
+
+            <p>
+              <strong>DOBOT's</strong> quadruped robot dog Rover X1, designed for home scenarios, walks stably on slopes, gravel, and stairs—capable of light transport, smart interaction, and child companionship.
+            </p>
+
+            <h3 className="text-2xl font-bold mt-10">Overseas Humanoid Robots Show Their Specialties</h3>
+
+            <p>
+              <strong>LG</strong> launched their first humanoid robot CLOiD for home scenarios, collaborating with smart home devices to complete tasks. In LG's demo, the robot took a towel from a human and placed it in a self-opening washing machine—taking nearly 30 seconds.
+            </p>
+
+            <p>
+              Hyundai's <strong>Boston Dynamics</strong> publicly showed the new-gen electric Atlas for the first time—56 degrees of freedom, head and torso can rotate 360°, 4-hour battery life, self-replaces battery in 3 minutes. Video showed Atlas easily lifting car door panels overhead for assembly tasks.
+            </p>
+
+            <p>
+              <strong>DYNA Robotics'</strong> robot folded clothes on-site convincingly. <strong>Agility Robotics</strong> demonstrated multiple Digit robots collaborating in the same space—designed for commercial warehouse scenarios.
+            </p>
+
+            <p>
+              <strong>Richtech Robotics</strong> debuted mobile humanoid DEX for industrial scenarios, already deployed 450+ units in real work environments.
+            </p>
+
+            <p>
+              <strong>Realbotix</strong> exhibited bionic humanoid robot Aria with integrated multimodal AI, capable of extremely subtle micro-expressions through dozens of facial motors.
+            </p>
+
+            <p>
+              Germany's <strong>Neura Robotics</strong> showed 4NE-1 with their proprietary AURA AI system. UK's <strong>Humanoid</strong> displayed HMND 01 Alpha that automatically retrieves unsorted bearings and places them on assembly line platforms.
+            </p>
+
+            <p>
+              Norway's <strong>1X Technologies</strong> brought biped robot NEO, previously shown with remarkably human-like housework capabilities. Sweden's <strong>Hexagon Robotics' AEON</strong> combines bipedal and wheeled locomotion—looking like the robot's wearing "fire wheels" for flexible, fast movement across scenarios with hot-swappable batteries.
+            </p>
+
+            <p>
+              France's <strong>Enchanted Tools' Morikai</strong>, with its orange exterior, looks adorably cute with two agile, extendable, angle-adjustable big ears. Singapore's <strong>Sharpa</strong> humanoid played ping-pong with attendees—fully autonomous, no remote control, with extremely fast reaction speed.
+            </p>
+
+            {/* Section 4: AI Companions */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">04</span>
+              Desktop Cuties, Mobile Companions, Education Helpers—Bionic Plush, Flying Fairies, Personality Development
+            </h2>
+
+            <p>
+              At CES 2026, a batch of Chinese startups are reshaping companion and education products on the AI wave, making this category one of the most popular and creative sights at the show. By our count, 18 Chinese companies exhibited "AI companion, education robots and pets."
+            </p>
+
+            <p>
+              <strong>Keyi Technology's Loona DeskMate</strong> firmly occupies desk center stage. It doesn't have a built-in screen, camera, or microphone—it uses your iPhone: when the phone attaches to the wireless charging spot, the AI companion app auto-launches. It also serves as an 80W fast-charging desktop power source.
+            </p>
+
+            <p>
+              <strong>Robot Lingdong's Robie</strong> is a desktop pet with ears and blinking eyes. During interaction, Robie shows "pupil contraction" to sudden movements and "dizziness" expressions when shaken. It recognizes faces and emotions for continuous conversation, using voiceprint and facial dual recognition to accurately identify conversation partners even in noisy environments.
+            </p>
+
+            <p>
+              <strong>TCL's Ai Me</strong> is a mobile smart home hub consisting of a cartoon-style main robot and a roller-skate-style base. The main robot handles emotional companionship and interaction through blinking, waving, etc. The base provides mobility and charging.
+            </p>
+
+            <p>
+              <strong>Ludens Intelligent's Cocomo</strong> is a mobile robot pet using a wheeled chassis, following users around the home. Its shell temperature is set near body temperature—normally 37°C, rising to 39°C with frequent touching. Cocomo doesn't speak but communicates emotions through non-semantic gurgling sounds. <strong>Inu</strong> is a desktop "alien puppy"—compact, responding to sounds and touch with realistic tail wagging and blinking animations.
+            </p>
+
+            <p>
+              <strong>Zero Motion Future's Huahuatang</strong> is like an AI version of "Tamagotchi"—only 89g, portable, warm, has memory, gets hungry and acts cute. It stays with you anywhere, even on trips, and can make friends by "bumping."
+            </p>
+
+            <p>
+              <strong>Alpha Egg's Eggi</strong> makes movement part of pet-raising. You earn coins by moving, unlock skills, and kids learn to care for "digital life" through interaction—even experiencing "rebellious phases" and conflicts with users. It has emotions, needs, and slowly "grows up."
+            </p>
+
+            <p>
+              <strong>Leimeng Technology's</strong> AI trendy life form looks like LABUBU's electronic cousin. Bibo recognizes faces, tone, and actions, using emotional AI to judge your state and proactively initiate interaction.
+            </p>
+
+            <p>
+              "AI Wall-E" <strong>W1</strong> from Yuandian Intelligence (new brand from Leyson Technology) is an indoor+outdoor interactive robot priced around 40,000 yuan. Licensed by Disney, it looks like Wall-E with wheels and eyes, supporting emotional interaction and outdoor camping photography. It can detect falls, follow while carrying things, and listen to music together—a "camping companion" with emotions.
+            </p>
+
+            {/* Section 5: Smart Home & Cleaning */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">05</span>
+              Robot Vacuums That Run and Fly Are Here! AI Mirrors, Smart Beds Galore
+            </h2>
+
+            <p>
+              Cleaning robots remain China's home turf, with new tricks emerging. <strong>Dreame</strong> launched the tracked Cyber X concept model that easily climbs stairs; <strong>Roborock's</strong> Saros Rover is even crazier—built-in mechanical legs let it run, jump, and sweep stairs clean simultaneously.
+            </p>
+
+            <p>
+              <strong>Narwal's</strong> new flagship Flow 2 can monitor pets, help find valuable items and toys. <strong>Midea's Eureka</strong> launched the cheaper E10 Evo Plus with dock—$100 less than the previous gen for maximum value. <strong>Anker Innovation</strong> debuted their first robot vacuum Eufy S2—sweep/mop combo with built-in fragrance.
+            </p>
+
+            <p>
+              <strong>MOVA's</strong> most eye-catching is the Pilot 70 robot vacuum that can <em>fly</em>—handling cleaning dead zones like balconies and attics.
+            </p>
+
+            <p>
+              <strong>Ninebot</strong> and <strong>Roborock</strong> both showed lawn mowing robots. <strong>Kuma Tech's</strong> new pool robot Spino S1 Pro can rise out of the water to charge itself.
+            </p>
+
+            <p>
+              <strong>Samsung's</strong> AI fridge Family Hub runs Gemini 3—voice control to open/close doors.
+            </p>
+
+            <p>
+              <strong>Hisense</strong> displayed various AI-enhanced appliances from HVAC systems to kitchen appliances to washer/dryers—like using Agents to automatically identify fabric types and dirt levels.
+            </p>
+
+            <p>
+              Matter and NFC-compatible smart locks are a major highlight. <strong>Lockin's</strong> Affirm series natively supports Matter with physical cards. <strong>TCL's</strong> new lock D2 Pro Palm Vein links with Alexa and Google. <strong>Chamberlain's</strong> myQ Secure View auto-locks doors and cars when detecting strangers.
+            </p>
+
+            <p>
+              Various AI-enhanced makeup mirrors, sleep lamps, and smart beds are overwhelming at CES. <strong>HEYMIRROR</strong> smart makeup mirror lets AI help with your outfits. <strong>Nuralogix's</strong> "Longevity Mirror" evaluates heart rate, cardiovascular risk, and mental health in 30 seconds.
+            </p>
+
+            <p>
+              <strong>Sleepal's</strong> AI sleep lamp and <strong>SomaNest's</strong> smart mattress both appeared, focused on helping you sleep well.
+            </p>
+
+            {/* Section 6: Displays */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">06</span>
+              Even Monitors Can't Escape AI! Brightness Wars Declared Over? Foldable Screen Creases Finally Gone
+            </h2>
+
+            <p>
+              Every year at CES, the dazzling "big screens" are main attractions. But compared to "big," this year's display products are clearly more "refined," focusing on "quality" over extreme specs—even AI is being stuffed into monitors.
+            </p>
+
+            <p>
+              From Korean giants Samsung and LG to domestic players TCL, Hisense, and Changhong, plus panel makers BOE, TCL CSOT, Tianma, and Visionox—everyone brought their best.
+            </p>
+
+            <p>
+              Samsung's 130-inch Micro LED remains attention-grabbing with its massive size and outstanding brightness and color. But "big" isn't this CES's main display direction—comparatively, AI has deeply penetrated various TV algorithms and even been stuffed directly into desktop monitors.
+            </p>
+
+            <p>
+              <strong>LG's</strong> three new Ultra Gear evo gaming monitors support new AI algorithms that intelligently recognize input resolution and "upgrade" it—from 1080P/2K/4K to near "native 5K display." Notably, this algorithm doesn't rely on GPUs but runs on the monitor's built-in processor—major brands are really going all out stuffing AI algorithms and dedicated chips into monitors.
+            </p>
+
+            <p>
+              Chinese display giants' main battlefield remains Mini LED. After years of competition, everyone's moved past "brightness king" or "partition count king"—today "RGB" is the focal racetrack, pursuing purer colors and wider color coverage through various technical routes. <strong>Hisense's</strong> RGB-Mini LED and <strong>TCL's</strong> SQD-Mini LED represent two competitive, intensely "rival" approaches.
+            </p>
+
+            <p>
+              <strong>TCL's</strong> flagship SQD-Mini LED TV X11L debuted at CES, stunning many overseas media. Its "Super Quantum Dot" technology achieves wider color gamut while proprietary light control algorithms balance vivid and accurate colors.
+            </p>
+
+            <p>
+              Beyond traditional LCD, OLED also saw many bright new products. As TCL CSOT's printed OLED approaches consumer markets, <strong>LG</strong> directly "intercepted" with their RGB solution OLED product featuring vertically striped "RGB" subpixel arrangement—making text and graphic borders significantly clearer and sharper, a boon for heavy OLED office users.
+            </p>
+
+            <p>
+              Beyond conventional products, 3D display tech continues evolving toward consumer grade. <strong>Samsung's</strong> glasses-free 3D monitor resolution has upgraded to 6K with high refresh and eye tracking.
+            </p>
+
+            <p>
+              Samsung also showed truly "creaseless" foldable—MONT FLEX OLED, reportedly to be used in this year's Apple foldable. Samsung, whose own phones get constantly criticized for creases, saves the best for Apple.
+            </p>
+
+            <p>
+              <strong>LG</strong> also launched an upgraded wallpaper TV, claimed as "world's thinnest" true wireless OLED TV at just 9mm thick—about as thick as an iPhone 17 Pro Max stuck to the wall.
+            </p>
+
+            <p>
+              Overall, the previous nit wars reaching tens of thousands of nits have concluded. As various technical lines develop, displays will increasingly focus on advanced features like color, eye protection, and energy efficiency, while lightness and quality become inevitable directions of upgraded consumer demand.
+            </p>
+
+            {/* Section 7: AI PCs */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">07</span>
+              PCs Go Full AI! "Keyboard Computer" Packs Supercomputing Power—Desktop Supercomputers Crowd In, Gaming Laptops Also Push AI
+            </h2>
+
+            <p>
+              At CES 2026, AI PCs are accelerating across the board. From keyboard-form all-in-one AI computers to pocket-sized desktop supercomputers to mainstream and gaming laptop smart upgrades—major vendors showcased their latest AI capabilities.
+            </p>
+
+            <p>
+              CES has always been a stage for exploring product form innovation. Among this year's new AI PC releases, bold attempts abound.
+            </p>
+
+            <p>
+              At first glance, is <strong>HP's</strong> AI PC any different from a regular all-in-one? Actually, it's the world's first full AI PC integrated into keyboard form—<strong>HP EliteBoard G1a</strong>. In a 750g, 12mm-thick keyboard, HP integrated an AMD Ryzen AI 300 processor delivering 50 TOPS. More importantly, it's not a concept—expected to ship in March.
+            </p>
+
+            <p>
+              <strong>Lenovo</strong> turned last year's auto-rotating screen concept into a consumer product: <strong>ThinkBook Plus Gen 7 Auto Twist</strong>. Using an AI-driven dual electric rotating hinge, it tracks faces and auto-adjusts direction and angle for optimal viewing.
+            </p>
+
+            <p>
+              AI PC miniaturization is a major trend. ASUS, MSI, Acer, Dell, Gigabyte, HP, and Lenovo have all launched desktop AI supercomputers based on NVIDIA's DGX Spark platform. Though named differently, all use GB10 Super Chips with 128GB unified architecture memory, delivering 1 PetaFLOP FP4 AI power.
+            </p>
+
+            <p>
+              <strong>Alibaba Cloud</strong> also brought a pocket-sized AI supercomputer—Wuying AI Cloud Supercomputing. The top config features 4 NVIDIA RTX 5880 GPUs in the cloud (48G VRAM each), hardware specs 10x+ higher than regular home PCs, accessible via Wuying Cube Ultra.
+            </p>
+
+            <p>
+              <strong>LG</strong> launched 2026 ultra-thin LG gram. Beyond lightweight Aerominum magnesium-aluminum alloy, some LG gram versions feature "dual AI"—using Microsoft Copilot+ PC while also running LG's proprietary models.
+            </p>
+
+            <p>
+              The same logic is more evident in <strong>Lenovo's</strong> PC devices promoting hybrid AI concepts. Many new ThinkPad and ThinkBook series products use edge-cloud combined AI capabilities.
+            </p>
+
+            <p>
+              <strong>ASUS</strong> released multiple AI PCs at CES. The Zenbook DUO dual-screen laptop got a second-gen refresh with just 8.28mm between two 3K screens—70% reduction. ProArt GoPro collab targets creator AI scenarios with built-in GoPro cloud access. Zenbook A16 is the first laptop with Snapdragon X2 Elite Extreme chip.
+            </p>
+
+            <p>
+              Even gaming PC vendors can't avoid talking AI. <strong>ThunderRobot</strong> and <strong>Razer</strong> both launched AI esports products. ThunderRobot's ZERO Air with Intel's first light-performance gaming laptop debuted at CES; Razer built virtual AI gaming assistant Project Ava hardware providing real-time gaming advice.
+            </p>
+
+            <p>
+              Behind the AI PC explosion, Intel, AMD, Qualcomm, and others all announced new PC processors at CES—key drivers of AI PC performance gains.
+            </p>
+
+            {/* Section 8: Chips */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">08</span>
+              Another Wave of PC Chips Arrives—Robot Chips Become New Trend
+            </h2>
+
+            <p>
+              During CES, chip companies showed next-gen AI and edge computing chip platforms, mainly covering PC, automotive, and robot chips.
+            </p>
+
+            <p>
+              <strong>Intel</strong> released Core Ultra Series 3 processors—first to use Intel 18A advanced process, bringing AI PCs into the angstrom era with 77% gaming performance improvement, 180 TOPS edge AI power, and up to 27-hour battery life. Notably, this AI PC chip also "crossed over" to humanoid robots—first time edge processors launched simultaneously with corresponding PC versions, supporting embodied intelligence, smart cities, automation, and healthcare.
+            </p>
+
+            <p>
+              <strong>AMD</strong> CEO Lisa Su announced MI455X GPU, Ryzen AI 400 series, Ryzen AI Max+ series, AI development platform Ryzen AI Halo and more in her CES 2026 keynote, also showcasing a "jet flight robot."
+            </p>
+
+            <p>
+              <strong>Qualcomm</strong> released mid-tier AI PC chip Snapdragon X2 Plus with 80 TOPS NPU, plus high-performance robot processor Qualcomm Snapdragon IQ2 series and next-gen complete robot tech stack architecture. They showed VinMotion Motion 2 humanoid robot with Snapdragon IQ9 series and Acceleration Evolution Booster K1 Geek Edition robot.
+            </p>
+
+            <p>
+              <strong>NVIDIA</strong> showed latest DLSS 4.5 image enhancement tech generating up to 5 extra frames per traditional rendered frame, plus latest G-Sync variable refresh effectively boosting refresh rate 4x to minimize motion blur. Day before CES, NVIDIA also released new open models for all robot types, announcing Boston Dynamics, Franka Robotics, Surgical robots, LG Electronics, NEURA, XRLabs, Zhiyuan Robotics and other global robot leaders are building on NVIDIA Isaac and GR00T.
+            </p>
+
+            <p>
+              <strong>NXP</strong> exhibited software-defined vehicles, life-saving drones, automated homes, and autonomous rover solutions. Silicon Labs demonstrated Bluetooth channel detection and IoT tech innovations.
+            </p>
+
+            <p>
+              <strong>Black Sesame Intelligence</strong> showed autonomous driving chips plus SesameX multi-dimensional embodied intelligence computing platform and robot progress.
+            </p>
+
+            <p>
+              In the hot memory chip space, <strong>Micron</strong> showed their latest—consumer PCIe 5.0 QLC SSD. Ultra-high read/write speeds, single-sided 4TB capacity, high value, and compatibility with various AI PCs and smart terminals made strong impressions.
+            </p>
+
+            {/* Section 9: Innovative Products */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">09</span>
+              Eight Innovative Tech Products: From Productivity Tools to Toys—Also Focusing on Sleep and Skin Health
+            </h2>
+
+            <p>
+              These eight innovative tech products are worth watching—they may not be famous yet, but they're interesting enough.
+            </p>
+
+            <p>
+              Just featured on Luo Yonghao's "Tech Spring Festival," <strong>Hypershell</strong> brought exoskeleton product HyperShell X Ultra to CES. This Shenzhen consumer exoskeleton robot developer's product uses an AI motion engine to reduce about 30kg of body weight sensation during climbing stairs and mountains.
+            </p>
+
+            <p>
+              <strong>Insta360's</strong> brand Antigravity A1 panoramic drone appeared—world's first 360° panoramic ultra-HD drone, winning CES Best Drone Innovation Award. Weighing just 249g with two 8K panoramic lenses, it captures seamless, blind-spot-free spherical images.
+            </p>
+
+            <p>
+              <strong>Zero Zero Infinity</strong> launched HOVERAir AQUA—world's first fully waterproof self-flying camera that can take off/land on water, with max speed of 55 km/h.
+            </p>
+
+            <p>
+              Shenzhen AI simultaneous translation earphone star brand <strong>Timekettle</strong> returned, upgrading W4, W4 Pro, and T1 handheld and earphone translators with new "SOTA Translation Engine Selector" that automatically picks optimal AI tools by language for more natural translation.
+            </p>
+
+            <p>
+              At the <strong>Flowtica</strong> booth, many stopped to experience a "thinking" smart pen. Founded by former ByteDance employees, Flowtica Scribe's main functions include recording, transcription, and summarization—press the FlowMark button to start recording with automatic background audio processing.
+            </p>
+
+            <p>
+              Denmark's famous toy maker <strong>LEGO</strong> dropped a bombshell at CES, launching new "Smart Brick"—claimed as the brand's most disruptive innovation in 50 years. Externally nearly identical to classic 2×4 bricks, it packs tiny chips and multiple sensors for sound, light, etc., making bricks "come alive."
+            </p>
+
+            <p>
+              Shenzhen AI hardware maker <strong>LunaWake</strong> exhibited their smart sleep aid Lunawake AI Wake-up Device—using non-contact millimeter-wave radar for overnight monitoring signals, waking users at optimal moments.
+            </p>
+
+            <p>
+              <strong>Govee</strong>, a Shenzhen smart lighting brand, brought smart fixtures Sky Ceiling Light and Ceiling Light Ultra. Sky Ceiling Light simulates daylight; Ceiling Light Ultra has 616 individually controllable RGB LEDs with an AI Lighting Robot 2.0 in the Govee app.
+            </p>
+
+            {/* Section 10: Conclusion */}
+            <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center">
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mr-4 text-lg">10</span>
+              Conclusion: AI Implementation Accelerator Welded Down—Chinese Players Lead the Charge
+            </h2>
+
+            <p>
+              The wild creativity of AI hardware left deep impressions, but equally notable: AI and smart hardware integration is maturing. AI is landing on the edge more tangibly, with products mostly actually purchasable—even at friendly prices.
+            </p>
+
+            <p>
+              From AI smart hardware, AI glasses, robots, smart home, displays to PCs, autos—we see more and more Chinese companies reaching the global forefront of AI innovation, becoming focal points in the global tech race.
+            </p>
+
+            <p>
+              Under AI's intense competition, more sectors may face transformation or reshaping in 2026. Who can stay at the table, ride the AI wave's crest? Who will quietly exit the stage? We look forward to answers in 2026.
+            </p>
+
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl shadow-md mt-10">
+              <h3 className="text-xl font-bold mb-3">🎯 Key Takeaways from CES 2026:</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Chinese companies</strong> made up nearly 1/4 of all exhibitors—dominating AI glasses, robotics, and smart home categories</li>
+                <li><strong>Physical AI is exploding</strong>—28+ Chinese humanoid robot companies participated</li>
+                <li><strong>AI hardware is getting more affordable</strong>—pocket AI assistants starting at $22</li>
+                <li><strong>Form factors are diversifying</strong>—flying pets, emotion-reading pendants, AI rings for notes</li>
+                <li><strong>The "brightness war" in displays is over</strong>—focus shifted to color accuracy and AI-powered upscaling</li>
+                <li><strong>AI PCs are mainstream</strong>—from keyboard-embedded computers to palm-sized supercomputers</li>
+              </ul>
+            </div>
+          </div>
+        )
+      });
     }
   }, [slug, postData]);
 
