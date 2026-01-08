@@ -219,4 +219,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/ces2026/venue.png',
     categories: ['AI', 'CES', 'Hardware', 'Robotics', 'Consumer Electronics'],
   },
+  'deepseek-r1-revisit-open-source-textbook': {
+    slug: 'deepseek-r1-revisit-open-source-textbook',
+    title: '🐋 DeepSeek "Teaches You" How R1 Was Trained: The "Open Source Textbook of the AI World"',
+    date: '8 January 2026',
+    author: 'Hovah Yii',
+    description: 'DeepSeek updates R1 paper to 86 pages! A fully reproducible technical report revealing data recipes, failed attempts, and pure RL training secrets.',
+    ogImage: '/blog/deepseek/paper/deepseek-R1.png',
+    categories: ['AI', 'DeepSeek', 'Open Source', 'Research'],
+  },
 };

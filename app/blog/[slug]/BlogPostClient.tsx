@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { BlogPost } from '../data/blogPosts';
 import CES2026Content from './CES2026Content';
 import NvidiaCES2026Content from './NvidiaCES2026Content';
+import DeepSeekR1RevisitContent from './DeepSeekR1RevisitContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -6162,6 +6163,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         ...postData,
         content: (
           <CES2026Content />
+        )
+      });
+    } else if (slug === 'deepseek-r1-revisit-open-source-textbook') {
+      setPost({
+        ...postData,
+        content: (
+          <DeepSeekR1RevisitContent />
         )
       });
     }
