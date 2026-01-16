@@ -661,8 +661,7 @@ export default function GitLectureDeckPage() {
 
             {/* Footer */}
             <div className="slide-footer">
-                This slide deck was generated with ✨ <a href="https://gemini.google.com" target="_blank">Gemini Pro</a> |
-                <a href="https://hovahyii.vercel.app" target="_blank">Hovah Digital Solutions</a>
+                This slide deck was generated with ✨ Gemini Pro | Prepared by <a href="https://hovahyii.vercel.app" target="_blank">Hovah Yii</a>
             </div>
         </>
     );
