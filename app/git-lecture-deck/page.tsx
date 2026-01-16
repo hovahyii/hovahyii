@@ -149,6 +149,18 @@ export default function GitLectureDeckPage() {
             background: linear-gradient(to bottom right, #0f172a, #1e293b);
             box-sizing: border-box;
         }
+
+        @media (max-width: 768px) {
+            .slide { 
+                padding: 1.5rem; 
+                overflow-y: auto; 
+                display: none; /* Keep generic hide, .active override handles display */
+                justify-content: flex-start; /* Allow scrolling from top */
+                padding-top: 5rem; /* Space for hidden nav or just top spacing */
+                padding-bottom: 6rem; /* Space for nav buttons */
+            }
+            .slide.active { display: flex; }
+        }
         
         .slide.active { display: flex; animation: fadeIn 0.5s ease-in-out; z-index: 10; }
 
@@ -232,7 +244,7 @@ export default function GitLectureDeckPage() {
                             <h3 className="text-xl text-indigo-400 font-mono">Founder, <a href="https://hovahdigitalsolutions.com/" target="_blank" className="underline hover:text-indigo-300">Hovah Digital Solutions</a></h3>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="space-y-6">
                             <div className="bg-slate-800 p-5 rounded-lg border-l-4 border-indigo-500">
                                 <h4 className="font-bold text-white text-lg mb-2">🚀 Professional Experience</h4>
@@ -302,7 +314,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="4">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl font-bold mb-8 text-white">The Origin Story (2005)</h2>
-                    <div className="grid grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="Linus Torvalds" className="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition duration-500 w-64 mx-auto mb-4 border-4 border-slate-700" />
                             <p className="text-center text-slate-400 italic">Linus Torvalds</p>
@@ -320,7 +332,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="5">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl font-bold mb-8 text-indigo-400">The Problem: &quot;File Chaos&quot;</h2>
-                    <div className="grid grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-4 text-xl text-slate-300">
                             <p>Before Git, we managed versions by copying folders.</p>
                             <ul className="list-disc pl-6 space-y-2 marker:text-red-500">
@@ -342,7 +354,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="6">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl font-bold mb-12">Git vs. GitHub</h2>
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="bg-slate-800 p-8 rounded-xl border-t-4 border-orange-500">
                             <h3 className="text-3xl font-bold mb-4">Git</h3>
                             <ul className="space-y-4 text-lg">
@@ -367,7 +379,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="7">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-4xl font-bold mb-8">The Tooling Landscape</h2>
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="os-card border-slate-600">
                             <div className="text-4xl mb-4">⌨️</div>
                             <h3 className="text-xl font-bold text-white mb-2">The CLI</h3>
@@ -392,7 +404,7 @@ export default function GitLectureDeckPage() {
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl font-bold mb-6 text-emerald-400">Installation Check</h2>
                     <p className="text-xl mb-8">Run: <code className="bg-slate-800 px-2 py-1 rounded">git --version</code></p>
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-blue-900/20 p-6 rounded-xl border border-blue-500/30">
                             <h3 className="text-2xl font-bold mb-4 text-blue-300">Windows</h3>
                             <p className="text-sm text-slate-300">Download <strong>Git Bash</strong> from git-scm.com.</p>
@@ -463,7 +475,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="12">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-4xl font-bold mb-6">Best Practices</h2>
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <h3 className="text-emerald-400 font-bold mb-4">Commit Messages</h3>
                             <ul className="text-sm text-slate-300 space-y-2">
@@ -498,7 +510,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="14">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-4xl font-bold mb-10 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">Mastering Issues & Projects</h2>
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="feature-card border-l-4 border-green-500">
                             <span className="feature-icon">📝</span>
                             <h3 className="text-xl font-bold text-white mb-2">GitHub Issues</h3>
@@ -537,7 +549,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="15">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-4xl font-bold mb-12 text-center text-red-400">Security & Operations</h2>
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="feature-card border-red-500/30">
                             <span className="feature-icon">🛡️</span>
                             <h3 className="text-xl font-bold text-white mb-2">Security Insights</h3>
@@ -561,7 +573,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="16">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl font-bold mb-8 text-blue-400">GitHub Actions</h2>
-                    <div className="grid grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <p className="text-xl text-slate-300 mb-6"><strong>CI/CD built-in.</strong> Automatically test, build, and deploy your code on every push.</p>
                             <ul className="space-y-4 text-sm text-slate-400">
@@ -601,7 +613,7 @@ export default function GitLectureDeckPage() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="bg-slate-800 p-4 rounded text-sm">
                             <strong className="text-emerald-400">✅ Code Review</strong><br />
                             Teammates suggest edits.
@@ -637,7 +649,7 @@ export default function GitLectureDeckPage() {
                         <span className="ai-badge">✨ New Era</span>
                     </div>
                     <h2 className="text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Git in the Age of AI</h2>
-                    <div className="grid grid-cols-2 gap-12 mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
                         <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
                             <h3 className="text-xl font-bold text-slate-300 mb-4">👴 The Old Way</h3>
                             <ul className="space-y-3 text-slate-400">
@@ -660,7 +672,7 @@ export default function GitLectureDeckPage() {
             <section className="slide" data-step="20">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-4xl font-bold mb-8 text-white">AI Tools for Beginners</h2>
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="bg-slate-800 p-6 rounded-xl border border-slate-600">
                             <div className="text-3xl mb-4">🖥️</div>
                             <h3 className="font-bold text-xl mb-2 text-blue-400">Copilot CLI</h3>
@@ -686,7 +698,7 @@ export default function GitLectureDeckPage() {
                     <h2 className="text-5xl font-bold mb-8 text-white">🎁 Bonus: Student Pack</h2>
                     <p className="text-2xl text-slate-300 mb-12">Get <strong>$200k+</strong> worth of developer tools for FREE.</p>
 
-                    <div className="grid grid-cols-3 gap-6 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                         <div className="bg-slate-800 p-6 rounded-xl border border-indigo-500/50">
                             <div className="text-4xl mb-2">🤖</div>
                             <h3 className="font-bold text-white">GitHub Copilot</h3>
@@ -718,7 +730,7 @@ export default function GitLectureDeckPage() {
                     <h2 className="text-5xl font-bold mb-6">Workshop Complete</h2>
                     <p className="text-2xl text-slate-300 mb-8">You now have the power of Time Travel (Git) and Intelligence (AI).</p>
 
-                    <div className="grid grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                         {/* Git Race 2025 Card */}
                         <div className="p-6 bg-amber-900/20 border border-amber-500/50 rounded-xl">
                             <div className="text-4xl mb-3">🏁</div>
