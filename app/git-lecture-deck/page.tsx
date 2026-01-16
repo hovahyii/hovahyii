@@ -175,10 +175,12 @@ export default function GitLectureDeckPage() {
                                 </ul>
                             </div>
                             <div className="bg-slate-800 p-5 rounded-lg border-l-4 border-green-500">
-                                <h4 className="font-bold text-white text-lg mb-2">👨‍🏫 Teaching & Blog</h4>
+                                <h4 className="font-bold text-white text-lg mb-2">👨‍🏫 Teaching & Speaking</h4>
                                 <div className="flex flex-wrap gap-2 mb-3">
                                     <span className="bio-tag bg-green-900/40 text-green-300">CodingBar</span>
                                     <span className="bio-tag bg-green-900/40 text-green-300">Chumbaka</span>
+                                    <span className="bio-tag bg-emerald-900/40 text-emerald-300">Supabase KL #1</span>
+                                    <a href="https://www.uxhmac.com/" target="_blank" className="bio-tag bg-red-900/40 text-red-300 hover:bg-red-800/40 transition">HMS Core x UMPSA</a>
                                 </div>
                                 <div className="text-xs">✍️ Writes at <a href="http://hovahyii.vercel.app/blog" target="_blank" className="text-indigo-400 hover:underline font-mono">hovahyii.vercel.app/blog</a></div>
                             </div>
