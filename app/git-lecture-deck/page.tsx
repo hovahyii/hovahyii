@@ -33,8 +33,14 @@ export default function GitLectureDeckPage() {
             if (progressBar) {
                 progressBar.style.width = pct + '%';
             }
+            // Update slide counter
+            const counter = document.getElementById('slide-counter');
+            if (counter) {
+                counter.textContent = `${step} / ${totalSteps}`;
+            }
         }
 
+        // Keyboard navigation
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'ArrowRight' || e.key === ' ') {
                 if (currentStep < totalSteps) {
@@ -50,8 +56,69 @@ export default function GitLectureDeckPage() {
             }
         };
 
+        // Touch/swipe navigation for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const handleTouchStart = (e: TouchEvent) => {
+            touchStartX = e.changedTouches[0].screenX;
+        };
+
+        const handleTouchEnd = (e: TouchEvent) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        };
+
+        const handleSwipe = () => {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (diff > swipeThreshold) {
+                // Swipe left - next slide
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    showSlide(currentStep);
+                }
+            } else if (diff < -swipeThreshold) {
+                // Swipe right - previous slide
+                if (currentStep > 1) {
+                    currentStep--;
+                    showSlide(currentStep);
+                }
+            }
+        };
+
+        // Navigation button handlers
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        const handlePrev = () => {
+            if (currentStep > 1) {
+                currentStep--;
+                showSlide(currentStep);
+            }
+        };
+
+        const handleNext = () => {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                showSlide(currentStep);
+            }
+        };
+
         document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
+        document.addEventListener('touchstart', handleTouchStart);
+        document.addEventListener('touchend', handleTouchEnd);
+        prevBtn?.addEventListener('click', handlePrev);
+        nextBtn?.addEventListener('click', handleNext);
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('touchstart', handleTouchStart);
+            document.removeEventListener('touchend', handleTouchEnd);
+            prevBtn?.removeEventListener('click', handlePrev);
+            nextBtn?.removeEventListener('click', handleNext);
+        };
     }, []);
 
     return (
@@ -120,6 +187,13 @@ export default function GitLectureDeckPage() {
         .slide-footer { position: fixed; bottom: 12px; left: 0; right: 0; text-align: center; z-index: 40; font-size: 0.75rem; color: #64748b; }
         .slide-footer a { color: #818cf8; text-decoration: none; }
         .slide-footer a:hover { text-decoration: underline; }
+
+        /* Mobile Navigation */
+        .mobile-nav { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 60; display: flex; align-items: center; gap: 1rem; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .mobile-nav-btn { width: 44px; height: 44px; border-radius: 50%; background: #334155; border: none; color: white; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+        .mobile-nav-btn:hover { background: #6366f1; }
+        .mobile-nav-btn:active { transform: scale(0.95); }
+        .slide-counter { color: #94a3b8; font-size: 0.875rem; font-weight: 600; min-width: 60px; text-align: center; }
       `}</style>
 
             {/* Top Navigation Bar */}
@@ -678,6 +752,13 @@ export default function GitLectureDeckPage() {
             </section>
 
             <div id="progress-bar"></div>
+
+            {/* Mobile Navigation Controls */}
+            <div className="mobile-nav">
+                <button id="prev-btn" className="mobile-nav-btn" aria-label="Previous slide">←</button>
+                <span id="slide-counter" className="slide-counter">1 / 22</span>
+                <button id="next-btn" className="mobile-nav-btn" aria-label="Next slide">→</button>
+            </div>
 
             {/* Footer */}
             <div className="slide-footer">
