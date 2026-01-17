@@ -1,9 +1,132 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Script from 'next/script';
 
 export default function GitLectureDeckPage() {
+    // Workflow Simulator State
+    const [fileStatus, setFileStatus] = useState<'none' | 'untracked' | 'staged' | 'committed' | 'modified'>('none');
+    const [commits, setCommits] = useState<number[]>([]);
+    const [consoleLog, setConsoleLog] = useState<{ text: string, color: string }[]>([
+        { text: '> System ready. Click "Create File" to start...', color: 'slate' }
+    ]);
+
+    // Workflow Simulator Actions
+    const addLog = (text: string, color: string) => {
+        setConsoleLog(prev => [...prev, { text, color }]);
+    };
+
+    const simAction = (action: string) => {
+        if (action === 'create') {
+            if (fileStatus !== 'none') {
+                addLog('Error: File already exists.', 'red');
+                return;
+            }
+            setFileStatus('untracked');
+            addLog('File "script.js" created.', 'white');
+        } else if (action === 'add') {
+            if (fileStatus === 'untracked' || fileStatus === 'modified') {
+                setFileStatus('staged');
+                addLog('$ git add script.js', 'green');
+            } else {
+                addLog('Nothing to add (file is committed or not created).', 'yellow');
+            }
+        } else if (action === 'commit') {
+            if (fileStatus === 'staged') {
+                const newCommitNum = commits.length + 1;
+                setCommits(prev => [...prev, newCommitNum]);
+                setFileStatus('committed');
+                addLog(`$ git commit -m "Save #${newCommitNum}"`, 'green');
+            } else {
+                addLog('Nothing to commit. Stage changes first!', 'red');
+            }
+        } else if (action === 'modify') {
+            if (fileStatus === 'committed') {
+                setFileStatus('modified');
+                addLog('File modified. Changes in Working Dir.', 'yellow');
+            } else {
+                addLog('Can only modify committed files.', 'yellow');
+            }
+        }
+    };
+
+    const resetSim = () => {
+        setFileStatus('none');
+        setCommits([]);
+        setConsoleLog([{ text: '> System ready. Click "Create File" to start...', color: 'slate' }]);
+    };
+
+    // Get file token position based on status
+    const getTokenZone = () => {
+        switch (fileStatus) {
+            case 'untracked':
+            case 'modified':
+                return 'working';
+            case 'staged':
+                return 'staging';
+            case 'committed':
+                return 'repo';
+            default:
+                return 'hidden';
+        }
+    };
+
+    const getTokenColor = () => {
+        switch (fileStatus) {
+            case 'untracked': return 'bg-white border-red-300';
+            case 'staged': return 'bg-indigo-100 border-indigo-300';
+            case 'committed': return 'bg-emerald-100 border-emerald-300';
+            case 'modified': return 'bg-amber-100 border-amber-300';
+            default: return 'bg-white border-slate-200';
+        }
+    };
+
+    const getStatusText = () => {
+        switch (fileStatus) {
+            case 'untracked': return { text: 'Untracked', color: 'text-red-500' };
+            case 'staged': return { text: 'Staged', color: 'text-indigo-600' };
+            case 'committed': return { text: 'Committed', color: 'text-emerald-600' };
+            case 'modified': return { text: 'Modified', color: 'text-amber-600' };
+            default: return { text: '', color: '' };
+        }
+    };
+
+    // Branching Visualizer State
+    const [activeBranch, setActiveBranch] = useState<'main' | 'feature'>('main');
+    const [mainCommits, setMainCommits] = useState<string[]>(['Init']);
+    const [featureCommits, setFeatureCommits] = useState<string[]>([]);
+    const [isMerged, setIsMerged] = useState(false);
+
+    const branchAction = (action: string) => {
+        if (action === 'commit') {
+            if (activeBranch === 'main') {
+                setMainCommits(prev => [...prev, `M${prev.length + 1}`]);
+            } else {
+                setFeatureCommits(prev => [...prev, `F${prev.length + 1}`]);
+            }
+        } else if (action === 'checkout') {
+            if (activeBranch === 'main' && !isMerged) {
+                setActiveBranch('feature');
+                if (featureCommits.length === 0) {
+                    setFeatureCommits(['Branch']);
+                }
+            }
+        } else if (action === 'merge') {
+            if (activeBranch === 'feature' && featureCommits.length > 0) {
+                setActiveBranch('main');
+                setMainCommits(prev => [...prev, 'Merge']);
+                setIsMerged(true);
+            }
+        }
+    };
+
+    const resetBranch = () => {
+        setActiveBranch('main');
+        setMainCommits(['Init']);
+        setFeatureCommits([]);
+        setIsMerged(false);
+    };
+
     useEffect(() => {
         // Hide the normal layout
         document.body.style.overflow = 'hidden';
@@ -240,7 +363,7 @@ export default function GitLectureDeckPage() {
                     <div className="flex items-center gap-4 mb-8">
                         <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-3xl shadow-lg">👨‍💻</div>
                         <div>
-                            <h2 className="text-4xl font-bold text-white">About Your Instructor</h2>
+                            <h2 className="text-4xl font-bold text-white"><a href="https://hovahyii.vercel.app" target="_blank" className="hover:text-indigo-400 transition">Jehovah Yii Zui Hon (Hovah)</a></h2>
                             <h3 className="text-xl text-indigo-400 font-mono">Founder, <a href="https://hovahdigitalsolutions.com/" target="_blank" className="underline hover:text-indigo-300">Hovah Digital Solutions</a></h3>
                         </div>
                     </div>
@@ -433,28 +556,97 @@ export default function GitLectureDeckPage() {
                 </div>
             </section>
 
-            {/* SLIDE 10: 3 Stages */}
+            {/* SLIDE 10: 3 Stages - Interactive Simulator */}
             <section className="slide" data-step="10">
-                <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold mb-6">The Core Concept: The 3 Stages</h2>
-                    <div className="flex justify-center items-center gap-4 mb-8">
-                        <div className="w-64 p-6 bg-slate-800 rounded border border-slate-600">
-                            <div className="text-2xl mb-2">📂</div>
-                            <div className="font-bold">Working Dir</div>
+                <div className="max-w-6xl mx-auto">
+                    <div className="flex justify-between items-center mb-4">
+                        <h2 className="text-3xl font-bold">Interactive Workflow Simulator</h2>
+                        <button onClick={resetSim} className="text-xs bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded transition border border-slate-600">Reset Demo</button>
+                    </div>
+
+                    {/* Control Panel */}
+                    <div className="p-3 bg-slate-800 rounded-t-xl border border-slate-700 flex flex-wrap gap-3 justify-center">
+                        <button onClick={() => simAction('create')} className="bg-slate-700 border border-slate-600 shadow-sm px-3 py-2 rounded-lg text-sm font-semibold hover:bg-slate-600 active:scale-95 transition flex items-center gap-2">
+                            <span className="text-emerald-400">✚</span> 1. Create File
+                        </button>
+                        <button onClick={() => simAction('add')} className="bg-indigo-600 text-white shadow-md px-3 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 active:scale-95 transition font-mono">
+                            2. git add
+                        </button>
+                        <button onClick={() => simAction('commit')} className="bg-emerald-600 text-white shadow-md px-3 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 active:scale-95 transition font-mono">
+                            3. git commit
+                        </button>
+                        <div className="w-px h-8 bg-slate-600 mx-1"></div>
+                        <button onClick={() => simAction('modify')} className="bg-slate-700 border border-slate-600 shadow-sm px-3 py-2 rounded-lg text-sm font-semibold hover:bg-slate-600 active:scale-95 transition flex items-center gap-2">
+                            <span className="text-amber-400">✎</span> Edit File
+                        </button>
+                    </div>
+
+                    {/* 3-Zone Visualization */}
+                    <div className="grid grid-cols-3 gap-4 p-4 bg-slate-900/50 border-x border-slate-700">
+                        {/* Zone 1: Working Directory */}
+                        <div className={`border-2 border-dashed rounded-xl p-4 min-h-[200px] flex flex-col items-center transition-all ${getTokenZone() === 'working' ? 'border-amber-500 bg-amber-500/10' : 'border-slate-600 bg-slate-800/50'}`}>
+                            <div className="text-slate-400 font-bold uppercase tracking-wider text-xs mb-1">Working Directory</div>
+                            <div className="text-center text-slate-500 text-[10px] mb-4">Files are &quot;Untracked&quot; or &quot;Modified&quot;</div>
+                            {getTokenZone() === 'working' && (
+                                <div className={`w-28 h-14 ${getTokenColor()} shadow-lg border-2 rounded-lg flex items-center justify-center gap-2 mt-auto mb-4 animate-pulse`}>
+                                    <span className="text-xl">📄</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-xs font-bold text-slate-700">script.js</span>
+                                        <span className={`text-[10px] uppercase font-bold ${getStatusText().color}`}>{getStatusText().text}</span>
+                                    </div>
+                                </div>
+                            )}
                         </div>
-                        <div className="text-4xl text-slate-600">➡️</div>
-                        <div className="w-64 p-6 bg-indigo-900/40 rounded border border-indigo-500">
-                            <div className="text-2xl mb-2">📦</div>
-                            <div className="font-bold text-indigo-300">Staging Area</div>
+
+                        {/* Zone 2: Staging Area */}
+                        <div className={`border-2 border-dashed rounded-xl p-4 min-h-[200px] flex flex-col items-center transition-all ${getTokenZone() === 'staging' ? 'border-indigo-500 bg-indigo-500/10' : 'border-slate-600 bg-slate-800/50'}`}>
+                            <div className="text-indigo-400 font-bold uppercase tracking-wider text-xs mb-1">Staging Area</div>
+                            <div className="text-center text-slate-500 text-[10px] mb-4">The &quot;Shopping Cart&quot;</div>
+                            {getTokenZone() === 'staging' && (
+                                <div className={`w-28 h-14 ${getTokenColor()} shadow-lg border-2 rounded-lg flex items-center justify-center gap-2 mt-auto mb-4 animate-pulse`}>
+                                    <span className="text-xl">📄</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-xs font-bold text-slate-700">script.js</span>
+                                        <span className={`text-[10px] uppercase font-bold ${getStatusText().color}`}>{getStatusText().text}</span>
+                                    </div>
+                                </div>
+                            )}
                         </div>
-                        <div className="text-4xl text-slate-600">➡️</div>
-                        <div className="w-64 p-6 bg-emerald-900/40 rounded border border-emerald-500">
-                            <div className="text-2xl mb-2">📚</div>
-                            <div className="font-bold text-emerald-300">Repository</div>
+
+                        {/* Zone 3: Repository */}
+                        <div className={`border-2 rounded-xl p-4 min-h-[200px] flex flex-col items-center transition-all ${getTokenZone() === 'repo' ? 'border-emerald-500 bg-emerald-500/10' : 'border-slate-600 bg-slate-800/50'}`}>
+                            <div className="text-emerald-400 font-bold uppercase tracking-wider text-xs mb-1">Repository</div>
+                            <div className="text-center text-slate-500 text-[10px] mb-2">Permanent History</div>
+                            {getTokenZone() === 'repo' && (
+                                <div className={`w-28 h-14 ${getTokenColor()} shadow-lg border-2 rounded-lg flex items-center justify-center gap-2 mb-2`}>
+                                    <span className="text-xl">📄</span>
+                                    <div className="flex flex-col">
+                                        <span className="text-xs font-bold text-slate-700">script.js</span>
+                                        <span className={`text-[10px] uppercase font-bold ${getStatusText().color}`}>{getStatusText().text}</span>
+                                    </div>
+                                </div>
+                            )}
+                            {/* Commit Stack */}
+                            <div className="w-full mt-auto flex flex-col-reverse gap-1">
+                                {commits.map((num) => (
+                                    <div key={num} className="w-full h-6 bg-slate-600 rounded border border-slate-500 text-[10px] flex items-center justify-center text-slate-300">
+                                        Commit #{num}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                    <div className="bg-amber-500/10 border border-amber-500/50 p-4 rounded inline-block text-amber-200">
-                        🛑 <strong>Demo Time:</strong> Switch to Interactive Tool &gt; &quot;Workflow&quot;
+
+                    {/* Console Log */}
+                    <div className="bg-black text-green-400 font-mono text-xs p-3 h-24 overflow-y-auto rounded-b-xl border border-t-0 border-slate-700">
+                        {consoleLog.map((log, i) => (
+                            <div key={i} className={
+                                log.color === 'red' ? 'text-red-400' :
+                                    log.color === 'green' ? 'text-emerald-400' :
+                                        log.color === 'yellow' ? 'text-amber-400' :
+                                            log.color === 'white' ? 'text-white' : 'text-slate-400'
+                            }>{log.text}</div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -494,14 +686,87 @@ export default function GitLectureDeckPage() {
                 </div>
             </section>
 
-            {/* SLIDE 13: Branching */}
+            {/* SLIDE 13: Interactive Branching Visualizer */}
             <section className="slide" data-step="13">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-6 text-purple-400">Branching</h2>
-                    <p className="text-xl mb-8">Create a &quot;Parallel Universe&quot; for your code.</p>
-                    <div className="code-block mt-8">$ git checkout -b feature-login</div>
-                    <div className="mt-8 text-center bg-purple-500/10 border border-purple-500/50 p-4 rounded inline-block text-purple-200">
-                        🛑 <strong>Demo Time:</strong> Switch to Interactive Tool &gt; &quot;Branching&quot;
+                <div className="max-w-5xl mx-auto">
+                    <div className="flex justify-between items-center mb-4">
+                        <h2 className="text-3xl font-bold text-purple-400">Interactive Branching</h2>
+                        <div className="flex items-center gap-3">
+                            <div className={`px-3 py-1 rounded-full text-sm font-bold flex items-center gap-2 ${activeBranch === 'main' ? 'bg-blue-500/20 text-blue-300 border border-blue-500' : 'bg-purple-500/20 text-purple-300 border border-purple-500'}`}>
+                                <span className={`w-2 h-2 rounded-full ${activeBranch === 'main' ? 'bg-blue-400' : 'bg-purple-400'}`}></span>
+                                Current: {activeBranch === 'main' ? 'Main' : 'Feature'}
+                            </div>
+                            <button onClick={resetBranch} className="text-xs bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded transition border border-slate-600">Reset</button>
+                        </div>
+                    </div>
+
+                    {/* Branch Visualization */}
+                    <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 mb-4">
+                        {/* Main Branch */}
+                        <div className="flex items-center gap-2 mb-6">
+                            <div className="w-20 text-right text-sm text-blue-400 font-bold">Main</div>
+                            <div className="flex-1 flex items-center gap-1 relative h-12">
+                                <div className="absolute inset-y-0 left-0 right-0 flex items-center">
+                                    <div className="h-1 bg-blue-600 flex-1"></div>
+                                </div>
+                                {mainCommits.map((commit, i) => (
+                                    <div key={i} className="w-10 h-10 rounded-full bg-blue-600 border-4 border-slate-900 flex items-center justify-center text-[10px] font-bold z-10 relative">
+                                        {commit}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Connector Lines */}
+                        {featureCommits.length > 0 && (
+                            <div className="flex items-center gap-2 mb-2">
+                                <div className="w-20"></div>
+                                <div className="flex-1 relative h-6">
+                                    <div className="absolute left-[60px] top-0 w-0.5 h-full bg-slate-500 border-dashed"></div>
+                                    {isMerged && <div className="absolute right-[20px] top-0 w-0.5 h-full bg-slate-500 border-dashed"></div>}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Feature Branch */}
+                        <div className={`flex items-center gap-2 transition-opacity ${featureCommits.length > 0 ? 'opacity-100' : 'opacity-30'}`}>
+                            <div className="w-20 text-right text-sm text-purple-400 font-bold">Feature</div>
+                            <div className="flex-1 flex items-center gap-1 relative h-12">
+                                {featureCommits.length > 0 && (
+                                    <>
+                                        <div className="absolute inset-y-0 left-[60px] right-0 flex items-center">
+                                            <div className={`h-1 bg-purple-600 flex-1 ${isMerged ? 'opacity-50' : ''}`}></div>
+                                        </div>
+                                        <div className="w-[60px]"></div>
+                                        {featureCommits.map((commit, i) => (
+                                            <div key={i} className={`w-10 h-10 rounded-full bg-purple-600 border-4 border-slate-900 flex items-center justify-center text-[10px] font-bold z-10 relative ${isMerged ? 'opacity-50' : ''}`}>
+                                                {commit}
+                                            </div>
+                                        ))}
+                                    </>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    <p className="text-sm text-slate-500 text-center mb-4">
+                        🔵 Blue = Main Branch | 🟣 Purple = Feature Branch
+                    </p>
+
+                    {/* Control Buttons */}
+                    <div className="flex justify-center gap-4">
+                        <button onClick={() => branchAction('commit')} className="bg-slate-700 border border-slate-600 shadow-sm px-4 py-3 rounded-lg font-semibold hover:bg-slate-600 active:scale-95 transition flex items-center gap-2">
+                            <span className="bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded text-xs font-mono">git commit</span>
+                            Save Snapshot
+                        </button>
+                        <button onClick={() => branchAction('checkout')} disabled={activeBranch === 'feature' || isMerged} className="bg-slate-700 border border-slate-600 shadow-sm px-4 py-3 rounded-lg font-semibold hover:bg-slate-600 active:scale-95 transition flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                            <span className="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-xs font-mono">git checkout -b</span>
+                            New Branch
+                        </button>
+                        <button onClick={() => branchAction('merge')} disabled={activeBranch === 'main' || featureCommits.length === 0} className="bg-slate-700 border border-slate-600 shadow-sm px-4 py-3 rounded-lg font-semibold hover:bg-slate-600 active:scale-95 transition flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                            <span className="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded text-xs font-mono">git merge</span>
+                            Merge & Finish
+                        </button>
                     </div>
                 </div>
             </section>
