@@ -7,6 +7,7 @@ export default function GitLectureDeckPage() {
     // Workflow Simulator State
     const [fileStatus, setFileStatus] = useState<'none' | 'untracked' | 'staged' | 'committed' | 'modified'>('none');
     const [commits, setCommits] = useState<number[]>([]);
+    const [isPushed, setIsPushed] = useState(false);
     const [consoleLog, setConsoleLog] = useState<{ text: string, color: string }[]>([
         { text: '> System ready. Click "Create File" to start...', color: 'slate' }
     ]);
@@ -43,9 +44,20 @@ export default function GitLectureDeckPage() {
         } else if (action === 'modify') {
             if (fileStatus === 'committed') {
                 setFileStatus('modified');
+                setIsPushed(false);
                 addLog('File modified. Changes in Working Dir.', 'yellow');
             } else {
                 addLog('Can only modify committed files.', 'yellow');
+            }
+        } else if (action === 'push') {
+            if (fileStatus === 'committed' && commits.length > 0 && !isPushed) {
+                setIsPushed(true);
+                addLog('$ git push origin main', 'green');
+                addLog('✓ Code pushed to GitHub!', 'green');
+            } else if (isPushed) {
+                addLog('Already pushed. Make changes first.', 'yellow');
+            } else {
+                addLog('Nothing to push. Commit changes first!', 'red');
             }
         }
     };
@@ -53,6 +65,7 @@ export default function GitLectureDeckPage() {
     const resetSim = () => {
         setFileStatus('none');
         setCommits([]);
+        setIsPushed(false);
         setConsoleLog([{ text: '> System ready. Click "Create File" to start...', color: 'slate' }]);
     };
 
@@ -574,6 +587,9 @@ export default function GitLectureDeckPage() {
                         </button>
                         <button onClick={() => simAction('commit')} className="bg-emerald-600 text-white shadow-md px-3 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-700 active:scale-95 transition font-mono">
                             3. git commit
+                        </button>
+                        <button onClick={() => simAction('push')} className={`${isPushed ? 'bg-purple-800' : 'bg-purple-600'} text-white shadow-md px-3 py-2 rounded-lg text-sm font-semibold hover:bg-purple-700 active:scale-95 transition font-mono flex items-center gap-1`}>
+                            4. git push {isPushed && '✓'}
                         </button>
                         <div className="w-px h-8 bg-slate-600 mx-1"></div>
                         <button onClick={() => simAction('modify')} className="bg-slate-700 border border-slate-600 shadow-sm px-3 py-2 rounded-lg text-sm font-semibold hover:bg-slate-600 active:scale-95 transition flex items-center gap-2">
