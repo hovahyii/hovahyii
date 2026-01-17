@@ -250,13 +250,13 @@ export default function GitLectureDeckPage() {
                                 <h4 className="font-bold text-white text-lg mb-2">🚀 Professional Experience</h4>
                                 <ul className="space-y-4">
                                     <li>
-                                        <div className="font-bold text-indigo-300">Hovah Digital Solutions</div>
-                                        <div className="text-xs text-slate-300 mt-1">Trusted by <a href="https://leica-store.my/" target="_blank" className="text-white font-bold hover:text-indigo-400 hover:underline transition">Leica Malaysia</a> & <a href="https://hlfcooling.com.my/" target="_blank" className="text-white font-bold hover:text-indigo-400 hover:underline transition">HLF Cooling</a>.</div>
-                                        <div className="text-xs text-slate-400">Building Apps & Websites.</div>
+                                        <div className="font-bold text-red-400">Huawei</div>
+                                        <div className="text-xs text-slate-400">Radio Frequency Engineer & Data Analyst.</div>
                                     </li>
                                     <li>
-                                        <div className="font-bold text-red-400">Huawei</div>
-                                        <div className="text-xs text-slate-400">RF Engineer & Data Analyst.</div>
+                                        <div className="font-bold text-indigo-300"><a href="https://hovahdigitalsolutions.com/" target="_blank" className="hover:text-indigo-400 hover:underline transition">Hovah Digital Solutions</a></div>
+                                        <div className="text-xs text-slate-300 mt-1">Trusted by <a href="https://leica-store.my/" target="_blank" className="text-white font-bold hover:text-indigo-400 hover:underline transition">Leica Malaysia</a> & <a href="https://hlfcooling.com.my/" target="_blank" className="text-white font-bold hover:text-indigo-400 hover:underline transition">HLF Cooling</a>.</div>
+                                        <div className="text-xs text-slate-400">Building Apps & Websites.</div>
                                     </li>
                                 </ul>
                             </div>
@@ -268,7 +268,7 @@ export default function GitLectureDeckPage() {
                                     <a href="https://luma.com/q1ucw5hv" target="_blank" className="bio-tag bg-emerald-900/40 text-emerald-300 hover:bg-emerald-800/40 transition">Supabase KL #1</a>
                                     <a href="https://www.uxhmac.com/" target="_blank" className="bio-tag bg-red-900/40 text-red-300 hover:bg-red-800/40 transition">HMS Core x UMPSA</a>
                                 </div>
-                                <div className="text-xs">✍️ Writes at <a href="http://hovahyii.vercel.app/blog" target="_blank" className="text-indigo-400 hover:underline font-mono">hovahyii.vercel.app/blog</a></div>
+                                <div className="text-xs">✍️ Writes blogs about Technology/AI/Engineering at <a href="http://hovahyii.vercel.app/blog" target="_blank" className="text-indigo-400 hover:underline font-mono">hovahyii.vercel.app/blog</a></div>
                             </div>
                         </div>
                         <div className="space-y-6">
@@ -280,7 +280,7 @@ export default function GitLectureDeckPage() {
                                     <span className="bio-tag bg-slate-700 text-white border border-slate-500">Leftenan Muda</span>
                                 </div>
                                 <div className="mt-4 flex flex-wrap gap-2">
-                                    <span className="bio-tag bg-red-900/30 text-red-300">Huawei Int. Data Analyst</span>
+                                    <span className="bio-tag bg-red-900/30 text-red-300">Huawei Intermediate Certified Data Analyst</span>
                                     <span className="bio-tag bg-red-900/30 text-red-300">HarmonyOS Developer</span>
                                 </div>
                             </div>
@@ -289,7 +289,7 @@ export default function GitLectureDeckPage() {
                                 <div className="grid grid-cols-2 gap-2 text-xs text-slate-300">
                                     <div>• CITREX &apos;24 Best of Best</div>
                                     <div>• AppGallery &apos;24 1st RU</div>
-                                    <div>• Huawei ICT &apos;24 (Cloud)</div>
+                                    <div>• Huawei ICT &apos;24 (Cloud) National 3rd</div>
                                     <div>• PSM &apos;25 Best Innovation</div>
                                 </div>
                             </div>
