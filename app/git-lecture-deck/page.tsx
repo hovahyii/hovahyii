@@ -730,7 +730,7 @@ export default function GitLectureDeckPage() {
                     <h2 className="text-5xl font-bold mb-6">Workshop Complete</h2>
                     <p className="text-2xl text-slate-300 mb-8">You now have the power of Time Travel (Git) and Intelligence (AI).</p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                         {/* Git Race 2025 Card */}
                         <div className="p-6 bg-amber-900/20 border border-amber-500/50 rounded-xl">
                             <div className="text-4xl mb-3">🏁</div>
@@ -757,6 +757,20 @@ export default function GitLectureDeckPage() {
                             >
                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
                                 GitHub Discussions
+                            </a>
+                        </div>
+
+                        {/* Learning Materials Card */}
+                        <div className="p-6 bg-green-900/20 border border-green-500/50 rounded-xl">
+                            <div className="text-4xl mb-3">📚</div>
+                            <h3 className="text-2xl font-bold text-green-400 mb-3">Materials</h3>
+                            <p className="text-slate-300 mb-4 text-sm">Continue learning Git & GitHub!</p>
+                            <a
+                                href="https://roadmap.sh/git-github"
+                                target="_blank"
+                                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105"
+                            >
+                                🗺️ Roadmap.sh
                             </a>
                         </div>
                     </div>
