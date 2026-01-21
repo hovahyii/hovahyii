@@ -7,6 +7,7 @@ import { BlogPost } from '../data/blogPosts';
 import CES2026Content from './CES2026Content';
 import NvidiaCES2026Content from './NvidiaCES2026Content';
 import DeepSeekR1RevisitContent from './DeepSeekR1RevisitContent';
+import ClaudeSmartForkingContent from './ClaudeSmartForkingContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -6170,6 +6171,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         ...postData,
         content: (
           <DeepSeekR1RevisitContent />
+        )
+      });
+    } else if (slug === 'claude-smart-forking-permanent-memory') {
+      setPost({
+        ...postData,
+        content: (
+          <ClaudeSmartForkingContent />
         )
       });
     }

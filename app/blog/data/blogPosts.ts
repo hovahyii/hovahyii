@@ -228,4 +228,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/deepseek/paper/deepseek-R1.png',
     categories: ['AI', 'DeepSeek', 'Open Source', 'Research'],
   },
+  'claude-smart-forking-permanent-memory': {
+    slug: 'claude-smart-forking-permanent-memory',
+    title: '🧠 LLMs Achieve "Permanent Memory"! Before Official Launch, Developers Are Already Going Wild',
+    date: '21 January 2026',
+    author: 'Hovah Yii',
+    description: 'Smart Forking gives Claude Code "permanent memory" through vector database retrieval. Developer reports 100% success rate. This approach and Anthropic\'s official knowledge base may merge for next-gen AI memory.',
+    ogImage: '/blog/claude/zac.png',
+    categories: ['AI', 'Claude', 'Programming', 'Anthropic'],
+  },
 };
