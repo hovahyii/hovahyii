@@ -237,4 +237,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/claude/zac.png',
     categories: ['AI', 'Claude', 'Programming', 'Anthropic'],
   },
+  'clawdbot': {
+    slug: 'clawdbot',
+    title: '🔥 First "Zero-Employee" Company Born? "Open Source Jarvis" Clawdbot Goes Viral, 24/7 Never Off Work',
+    date: '26 January 2026',
+    author: 'Hovah Yii',
+    description: 'A retired coder built the god-tier Clawdbot, painting Silicon Valley red. Even Google bigwigs are jumping in. Overnight, all of Silicon Valley became obsessed with Clawdbot, hailed as the "24/7 Jarvis". It has infinite memory, is always on call, and proactively works. The most ridiculous part? It single-handedly ignited a sales boom for the Mac mini.',
+    ogImage: '/blog/clawdbot/clawdbot.png',
+    categories: ['AI', 'Clawdbot', 'Agent', 'Open Source'],
+  },
 };

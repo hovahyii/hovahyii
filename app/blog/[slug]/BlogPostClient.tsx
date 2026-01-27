@@ -8,6 +8,7 @@ import CES2026Content from './CES2026Content';
 import NvidiaCES2026Content from './NvidiaCES2026Content';
 import DeepSeekR1RevisitContent from './DeepSeekR1RevisitContent';
 import ClaudeSmartForkingContent from './ClaudeSmartForkingContent';
+import ClawdbotContent from './ClawdbotContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -553,6 +554,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
             <p className="font-semibold text-slate-900 dark:text-white">So yes, Qwen App might be &larr;€œChina&larr;€™s ChatGPT.&larr;€ But the deeper story is that even trillion-parameter breakthroughs need a name people can tap on. Have a question? Ask Qwen.</p>
           </div>
         )
+      });
+    } else if (slug === 'clawdbot') {
+      setPost({
+        ...postData,
+        content: <ClawdbotContent />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({
