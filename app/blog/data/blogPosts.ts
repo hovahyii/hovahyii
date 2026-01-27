@@ -246,4 +246,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/clawdbot/clawdbot.png',
     categories: ['AI', 'Clawdbot', 'Agent', 'Open Source'],
   },
+  'deepseek-ocr-2-vision-reasoning': {
+    slug: 'deepseek-ocr-2-vision-reasoning',
+    title: '🐋 DeepSeek-OCR 2 Takes First Place Again! AI Reads Like a Human, Pioneers "Causal Flow" Visual Reasoning',
+    date: '27 January 2026',
+    author: 'Hovah Yii',
+    description: 'DeepSeek releases OCR 2 with DeepEncoder V2, shifting from "fixed scanning" to "semantic reasoning". By introducing causal attention, it unlocks human-like reading logic for complex documents while maintaining extreme efficiency.',
+    ogImage: '/blog/deepseek/ocr-2/github.png',
+    categories: ['AI', 'DeepSeek', 'OCR', 'Research'],
+  },
 };

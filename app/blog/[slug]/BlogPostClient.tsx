@@ -9,6 +9,7 @@ import NvidiaCES2026Content from './NvidiaCES2026Content';
 import DeepSeekR1RevisitContent from './DeepSeekR1RevisitContent';
 import ClaudeSmartForkingContent from './ClaudeSmartForkingContent';
 import ClawdbotContent from './ClawdbotContent';
+import DeepSeekOCR2Content from './DeepSeekOCR2Content';
 
 interface BlogPostClientProps {
   slug: string;
@@ -559,6 +560,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <ClawdbotContent />
+      });
+    } else if (slug === 'deepseek-ocr-2-vision-reasoning') {
+      setPost({
+        ...postData,
+        content: <DeepSeekOCR2Content />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({
