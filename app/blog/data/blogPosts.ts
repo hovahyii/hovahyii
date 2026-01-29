@@ -255,4 +255,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/deepseek/ocr-2/github.png',
     categories: ['AI', 'DeepSeek', 'OCR', 'Research'],
   },
+  'kimi-k2-5-open-source-king': {
+    slug: 'kimi-k2-5-open-source-king',
+    title: '👑 Open Source "King" Kimi K2.5 Released! "Most Powerful Open Source Model Yet" - Autonomous Agent Army Boosts Efficiency by 450%!',
+    date: '28 January 2026',
+    author: 'Hovah Yii',
+    description: 'Moonshot AI releases Kimi K2.5, featuring an autonomous agent cluster that can schedule up to 100 sub-agents. It ranks first in multiple benchmarks and offers a comprehensive Vibe Coding experience.',
+    ogImage: '/blog/kimi/k2.5/main.png',
+    categories: ['AI', 'Kimi', 'Open Source', 'Agent'],
+  },
 };

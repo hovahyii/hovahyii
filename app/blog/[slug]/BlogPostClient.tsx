@@ -10,6 +10,7 @@ import DeepSeekR1RevisitContent from './DeepSeekR1RevisitContent';
 import ClaudeSmartForkingContent from './ClaudeSmartForkingContent';
 import ClawdbotContent from './ClawdbotContent';
 import DeepSeekOCR2Content from './DeepSeekOCR2Content';
+import KimiK25Content from './KimiK25Content';
 
 interface BlogPostClientProps {
   slug: string;
@@ -565,6 +566,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <DeepSeekOCR2Content />
+      });
+    } else if (slug === 'kimi-k2-5-open-source-king') {
+      setPost({
+        ...postData,
+        content: <KimiK25Content />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({
