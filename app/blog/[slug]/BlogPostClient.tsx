@@ -11,6 +11,7 @@ import ClaudeSmartForkingContent from './ClaudeSmartForkingContent';
 import ClawdbotContent from './ClawdbotContent';
 import DeepSeekOCR2Content from './DeepSeekOCR2Content';
 import KimiK25Content from './KimiK25Content';
+import MoltbotContent from './MoltbotContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -571,6 +572,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <KimiK25Content />
+      });
+    } else if (slug === 'moltbot-100k-stars') {
+      setPost({
+        ...postData,
+        content: <MoltbotContent />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({

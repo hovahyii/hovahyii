@@ -264,4 +264,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/kimi/k2.5/main.png',
     categories: ['AI', 'Kimi', 'Open Source', 'Agent'],
   },
+  'moltbot-100k-stars': {
+    slug: 'moltbot-100k-stars',
+    title: '🚀 2026\'s First Explosion: "Open Source Jarvis" Moltbot Breaks 100K Stars, Rockets to GitHub Top!',
+    date: '30 January 2026',
+    author: 'Hovah Yii',
+    description: 'Moltbot (formerly Clawdbot) rockets past 100,000 GitHub stars, becoming the fastest-growing open source project. From a retired coder\'s hobby to a phenomenon reshaping AI development workflows, with insights on "closing the loop" and why taste is humanity\'s last moat.',
+    ogImage: '/blog/moltbot/shocked.png',
+    categories: ['AI', 'Moltbot', 'Agent', 'Open Source'],
+  },
 };
