@@ -349,7 +349,7 @@ export default function MoltbotContent() {
 
             <div className="my-8 flex justify-center">
                 <Image
-                    src="/blog/moltbot/i ship code.png"
+                    src="/blog/moltbot/i-ship-code.png"
                     alt="I Ship Code"
                     width={900}
                     height={500}

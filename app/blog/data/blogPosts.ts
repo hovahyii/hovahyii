@@ -270,7 +270,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     date: '30 January 2026',
     author: 'Hovah Yii',
     description: 'Moltbot (formerly Clawdbot) rockets past 100,000 GitHub stars, becoming the fastest-growing open source project. From a retired coder\'s hobby to a phenomenon reshaping AI development workflows, with insights on "closing the loop" and why taste is humanity\'s last moat.',
-    ogImage: '/blog/moltbot/shocked.png',
+    ogImage: '/blog/moltbot/peter-steinberger.jpg',
     categories: ['AI', 'Moltbot', 'Agent', 'Open Source'],
   },
 };
