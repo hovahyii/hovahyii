@@ -12,6 +12,7 @@ import ClawdbotContent from './ClawdbotContent';
 import DeepSeekOCR2Content from './DeepSeekOCR2Content';
 import KimiK25Content from './KimiK25Content';
 import MoltbotContent from './MoltbotContent';
+import AISpringFestivalContent from './AISpringFestivalContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -577,6 +578,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <MoltbotContent />
+      });
+    } else if (slug === 'ai-spring-festival-chatgpt-claude-update') {
+      setPost({
+        ...postData,
+        content: <AISpringFestivalContent />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({

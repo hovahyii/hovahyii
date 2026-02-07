@@ -273,4 +273,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/moltbot/peter-steinberger.jpg',
     categories: ['AI', 'Moltbot', 'Agent', 'Open Source'],
   },
+  'ai-spring-festival-chatgpt-claude-update': {
+    slug: 'ai-spring-festival-chatgpt-claude-update',
+    title: '🔥 The REAL AI Spring Festival! ChatGPT and Claude Drop Major Updates — Workers Who Can\'t Manage AI Will Be Left Behind',
+    date: '6 February 2026',
+    author: 'Hovah Yii',
+    description: 'Anthropic and OpenAI release Claude Opus 4.6 and GPT-5.3-Codex simultaneously. Claude demonstrates 100K-line C compiler built by 16 AI agents, while OpenAI\'s Codex becomes a full work assistant beyond coding. The role of humans in AI workflows is fundamentally changing.',
+    ogImage: '/blog/festival/sam.png',
+    categories: ['AI', 'ChatGPT', 'Claude', 'OpenAI', 'Anthropic'],
+  },
 };
