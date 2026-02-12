@@ -282,4 +282,22 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/festival/sam.png',
     categories: ['AI', 'ChatGPT', 'Claude', 'OpenAI', 'Anthropic'],
   },
+  'generic-language-model-5-release': {
+    slug: 'generic-language-model-5-release',
+    title: '👑 New King of Open Source: Zhipu GLM-5 Released, Coding Capabilities Rival Claude Opus 4.5',
+    date: '7 February 2026',
+    author: 'Hovah Yii',
+    description: 'Zhipu releases GLM-5, the first open-source model to challenge Silicon Valley giants in system-level engineering. With "Agentic Engineering" capabilities, it rivals Claude Opus 4.6 and GPT-5.3-Codex.',
+    ogImage: '/blog/glm5.0/atlas.png',
+    categories: ['AI', 'GLM-5', 'Zhipu', 'Open Source', 'Agentic Engineering'],
+  },
+  'seedance-2-0-director-ai': {
+    slug: 'seedance-2-0-director-ai',
+    title: '👑 China Has the World\'s #1 Model Too! Seedance 2.0: The AI That Can Be a Director',
+    date: '8 February 2026',
+    author: 'Hovah Yii',
+    description: 'Seedance 2.0 (Doubao Video) explodes in popularity, offering director-level video generation, storyboard capabilities, and subject migration. It marks the end of AIGC\'s childhood.',
+    ogImage: '/blog/seedance/yocar.jpg',
+    categories: ['AI', 'Seedance', 'Video Generation', 'Doubao', 'AIGC'],
+  },
 };

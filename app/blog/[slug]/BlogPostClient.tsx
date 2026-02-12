@@ -13,6 +13,8 @@ import DeepSeekOCR2Content from './DeepSeekOCR2Content';
 import KimiK25Content from './KimiK25Content';
 import MoltbotContent from './MoltbotContent';
 import AISpringFestivalContent from './AISpringFestivalContent';
+import GLM5Content from './GLM5Content';
+import SeedanceContent from './SeedanceContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -583,6 +585,16 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <AISpringFestivalContent />
+      });
+    } else if (slug === 'generic-language-model-5-release') {
+      setPost({
+        ...postData,
+        content: <GLM5Content />
+      });
+    } else if (slug === 'seedance-2-0-director-ai') {
+      setPost({
+        ...postData,
+        content: <SeedanceContent />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({
