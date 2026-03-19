@@ -16,6 +16,7 @@ import AISpringFestivalContent from './AISpringFestivalContent';
 import GLM5Content from './GLM5Content';
 import SeedanceContent from './SeedanceContent';
 import MiniMaxM27Content from './MiniMaxM27Content';
+import GTC2026HighlightsContent from './GTC2026HighlightsContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -601,6 +602,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <SeedanceContent />
+      });
+    } else if (slug === 'nvidia-gtc-2026-highlights') {
+      setPost({
+        ...postData,
+        content: <GTC2026HighlightsContent />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({

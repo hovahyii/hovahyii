@@ -309,4 +309,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/minimax/2.7/hero.png',
     categories: ['AI', 'Agent', 'MiniMax'],
   },
+  'nvidia-gtc-2026-highlights': {
+    slug: 'nvidia-gtc-2026-highlights',
+    title: '🟢 NVIDIA GTC 2026: What Shocked Me and Highlights',
+    date: '19 March 2026',
+    author: 'Hovah Yii',
+    description: 'Jensen Huang’s 20th anniversary CUDA keynote marks the transition to a full-stack AI platform. Highlights include the Vera Rubin architecture, AI factories, Open Claw, and the milestone of physical AI with Disney’s Olaf.',
+    ogImage: '/blog/GTC2026/nvidia-vera-rubin-system.PNG',
+    categories: ['AI', 'NVIDIA', 'GTC 2026', 'Hardware', 'Robotics'],
+  },
 };
