@@ -28,8 +28,27 @@ export default function GTC2026HighlightsContent() {
             </div>
 
             <p className="text-xl md:text-2xl leading-relaxed my-12 font-medium text-slate-800 dark:text-slate-200 border-l-4 border-green-500 pl-8 italic">
-                "Accelerated computing is the building of AI factories to generate the knowledge of humanity. Tokens are the foundational building blocks of this new world."
+                "Accelerated computing is the building of AI factories to generate the knowledge of humanity. Tokens are foundational blocks."
             </p>
+
+            {/* Key Highlights Quick Access */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16">
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+                    <div className="text-sm font-bold text-green-600 mb-2">⏱️ 0:41</div>
+                    <h4 className="font-bold mb-2">DLSS 5 & Neuro Rendering</h4>
+                    <p className="text-sm text-slate-500">Fusion of 3D graphics and generative AI for controllable virtual worlds.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+                    <div className="text-sm font-bold text-green-600 mb-2">⏱️ 3:52</div>
+                    <h4 className="font-bold mb-2">AI Agentic Computing</h4>
+                    <p className="text-sm text-slate-500">Shift to AI agents that reason, plan, and use tools to solve complex problems.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm">
+                    <div className="text-sm font-bold text-green-600 mb-2">⏱️ 5:07</div>
+                    <h4 className="font-bold mb-2">Vera Rubin Hardware</h4>
+                    <p className="text-sm text-slate-500">Unveiling of the 100% liquid-cooled system with 6th-gen NVLink.</p>
+                </div>
+            </div>
 
             {/* CUDA Section */}
             <div className="my-24 group">
@@ -44,61 +63,18 @@ export default function GTC2026HighlightsContent() {
                     <div className="mt-8 text-center max-w-2xl">
                         <h3 className="text-2xl font-bold mb-3">The CUDA Ecosystem: 20-Year Flywheel</h3>
                         <p className="text-slate-600 dark:text-slate-400">
-                            Celebrating 20 years of CUDA, Jensen Huang highlighted the massive installed base of hundreds of millions of GPUs that act as the fuel for AI breakthroughs (6:02-7:49).
+                            The massive installed base of hundreds of millions of GPUs acts as the flywheel accelerating AI breakthroughs (6:02-7:49).
                         </p>
                     </div>
                 </div>
             </div>
 
-            {/* AI Factories Detailed Section */}
-            <div className="my-32 py-20 px-8 md:px-16 rounded-[3.5rem] bg-slate-900 text-white shadow-2xl relative overflow-hidden">
-                <div className="relative z-10">
-                    <h3 className="text-4xl font-black mb-12 text-center text-green-400">Understanding "AI Factories"</h3>
-                    
-                    <div className="grid md:grid-cols-2 gap-16 items-start">
-                        <div className="space-y-10">
-                            <div className="relative pl-12">
-                                <span className="absolute left-0 top-0 text-3xl">🧩</span>
-                                <h4 className="text-2xl font-bold mb-4">Token Generation</h4>
-                                <p className="text-slate-400 leading-relaxed font-medium">The purpose of an AI factory is to serve as a generator of tokens (0:16), the fundamental building blocks of AI (0:19).</p>
-                            </div>
-                            <div className="relative pl-12">
-                                <span className="absolute left-0 top-0 text-3xl">🏺</span>
-                                <h4 className="text-2xl font-bold mb-4">Data into Knowledge</h4>
-                                <p className="text-slate-400 leading-relaxed font-medium">Processing massive amounts of information to create actionable intelligence—turning raw data into value (0:28).</p>
-                            </div>
-                            <div className="relative pl-12">
-                                <span className="absolute left-0 top-0 text-3xl">🔋</span>
-                                <h4 className="text-2xl font-bold mb-4">Powering Systems</h4>
-                                <p className="text-slate-400 leading-relaxed font-medium">Generating tokens necessary to fuel agentic AI and physical AI (robotics) at scale (0:32, 0:53).</p>
-                            </div>
-                            <div className="relative pl-12 text-green-400 font-bold bg-white/5 p-6 rounded-2xl border border-white/10">
-                                💡 Maximizing Production: Operating as a high-throughput factory to convert electrical power into revenue as efficiently as possible (1:02:10, 1:43:10).
-                            </div>
-                        </div>
-                        <div className="relative group">
-                            <Image
-                                src="/blog/GTC2026/nvidia-dsx-ai-factory-platform.PNG"
-                                alt="NVIDIA DSX AI Factory Platform Blueprint"
-                                width={600}
-                                height={337}
-                                className="rounded-2xl shadow-2xl relative z-10 border border-white/20 group-hover:scale-[1.03] transition-transform duration-500"
-                            />
-                            <div className="absolute inset-0 bg-green-500/20 blur-[100px] rounded-full scale-110 opacity-40"></div>
-                            <p className="mt-6 text-sm text-slate-400 italic text-center">
-                                The DSX AI Factory Platform operates as an Omniverse digital twin blueprint for simulating factory performance (1:42:03).
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Vera Rubin Architecture In-Depth */}
+            {/* Vera Rubin Architecture */}
             <div className="my-32 flex flex-col lg:flex-row gap-20 items-center">
                 <div className="lg:w-1/2 space-y-8">
                     <h3 className="text-4xl font-extrabold text-slate-900 dark:text-white border-l-8 border-green-500 pl-8">Vera Rubin: A Full-Stack Vertical Leap</h3>
-                    <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                        Differing from Hopper and Blackwell, <strong>Vera Rubin</strong> is architected specifically as a horizontally and vertically integrated system for the era of agentic AI (1:10:04).
+                    <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300 font-medium">
+                        The Vera Rubin system (5:07) is architected for the era of agentic AI, maximizing token throughput for models that need to reason and plan (1:24:54).
                     </p>
                     
                     <div className="space-y-4">
@@ -107,23 +83,15 @@ export default function GTC2026HighlightsContent() {
                             <div className="flex-1">
                                 <h5 className="font-extrabold text-sm uppercase tracking-wider text-slate-500 mb-1">Cooling</h5>
                                 <p className="font-bold">100% Liquid Cooled (45°C Hot-Water)</p>
-                                <p className="text-sm text-slate-500 font-medium">Reduces data center cooling costs significantly (1:14:15).</p>
+                                <p className="text-sm text-slate-500 font-medium">Vertical integration reduces installation from days to hours (1:14:15).</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-6 p-6 rounded-3xl bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800">
                             <div className="w-12 h-12 flex items-center justify-center bg-indigo-100 dark:bg-indigo-900/50 rounded-2xl text-2xl">⚡</div>
                             <div className="flex-1">
-                                <h5 className="font-extrabold text-sm uppercase tracking-wider text-slate-500 mb-1">Performance</h5>
-                                <p className="font-bold">350x Token Generation Speed Leap</p>
-                                <p className="text-sm text-slate-500 font-medium">Massive gains over traditional Moore's Law progression (1:35:31).</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-6 p-6 rounded-3xl bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800">
-                            <div className="w-12 h-12 flex items-center justify-center bg-purple-100 dark:bg-purple-900/50 rounded-2xl text-2xl">🏭</div>
-                            <div className="flex-1">
-                                <h5 className="font-extrabold text-sm uppercase tracking-wider text-slate-500 mb-1">Modular Scaling</h5>
-                                <p className="font-bold">Kyber Rack (144 GPUs)</p>
-                                <p className="text-sm text-slate-500 font-medium">Connecting 144 GPUs in a single NVLink domain with LPDDR5 (1:17:58).</p>
+                                <h5 className="font-extrabold text-sm uppercase tracking-wider text-slate-500 mb-1">Scale</h5>
+                                <p className="font-bold">Kyber Rack & 6th-Gen NVLink</p>
+                                <p className="text-sm text-slate-500 font-medium">350x token generation speed increase over two years (1:35:31).</p>
                             </div>
                         </div>
                     </div>
@@ -136,53 +104,96 @@ export default function GTC2026HighlightsContent() {
                         height={400}
                         className="rounded-3xl shadow-2xl border-4 border-white dark:border-slate-800"
                     />
-                    <Image
-                        src="/blog/GTC2026/vera-rubin.PNG"
-                        alt="Vera Rubin Architecture Component"
-                        width={600}
-                        height={400}
-                        className="rounded-3xl shadow-xl"
-                    />
                 </div>
             </div>
 
-            {/* Storage Section */}
-            <div className="my-24 p-10 md:p-16 rounded-[3rem] bg-gradient-to-br from-indigo-50 to-white dark:from-slate-900 dark:to-slate-900 border border-indigo-100 dark:border-slate-800 shadow-xl flex flex-col md:flex-row gap-12 items-center">
-                <div className="md:w-1/2">
-                    <h3 className="text-3xl font-black mb-6 text-indigo-900 dark:text-indigo-400 tracking-tight">BlueField-4 STX: AI-Native Storage</h3>
-                    <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-                        The BlueField-4 STX is a new platform introduced as part of the Vera Rubin ecosystem (1:10:41). It is designed to bridge compute and storage to handle the massive data demands of agentic AI.
-                    </p>
-                    <ul className="mt-8 space-y-4">
-                        <li className="flex gap-4">
-                            <span className="shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-600 text-white rounded-full text-[10px] font-bold">1</span>
-                            <span className="font-bold">Integrated Networking:</span> High-speed Spectrum-X integration (1:16:45).
-                        </li>
-                        <li className="flex gap-4">
-                            <span className="shrink-0 w-6 h-6 flex items-center justify-center bg-indigo-600 text-white rounded-full text-[10px] font-bold">2</span>
-                            <span className="font-bold">Efficiency & Security:</span> Utilizing DPUs to manage storage traffic, freeing up CPU resources (1:10:43).
-                        </li>
-                    </ul>
+            {/* AI Factories Detailed Section */}
+            <div className="my-32 py-20 px-8 md:px-16 rounded-[3.5rem] bg-slate-900 text-white shadow-2xl relative overflow-hidden">
+                <div className="relative z-10">
+                    <h3 className="text-4xl font-black mb-12 text-center text-green-400">Understanding "AI Factories"</h3>
+                    
+                    <div className="grid md:grid-cols-2 gap-16 items-start">
+                        <div className="space-y-10">
+                            <div className="relative pl-12">
+                                <span className="absolute left-0 top-0 text-3xl">🧩</span>
+                                <h4 className="text-2xl font-bold mb-4">Token Generation (0:16)</h4>
+                                <p className="text-slate-400 leading-relaxed font-medium">Operating as a high-throughput factory to convert electrical power into token throughput (revenue) as efficiently as possible (1:02:10, 1:43:10).</p>
+                            </div>
+                            <div className="relative pl-12">
+                                <span className="absolute left-0 top-0 text-3xl">🏺</span>
+                                <h4 className="text-2xl font-bold mb-4">Data into Knowledge (0:28)</h4>
+                                <p className="text-slate-400 leading-relaxed font-medium">Turning data into knowledge through massive processing to create actionable intelligence.</p>
+                            </div>
+                            <div className="relative pl-12">
+                                <span className="absolute left-0 top-0 text-3xl">🔋</span>
+                                <h4 className="text-2xl font-bold mb-4">Powering Systems (0:32)</h4>
+                                <p className="text-slate-400 leading-relaxed font-medium">Generating tokens necessary to fuel agentic AI and physical physical AI (robotics).</p>
+                            </div>
+                        </div>
+                        <div className="relative group">
+                            <Image
+                                src="/blog/GTC2026/nvidia-dsx-ai-factory-platform.PNG"
+                                alt="NVIDIA DSX AI Factory Platform Blueprint"
+                                width={600}
+                                height={337}
+                                className="rounded-2xl shadow-2xl relative z-10 border border-white/20 group-hover:scale-[1.03] transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-green-500/20 blur-[100px] rounded-full scale-110 opacity-40"></div>
+                            <p className="mt-6 text-sm text-slate-400 italic text-center">
+                                DSX SIM, Max-Q, and Flex optimize performance across the physical, electrical, and thermal grid (1:42:03).
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div className="md:w-1/2">
-                    <Image
-                        src="/blog/GTC2026/nvidia-bluefield-4 stx.PNG"
-                        alt="BlueField-4 STX Rack"
-                        width={600}
-                        height={337}
-                        className="rounded-[2.5rem] shadow-2xl border-4 border-white dark:border-slate-700"
-                    />
+            </div>
+
+            {/* Autonomous Driving Section - THE $1 TRILLION OPPORTUNITY */}
+            <div className="my-32 p-10 md:p-16 rounded-[4rem] bg-gradient-to-br from-green-600 to-indigo-900 text-white shadow-2xl relative overflow-hidden">
+                <div className="relative z-10">
+                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                        <div className="lg:w-3/5 space-y-8">
+                            <div className="inline-block px-4 py-1 bg-white/20 backdrop-blur-md text-white text-xs font-bold rounded-full uppercase tracking-[0.2em] mb-4">Market Potential (52:59 - 53:48)</div>
+                            <h3 className="text-4xl md:text-5xl font-black leading-tight text-white">The <br /><span className="text-green-300 animate-pulse font-black">$1 Trillion</span> <br />Opportunity</h3>
+                            
+                            <p className="text-xl text-slate-100 leading-relaxed font-medium">
+                                Markets previously estimated at $500 billion have now ballooned into a <strong>$1 trillion opportunity</strong> through 2027. The "Chat GPT moment" for self-driving cars has finally arrived (206:37).
+                            </p>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/20 hover:bg-white/20 transition-all">
+                                    <h5 className="font-bold text-green-300 mb-2">Robo-Taxi Ready</h5>
+                                    <p className="text-sm text-slate-200">Partnering with <strong>BYD, Hyundai, Nissan, and Ji</strong> to bring autonomous platforms to market (206:48).</p>
+                                </div>
+                                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-3xl border border-white/20 hover:bg-white/20 transition-all">
+                                    <h5 className="font-bold text-green-300 mb-2">Uber Integration</h5>
+                                    <p className="text-sm text-slate-200">A major partnership with <strong>Uber</strong> to deploy robo-taxis across multiple cities (207:20).</p>
+                                </div>
+                            </div>
+
+                            <div className="p-8 rounded-3xl bg-black/30 border border-white/10 italic">
+                                "Cars can now <strong>reason</strong> about their actions, narrating lane changes and decision-making around obstacles in real-time." (208:48-209:24).
+                            </div>
+                        </div>
+                        <div className="lg:w-2/5 shrink-0">
+                            <div className="bg-slate-200/10 backdrop-blur-xl h-[400px] w-full rounded-[3rem] flex items-center justify-center relative z-10 border border-white/20 group overflow-hidden">
+                                 <div className="absolute inset-0 bg-green-500/20 blur-[100px] opacity-20"></div>
+                                 <span className="text-white font-black text-2xl uppercase tracking-[0.4em] text-center px-10 leading-loose">NVIDIA <br />ALPAYO <br />SYSTEM</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                {/* Decorative background element */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-green-400/20 rounded-full blur-[120px] -mr-32 -mt-32"></div>
             </div>
 
             {/* Open Claw Framework */}
             <div className="my-32 py-20 bg-emerald-50 dark:bg-white/5 rounded-[4rem] px-8 md:px-20 border border-emerald-100 dark:border-white/10">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
-                        <div className="inline-block px-4 py-1 bg-emerald-600 text-white text-xs font-bold rounded-full mb-4">OPEN SOURCE ECOSYSTEM</div>
-                        <h3 className="text-4xl font-black">Open Claw: The OS for Agents</h3>
+                        <div className="inline-block px-4 py-1 bg-emerald-600 text-white text-xs font-bold rounded-full mb-4">8:12 • OPEN SOURCE ECOSYSTEM</div>
+                        <h3 className="text-4xl font-black">OpenClaw: The OS for Agents</h3>
                         <p className="text-xl text-slate-600 dark:text-slate-400 mt-4 leading-relaxed font-medium">
-                            An open-source framework aiming to become the <strong>"operating system of agent computers"</strong> (1:51:38-1:52:03).
+                            An open-source framework aiming to make creating personal AI agents as accessible as personal computing once was (1:51:38-1:52:03).
                         </p>
                     </div>
                     
@@ -190,42 +201,24 @@ export default function GTC2026HighlightsContent() {
                         <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center">
                             <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/50 rounded-2xl flex items-center justify-center text-3xl mb-6">💡</div>
                             <h5 className="font-bold text-lg mb-3">Reason & Plan</h5>
-                            <p className="text-sm text-slate-500 font-medium">Decompose complex prompts into step-by-step tasks (1:51:04).</p>
+                            <p className="text-sm text-slate-500 font-medium tracking-tight">Decompose complex prompts into step-by-step tasks (1:51:04).</p>
                         </div>
                         <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center">
                             <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/50 rounded-2xl flex items-center justify-center text-3xl mb-6">📂</div>
                             <h5 className="font-bold text-lg mb-3">Manage Assets</h5>
-                            <p className="text-sm text-slate-500 font-medium">Access tools, file systems, and LLM models seamlessly (1:50:50).</p>
+                            <p className="text-sm text-slate-500 font-medium tracking-tight">Access tools, file systems, and LLM models seamlessly (1:50:50).</p>
                         </div>
                         <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center md:col-span-2 lg:col-span-1">
                             <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/50 rounded-2xl flex items-center justify-center text-3xl mb-6">⚙️</div>
                             <h5 className="font-bold text-lg mb-3">Execute Actions</h5>
-                            <p className="text-sm text-slate-500 font-medium">Call sub-agents and handle I/O across modalities (1:51:13).</p>
-                        </div>
-                    </div>
-
-                    <div className="mt-16 bg-white dark:bg-slate-900 p-10 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-800 flex flex-col md:flex-row gap-8 items-center">
-                        <div className="flex-1">
-                            <h4 className="text-2xl font-bold mb-4 text-emerald-600">Enterprise Core: Nemo Claw</h4>
-                            <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-                                Nemo Claw solves critical security issues inherent in open-source agent frameworks. It adds <strong>Open Shell</strong> to manage risks, a policy guardrail, and a privacy router to ensure sensitive corporate data never leaves the network (1:55:18, 1:56:32).
-                            </p>
-                        </div>
-                        <div className="shrink-0">
-                            <Image
-                                src="/blog/GTC2026/nemoclaw.PNG"
-                                alt="Nemo Claw Interface"
-                                width={300}
-                                height={200}
-                                className="rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800"
-                            />
+                            <p className="text-sm text-slate-500 font-medium tracking-tight">Call sub-agents and handle I/O across modalities (1:51:13).</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Physical AI & Disney Olaf */}
-            <div className="my-32">
+            <div className="my-40">
                 <div className="flex flex-col lg:flex-row gap-20 items-center">
                     <div className="lg:w-1/2 relative group">
                         <div className="absolute -inset-4 bg-green-500/10 blur-[100px] rounded-full scale-125 opacity-50"></div>
@@ -236,37 +229,43 @@ export default function GTC2026HighlightsContent() {
                             height={600}
                             className="rounded-[4rem] shadow-2xl relative z-10 hover:scale-[1.02] transition-transform duration-700 ring-[20px] ring-white dark:ring-slate-800"
                         />
+                        <div className="absolute bottom-10 right-10 z-20 bg-black/60 backdrop-blur-md px-6 py-4 rounded-3xl border border-white/20 text-white">
+                            <div className="text-xs font-bold text-green-400 uppercase tracking-widest mb-1">Compute Heart</div>
+                            <div className="text-sm font-bold">NVIDIA Jetson System</div>
+                        </div>
                     </div>
                     <div className="lg:w-1/2 space-y-10">
                         <div>
-                            <div className="inline-block px-4 py-1 bg-green-600 text-white text-xs font-bold rounded-full mb-6 uppercase tracking-widest">Disney Research Milestone</div>
-                            <h3 className="text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">Character Robotics: <br />Olaf Learned to Walk!</h3>
+                            <div className="inline-block px-4 py-1 bg-green-600 text-white text-xs font-bold rounded-full mb-6 uppercase tracking-widest">Disney Research • 211:27</div>
+                            <h3 className="text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">Physical AI: <br />Bringing Olaf to Life</h3>
                             <p className="text-xl text-slate-600 dark:text-slate-400 font-medium mt-6 leading-relaxed">
-                                A surprise appearance by Disney's Olaf (2:12:40) demonstrated how robots can learn to walk and navigate the world using simulation (2:13:00 - 2:14:18).
+                                Developed in partnership with <strong>Disney Research</strong>, Olaf utilizes a <strong>Jetson computer</strong> in its "tummy" to process physical AI and reasoning (213:06 - 213:16).
                             </p>
                         </div>
                         
                         <div className="space-y-6">
-                            <div className="flex gap-6">
+                            <div className="flex gap-6 items-start">
                                 <div className="shrink-0 w-12 h-12 bg-white dark:bg-slate-800 shadow-md border border-slate-100 dark:border-slate-700 rounded-2xl flex items-center justify-center text-2xl">🌍</div>
                                 <div>
-                                    <h5 className="font-bold text-lg">Omniverse Training</h5>
-                                    <p className="text-slate-500 font-medium">Olaf explained that he learned to walk specifically inside <strong>NVIDIA Omniverse</strong> using synthetic data (2:13:20).</p>
+                                    <h5 className="font-bold text-lg">Omniverse Virtual Training</h5>
+                                    <p className="text-slate-500 font-medium">The robot learns how to walk inside the <strong>Omniverse digital twin</strong> before physical deployment (213:18).</p>
                                 </div>
                             </div>
-                            <div className="flex gap-6">
+                            <div className="flex gap-6 items-start">
                                 <div className="shrink-0 w-12 h-12 bg-white dark:bg-slate-800 shadow-md border border-slate-100 dark:border-slate-700 rounded-2xl flex items-center justify-center text-2xl">⚖️</div>
                                 <div>
-                                    <h5 className="font-bold text-lg">Newton Physics Solver</h5>
-                                    <p className="text-slate-500 font-medium">Demonstrates the power of the Newton physics solver running on <strong>NVIDIA Warp</strong> (2:13:30).</p>
+                                    <h5 className="font-bold text-lg">Newton Physics Simulation</h5>
+                                    <p className="text-slate-500 font-medium">Policies for movement are trained using <strong>Newton physics</strong> to bridge the sim-to-real gap (212:52).</p>
                                 </div>
                             </div>
-                            <div className="flex gap-6">
-                                <div className="shrink-0 w-12 h-12 bg-white dark:bg-slate-800 shadow-md border border-slate-100 dark:border-slate-700 rounded-2xl flex items-center justify-center text-2xl">🔮</div>
-                                <div>
-                                    <h5 className="font-bold text-lg">Cosmos World Models</h5>
-                                    <p className="text-slate-500 font-medium">AI models used for <strong>neural simulation</strong> to create massive amounts of diverse training data (2:10:55).</p>
+                            <div className="p-8 rounded-[2rem] bg-slate-900 text-white shadow-xl relative overflow-hidden group">
+                                <div className="relative z-10 flex gap-6 items-center">
+                                    <div className="shrink-0 text-3xl">🤝</div>
+                                    <p className="text-sm font-medium leading-relaxed opacity-90">
+                                        NVIDIA worked with <strong>Google, DeepMind, and Disney</strong> to make character robots navigate the world safely and naturally.
+                                    </p>
                                 </div>
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-green-500/10 rounded-full blur-2xl group-hover:bg-green-500/20 transition-all"></div>
                             </div>
                         </div>
                     </div>
