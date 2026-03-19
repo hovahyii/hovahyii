@@ -300,4 +300,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/seedance/yocar.jpg',
     categories: ['AI', 'Seedance', 'Video Generation', 'Doubao', 'AIGC'],
   },
+  'minimax-m2-7-self-evolution': {
+    slug: 'minimax-m2-7-self-evolution',
+    title: '🚀 MiniMax M2.7: Early Echoes of Self-Evolution',
+    date: '19 March 2026',
+    author: 'Hovah Yii',
+    description: 'MiniMax releases its first model deeply participating in its own evolution. With 56.22% on SWE-Pro and autonomous skill-building capabilities, M2.7 represents a new frontier for agentic AI.',
+    ogImage: '/blog/minimax/2.7/hero.png',
+    categories: ['AI', 'Agent', 'MiniMax'],
+  },
 };

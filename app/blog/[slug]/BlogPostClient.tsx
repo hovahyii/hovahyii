@@ -15,6 +15,7 @@ import MoltbotContent from './MoltbotContent';
 import AISpringFestivalContent from './AISpringFestivalContent';
 import GLM5Content from './GLM5Content';
 import SeedanceContent from './SeedanceContent';
+import MiniMaxM27Content from './MiniMaxM27Content';
 
 interface BlogPostClientProps {
   slug: string;
@@ -590,6 +591,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <GLM5Content />
+      });
+    } else if (slug === 'minimax-m2-7-self-evolution') {
+      setPost({
+        ...postData,
+        content: <MiniMaxM27Content />
       });
     } else if (slug === 'seedance-2-0-director-ai') {
       setPost({
