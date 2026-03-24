@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Defense - Jehovah Yii Zui Hon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; margin: 0; overflow: hidden; }
+        .slide { display: none; height: 100vh; width: 100vw; padding: 2.5rem 5rem; flex-direction: column; justify-content: flex-start; transition: all 0.4s ease; }
+        .slide.active { display: flex; animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 1.25rem; border-radius: 1rem; }
+        .progress-bar { height: 4px; background: linear-gradient(90deg, #0ea5e9, #6366f1); position: fixed; top: 0; left: 0; transition: width 0.3s ease; z-index: 100; }
+        .scroll-content { overflow-y: auto; flex-grow: 1; padding-right: 1rem; }
+        .scroll-content::-webkit-scrollbar { width: 4px; }
+        .scroll-content::-webkit-scrollbar-thumb { background: #38bdf8; border-radius: 10px; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; border-left: 6px solid #38bdf8; padding-left: 1.5rem; }
+        h3 { font-size: 1.35rem; font-weight: 600; color: #38bdf8; margin-bottom: 0.75rem; }
+        .objective-card { border-left: 4px solid #38bdf8; background: rgba(56, 189, 248, 0.05); }
+    </style>
+</head>
+<body>
+
+    <div id="progressBar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Slide 1: Title -->
+    <section class="slide active justify-center text-center items-center">
+        <div class="max-w-5xl">
+            <div class="inline-block px-4 py-1 mb-6 rounded-full glass-card border-sky-500/30 text-sky-400 text-xs font-bold tracking-widest uppercase">
+                Master's Thesis Proposal Defense
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
+                A Machine Learning Framework for <span class="gradient-text">Automated Geospatial Root Cause Analysis</span> in 5G Radio Frequency Optimization
+            </h1>
+            <div class="space-y-3 mb-12">
+                <p class="text-2xl font-semibold">Jehovah Yii Zui Hon</p>
+                <p class="text-slate-400">Supervisor: Ts Dr Hoh Wei Siang</p>
+            </div>
+            <div class="text-slate-400 text-sm uppercase tracking-widest border-t border-slate-800 pt-8 font-medium">
+                Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA)
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Background -->
+    <section class="slide">
+        <h2>Background of the Study</h2>
+        <div class="scroll-content space-y-6 text-slate-300">
+            <p>The deployment of 5G New Radio (NR) networks has brought significant complexity into Radio Frequency (RF) optimization due to massive MIMO antenna arrays and highly dynamic signal propagation.</p>
+            <p>Historically, RF optimization has relied on manual interpretation of static coverage plots and drive test logs. While these methods effectively visualize signal strength metrics like Reference Signal Received Power (RSRP), they lack the capacity for automated contextual analysis.</p>
+            <div class="glass-card">
+                <p class="italic text-sky-400">"Being purely descriptive, they fail to identify the underlying root causes of performance degradation, such as pilot pollution, overshooting, or terrain shadowing (Al-Ahmed & Shakir, 2022)."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Problem Statement -->
+    <section class="slide">
+        <h2>Problem Statement</h2>
+        <div class="scroll-content grid grid-cols-1 gap-4">
+            <div class="glass-card border-l-4 border-rose-500 bg-slate-900/40">
+                <p class="text-[13px] text-slate-300 leading-relaxed font-medium">1. Manual interpretation of drive test data remains a labor-intensive and time-consuming process... prone to human error, particularly when identifying transient interference phenomena such as pilot pollution.</p>
+            </div>
+            <div class="glass-card border-l-4 border-indigo-500 bg-slate-900/40">
+                <p class="text-[13px] text-slate-300 leading-relaxed font-medium">2. Although traditional machine learning models such as Random Forest and XGBoost have demonstrated strong capabilities in predictive analytics... they lack the ability to provide prescriptive insights. These models cannot explain the underlying causes of signal degradation in natural language or recommend specific engineering actions.</p>
+            </div>
+            <div class="glass-card border-l-4 border-amber-500 bg-slate-900/40">
+                <p class="text-[13px] text-slate-300 leading-relaxed font-medium">3. Furthermore, the adoption of advanced AI solutions is constrained by data privacy and sovereignty requirements... Operators must comply with strict regulations that limit the use of cloud-based AI platforms like ChatGPT and Gemini due to the risk of exposing critical national infrastructure data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Research Objectives -->
+    <section class="slide">
+        <h2>Research Objectives</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card objective-card">
+                <p class="text-[14px] leading-relaxed text-slate-200 font-medium"><span class="font-bold text-sky-400 text-xl mr-3">1.</span>To develop a data pipeline that fuses user-plane drive test metrics (RSRP, SINR) with highly accurate, device-recorded network infrastructure data (cellinfo.txt) and geospatial environmental layers, overcoming the inaccuracy limitations of crowdsourced databases like OpenCellID.</p>
+            </div>
+            <div class="glass-card objective-card border-indigo-500">
+                <p class="text-[14px] leading-relaxed text-slate-200 font-medium"><span class="font-bold text-indigo-400 text-xl mr-3">2.</span>To assess whether locally deployed Generative AI can provide explainable RF root cause analysis that aligns with standard human engineering judgment under data sovereignty constraints.</p>
+            </div>
+            <div class="glass-card objective-card border-purple-500">
+                <p class="text-[14px] leading-relaxed text-slate-200 font-medium"><span class="font-bold text-purple-400 text-xl mr-3">3.</span>To evaluate the integration of predictive geospatial analytics and local Generative AI within a GIS-based decision-support system for RF optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: Scope of Research -->
+    <section class="slide">
+        <h2>Scope of Research</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card bg-slate-900/40">
+                <p class="text-[13px] text-slate-300 leading-relaxed font-medium">This research is primarily focused on the optimization of Downlink (DL) coverage within LTE and 5G Non-Standalone (NSA) networks. To capture a realistic representation of the user experience, field measurement data was collected using the fully licensed G-NetTrack Pro v33.3 application installed on a standard Android 5G handset (Infinix Note 60 Pro).</p>
+            </div>
+            <div class="glass-card bg-slate-900/40">
+                <p class="text-[13px] text-slate-300 leading-relaxed font-medium">Unlike previous approaches that relied on crowdsourced databases such as OpenCellID for base station locations, this research leverages the precise site coordinates recorded directly by G-NetTrack Pro v33.3 in the cellinfo.txt file, providing sub-meter accuracy for spatial fusion calculations.</p>
+            </div>
+            <div class="glass-card bg-slate-900/40">
+                <p class="text-[13px] text-slate-300 leading-relaxed font-medium">The study acknowledges specific technical boundaries to ensure feasibility. It does not extend to Uplink (UL) performance optimization or core network latency analysis. All data processing, spatial computations, and generative AI reasoning strictly execute on local consumer-grade hardware to ensure compliance with the Malaysian Personal Data Protection Act (PDPA) 2010.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: Literature Review (Predictive Analytics) -->
+    <section class="slide">
+        <h2>Literature Review (Predictive Modeling)</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card border-l-4 border-sky-500 bg-slate-900/40">
+                <h4 class="font-bold text-white mb-2 text-lg">Maneesha & Kiran (2025)</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[11px] font-bold text-sky-400 uppercase tracking-widest">Methodology & Findings</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Evaluated ML models (Logistic Regression, SVM, Random Forest) for 5G coverage prediction. Random Forest achieved highest accuracy ($R^2=0.97$, RMSE=1.14 dB), proving robustness in noisy high-dimensional drive-test data.</p>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-rose-400 uppercase tracking-widest">Identified Limitation & Gap</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Acts as a "Black Box". Accurately predicts coverage degradation numerically but provides no semantic insight into underlying causes (e.g., downtilt, clutter) and yields no actionable engineering recommendations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card border-l-4 border-sky-500 bg-slate-900/40">
+                <h4 class="font-bold text-white mb-2 text-lg">Xu et al. (2025)</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[11px] font-bold text-sky-400 uppercase tracking-widest">Methodology & Findings</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Addressed ML opacity by combining XGBoost ($R^2>0.9$) and SHAP values using 3D building data. SHAP successfully identified "Distance to Site" and "Building Height" as dominant factors in path loss.</p>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-rose-400 uppercase tracking-widest">Identified Limitation & Gap</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Explanation remains primarily mathematical feature extraction rather than semantic generative text. Engineers must still manually interpret the numerical values to translate them into physical actions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: Literature Review (Detection & Clustering) -->
+    <section class="slide">
+        <h2>Literature Review (Detection & Clustering)</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card border-l-4 border-indigo-500 bg-slate-900/40">
+                <h4 class="font-bold text-white mb-2 text-lg">Al-Ahmed & Shakir (2022) / Trujillo et al. (2025)</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[11px] font-bold text-indigo-400 uppercase tracking-widest">Methodology & Findings</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Applied Semi-Supervised ML on Minimization of Drive Tests (MDT) KPIs for real-time overshoot, undershoot, and hole detection (98% precision). Overcomes fixed manual thresholds.</p>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-rose-400 uppercase tracking-widest">Identified Limitation & Gap</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Excellent pattern detection but lacks diagnostic depth. Cannot classify contextual root causes (e.g., pilot pollution vs. shadowing) and provides mere alerting instead of prescriptive guidance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass-card border-l-4 border-indigo-500 bg-slate-900/40">
+                <h4 class="font-bold text-white mb-2 text-lg">Nikula et al. (2025)</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-[11px] font-bold text-indigo-400 uppercase tracking-widest">Methodology & Findings</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Applied DBSCAN clustering with LSTM Autoencoders to group irregular network performance degradation across complex non-spherical environments.</p>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-rose-400 uppercase tracking-widest">Identified Limitation & Gap</span>
+                        <p class="text-[13px] text-slate-300 mt-1 leading-relaxed">Focused solely on temporal KPI patterns. Neglected spatial relationships (Latitude/Longitude coordinates) required to correlate network faults with geographical environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 8: Literature Review (LLMs) -->
+    <section class="slide">
+        <h2>Literature Review (Semantic Reasoning)</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card border-l-4 border-fuchsia-500 bg-slate-900/40">
+                <h4 class="font-bold text-white mb-2 text-lg">Sana et al. (2025)</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <span class="text-[11px] font-bold text-fuchsia-400 uppercase tracking-widest">Methodology & Findings</span>
+                        <p class="text-[13px] text-slate-300 mt-2 leading-relaxed">Explored the use of GPT-4 for RCA via structured prompts over domain-specific "TeleLogs". Concluded that Chain-of-Thought (CoT) prompting significantly reduced technical hallucination during configuration mismatch identification.</p>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-rose-400 uppercase tracking-widest">Identified Limitation & Gap</span>
+                        <ul class="text-[13px] text-slate-300 mt-2 space-y-2 leading-relaxed">
+                            <li>• <strong class="text-white">Cloud Constraints:</strong> Complete reliance on cloud models directly conflicts with local data sovereignty mandates required by national telecommunications operators.</li>
+                            <li>• <strong class="text-white">Spatial Blindness:</strong> Exclusively ingests tabular log text. The absolute lack of geographic coordinate integration prevents it from reasoning about spatial interference physics.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 9: Research Gap (Table 2.1) -->
+    <section class="slide">
+        <h2>Research Gap Summary (Table 2.1)</h2>
+        <div class="scroll-content">
+            <div class="glass-card overflow-x-auto p-0 border-slate-700/50 bg-slate-900/50 rounded-lg">
+                <table class="w-full text-left text-[13px] text-slate-300">
+                    <thead class="text-[11px] uppercase bg-slate-800 text-sky-400">
+                        <tr>
+                            <th scope="col" class="px-4 py-3 border-b border-slate-700">Study</th>
+                            <th scope="col" class="px-4 py-3 border-b border-slate-700">Predictive Accuracy</th>
+                            <th scope="col" class="px-4 py-3 border-b border-slate-700">RCA Capability</th>
+                            <th scope="col" class="px-4 py-3 border-b border-slate-700">GIS Integration</th>
+                            <th scope="col" class="px-4 py-3 border-b border-slate-700">Privacy / Local AI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-slate-800/50">
+                            <td class="px-4 py-3 font-medium text-white">Maneesha & Kiran (2025)</td>
+                            <td class="px-4 py-3 text-emerald-400 font-semibold">High (Random Forest)</td>
+                            <td class="px-4 py-3 text-rose-400 font-semibold">None</td>
+                            <td class="px-4 py-3 text-rose-400 font-semibold">Low</td>
+                            <td class="px-4 py-3 text-slate-500">N/A</td>
+                        </tr>
+                        <tr class="bg-black/20 border-b border-slate-800/50">
+                            <td class="px-4 py-3 font-medium text-white">Xu et al. (2025)</td>
+                            <td class="px-4 py-3 text-emerald-400 font-semibold">High (XGBoost)</td>
+                            <td class="px-4 py-3 text-amber-400 font-semibold">Low (Numeric SHAP)</td>
+                            <td class="px-4 py-3 text-rose-400 font-semibold">Low</td>
+                            <td class="px-4 py-3 text-slate-500">N/A</td>
+                        </tr>
+                        <tr class="border-b border-slate-800/50">
+                            <td class="px-4 py-3 font-medium text-white">Al-Ahmed & Shakir (2022)</td>
+                            <td class="px-4 py-3 text-amber-400 font-semibold">Medium (Semi-Sup.)</td>
+                            <td class="px-4 py-3 text-amber-400 font-semibold">Detection Only</td>
+                            <td class="px-4 py-3 text-amber-400 font-semibold">Medium</td>
+                            <td class="px-4 py-3 text-slate-500">N/A</td>
+                        </tr>
+                        <tr class="bg-black/20 border-b border-slate-800/50">
+                            <td class="px-4 py-3 font-medium text-white">Sana et al. (2025)</td>
+                            <td class="px-4 py-3 text-slate-500">N/A</td>
+                            <td class="px-4 py-3 text-emerald-400 font-semibold">High (LLM-based)</td>
+                            <td class="px-4 py-3 text-rose-400 font-semibold">Low (Log-based)</td>
+                            <td class="px-4 py-3 text-rose-400 font-semibold">Low (Cloud-based)</td>
+                        </tr>
+                        <tr class="bg-sky-900/30 border-2 border-sky-500 shadow-[inset_0_0_15px_rgba(56,189,248,0.15)]">
+                            <td class="px-4 py-4 font-bold text-sky-400">This Thesis Framework</td>
+                            <td class="px-4 py-4 text-emerald-300 font-bold">High (Random Forest)</td>
+                            <td class="px-4 py-4 text-emerald-300 font-bold">High (GenAI)</td>
+                            <td class="px-4 py-4 text-emerald-300 font-bold">High (QGIS)</td>
+                            <td class="px-4 py-4 text-emerald-300 font-bold">High (Local LLM)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-[13px] text-slate-300 mt-4 leading-relaxed p-3 bg-black/20 rounded border border-slate-800">
+                The table illustrates a key fragmentation in the current research landscape. While predicting algorithms function well numerically, they lack prescriptive semantic depth. Conversely, existing LLM tools lack crucial spatial physics integration and violate data sovereignty. This thesis uniquely bridges both domains.
+            </p>
+        </div>
+    </section>
+
+    <!-- Slide 9: System Architecture -->
+    <section class="slide">
+        <h2>System Architecture</h2>
+        <div class="scroll-content space-y-6">
+            <div class="glass-card p-6 border border-indigo-500/30 bg-slate-900/50">
+                <div class="flex justify-between items-center px-4">
+                    <div class="w-1/3 text-center">
+                        <div class="w-16 h-16 mx-auto bg-sky-500/20 border-2 border-sky-400 rounded-lg flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+                            <span class="text-2xl">🗺️</span>
+                        </div>
+                        <p class="font-bold text-sky-400">QGIS (Frontend)</p>
+                        <p class="text-[11px] text-slate-400 mt-1">Spatial Maps & UI</p>
+                    </div>
+                    
+                    <div class="text-slate-500 font-bold text-xl">JSON ↔</div>
+                    
+                    <div class="w-1/3 text-center">
+                        <div class="w-16 h-16 mx-auto bg-indigo-500/20 border-2 border-indigo-400 rounded-lg flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                            <span class="text-2xl">⚙️</span>
+                        </div>
+                        <p class="font-bold text-indigo-400">Python (Middleware)</p>
+                        <p class="text-[11px] text-slate-400 mt-1">ML Engine (RF & DBSCAN)</p>
+                    </div>
+
+                    <div class="text-slate-500 font-bold text-xl">API ↔</div>
+                    
+                    <div class="w-1/3 text-center">
+                        <div class="w-16 h-16 mx-auto bg-purple-500/20 border-2 border-purple-400 rounded-lg flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+                            <span class="text-2xl">🧠</span>
+                        </div>
+                        <p class="font-bold text-purple-400">Ollama (Backend)</p>
+                        <p class="text-[11px] text-slate-400 mt-1">Local qwen3.5:4b LLM</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-[13px] text-slate-300 text-center leading-relaxed">
+                A localized, modular architecture designed around data sovereignty compliance. All inference operates securely on-premises via local REST APIs. Data never traverses the external public internet, protecting critical infrastructure telemetry.
+            </p>
+        </div>
+    </section>
+
+    <!-- Slide 10: Methodology (Layer 1) -->
+    <section class="slide">
+        <h2>Methodology - Layer 1: Spatial Fusion</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card bg-slate-900/60">
+                <h3 class="text-sm font-bold text-sky-400 mb-2">Haversine Distance Formulation</h3>
+                <div class="bg-black/40 p-4 rounded-lg font-mono text-center text-sky-300 text-lg">
+                    $$a = \sin^2\left(\frac{\Delta\phi}{2}\right) + \cos\phi_1 \cdot \cos\phi_2 \cdot \sin^2\left(\frac{\Delta\lambda}{2}\right)$$
+                    $$d = r \cdot 2 \cdot \text{atan2}(\sqrt{a}, \sqrt{1-a})$$
+                </div>
+            </div>
+            <div class="glass-card">
+                <p class="text-[13px] text-slate-300">
+                    Phase 1 programmatically joins asynchronous telemetry logs with precise network topology using great-circle distance computations, accommodating the Earth's curvature. Essential for establishing the baseline line-of-sight signal expectation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 11: Methodology (Layer 2 Predictive) -->
+    <section class="slide">
+        <h2>Methodology - Layer 2: Predictive Engine</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card h-full">
+                <h3 class="text-sm font-bold text-indigo-400 mb-2">Random Forest Regressor</h3>
+                <p class="text-[13px] text-slate-300 leading-relaxed mb-4">
+                    Establishes the structural RF baseline. It models non-linear path loss constraints typical of dense urban multiplexing environments using purely spatial predictors (Lat/Lng/Distance) to forecast absolute RSRP.
+                </p>
+                <div class="bg-black/40 p-4 rounded-lg font-mono text-indigo-300 text-center text-lg shadow-inner">
+                    $$\hat{y} = \frac{1}{K} \sum_{k=1}^{K} f_k(x)$$
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 12: Methodology (Layer 2 Clustering) -->
+    <section class="slide">
+        <h2>Methodology - Layer 2: Spatial Clustering</h2>
+        <div class="scroll-content space-y-6">
+            <div class="glass-card text-center">
+                <h3 class="text-lg font-bold text-purple-400">DBSCAN Algorithm</h3>
+                <p class="text-[13px] text-slate-300 mt-2 text-left">
+                    Pivots analysis from reactive point-measurements to proactive multi-dimensional geographic areas. Identifies contiguous regions of degraded coverage without relying on predefined geometric network layouts.
+                </p>
+                <div class="grid grid-cols-2 gap-4 mt-6">
+                    <div class="py-4 border border-purple-500/30 bg-purple-900/20 rounded-lg">
+                        <span class="text-xs uppercase text-slate-400 font-bold tracking-widest">Radius ($\epsilon$) Parameter</span>
+                        <p class="text-3xl font-bold text-white mt-1">150m</p>
+                    </div>
+                    <div class="py-4 border border-purple-500/30 bg-purple-900/20 rounded-lg">
+                        <span class="text-xs uppercase text-slate-400 font-bold tracking-widest">Minimum Samples</span>
+                        <p class="text-3xl font-bold text-white mt-1">3 Pts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 13: Methodology (Layer 2 RCA Logic) -->
+    <section class="slide">
+        <h2>Methodology - Layer 2: Rule-Based Logic</h2>
+        <div class="scroll-content grid grid-cols-2 gap-4">
+            <div class="glass-card border-l-4 border-rose-500 bg-rose-900/10">
+                <h4 class="font-bold text-[13px] mb-1 uppercase tracking-wide">Coverage Hole</h4>
+                <p class="text-xs text-slate-300 leading-relaxed font-mono bg-black/30 p-2 rounded mt-2">RSRP < -95 dBm <br>& Distance > 500m</p>
+            </div>
+            <div class="glass-card border-l-4 border-amber-500 bg-amber-900/10">
+                <h4 class="font-bold text-[13px] mb-1 uppercase tracking-wide">Interference (Pollution)</h4>
+                <p class="text-xs text-slate-300 leading-relaxed font-mono bg-black/30 p-2 rounded mt-2">RSRP < -95 dBm <br>& Distance <= 500m<br>& SINR < 0 dB</p>
+            </div>
+            <div class="glass-card border-l-4 border-blue-500 bg-blue-900/10">
+                <h4 class="font-bold text-[13px] mb-1 uppercase tracking-wide">Shadowing/Weak Coverage</h4>
+                <p class="text-xs text-slate-300 leading-relaxed font-mono bg-black/30 p-2 rounded mt-2">RSRP < -95 dBm <br>& Distance <= 500m<br>& SINR >= 0 dB</p>
+            </div>
+            <div class="glass-card border-l-4 border-emerald-500 bg-emerald-900/10">
+                <h4 class="font-bold text-[13px] mb-1 uppercase tracking-wide">Normal Optimization</h4>
+                <p class="text-xs text-slate-300 leading-relaxed font-mono bg-black/30 p-2 rounded mt-2">RSRP >= -95 dBm</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 14: Methodology (Layer 3 Prescriptive) -->
+    <section class="slide">
+        <h2>Methodology - Layer 3: Prescriptive GenAI</h2>
+        <div class="scroll-content space-y-4">
+            <div class="glass-card border border-fuchsia-500/30 bg-fuchsia-900/10">
+                <h3 class="text-sm font-bold uppercase text-fuchsia-400 mb-3">Context-Aware LLM Prompting</h3>
+                <p class="text-[13px] text-slate-300 mb-4">
+                    The framework translates spatial boundaries back into semantic tokens via a Chain-of-Thought template, dynamically injected with telemetry.
+                </p>
+                <div class="bg-black/60 p-4 rounded text-xs font-mono text-fuchsia-200 leading-relaxed overflow-hidden">
+                    System: You are an RF Engineer analyzing a cluster.<br><br>
+                    Data: [Cluster ID = 5, Min SINR = -9.0dB, PCIs = 11...]<br><br>
+                    Logic flow:<br>
+                    1. Evaluate RSRP severity vs Distance curve.<br>
+                    2. Discern SINR impact vs Unique PCI counts.<br>
+                    3. Determine RCA -> Generate 3 tuning recommendations.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 15: Hardware and Software -->
+    <section class="slide">
+        <h2>Project Requirements</h2>
+        <div class="scroll-content grid grid-cols-2 gap-4">
+            <div class="glass-card bg-slate-800">
+                <div class="w-10 h-10 bg-sky-500 rounded flex justify-center items-center font-bold mb-4 shadow text-xl">💻</div>
+                <h4 class="font-bold uppercase text-slate-400 text-[11px] tracking-widest mb-3 border-b border-slate-700 pb-2">Hardware Specs</h4>
+                <ul class="text-[12px] space-y-2 text-slate-300">
+                    <li>• <strong class="text-white">Mobile UE:</strong> Infinix Note 60 Pro</li>
+                    <li>• <strong class="text-white">Workstation:</strong> Gigabyte G5 Compute</li>
+                    <li>• <strong class="text-white">GPU Acceleration:</strong> RTX 3050 (4GB VRAM) for local inferencing.</li>
+                    <li>• <strong class="text-white">RAM:</strong> 24GB DDR4 Memory.</li>
+                </ul>
+            </div>
+            <div class="glass-card bg-slate-800">
+                <div class="w-10 h-10 bg-indigo-500 rounded flex justify-center items-center font-bold mb-4 shadow text-xl">🛠️</div>
+                <h4 class="font-bold uppercase text-slate-400 text-[11px] tracking-widest mb-3 border-b border-slate-700 pb-2">Software Stack</h4>
+                <ul class="text-[12px] space-y-2 text-slate-300">
+                    <li>• <strong class="text-white">Drive Testing:</strong> G-NetTrack Pro v33.3 (Licensed)</li>
+                    <li>• <strong class="text-white">Backend Analytics:</strong> Python 3.9 (scikit-learn)</li>
+                    <li>• <strong class="text-white">Visual Intelligence:</strong> QGIS v3.28</li>
+                    <li>• <strong class="text-white">Sovereign LLM Core:</strong> Ollama Engine running <span class="text-sky-400 font-mono">qwen3.5:4b</span>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 16: Expected Outcomes -->
+    <section class="slide">
+        <h2>Expected / Preliminary Outcomes</h2>
+        <div class="scroll-content">
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Text on left -->
+                <div class="space-y-4 w-full md:w-1/2">
+                    <div class="glass-card border-l-4 border-sky-500">
+                        <h3 class="font-bold text-[14px]">Actionable Intelligence</h3>
+                        <p class="text-[12px] text-slate-300 mt-1">Radically reduce drive test synthesis time from hours to minutes. Directly automates the identification of pilot pollution versus morphological shadowing.</p>
+                    </div>
+                    <div class="glass-card border-l-4 border-purple-500">
+                        <h3 class="font-bold text-[14px]">Sovereign Compliance</h3>
+                        <p class="text-[12px] text-slate-300 mt-1">Proof-of-concept that local edge-deployed Generative AI operates at expert reasoning capacity without off-premises data risk to national telecom assets.</p>
+                    </div>
+                </div>
+                <!-- Visual placeholder on right -->
+                <div class="glass-card w-full md:w-1/2 flex flex-col justify-center items-center text-center border-dashed border-sky-500/30">
+                    <img src="/master/chart/Fig_Problem_Clusters.png" alt="Preliminary Spatial Cluster" class="w-full object-contain rounded border border-slate-700/50" style="max-height: 180px;">
+                    <p class="text-[11px] text-sky-400 mt-2 font-mono">Preliminary Mapping: Spatial Identification</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 17: Conclusion / Q&A -->
+    <section class="slide justify-center items-center text-center">
+        <h2 class="border-none p-0 text-sky-400 text-5xl mb-6">Summary</h2>
+        <div class="glass-card text-left max-w-4xl text-[15px] leading-relaxed text-slate-300 mb-10">
+            <p>We propose a structural shift in RF Optimization strategies: transitioning from purely descriptive heatmaps to a fully automated <span class="text-white font-bold">Geospatial-Semantic Decision Engine</span>. By coupling robust predictive spatial tools (QGIS, Random Forest) with domain-guided Sovereign AI logic, we aim to forge a scalable blueprint for self-organizing 5G networks.</p>
+        </div>
+        <p class="text-2xl font-bold italic text-white uppercase tracking-wider">End of Proposal</p>
+        <p class="text-slate-500 mt-4 text-[11px] font-mono tracking-widest">Jehovah Yii Zui Hon | Master of Science | UMPSA</p>
+    </section>
+
+    <!-- Controls -->
+    <div class="fixed bottom-8 left-10 right-10 flex justify-between items-center z-50">
+        <div class="glass-card py-2 px-4 text-xs font-mono text-slate-400 border border-slate-700/50 bg-slate-900/80">
+            Slide <span id="currentNum">1</span> / 18
+        </div>
+        <div class="flex gap-4">
+            <button onclick="changeSlide(-1)" class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-600 flex items-center justify-center hover:bg-slate-700 transition" aria-label="Previous Slide">
+                <!-- Hardcoded styling for arrow to ensure it never disappears -->
+                <svg style="width: 24px; height: 24px; stroke: #f8fafc; stroke-width: 2px; fill: none;" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button onclick="changeSlide(1)" class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-600 flex items-center justify-center hover:bg-slate-700 transition" aria-label="Next Slide">
+                <!-- Hardcoded styling for arrow to ensure it never disappears -->
+                <svg style="width: 24px; height: 24px; stroke: #f8fafc; stroke-width: 2px; fill: none;" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let current = 0;
+        const slides = document.querySelectorAll('.slide');
+        const progressBar = document.getElementById('progressBar');
+        const currentNum = document.getElementById('currentNum');
+
+        function update() {
+            slides.forEach((s, i) => s.classList.toggle('active', i === current));
+            progressBar.style.width = `${((current) / (slides.length - 1)) * 100}%`;
+            currentNum.innerText = current + 1;
+            
+            if (window.MathJax && typeof window.MathJax.typeset === 'function') {
+                MathJax.typeset();
+            }
+        }
+
+        function changeSlide(dir) {
+            current = Math.min(Math.max(0, current + dir), slides.length - 1);
+            update();
+        }
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+        });
+
+        // Initialize state
+        update();
+    </script>
+</body>
+</html>

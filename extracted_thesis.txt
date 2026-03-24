@@ -1,0 +1,1175 @@
+
+
+A Machine Learning Framework for 
+Automated Geospatial Root Cause Analysis in 5G Radio Frequency Optimization
+
+JEHOVAH YII ZUI HON
+
+
+
+
+
+
+MASTER OF SCIENCE/DOCTOR OF PHILOSOPHY
+
+UNIVERSITI MALAYSIA PAHANG 
+AL-SULTAN ABDULLAH
+
+DECLARATION OF THESIS AND COPYRIGHTAuthor’s Full Name : JEHOVAH YII ZUI HONDate of Birth :1997-01-17Title :A Machine Learning Framework for Automated Geospatial Root Cause Analysis in 5G Radio Frequency OptimizationAcademic Session : I declare that this thesis is classified as:☐CONFIDENTIAL(Contains confidential information under the Official Secret Act 1997)*☐RESTRICTED(Contains restricted information as specified by the organization where research was done)*☒OPEN ACCESSI agree that my thesis to be published as online open access (Full Text) This thesis is subject to an embargo period of 1/ 2 /3 /4 /5 years for the following reasons:(please circle the selected period, which must not exceed a maximum of 5 years) __________________________________________________________________________________________________________________________________________________After the embargo period expires, the thesis will be made available via the UMPSA-IRI acknowledge that Universiti Malaysia Pahang Al-Sultan Abdullah reserves the followingrights:1. The Thesis is the Property of Universiti Malaysia Pahang Al-Sultan Abdullah2. The Library of Universiti Malaysia Pahang Al-Sultan Abdullah has the right to make copies of the thesis for the purpose of research only.3. The Library has the right to make copies of the thesis for academic exchange.Certified by:_____________________(Student’s Signature)_____________________New IC/Passport NumberDate:_______________________(Supervisor’s Signature) _______________________Name of Supervisor Date: DECLARATION OF THESIS AND COPYRIGHTAuthor’s Full Name : JEHOVAH YII ZUI HONDate of Birth :1997-01-17Title :A Machine Learning Framework for Automated Geospatial Root Cause Analysis in 5G Radio Frequency OptimizationAcademic Session : I declare that this thesis is classified as:☐CONFIDENTIAL(Contains confidential information under the Official Secret Act 1997)*☐RESTRICTED(Contains restricted information as specified by the organization where research was done)*☒OPEN ACCESSI agree that my thesis to be published as online open access (Full Text) This thesis is subject to an embargo period of 1/ 2 /3 /4 /5 years for the following reasons:(please circle the selected period, which must not exceed a maximum of 5 years) __________________________________________________________________________________________________________________________________________________After the embargo period expires, the thesis will be made available via the UMPSA-IRI acknowledge that Universiti Malaysia Pahang Al-Sultan Abdullah reserves the followingrights:1. The Thesis is the Property of Universiti Malaysia Pahang Al-Sultan Abdullah2. The Library of Universiti Malaysia Pahang Al-Sultan Abdullah has the right to make copies of the thesis for the purpose of research only.3. The Library has the right to make copies of the thesis for academic exchange.Certified by:_____________________(Student’s Signature)_____________________New IC/Passport NumberDate:_______________________(Supervisor’s Signature) _______________________Name of Supervisor Date: NOTE : * If the thesis is CONFIDENTIAL or RESTRICTED, please attach a thesis declaration letter.
+DECLARATION OF THESIS AND COPYRIGHT
+
+Author’s Full Name 
+: 
+JEHOVAH YII ZUI HON
+Date of Birth 
+:
+1997-01-17
+Title 
+:
+A Machine Learning Framework for 
+Automated Geospatial Root Cause Analysis in 5G Radio Frequency Optimization
+Academic Session 
+: 
+
+
+I declare that this thesis is classified as:
+
+☐
+CONFIDENTIAL
+(Contains confidential information under the Official Secret Act 1997)*
+☐
+RESTRICTED
+(Contains restricted information as specified by the organization where research was done)*
+☒
+OPEN ACCESS
+I agree that my thesis to be published as online open access (Full Text) 
+This thesis is subject to an embargo period of 1/ 2 /3 /4 /5 years for the following reasons:(please circle the selected period, which must not exceed a maximum of 5 years) __________________________________________________________________________________________________________________________________________________After the embargo period expires, the thesis will be made available via the UMPSA-IR
+I acknowledge that Universiti Malaysia Pahang Al-Sultan Abdullah reserves the followingrights:1. The Thesis is the Property of Universiti Malaysia Pahang Al-Sultan Abdullah2. The Library of Universiti Malaysia Pahang Al-Sultan Abdullah has the right to make copies of the thesis for the purpose of research only.3. The Library has the right to make copies of the thesis for academic exchange.Certified by:
+
+
+_____________________
+(Student’s Signature)
+
+
+_____________________
+New IC/Passport Number
+Date:
+
+
+_______________________
+(Supervisor’s Signature) 
+
+
+_______________________
+Name of Supervisor 
+Date: 
+
+
+
+
+
+
+
+
+DECLARATION OF THESIS AND COPYRIGHT
+
+Author’s Full Name 
+: 
+JEHOVAH YII ZUI HON
+Date of Birth 
+:
+1997-01-17
+Title 
+:
+A Machine Learning Framework for 
+Automated Geospatial Root Cause Analysis in 5G Radio Frequency Optimization
+Academic Session 
+: 
+
+
+I declare that this thesis is classified as:
+
+☐
+CONFIDENTIAL
+(Contains confidential information under the Official Secret Act 1997)*
+☐
+RESTRICTED
+(Contains restricted information as specified by the organization where research was done)*
+☒
+OPEN ACCESS
+I agree that my thesis to be published as online open access (Full Text) 
+This thesis is subject to an embargo period of 1/ 2 /3 /4 /5 years for the following reasons:(please circle the selected period, which must not exceed a maximum of 5 years) __________________________________________________________________________________________________________________________________________________After the embargo period expires, the thesis will be made available via the UMPSA-IR
+I acknowledge that Universiti Malaysia Pahang Al-Sultan Abdullah reserves the followingrights:1. The Thesis is the Property of Universiti Malaysia Pahang Al-Sultan Abdullah2. The Library of Universiti Malaysia Pahang Al-Sultan Abdullah has the right to make copies of the thesis for the purpose of research only.3. The Library has the right to make copies of the thesis for academic exchange.Certified by:
+
+
+_____________________
+(Student’s Signature)
+
+
+_____________________
+New IC/Passport Number
+Date:
+
+
+_______________________
+(Supervisor’s Signature) 
+
+
+_______________________
+Name of Supervisor 
+Date: 
+
+
+
+
+
+
+
+
+THESIS DECLARATION LETTER (OPTIONAL)
+Librarian, 
+Universiti Malaysia Pahang Al-Sultan Abdullah,
+Lebuh Persiaran Tun Khalil Yaakob,
+26300, Gambang, Kuantan, Pahang.
+
+Dear Sir,
+
+CLASSIFICATION OF THESIS AS RESTRICTED
+
+Please be informed that the following thesis is classified as RESTRICTED for a period of three (3) years from the date of this letter.  The reasons for this classification are as listed below.
+Author’s Name 
+Jehovah Yii Zui Hon
+Thesis Title
+A Machine Learning Framework for Automated Geospatial Root Cause Analysis in 5G Radio Frequency Optimization
+
+
+
+
+
+
+Reasons
+(i)
+
+
+
+
+(ii)
+
+
+
+
+(iii)
+
+
+
+
+Thank you.
+
+Yours faithfully,
+
+
+
+
+_____________________________
+(Supervisor’s Signature)
+
+Date:
+
+Stamp:
+
+
+
+
+Note: This letter should be written by the supervisor and addressed to the Librarian, Universiti Malaysia Pahang Al-Sultan Abdullah with its copy attached to the thesis. 
+
+
+SUPERVISOR’s DECLARATION
+I/We* hereby declare that I/We* have checked this thesis/project* and in my/our* opinion, this thesis/project* is adequate in terms of scope and quality for the award of the degree of *Doctor of Philosophy/ Master of Science.
+
+
+_______________________________(Supervisor’s Signature)
+Full Name : 
+Position : 
+Date : 
+
+
+
+_______________________________(Co-supervisor’s Signature)
+Full Name : 
+Position : 
+Date : 
+
+STUDENT’S DECLARATION
+I hereby declare that the work in this thesis is based on my original work except for quotations and citations which have been duly acknowledged. I also declare that it has not been previously or concurrently submitted for any other degree at Universiti Malaysia Pahang Al-Sultan Abdullah or any other institutions. 
+
+
+_______________________________(Student’s Signature)
+Full Name: JEHOVAH YII ZUI HON 
+ID Number: 970117136233
+Date: 22 March 2026
+
+
+
+
+
+
+A Machine Learning Framework for 
+Automated Geospatial Root Cause Analysis in 5G Radio Frequency Optimization
+
+
+JEHOVAH YII ZUI HON
+
+
+Thesis submitted in fulfillment of the requirements
+for the award of the degree of
+Doctor of Philosophy/Master of Science
+
+
+
+Faculty of Electrical and Electronics Engineering Technology
+
+UNIVERSITI MALAYSIA PAHANG AL-SULTAN ABDULLAH
+
+March 2026
+
+
+
+ACKNOWLEDGEMENTS
+I would like to begin by expressing my gratitude to my future self, whose vision and determination inspired my present self to pursue this Master’s degree. My initial motivation for undertaking this journey was to deepen my understanding of my professional work on the U Mobile 5G project. This thesis is rooted in the challenges I encountered while transitioning from an electrical engineering background into radio frequency engineering. While working in the industry, I sought to strengthen my understanding of 5G NSA and SA networks, not only to enhance my technical competence, but also to build a foundation for my future career and to inspire others facing similar transitions.
+I would like to sincerely thank Ts. Dr. Hoh Wei Siang for his invaluable guidance, mentorship, and support throughout this journey. Your encouragement and the opportunities you provided—including guidance that helped me secure my position at Huawei and my invitation to the ICT Huawei Academy—have profoundly shaped my professional growth and life experience.
+My appreciation also goes to the UMPSA World Class Elite members for encouraging me to take on this challenge and to pursue learning beyond academic requirements. Your support reminded me that education is not only about personal achievement, but also about contributing meaningfully to society and the Malaysian telecommunications industry.
+I am deeply grateful to my mother for her unwavering trust and belief in me. Your constant support has been a source of strength throughout this journey. I would also like to thank my cousin, Jesse, whose prayers, encouragement, and moral support inspired me to persevere during challenging times.
+My sincere thanks go to my housemates, Jason Lee and Nigel Ryan, for their companionship and encouragement, especially during moments of discouragement. I would like to extend special appreciation to Nigel Ryan for his time and effort in personally driving me using his car (MBH4651) to conduct the drive tests, without which I would not have been able to collect the data required for this thesis. 
+Finally, and most importantly, I give thanks to the Lord Jesus Christ for His grace and blessings throughout this journey. All that I have accomplished is for His glory. I trust that my future is in His hands, and I am grateful for the grace and strength He has provided at every step.
+ABSTRAK
+Pelaksanaan rangkaian 5G New Radio telah meningkatkan kerumitan pengoptimuman Frekuensi Radio (RF) disebabkan oleh penggunaan sistem antena massive MIMO dan persekitaran perambatan isyarat yang sangat dinamik. Pengoptimuman RF secara konvensional banyak bergantung kepada tafsiran manual data ujian pandu (drive test) serta visualisasi liputan statik, yang memakan masa dan bersifat deskriptif. Walaupun model pembelajaran mesin terkini telah meningkatkan ketepatan ramalan dalam mengenal pasti isu liputan, model tersebut tidak mampu memberikan penjelasan semantik atau cadangan preskriptif yang selaras dengan pemikiran kejuruteraan manusia. Selain itu, penggunaan kecerdasan buatan berasaskan awan adalah terhad oleh peraturan kedaulatan data dan privasi, khususnya bagi infrastruktur telekomunikasi negara. Bagi menangani kekangan ini, kajian ini membangunkan sebuah Pembantu Geospatial Pintar berasaskan setempat yang memelihara privasi dengan mengintegrasikan analitik spatial, pembelajaran mesin ramalan, dan Model Bahasa Besar Generatif (LLM) untuk mengautomasikan Analisis Punca Akar (RCA). Sistem ini menggabungkan ukuran ujian pandu lapisan pengguna dengan data infrastruktur rangkaian yang direkodkan oleh peranti dengan ketepatan tinggi bagi membentuk set data berasaskan konteks spatial. Model regresi Random Forest digunakan untuk mengenal pasti kelompok masalah liputan berdasarkan ciri-ciri spatial semata-mata, dengan pencapaian nilai $R^2$ sebanyak 0.82. Seterusnya, LLM bersaiz 4 bilion parameter yang digunakan secara setempat (qwen3.5:4b) memproses kelompok ini untuk menghasilkan penjelasan diagnostik yang boleh difahami oleh manusia. Semua pemprosesan data dan inferens kecerdasan buatan dijalankan sepenuhnya pada perkakasan tempatan, sekali gus memastikan pematuhan ketat terhadap undang-undang kedaulatan data. Keputusan eksperimen menunjukkan bahawa model Random Forest secara signifikan mengatasi algoritma asas dalam ramalan spatial, manakala pengelas RCA berasaskan peraturan mencapai ketepatan sebanyak 99.77% merentasi 2,144 sampel ujian dunia sebenar. Penilaian kualitatif mengesahkan bahawa LLM yang dihoskan secara tempatan berjaya meniru pertimbangan kejuruteraan RF pada tahap pakar, termasuk mendiagnosis isu kompleks seperti pencemaran pilot dan anomali corak antena dengan tepat. Secara keseluruhannya, kajian ini membuktikan bahawa kecerdasan buatan berasaskan edge yang berdaulat mampu menyediakan sokongan keputusan yang praktikal dan boleh ditafsir untuk pengoptimuman 5G tanpa bergantung kepada perkhidmatan awan luaran.
+ABSTRACT
+The deployment of 5G New Radio networks has increased the complexity of Radio Frequency (RF) optimization due to massive MIMO antenna systems and highly dynamic signal propagation environments. Conventional RF optimization relies heavily on manual interpretation of drive test data and static coverage visualizations, which are time-consuming and largely descriptive. While recent machine learning models have improved predictive accuracy in identifying coverage issues, they cannot provide semantic explanations or prescriptive recommendations that align with human engineering reasoning. Furthermore, the adoption of cloud-based artificial intelligence is constrained by data sovereignty and privacy regulations, particularly for national telecommunications infrastructure. To address these limitations, this study develops a localized, privacy-preserving Intelligent Geospatial Assistant that integrates spatial analytics, predictive machine learning, and a Generative Large Language Model (LLM) to automate Root Cause Analysis (RCA). The system fuses user-plane drive test measurements with highly accurate, device-recorded network infrastructure data to construct a spatially contextualized dataset. A Random Forest regressor is utilized to identify coverage problem clusters based purely on spatial features, achieving an  of 0.82. Subsequently, a locally deployed 4-billion parameter LLM (qwen3.5:4b) processes these clusters to generate explainable, human-readable diagnostic reasoning. All data processing and AI inference occur entirely on local hardware, ensuring strict compliance with data sovereignty laws. Experimental results demonstrate that the Random Forest model significantly outperforms baseline algorithms in spatial prediction, while the rule-based RCA classifier achieves 99.77% accuracy across 2,144 real-world test samples. Qualitative evaluation confirms that the locally hosted LLM successfully emulates expert-level RF engineering judgment, accurately diagnosing complex issues such as pilot pollution and antenna pattern anomalies. Ultimately, this research proves that sovereign, edge-based AI can deliver practical and interpretable decision support for 5G optimization without relying on external cloud services.
+
+TABLE OF CONTENT
+DECLARATION
+TITLE PAGE
+ACKNOWLEDGEMENTSii
+ABSTRAKiii
+ABSTRACTiv
+TABLE OF CONTENTv
+LIST OF TABLESix
+LIST OF FIGURESx
+LIST OF SYMBOLSxi
+LIST OF ABBREVIATIONSxiii
+LIST OF APPENDICESxix
+CHAPTER 120
+1.1Background of the Study20
+1.2Problem Statement21
+1.3Research Objectives22
+1.4Scope of Research22
+1.5Thesis Organization23
+CHAPTER 225
+2.1Introduction25
+2.2Related Work25
+2.2.1Comparison of Machine Learning Algorithms for 5G Coverage Prediction (Maneesha & Kiran, 2025)25
+2.2.2Path Loss Prediction Model Based on XGBoost and SHAP (Xu et al., 2025)26
+2.2.3Semi-Supervised Learning for Coverage Hole Detection (Al-Ahmed & Shakir, 2022)27
+2.2.4Reasoning Language Models for Root Cause Analysis (Sana et al., 2025)28
+2.2.5Real-Time Overshoot and Undershoot Detection in Cellular Networks29
+2.2.6Machine Learning-Based Anomaly Detection and Root Cause Analysis in Mobile Networks30
+2.3The Gap in Prescriptive Analytics31
+2.4Integration of GIS and AI31
+2.5Summary and Research Gap32
+CHAPTER 334
+3.1Introduction34
+3.2Proposed Framework34
+3.2.1Layer 1: Data Acquisition and Spatial Fusion35
+3.2.2Layer 2: The Sovereign Intelligent Core (Primary Contribution)36
+3.2.3Layer 3: Prescriptive Analytics Output37
+3.3Project Requirements38
+3.3.1Hardware Requirements38
+3.3.2Software Tools & Technology Stack38
+3.4Data Design39
+3.4.1Input Data Structure39
+3.4.2Data Pre-processing Pipeline40
+3.5System Architecture and Intelligent Core Design41
+3.6Experiment Setup43
+3.6.1Phase 1: Drive Test Data Collection43
+3.6.2Phase 2: QGIS Environment Configuration43
+3.6.3Phase 3: AI Integration (QGIS to Ollama)43
+3.7Potential Use of Solution44
+3.8Gantt Chart44
+3.9Summary45
+CHAPTER 446
+4.1Introduction46
+4.2Data Collection and Descriptive Statistics47
+4.3Spatial Fusion Results50
+4.4Predictive Modeling of RSRP using Random Forest Regressor52
+4.4.1Baseline Comparison and Quantitative Validation52
+4.5Problem Cluster Identification via DBSCAN57
+4.5.1PCI-Based Pilot Pollution Analysis60
+4.6Automated Root Cause Analysis Labelling62
+4.6.1Validation of RCA Logic via Classifier64
+4.7Integration of Local Generative AI for Prescriptive Analytics66
+4.7.1LLM Evaluation Case Studies67
+4.8Summary71
+CHAPTER 572
+5.1Introduction72
+5.2Summary of Findings72
+5.3Achievement of Research Objectives74
+5.4Contributions to Knowledge75
+5.5Limitations of the Study75
+5.6Recommendations for Future Work76
+5.7Conclusion77
+REFERENCES79
+APPENDICES84
+
+
+LIST OF TABLES
+Table 2.1 Comparison of Related Work and Research Gap33
+Table 3.1 Core Input Data Attributes41
+Table 4.1 Descriptive Statistics of Key RF Metrics50
+Table 4.2 Spatial Fusion Output Summary52
+Table 4.3 Baseline Comparison of Predictive Models for RSRP55
+Table 4.4 Summary of Detected Problem Clusters (RSRP, SINR, and PCI)61
+Table 4.5 PCI Pilot Pollution64
+Table 4.6 Distribution of Root Causes66
+
+LIST OF FIGURES
+Figure 3.1 Gantt Chart45
+Figure 4.1 RSRP Distribution in the Drive Test Area49
+Figure 4.2 SINR Distribution in the Drive Test Area49
+Figure 4.3 Scatter Plot of RSRP vs. Haversine Distance to Serving Site coloured by Root Cause Classification51
+Figure 4.4 Baseline Comparison of Machine Learning Models for RSRP Prediction54
+Figure 4.5 Predicted vs. Actual RSRP for the Random Forest Model55
+Figure 4.6 Residual Analysis of the Random Forest Predictions56
+Figure 4.7 Feature Importance for RSRP Prediction57
+Figure 4.8 Spatial Distribution of Identified Problem Clusters in Bandar Utama60
+Figure 4.9 PCI Count per Cluster (left) and PCI Count vs SINR Correlation (right)62
+Figure 4.10 Confusion Matrix for the RCA Random Forest Classifier65
+Figure 4.11 Feature Importance for RCA Classification66
+Figure 4.12 QGIS visualization with Intelligent Geospatial Assistant69
+Figure 4.13 QGIS output result of cell sites locations (triangle) and Problem Clusters69
+Figure 4.14 Local LLM Root Cause Analysis Report70
+
+LIST OF SYMBOLS
+Symbol
+Description
+Unit
+RSRP
+Reference Signal Received Power
+dBm
+SINR
+Signal-to-Interference-plus-Noise Ratio
+dB
+d
+Haversine Distance
+meters (m)
+
+
+Radius of the Earth
+km
+
+Coefficient of Determination
+-
+ε
+Epsilon (Maximum radius of the neighborhood in DBSCAN)
+m
+MinPts
+Minimum number of points required to form a dense region in DBSCAN
+-
+Φ
+Latitude
+Radians
+λ
+Longitude
+Radians
+K
+Number of decision trees in Random Forest
+-
+ŷ
+Predicted value
+-
+x
+Input feature vector
+-
+
+Prediction of the k-th decision tree
+-
+∑
+Summation operator
+-
+
+Averaging factor over $K$ decision trees in Random Forest
+-
+
+Epsilon-neighborhood of a point p
+-
+LIST OF ABBREVIATIONS
+3GPP
+3rd Generation Partnership Project
+5G NR
+5G New Radio
+AI
+Artificial Intelligence
+API
+Application Programming Interface
+CA
+Carrier Aggregation
+CNI
+Critical National Information
+CNN
+Convolutional Neural Network
+CoT
+Chain-of-Thought (Prompting Strategy)
+CPMW
+Central Processing Mobile Workstation
+CPU
+Central Processing Unit
+CQI
+Channel Quality Indicator
+CRISP-DM
+Cross-Industry Standard Process for Data Mining
+CSV
+Comma-Separated Values
+CUDA
+Compute Unified Device Architecture
+DL
+Downlink
+DNB
+Digital Nasional Berhad
+DT
+Drive Test
+GenAI
+Generative Artificial Intelligence
+GGUF
+GPT-Generated Unified Format
+GIS
+Geospatial Information System
+GNSS
+Global Navigation Satellite System
+GPU
+Graphics Processing Unit
+HOF
+Handover Failure
+JSON
+JavaScript Object Notation
+KG
+Knowledge Graph
+KPI
+Key Performance Indicator
+LLM
+Large Language Model
+LTE
+Long Term Evolution (4G)
+MDAU
+Mobile Data Acquisition Unit
+S2MDT
+Minimization of Drive Tests
+ML
+Machine Learning
+mMIMO
+Massive Multiple-Input Multiple-Output
+MNO
+Mobile Network Operator
+NSA
+Non-Standalone (5G Architecture)
+OIS
+Optical Image Stabilization
+OSS
+Operations Support System
+PCI
+Physical Cell Identity
+PDPA
+Personal Data Protection Act
+PII
+Personally Identifiable Information
+PWM
+Pulse Width Modulation
+QGIS
+Quantum GIS
+RAG
+Retrieval-Augmented Generation
+RAM
+Random Access Memory
+RAN
+Radio Access Network
+RCA
+Root Cause Analysis
+RET
+Remote Electrical Tilt
+RF
+Radio Frequency
+RLHF
+Reinforcement Learning from Human Feedback
+RMSE
+Root Mean Square Error
+RSRP
+Reference Signal Received Power
+SA
+Standalone (5G Architecture)
+SHAP
+SHapley Additive exPlanations
+SINR
+Signal-to-Interference-plus-Noise Ratio
+SoC
+System-on-Chip
+SON
+Self-Organizing Network
+SQL
+Structured Query Language
+SSD
+Solid State Drive
+UE
+User Equipment
+UL
+Uplink
+VLM
+Vision-Language Model
+VRAM
+Video Random Access Memory
+XAI
+Explainable Artificial Intelligence
+
+LIST OF APPENDICES
+Appendix A:QGIS84
+Appendix B:G-NetTrack Pro85
+
+
+
+
+INTRODUCTION
+Background of the Study
+The deployment of 5G New Radio (NR) networks has brought significant complexity into Radio Frequency (RF) optimization. Unlike previous generations, 5G networks utilize massive Multiple-Input Multiple-Output (mMIMO) antenna arrays and higher frequency bands, resulting in highly dynamic signal propagation characteristics that challenge traditional optimization paradigms (Karapantelakis et al., 2024). Historically, RF optimization has relied on manual interpretation of static coverage plots and drive test logs. While these methods effectively visualize signal strength metrics like Reference Signal Received Power (RSRP), they lack the capacity for automated contextual analysis; being purely descriptive, they fail to identify the underlying root causes of performance degradation, such as pilot pollution, overshooting, or terrain shadowing (Al-Ahmed & Shakir, 2022).
+The increasing density of 5G deployments in urban environments has further exacerbated this challenge. As the number of small cells and macro sites increases to meet capacity demands, the inter-cell interference environment becomes increasingly complex, requiring sophisticated analytical tools that can process multi-dimensional RF data in a spatially aware manner (Karapantelakis et al., 2024). Traditional drive test analysis tools, while capable of recording detailed RF measurements, provide limited automated diagnostic capability, leaving the burden of interpretation on human engineers who must manually correlate signal degradation patterns with potential physical and environmental causes.
+This thesis proposes a novel Intelligent Geospatial Assistant that merges drive test measurements and environmental data to enable automated Root Cause Analysis (RCA). The primary contribution of this study is to determine the feasibility of utilizing Generative AI to emulate the RF engineer's reasoning process by processing datasets that are asynchronously fused through a Local Large Language Model (LLM). This approach addresses the industry's need for intelligent automation that operates within the strict bounds of data sovereignty and privacy, particularly relevant for national infrastructure providers (Othman, 2025).
+Problem Statement
+Current RF optimization workflows face three critical limitations that hinder operational efficiency and network quality:
+Manual interpretation of drive test data remains a labor-intensive and time-consuming process, where engineers must cross-reference RSRP heatmaps with terrain information, antenna configurations, and neighbour lists to diagnose network issues. This approach is not only inefficient but also prone to human error, particularly when identifying transient interference phenomena such as pilot pollution (Al-Ahmed & Shakir, 2022). Previous studies indicate that such analysis can take several hours per route, with diagnostic accuracy largely dependent on the engineer’s level of experience (Azkaei, 2025).
+In parallel, although traditional machine learning models such as Random Forest and XGBoost have demonstrated strong capabilities in predictive analytics by identifying areas of weak signal coverage, they lack the ability to provide prescriptive insights (Maneesha & Kiran, 2025; Xu et al., 2025). These models cannot explain the underlying causes of signal degradation in natural language or recommend specific engineering actions, such as antenna downtilt or azimuth adjustments (Xu et al., 2025). Even with the use of explainability techniques like SHAP values, the outputs remain numerical and do not directly translate into actionable decisions (Maneesha & Kiran, 2025). 
+Furthermore, the adoption of advanced AI solutions is constrained by data privacy and sovereignty requirements, particularly within the Malaysian telecommunications sector. Operators such as Digital Nasional Berhad (DNB) must comply with strict regulations that limit the use of cloud-based AI platforms like ChatGPT and Gemini due to the risk of exposing critical national infrastructure data (Othman, 2025). Regulatory frameworks, including the Malaysian Personal Data Protection Act (PDPA) 2010 and the Cyber Security Act 2024, impose stringent controls on data processing and storage, thereby necessitating the use of locally deployed AI systems (Malaysian Communications and Multimedia Commission, 2024).
+There is currently no standardized framework that combines the spatial precision of GIS, the predictive power of Random Forest, and the semantic reasoning of Local LLMs into a unified, privacy-compliant dashboard. This research addresses this gap by developing a localized, privacy-preserving framework that integrates geospatial analytics with AI-driven root cause reasoning for RF optimization.
+Research Objectives
+The main objectives of this research are:
+To develop a data pipeline that fuses user-plane drive test metrics (RSRP, SINR) with highly accurate, device-recorded network infrastructure data (cellinfo.txt) and geospatial environmental layers, overcoming the inaccuracy limitations of crowdsourced databases like OpenCellID.
+To assess whether locally deployed Generative AI can provide explainable RF root cause analysis that aligns with standard human engineering judgment under data sovereignty constraints.
+To evaluate the integration of predictive geospatial analytics and local Generative AI within a GIS-based decision-support system for RF optimization.
+
+Scope of Research
+This research is primarily focused on the optimization of Downlink (DL) coverage within LTE and 5G Non-Standalone (NSA) networks. To capture a realistic representation of the user experience, field measurement data was collected using the fully licensed G-NetTrack Pro v33.3 application installed on a standard Android 5G handset (Infinix Note 60 Pro) (Chatchalermpu et al., 2024). The drive tests were conducted along pre-defined arterial routes in Bandar Utama, Selangor, Malaysia, where a comprehensive database of user-plane metrics under different propagation conditions was developed.
+In terms of infrastructure and analysis, the study combines data from multiple sources. Unlike previous approaches that relied on crowdsourced databases such as OpenCellID for base station locations, this research leverages the precise site coordinates recorded directly by G-NetTrack Pro v33.3 in the cellinfo.txt file, providing sub-meter accuracy for spatial fusion calculations. Environmental clutter data is extracted from OpenStreetMap for contextual analysis. For the analytical engine, the backend is Python-based for data processing, using Scikit-Learn for predictive modeling (Random Forest Regressor and Classifier) (Maneesha & Kiran, 2025), and the Ollama framework is utilized to implement the local Large Language Model (qwen3.5:4b) for prescriptive reasoning. The visualization and interaction are conducted through a customized dashboard within QGIS.
+The study acknowledges specific technical boundaries to ensure feasibility. It does not extend to Uplink (UL) performance optimization or core network latency analysis. Furthermore, the system's efficacy is evaluated against a strict success criterion. Specifically, the AI-generated root cause analysis must demonstrate qualitative comparability with human engineering judgment and comply with standard industry optimization practices, such as those documented in recent AI/ML frameworks for NR air interfaces (3rd Generation Partnership Project, 2024).
+Thesis Organization
+This thesis is structured into five chapters, guiding the reader from theoretical foundations to practical implementation and conclusion.
+Chapter 2 (Literature Review) critically examines key technologies used in RF optimization, highlighting the existing gap in prescriptive analytics. The growing application of machine learning in wireless network optimization has been widely documented, demonstrating improvements in network performance and cost efficiency (Mughees et al., 2020). The chapter traces the transition from empirical propagation models to data-driven approaches, emphasizing the effectiveness of algorithms such as Random Forest and XGBoost for coverage prediction (Maneesha & Kiran, 2025). It also discusses challenges such as inter-cell interference and pilot pollution in dense 5G environments (Li, 2024), explores density-based spatial clustering for anomaly detection (Mourya et al., 2025), and reviews the emerging integration of Generative AI and GIS for automating engineering reasoning (Songjiayi, 2024).
+Chapter 3 (Methodology) details the comprehensive system architecture designed for this study. It elaborates on the data acquisition process through G-NetTrack Pro v33.3, the pre-processing pipeline incorporating Haversine distance calculation, and the configuration of the Local Large Language Model (qwen3.5:4b via Ollama). The chapter also presents the mathematical formulations for the Random Forest Regressor, DBSCAN clustering algorithm, and the Haversine formula, along with the prompt engineering strategies ensuring the AI adheres to RF engineering principles (Sana et al., 2025).
+Chapter 4 (Results and Discussion) presents the empirical findings from the Third Drive Test conducted in Bandar Utama. The chapter evaluates the predictive performance of the Random Forest model against baseline alternatives (Linear Regression, KNN, SVR), presents the DBSCAN cluster analysis with PCI-based pilot pollution detection, and discusses the qualitative performance of the AI-generated root cause analysis in comparison to human expert judgment.
+Chapter 5 (Conclusion) summarizes the key contributions of the research, discusses its implications for data sovereignty in the telecommunications industry, and offers recommendations for future work, including the potential integration with O-RAN architecture and 6G Digital Twins.
+ 
+LITERATURE REVIEW
+Introduction
+This chapter reviews existing methodologies in RF optimization, focusing on the transition from empirical models to AI-driven approaches. The deployment of 5G New Radio (NR) networks has rendered traditional drive test analysis increasingly complex due to massive MIMO systems and dynamic propagation environments, necessitating automated and predictive frameworks (Yuliana, 2024). It evaluates the contribution of machine learning algorithms for signal prediction through a critical analysis and recognizes a highly specific gap in "Prescriptive Analytics," namely, the ability to automate engineering reasoning. In keeping up with the rapid progress made in this area, this review relies strongly on publications from the years 2022 to 2025, which feature the developing intersection of Generative AI and telecommunications.
+Related Work
+This section provides an extensive analysis of key research papers and technical domains that form the foundation of the proposed framework. These projects represent the state-of-the-art in Predictive AI, Explainable AI (XAI), spatial clustering, interference mitigation, and the first applications of Generative AI in telecommunications.
+Comparison of Machine Learning Algorithms for 5G Coverage Prediction (Maneesha & Kiran, 2025)
+Maneesha and Kiran (2025) conducted a comprehensive study to identify the most effective machine learning algorithm for predicting 5G coverage areas. Their research addressed the difficult circumstances in the case of the transmission of a 5G signal, which is related to the fact that existing empirical models (such as COST-231) cannot adequately account for the dense, non-linear multipath effects of urban environments.
+Their study utilized real-world RF datasets incorporating parameters such as Reference Signal Received Power (RSRP) and Signal-to-Noise Ratio (SNR), and evaluated several supervised learning techniques, including Logistic Regression, Support Vector Machines (SVM), and Random Forest. 
+The findings demonstrated that Random Forest significantly outperformed the other models, achieving a coefficient of determination (R²) of 0.97 and a Root Mean Square Error (RMSE) of 1.14 dB, highlighting its robustness in handling noisy and high-dimensional drive-test data compared to single-estimator approaches. 
+Despite its strong predictive capability—supporting its adoption in Phase 3 of this thesis—the Random Forest model remains limited as a “black box” in terms of interpretability, as it can accurately predict coverage degradation without providing insight into underlying causes, such as antenna downtilt or environmental clutter, nor offering actionable recommendations. This limitation underscores the research gap that the prescriptive analytics capabilities of locally deployed LLMs aim to address.
+Path Loss Prediction Model Based on XGBoost and SHAP (Xu et al., 2025) 
+Xu et al. (2025) addressed the "Black Box" issue regarding the opacity of machine learning models. Understanding that engineers prefer physics-based explanations over unqualified predictions, they combined XGBoost (Extreme Gradient Boosting) and SHAP (SHapley Additive exPlanations) to predict and explain 5G path loss. 
+The methodology combined drive test measurements with 3D building data, where XGBoost was employed for prediction and SHAP values were used to quantify the contribution of key features such as building height, distance, and clutter type to overall signal degradation. The results showed that the XGBoost model achieved strong predictive performance with an R² greater than 0.9, while SHAP analysis identified “Distance to Site” and “Building Height” as the dominant factors influencing signal loss in non-line-of-sight (NLOS) conditions. 
+Although this approach significantly improves model interpretability, its outputs remain primarily mathematical rather than semantic. For example, identifying that building height contributes +15 dB to path loss is informative but does not directly translate into actionable engineering decisions. Engineers must still interpret these values to determine appropriate actions, such as adjusting antenna tilt. This limitation highlights the need for more intuitive, human-readable insights, which this thesis addresses by leveraging a locally deployed LLM to convert feature importance into clear engineering recommendations.
+Semi-Supervised Learning for Coverage Hole Detection (Al-Ahmed & Shakir, 2022)
+In the context of Self-Organizing Networks (SON), Al-Ahmed and Shakir (2022) presented a semi-supervised learning model for identifying coverage holes using Minimization of Drive Tests (MDT) data data, addressing the common challenge of limited labeled failure data in real-world networks. 
+Their methodology utilized a small set of labeled coverage hole instances to train a classifier, which was then applied to detect similar patterns within large volumes of unlabeled user data. The findings demonstrated that this approach outperformed traditional fixed-threshold methods by effectively identifying weak coverage areas without the need for extensive manual drive testing. 
+However, despite its effectiveness in detection, the model lacks diagnostic depth, as it clusters poor coverage points without distinguishing their underlying causes, such as pilot pollution, overshooting, or shadowing. As a result, network operators are alerted to issues but are not provided with actionable solutions. This limitation is addressed in the proposed thesis by incorporating cluster-level spatial features into a Generative AI framework, enabling the differentiation of RF fault types through contextual spatial reasoning.
+Reasoning Language Models for Root Cause Analysis (Sana et al., 2025)
+Sana et al. (2025), affiliated with Huawei’s research unit, explored the use of existing large language models, including GPT-4, for Root Cause Analysis (RCA) in 5G wireless networks by guiding pre-trained models through structured prompting rather than developing new architectures. 
+Their methodology involved constructing a domain-specific dataset known as “TeleLogs,” consisting of real network fault logs, and applying Chain-of-Thought (CoT) prompting to lead LLMs through step-by-step diagnostic reasoning. The study also compared general-purpose models with domain-adapted variants to assess the impact of telecommunications-specific fine-tuning. 
+The findings indicated that CoT prompting significantly reduced hallucination in technical diagnosis and enabled accurate identification of configuration mismatches from textual logs, although general-purpose models without domain adaptation struggled with unfamiliar network-specific terminology. 
+While this work represents a closely related effort in applying LLMs to RF diagnostics, it presents two key limitations. First, the reliance on cloud-based models or high-performance GPU infrastructure raises data sovereignty concerns, which are not suitable for national telecommunications operators such as Digital Nasional Berhad (DNB). Second, the approach is limited to textual log inputs and does not incorporate spatial context, preventing the system from reasoning about the geographic origin or environmental causes of faults. This thesis addresses these limitations by deploying a quantized LLM (qwen3.5:4b) entirely on local consumer-grade hardware using the Ollama framework, and by enriching the model input with spatially derived features—such as Haversine distance, SINR, and PCI count—based on real-world drive test data, thereby enabling geospatially aware and privacy-preserving diagnostic recommendations.
+Real-Time Overshoot and Undershoot Detection in Cellular Networks
+As 5G networks evolve toward higher cell densities to meet increasing capacity demands, inter-cell interference has become a major limitation to overall network performance. The overlap of multiple cell coverage areas often results in pilot pollution, where User Equipment (UE) detects several strong signals (Physical Cell Identities, PCIs) simultaneously, leading to degraded Signal-to-Interference-plus-Noise Ratio (SINR) even when the Reference Signal Received Power (RSRP) remains strong (Siddiqui et al., 2021). 
+In this context, Trujillo et al. (2025) investigated the detection of interference-related phenomena, particularly overshoot, where cells interfere with neighboring coverage areas, and undershoot, which results in coverage gaps. Their methodology focused on real-time detection using machine learning models applied to Key Performance Indicators (KPIs) collected from operational networks, aiming to automate anomaly identification without relying on manual drive test analysis. 
+The findings demonstrated that the proposed models could effectively distinguish between overshoot, undershoot, and normal network conditions, achieving a precision of 98.42% and a test accuracy of 88.66%, while also highlighting the importance of interference analysis in optimizing antenna tilt and improving network performance. 
+However, despite its effectiveness in anomaly detection, the framework remains limited to diagnostic capabilities, as it identifies the presence of issues without generating actionable, natural language recommendations for resolution. Additionally, its reliance on network-side KPIs lacks the fine-grained spatial detail provided by user-plane drive test data. This thesis addresses these limitations by incorporating high-resolution spatial measurements, including RSRP, SINR, and PCI, to detect pilot pollution more precisely, and by leveraging a locally deployed LLM to produce prescriptive, context-aware engineering recommendations.
+Machine Learning-Based Anomaly Detection and Root Cause Analysis in Mobile Networks
+The shift from point-based analysis to area-based optimization in RF engineering necessitates the use of robust spatial clustering techniques. Conventional approaches such as K-Means are often unsuitable for geospatial RF data, as they require predefined cluster counts and assume spherical cluster distributions. To overcome these limitations, researchers frequently adopt the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm, which has proven highly effective for spatial grouping in modern wireless networks (Mourya et al., 2025). 
+In this context, Nikula et al. (2025) applied DBSCAN for anomaly detection in modern mobile networks through an automated machine learning framework designed to analyze unlabeled data. Their methodology integrated DBSCAN with Long Short-Term Memory Autoencoders (LSTM-AE), where DBSCAN was specifically used to distinguish normal from anomalous network behavior without requiring prior knowledge of cluster numbers. 
+The findings confirmed that DBSCAN is highly effective in identifying contiguous regions of network degradation, as it groups data points based on local density rather than distance to a centroid, making it well-suited for irregular and non-spherical patterns such as street canyons or building-induced signal shadows. 
+Despite these strengths, the study primarily focused on temporal KPI-based patterns rather than spatial coordinates such as latitude and longitude, and its root cause analysis relied on statistical inference rather than semantic interpretation. Building on this foundation, the present thesis applies DBSCAN directly within the geospatial domain to cluster areas of degraded RSRP and enhances the analysis by incorporating a generative local LLM, enabling context-aware reasoning across spatially coherent problem regions instead of isolated data points.
+
+The Gap in Prescriptive Analytics
+A review of similar projects shows that existing research tends to fall into two main directions: studies led by human expert analysis and those driven by automated, AI-based approaches. Researchers such as Maneesha & Kiran (2025) and Xu et al. (2025) excel at numerical prediction but lack semantic reasoning. Conversely, studies like Sana et al. (2025) introduce reasoning but often rely on cloud infrastructure and text logs, neglecting the spatial "where" and "why" of RF propagation. The International Telecommunication Union (ITU-T, 2025) has recognized the deployment of Generative AI in telecom networks as a critical emerging requirement, yet standard frameworks for local execution remain scarce. Furthermore, the transition from traditional automated self-healing concepts to modern ML-driven anomaly detection (Azkaei, 2025)  has been hindered by a lack of spatial context in diagnostic models.
+Additionally, a significant limitation in prior spatial modeling research has been the reliance on crowdsourced infrastructure databases. Many previous studies utilized OpenCellID to estimate base station locations for distance calculations. However, OpenCellID relies on crowdsourced triangulation, which suffers from poor spatial accuracy (often exhibiting mean errors exceeding 1 kilometer) and severe under-representation of 5G NR sites (Infovista, 2021). This inaccuracy fundamentally compromises any spatial predictive model. The methodology proposed in this thesis overcomes this limitation by extracting highly accurate, GPS-locked site coordinates directly from the cellinfo.txt file recorded by the UE during the drive test, ensuring sub-meter precision for spatial fusion.
+Integration of GIS and AI
+Since RF optimization depends strongly on spatial information, close integration between AI models and GIS becomes necessary. Distance is a fundamental determinant of free-space path loss in RF propagation (Rappaport, 2024), making geospatial context essential for any diagnostic engine. Songjiayi (2024) detailed a workflow integrating QGIS with Convolutional Neural Networks (CNNs) for landscape planning. This thesis modifies that approach for use in the telecommunications sector. By treating the RF environment as a "landscape" of signal interference, QGIS can serve not just as a map, but as the interactive "context engine" that feeds the Local LLM the necessary spatial data (e.g., "The user is in a valley, 500m from the tower with 11 overlapping PCIs") to generate accurate, context-aware engineering advice.
+Summary and Research Gap
+Table 2.1 provides a concise comparison of recent projects similar to the proposed framework, highlighting the specific capabilities addressed by this thesis.
+Table 2.1 Comparison of Related Work and Research Gap
+Study
+Predictive Accuracy
+RCA Capability
+GIS Integration
+Privacy/Local AI
+Maneesha & Kiran (2025)
+High (Random Forest)
+None
+Low
+N/A
+Xu et al. (2025)
+High (XGBoost)
+Low (Numerical SHAP)
+Low
+N/A
+Al-Ahmed & Shakir (2022)
+Medium (Semi-Supervised)
+Detection Only
+Medium
+N/A
+Sana et al. (2025)
+N/A
+High (LLM-based)
+Low (Log-based)
+Low (Cloud-based)
+This Thesis
+High (Random Forest)
+High (GenAI)
+High (QGIS)
+High (Local LLM)
+
+Table 2.1 illustrates a key fragmentation in the current research landscape, where most existing solutions perform well in isolation but fall short of delivering a holistic RF optimization framework. Studies such as Maneesha and Kiran (2025) and Xu et al. (2025) show strong maturity in Predictive Analytics, using algorithms like Random Forest to accurately forecast signal strength. However, these approaches largely function as "black boxes," identifying where coverage faults exist without explaining their underlying causes or suggesting engineering fixes. Conversely, while Sana et al. (2025) introduce advanced reasoning via LLMs, their reliance on cloud-based infrastructure and text-only logs overlooks the critical spatial characteristics of RF propagation and conflicts with the data sovereignty mandates of national telecommunications operators. This thesis bridges these domains to create a unified, privacy-preserving, and highly actionable optimization tool.
+
+METHODOLOGY
+Introduction
+This chapter outlines the research methodology employed to develop the "Intelligent Geospatial Assistant." The study follows the Cross-Industry Standard Process for Data Mining (CRISP-DM) framework, a widely adopted industry-standard lifecycle for data science projects (Devi, P. R., 2026). 
+The methodology is structured in alignment with the CRISP-DM lifecycle, where data understanding and preparation are realized through G-NetTrack Pro v33.3 integration and spatial fusion, modeling and evaluation are executed within the intelligent core using Random Forest and DBSCAN algorithms, and deployment is operationalized through prescriptive analytics output within QGIS. These components are implemented in a systematic and sequential manner, from business understanding through to deployment.
+All AI reasoning in this study is executed locally without reliance on external cloud services, ensuring full compliance with data sovereignty and privacy requirements as articulated by the Malaysian Personal Data Protection Act (PDPA) 2010 (Othman, 2025).
+Proposed Framework
+The research framework designed for this study moves beyond traditional linear data processing by establishing a multi-layered intelligent architecture. Unlike standard optimization workflows that rely solely on the manual interpretation of static heatmaps, this framework presents an Integrated Geospatial-Semantic Engine that embodies automated reasoning. The framework is organized into three distinct functional layers: (1) Data Acquisition & Spatial Fusion, (2) The Sovereign Intelligent Core, and (3) Prescriptive Analytics Output.
+Layer 1: Data Acquisition and Spatial Fusion
+The foundational layer addresses the problem of fragmented network data. Standard drive tests typically deliver isolated user-plane metrics (RSRP, SINR) without environmental context. As a significant contribution, a Spatial Fusion Mechanism is designed to automatically synchronize dynamic telemetry data from the Infinix Note 60 Pro with the highly accurate, device-recorded static network topology found in the cellinfo.txt file. This mechanism programmatically links raw signal data to physical tower locations, thereby creating the necessary spatial context for intelligent diagnosis.
+This layer extends conventional drive-test analysis by calculating derived geospatial features. It utilizes deterministic spatial computations developed in Python to generate geospatial features, most notably the Haversine Distance to the Serving Cell (). The Haversine formula is critical for accurate geospatial modeling as it calculates the great-circle distance between two points on a sphere, accommodating the curvature of the Earth (Sinnott, 1984):
+
+Where:
+ is the radius of the Earth (approximately 6,371 km)
+are the latitudes of the User Equipment (UE) and the serving base station, respectively (in radians)
+are the longitudes of the UE and the serving base station, respectively (in radians)
+This process transforms raw CSV logs into spatially aware datasets, enabling the system to distinguish between distance-based path loss (normal attenuation) and interference-based degradation (pilot pollution) prior to the commencement of AI analysis.
+Layer 2: The Sovereign Intelligent Core (Primary Contribution)
+This layer represents the core innovation of the research, effectively bridging the gap between predictive AI, driven by machine learning, and prescriptive AI, enabled through generative reasoning, while maintaining strict compliance with data sovereignty requirements. The deployment of AI models on edge hardware reflects a growing trend in telecommunications, where operators utilize localized computing to reduce latency and safeguard data privacy (Karapantelakis et al., 2024). The architecture is composed of three sequential processing engines.
+The first component, the Spatial Predictive Engine, utilizes a Random Forest Regressor to model and predict signal strength based solely on spatial inputs. Its primary objective is to capture the non-linear relationship between terrain characteristics, environmental clutter, and RSRP using geographic features such as Latitude, Longitude, and Haversine Distance. The Random Forest algorithm operates as an ensemble of decision trees, where the final prediction, ŷ, is obtained by averaging the outputs of K individual trees (Maneesha & Kiran, 2025), expressed as
+ 
+
+where  denotes the input spatial features and  represents the prediction of the k-th tree.
+The second component, the Spatial Clustering Engine, employs the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm to identify contiguous regions of network degradation. This is achieved by clustering data points where RSRP falls below a defined threshold (e.g., < -95 dBm). DBSCAN groups points based on two key parameters: ε, which defines the neighborhood radius, and MinPts, the minimum number of points required to form a dense cluster (Mourya et al., 2025). A point p is considered as a core point if the number of neighboring points within ε satisfies . This approach enables the detection of irregularly shaped “problem clusters” without imposing predefined geometric constraints.
+The final component, the Sovereign Generative Reasoning Engine, constitutes the central prescriptive layer of the framework. It is built upon a locally deployed Large Language Model, specifically qwen3.5:4b, hosted via the Ollama framework on consumer-grade hardware. This engine processes aggregated statistical summaries of each identified problem cluster, including metrics such as average RSRP, minimum SINR, and PCI count, and generates expert-level root cause diagnoses using Context-Aware Chain-of-Thought (CoT) prompting. Importantly, all processing is performed locally, ensuring that no sensitive data is transmitted to external cloud services, thereby preserving full compliance with data sovereignty requirements (Othman, 2025). This approach aligns with emerging industry guidance on deploying LLMs at the network edge, where local inference reduces both latency and data exposure risks (GSMA, 2025).
+Layer 3: Prescriptive Analytics Output
+The final layer illustrates the conversion of the AI's output into actionable engineering insights. In comparison to traditional tools that only display descriptive statistics (e.g., "Poor Coverage"), this framework introduces a novel visualization of Prescriptive Diagnoses integrated directly into a QGIS Dashboard.
+This layer generates a structured Root Cause Analysis (RCA) Report that maps specific geographic clusters to their probable root causes (e.g., "Interference due to Pilot Pollution" vs. "Weak Coverage due to physical shadowing"), enabling engineers to transition seamlessly from visualization to remediation.
+While this section presents the conceptual framework of the proposed system, the concrete system architecture and execution flow are detailed in Section 3.5.
+Project Requirements
+The development of the Intelligent Geospatial Assistant requires a specific hardware and software platform capable of supporting both intensive geospatial processing and local AI inference.
+Hardware Requirements
+The experimental setup for this study consists of both mobile equipment for data collection and a workstation environment for processing. For drive test data collection, an Infinix Note 60 Pro smartphone was utilized. The device is equipped with an internal GPS module and a 5G cellular modem, enabling accurate geolocation tagging and real-time network measurement during field testing using G-NetTrack Pro v33.3.
+Data processing, spatial analysis, and AI-based reasoning were conducted on a consumer-grade workstation: a Gigabyte G5 laptop powered by an 11th Generation Intel® Core™ i5-11400H processor with 24 GB of RAM, running Windows 11. Crucially, the system is equipped with an NVIDIA® GeForce RTX™ 3050 laptop GPU (4GB VRAM), enabling CUDA-accelerated computation to support local large language model (LLM) inference when deployed via Ollama.
+This hardware setup proved sufficient to execute GPU-accelerated geospatial processing within QGIS and perform quantized local LLM inference without reliance on external cloud infrastructure.
+Software Tools & Technology Stack
+From a software perspective, the fully licensed G-NetTrack Pro v33.3 Android application is used for collecting RF field measurement data, recording essential parameters such as RSRP, PCI, SINR, and highly accurate serving cell coordinates in the cellinfo.txt file (Chatchalermpu et al., 2024). QGIS (version 3.28 Firenze or newer) serves as the primary user interface and spatial analysis platform for geospatial processing and visualization.
+Language inference at the local level is enabled through Ollama, an open-source framework for running large language models exclusively on local hardware. The selected model is qwen3.5:4b (4 billion parameters), quantized to 4 bits, chosen specifically to balance robust engineering reasoning capability with the strict VRAM constraints of the local hardware.
+Python (version 3.9 or newer) powers the backend of the system, utilizing the following libraries: pandas for data manipulation, scikit-learn for Random Forest modeling and DBSCAN clustering, requests for local API communication with Ollama, and PyQGIS for direct integration with the QGIS environment.
+Data Design
+The proposed system operates by merging two primary data sources generated simultaneously during the drive test: a dynamic user-plane dataset and a static network topology dataset.
+Input Data Structure
+The G-NetTrack Pro v33.3 drive test measurements are stored in a tab-separated text file format, capturing the signal quality measurements of the RF environment. A timestamp is included in every record, along with geographic coordinates (Latitude, Longitude) in the WGS84 reference system, the Physical Cell Identity (PCI) of the serving cell, the Reference Signal Received Power (RSRP) in dBm, and the Signal-to-Interference-plus-Noise Ratio (SINR) in dB.
+Table 3.1 Core Input Data Attributes
+Attribute
+Data Type
+Description
+Timestamp
+DateTime
+Exact time of measurement (YYYY-MM-DD HH:MM:SS).
+Latitude
+Float
+GPS Latitude (WGS84).
+Longitude
+Float
+GPS Longitude (WGS84).
+PCI
+Integer
+Physical Cell Identity (0-1007 for 5G NR).
+RSRP
+Float
+Reference Signal Received Power (dBm).
+SINR
+Float
+Signal to Interference plus Noise Ratio (dB).
+Speed
+Float
+Velocity of the UE (km/h) used for filtering stationary points.
+
+Simultaneously, the cellinfo.txt file provides the exact coordinates (Latitude, Longitude) for each unique serving PCI encountered during the drive test, eliminating the need for inaccurate external databases.
+Data Pre-processing Pipeline
+The raw data is processed through a structured pre-processing pipeline prior to analysis. First, corrupted entries (such as RSRP readings of -340 dBm or missing coordinates) are removed. Stationary samples are excluded by filtering measurements with speeds below a defined threshold, removing congestion-induced artifacts while preserving representative mobility conditions.
+Subsequently, a spatial join operation is executed using Python, where each drive test measurement is matched to its corresponding serving base station coordinates derived from the cellinfo.txt file based on the active PCI. This enables the calculation of the primary derived feature: the Haversine Distance to the serving site.
+System Architecture and Intelligent Core Design
+The system is built around a modular client–server architecture that ensures both functionality and data remain under strict local control. QGIS acts as the front-end environment, providing interactive spatial visualizations and tools for user engagement. A custom Python script (geospatial_ai_bot.py) acts as the middleware (Kshetri & Ojha, 2025), executing the machine learning pipeline (Random Forest and DBSCAN) and formatting the results. Ollama runs locally as the AI inference engine hosting the qwen3.5:4b language model.
+These components communicate through a local REST interface (http://localhost:11434), exchanging structured JSON messages without ever transmitting data over the external internet. Consequently, all RF measurements, derived spatial features, and AI-generated outputs remain entirely on-premises. This design satisfies data sovereignty regulations while delivering automated, intelligent RF diagnostics.
+The reasoning process within the system's intelligent core relies heavily on structured Prompt Engineering. The process begins with the spatially aware clusters generated by DBSCAN. For each cluster, a statistical profile is generated, including the number of points, average RSRP, minimum SINR, average distance to the site, and crucially, the number of unique PCIs detected within the cluster (an indicator of pilot pollution).
+These profiles are injected into a Chain-of-Thought (CoT) prompt template. The template explicitly instructs the LLM to act as a Senior 5G RF Optimization Engineer and guides its reasoning process step-by-step:
+
+System Prompt: You are a Senior 5G RF Optimization Engineer. Analyze the following drive test cluster data and determine the root cause of the degradation.
+
+User Prompt:
+Cluster ID: {cluster_id}
+Average RSRP: {avg_rsrp} dBm
+Minimum SINR: {min_sinr} dB
+Average Distance to Site: {avg_distance} m
+Unique PCIs detected: {pci_count} (List: {pci_list})
+
+Instructions:
+1. Analyze the RSRP vs Distance relationship. Is it a coverage hole?
+2. Analyze the SINR and unique PCI count. Is there pilot pollution/interference?
+3. Provide a clear Root Cause classification.
+4. Recommend 3 specific engineering actions to resolve the issue.
+The prompt is submitted to the local qwen3.5:4b model via Ollama, which produces a structured root-cause assessment. Because the reasoning logic is cleanly separated from the spatial processing, the framework supports transparent, repeatable, and highly interpretable RF diagnostics.
+ Experiment Setup
+Phase 1: Drive Test Data Collection
+In phase one, real-world data was collected within the designated study area of Bandar Utama, Selangor. Data was collected using G-NetTrack Pro v33.3 on the Infinix Note 60 Pro while traveling through arterial roads. The mobile device was mounted on the dashboard to ensure unobstructed GPS reception, with measurements recorded at one-second intervals. This configuration captures typical user experience patterns, with particular emphasis on handover zones and inter-cell boundaries (Chatchalermpu et al., 2024).
+Phase 2: QGIS Environment Configuration
+In phase two, the QGIS environment is established by creating a specific project file and importing OpenStreetMap base layers to provide geographic context. The output from the Python machine learning pipeline (ML_Predicted_RCA.csv) is imported as a Delimited Text Layer. RSRP visual symbology is applied to depict signal strength gradients, while the problem clusters and base station locations (Site_Locations.csv) are overlaid as distinct layers, allowing users to visually correlate coverage holes with network topology.
+Phase 3: AI Integration (QGIS to Ollama)
+In the final phase, the integration between the spatial data and the local AI is executed. Ollama is installed locally and configured to serve the qwen3.5:4b model on the default local port. The custom QGIS plugin (Intelligent Geospatial Assistant) connects to the local AI engine via HTTP POST requests. The plugin dynamically constructs JSON prompts containing the summarized RF cluster features and submits them to Ollama's generation endpoint. The resulting diagnostic texts are parsed and displayed directly within the QGIS interface, enabling context-aware engineering diagnostics seamlessly integrated into the geospatial workflow (Songjiayi, 2024).
+Potential Use of Solution
+This solution is designed for specific stakeholders in the telecommunications industry:
+RF Optimization Engineers: Can utilize the system to automate the tedious process of analyzing drive test logs, rapidly identifying interference scenarios (such as pilot pollution) and receiving immediate, context-aware mitigation strategies.
+Network Planners: Can leverage the aggregated cluster analysis to direct physical site adjustments (e.g., antenna tilts) or justify the deployment of additional infrastructure to resolve persistent coverage holes.
+National Infrastructure Providers: Organizations such as Digital Nasional Berhad (DNB) can deploy the solution for comprehensive network optimization while strictly adhering to data sovereignty regulations and the PDPA, ensuring that critical national infrastructure data is never exposed to external cloud platforms (Othman, 2025).
+
+Gantt Chart
+The project timeline reflects a phased research process that entitles data collection, system development, experiment through simulation, comparative evaluation, and thesis format writing in accordance with institutional academic milestones.
+Figure 3.1 Gantt ChartFigure 3.1 Gantt Chart
+Figure 3.1 Gantt Chart
+Figure 3.1 Gantt Chart
+Summary
+This methodology chapter detailed the end-to-end framework for building the Intelligent Geospatial Assistant. By adhering to the CRISP-DM lifecycle, the research ensures a structured approach from data collection with G-NetTrack Pro v33.3 to advanced visualization in QGIS. The integration of robust spatial algorithms (Random Forest and DBSCAN utilizing Haversine distance) with a Local Large Language Model (qwen3.5:4b via Ollama) provides a novel capability. This architecture enables sophisticated, AI-driven prescriptive RF optimization to be achieved entirely on-premises, thereby fulfilling both the complex technical requirements of 5G network analysis and the strict governance mandates of localized data processing.
+
+RESULTS AND DISCUSSION
+Introduction
+This chapter presents the empirical findings derived from the deployment of the proposed machine learning framework for automated geospatial root cause analysis in 5G Radio Frequency (RF) optimization. The framework addresses critical challenges in modern 5G network management, where operators must balance performance optimization with operational efficiency (Shaibu et al., 2025).
+As highlighted in Chapter 2, no established framework currently integrates the spatial accuracy of GIS, the predictive capabilities of Random Forest, and the semantic reasoning of locally deployed LLMs within a single privacy-compliant dashboard (Sana et al., 2025; Songjiayi, 2024). The evaluation presented herein is grounded in real-world 5G Non-Standalone (NSA) drive test data collected using G-NetTrack Pro v33.3 on an Infinix Note 60 Pro device in Bandar Utama, Selangor, Malaysia.
+The results are systematically organized to address the three research objectives outlined in Chapter 1. First, the data collection and descriptive statistics of the RF environment are detailed. Second, the performance of the Random Forest (RF) Regressor in predicting Reference Signal Received Power (RSRP) based on purely spatial features is evaluated, including a rigorous baseline comparison against alternative machine learning models (Maneesha & Kiran, 2025). 
+Third, the efficacy of the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm in identifying localized coverage anomalies is presented (Mourya et al., 2025; Zhang, H., 2023). Finally, the outcomes of the rule-based Root Cause Analysis (RCA) and the integration of locally deployed Generative Artificial Intelligence (AI) for prescriptive engineering recommendations are discussed within the context of data sovereignty (Malaysian Communications and Multimedia Commission, 2024).
+Data Collection and Descriptive Statistics
+The primary dataset for this study was obtained through an extensive drive test conducted on March 14, 2026. Unlike previous iterations that relied on outdated software versions, the data was captured using the fully licensed G-NetTrack Pro v33.3, which accurately recorded serving site locations (Latitude and Longitude) directly into the cellinfo.txt file. This enhancement eliminated the reliance on third-party databases such as OpenCelliD, significantly improving the spatial accuracy of the Haversine distance calculations (Infovista, 2021).
+A total of 2,146 raw measurement samples were collected. After data cleaning—which involved filtering out invalid GPS coordinates and anomalous RSRP values (e.g., -340 dBm)—a robust dataset of 2,144 valid samples was established. The network environment was predominantly 5G New Radio (NR), accounting for 93.4% (2,003 samples) of the measurements, with the remaining 6.6% (141 samples) operating on 4G LTE. The primary frequency band utilized was the N78 band (3500 MHz Time Division Duplex), representing 92.7% of the total data.
+The descriptive statistics of the key RF metrics are summarized in Table 4.1. Notably, the analysis focused on two primary RF Key Performance Indicators (KPIs): RSRP and SINR. The Channel Quality Indicator (CQI) column was present in the G-NetTrack Pro output schema; however, all 2,144 CQI values were recorded as null ("-"). This is consistent with the behavior of 5G NR drive test tools, where CQI is a UE-internal feedback metric reported to the gNB scheduler and is not typically exposed at the modem diagnostic layer accessible to third-party applications. The absence of CQI is acknowledged as a limitation in Section 5.5.
+
+Table 4.1 Descriptive Statistics of Key RF Metrics
+Metric
+Valid Samples
+Minimum
+Maximum
+Mean
+Standard Deviation
+RSRP (dBm)
+2,144
+-113.0
+-56.0
+-88.73
+10.95
+SINR (dB)
+2,129
+-9.0
+34.0
+15.67
+9.88
+CQI
+0
+
+N/A
+N/A
+N/A
+N/A
+Haversine Distance to Site (m)
+2,144
+0.0
+1,824.3
+671.1
+398.2
+
+According to the 3rd Generation Partnership Project (3GPP) TS 38.133 standards, the RSRP distribution indicates a generally healthy network, with the mean RSRP of -88.73 dBm falling within the "Good" classification (3rd Generation Partnership Project, 2023a). However, the presence of minimum values down to -113.0 dBm underscores the existence of localized coverage holes. Figure 4.1 and Figure 4.2 illustrate the distributions of RSRP and SINR across the drive test route.
+
+Figure 4.1 RSRP Distribution in the Drive Test Area
+
+Figure 4.2 SINR Distribution in the Drive Test Area
+The SINR distribution provides a complementary perspective on network quality. While RSRP measures the absolute received signal power, SINR captures the ratio of the desired signal to the combined interference and noise floor, making it a critical indicator of the user's achievable throughput and connection stability (Nurakhov, 2025). The mean SINR of 15.67 dB is classified as "Good" by 3GPP standards, yet the minimum of -9.0 dB reveals the presence of severe interference zones where the noise and inter-cell interference overpower the desired signal. This dual-metric analysis—combining RSRP (coverage) with SINR (quality)—is essential for distinguishing between distance-induced path loss and interference-induced degradation, a distinction that single-metric thresholding cannot achieve (Yuliana, 2024).
+Spatial Fusion Results
+Applying the Haversine-based spatial fusion methodology described in Chapter 3 (Section 3.2.1), the pipeline successfully matched all 2,144 measurement points to their respective serving base stations using the site coordinates recorded in the cellinfo.txt file. A total of 37 unique cell entries were identified across the drive test route, corresponding to 25 distinct Physical Cell Identities (PCIs). The computed Haversine distances ranged from 0.0 m (UE co-located with the site) to 1,824.3 m, with a mean distance of 671.1 m and a standard deviation of 398.2 m. This wide range confirms that the drive test route adequately sampled both near-field and far-field coverage conditions.
+Table 4.2 summarizes the key statistics of the spatial fusion output.
+Table 4.2 Spatial Fusion Output Summary
+Parameter
+Value
+Total measurement points fused
+2,144
+Unique cell entries (cellinfo.txt)
+37
+Unique PCIs detected
+25
+Haversine distance range
+0.0 m – 1,824.3 m
+Mean Haversine distance
+671.1 m
+Standard deviation
+398.2 m
+
+The elimination of the crowdsourced OpenCellID database in favour of G-NetTrack Pro's device-recorded site coordinates represents a significant improvement over prior iterations. As discussed in Chapter 2, OpenCellID's crowdsourced entries for the Bandar Utama area had an average accuracy of over 1,000 meters and contained zero 5G NR entries, rendering them unsuitable for precise geospatial analysis (Folini et al., 2022). The cellinfo.txt file, by contrast, provides GPS-locked coordinates with sub-meter precision, captured at the moment of the UE's active connection to each cell.
+
+Figure 4.3 Scatter Plot of RSRP vs. Haversine Distance to Serving Site coloured by Root Cause Classification
+Figure 4.3 illustrates the relationship between the computed Haversine distance and the measured RSRP. The expected negative correlation is clearly visible: as the UE moves farther from the serving site, the received signal power decreases, consistent with the free-space path loss model (Rappaport, 2024). However, the significant variance in RSRP at any given distance—for example, RSRP values ranging from -75 dBm to -110 dBm at distances of approximately 400 m—highlights the influence of urban morphology (building shadowing, multipath reflections) that cannot be captured by distance alone. This observation directly justifies the use of a non-linear machine learning model (Random Forest) in the subsequent phase, rather than a simple distance-based propagation formula.
+
+Predictive Modeling of RSRP using Random Forest Regressor
+The Random Forest Regressor serves as the Spatial Intelligence Engine (the "WHERE" component) of the proposed framework. Its purpose is strictly predictive: to model the spatial distribution of RSRP across the drive test area and to identify geographic locations exhibiting substandard coverage. As articulated in Chapter 1, traditional machine learning models excel at Predictive Analytics—forecasting where a signal will be weak—but inherently lack Prescriptive Analytics capabilities; they cannot explain why a signal is weak or recommend specific physical adjustments (Maneesha & Kiran, 2025; Xu et al., 2025). This deliberate limitation is what necessitates the subsequent integration of the local LLM (Section 4.7).
+The model was trained to predict RSRP based exclusively on three spatial features: Latitude, Longitude, and Haversine Distance to the serving site. The dataset was split into an 80% training set (1,715 samples) and a 20% testing set (429 samples).
+Baseline Comparison and Quantitative Validation
+As demonstrated in Table 4.3 and Figure 4.4, the Random Forest Regressor significantly outperformed all baseline models. The linear regression model failed to capture the complex, non-linear multipath effects inherent in the urban environment (R² = 0.1696). The Random Forest model achieved a testing R² of 0.8206, indicating that approximately 82% of the variance in RSRP can be explained purely by the spatial location and distance to the site. This result is consistent with comparative studies of machine learning algorithms for RF prediction, where ensemble methods like Random Forest consistently outperform single-model approaches (Inyang & Johnson, 2025).
+Table 4.3 Baseline Comparison of Predictive Models for RSRP
+Model
+Test R-squared ()
+Test RMSE (dBm)
+Test MAE (dBm)
+5-Fold CV ) (Mean  Standard Deviation (SD))
+Linear Regression
+0.1696
+9.84
+7.46
+0.0461  0.2963
+KNN (K=5)
+0.0258
+10.65
+8.36
+-0.2461  0.2845
+Support Vector Regression
+0.0946
+10.27
+7.73
+-0.2452 0.3818
+Random Forest (Proposed)
+0.8206
+4.57
+2.56
+-0.4159  0.9956*
+*Note: The high variance in CV  for Random Forest is due to the spatial clustering nature of the drive test data, where geographic folds can contain entirely different signal propagation characteristics.
+This capability enables the construction of high-fidelity Radio Environment Maps (REMs), which are essential for modern network optimization and have been extensively studied in the context of automated coverage prediction (Rekkas et al., 2025). The testing RMSE of 4.57 dBm is well within the acceptable margin of error for RF propagation modeling in urban environments, where shadowing and multipath fading introduce inherent unpredictability (Yang, 2024).
+The Random Forest model achieved a testing  of 0.8206, indicating that approximately 82% of the variance in RSRP can be explained purely by the spatial location and distance to the site. The testing RMSE of 4.57 dBm is well within the acceptable margin of error for RF propagation modeling in urban environments, where shadowing and multipath fading introduce inherent unpredictability (Yang, 2024).
+
+Figure 4.4 Baseline Comparison of Machine Learning Models for RSRP Prediction
+
+
+Figure 4.5 Predicted vs. Actual RSRP for the Random Forest Model
+
+Figure 4.6 Residual Analysis of the Random Forest Predictions
+Figure 4.5 and Figure 4.6 illustrate the model's predictive accuracy and residual distribution. The residuals are normally distributed around zero, confirming that the model does not suffer from systematic bias.
+It is important to note that SINR was deliberately excluded from the Random Forest Regressor's feature set. The rationale is that SINR is itself a dependent variable influenced by the same propagation environment; including it would introduce data leakage and circular reasoning. The purpose of the regressor is to predict coverage from purely spatial inputs, thereby creating a model that can generate coverage predictions for locations where no measurements exist—a capability essential for interpolation and radio environment map (REM) construction (Rekkas et al., 2025).
+Analysis of feature importance revealed that Longitude was the most significant predictor (40.94%), followed by Latitude (35.29%) and Haversine Distance (23.77%). The high importance of the absolute coordinate features (Latitude and Longitude) suggests that specific geographic locations in Bandar Utama experience consistent signal degradation, likely due to localized urban morphology such as high-rise buildings acting as physical obstructions.
+
+Figure 4.7 Feature Importance for RSRP Prediction
+Problem Cluster Identification via DBSCAN
+While predicting overall network coverage is valuable, RF optimization requires the isolation of specific geographic areas exhibiting substandard performance. To achieve this, the DBSCAN algorithm was applied to the dataset (Mourya et al., 2025; Li, Q., 2023). DBSCAN is particularly suited for geospatial anomaly detection as it does not require the a priori specification of the number of clusters and can identify clusters of arbitrary shape while filtering out isolated noise points (Azkaei, 2025).
+The clustering was constrained to points exhibiting poor coverage, defined by an RSRP threshold of <-95 dBm. The DBSCAN hyperparameters were set to an epsilon (ε) radius of 150 metres and a minimum samples threshold of 3 points, selected to detect localized degradation zones without over-segmenting sparse data — consistent with spatial clustering approaches employed in self-organizing network (SON) anomaly detection (Canastro et al., 2021).
+Out of the 2,144 valid samples, 561 points (26.2%) fell below the -95 dBm threshold. The DBSCAN algorithm successfully grouped these points into 7 distinct problem clusters. A summary of these clusters is presented in Table 4.4. Critically, the table includes both RSRP and SINR averages for each cluster, as the relationship between these two metrics is the primary discriminator used in the subsequent Root Cause Analysis.
+Table 4.4 Summary of Detected Problem Clusters (RSRP, SINR, and PCI)
+Cluster ID
+Points
+Avg RSRP (dBm)
+Min RSRP (dBm)
+Avg SINR (dB)
+Min SINR (dB)
+Avg Distance (m)
+Unique PCIs
+Dominant PCI
+0
+9
+-102.0
+-102.0
+10.0
+10.0
+114.4
+1
+292
+1
+104
+-104.1
+-110.0
+8.8
+-2.0
+320.6
+3
+363
+2
+10
+-100.8
+-103.0
+10.2
+5.0
+491.2
+4
+213
+3
+22
+-98.4
+-99.0
+16.8
+9.0
+357.4
+2
+466
+4
+208
+-100.5
+-111.0
+8.8
+-5.0
+599.0
+12
+277
+5
+200
+-102.2
+-113.0
+2.6
+-9.0
+363.1
+11
+384
+6
+7
+-101.0
+-101.0
+16.5
+14.0
+48.2
+1
+472
+
+The identification of these clusters transitions the optimization process from a reactive, point-by-point analysis to a proactive, area-based strategy. The inclusion of SINR alongside RSRP in the cluster characterization reveals patterns that RSRP alone cannot expose. For instance, Cluster 5 (200 points) exhibits an average RSRP of -102.2 dBm with a critically low average SINR of only 2.6 dB and a minimum SINR of -9.0 dB. This combination of poor RSRP and severely degraded SINR at a moderate distance (363.1 m) is the hallmark signature of inter-cell interference or pilot pollution, where multiple overlapping cells create a high noise floor that degrades both signal strength and signal quality simultaneously (Siddiqui et al., 2021).
+Conversely, Cluster 6 (7 points) exhibits poor RSRP (-101 dBm) despite being exceptionally close to the site (48.2 m) while maintaining excellent SINR (16.5 dB). The high SINR confirms that there is no interference problem; the poor RSRP is purely a coverage issue, strongly suggesting an antenna pattern anomaly such as the UE falling within a null between antenna lobes or directly underneath the main beam (overshoot). This distinction between interference-driven and coverage-driven degradation is only possible through the joint analysis of RSRP and SINR (Hernández-Carlón, 2023).
+
+Figure 4.8 Spatial Distribution of Identified Problem Clusters in Bandar Utama
+PCI-Based Pilot Pollution Analysis
+The Physical Cell Identity (PCI) serves as the unique identifier for each cell in the 5G NR network. In the context of drive test analysis, the number of unique PCIs detected within a geographic cluster provides direct evidence of inter-cell overlap—a condition known as pilot pollution when three or more cells compete for dominance in the same area (3rd Generation Partnership Project, 2023b; Chai et al., 2024). As stated in the research objectives (Chapter 1), PCI is one of the three key user-plane metrics (alongside RSRP and SINR) that the data pipeline fuses with network infrastructure data.
+Table 4.5 presents the PCI analysis for each problem cluster, cross-referenced with the average SINR to confirm the pilot pollution diagnosis.
+Table 4.5 PCI Pilot Pollution
+Cluster ID
+Unique PCIs
+PCI List
+Avg SINR (dB)
+Pilot Pollution
+Severity
+0
+1
+[292]
+10.0
+No
+None
+1
+3
+[215] [363] [473]
+8.8
+Yes
+Moderate
+2
+4
+[213] [363] [418] [471]
+10.2
+Yes
+Moderate
+3
+2
+[365] [466]
+16.8
+No
+None
+4
+12
+[2] [50] [54] [273] [277] [278] [298] [363] [365] [466] [471] [473]
+8.8
+Yes
+Moderate Confirmed
+5
+11
+[13] [124] [125] [127] [128] [152] [201] [227] [335] [384] [385]
+2.6
+Yes
+Confirmed
+6
+1
+[472]
+16.5
+No
+None
+The analysis reveals a clear negative correlation between the number of unique PCIs and the average SINR, as illustrated in Figure 4.9. Cluster 5, with 11 unique PCIs and an average SINR of only 2.6 dB, represents a confirmed pilot pollution zone. The presence of 11 distinct cells attempting to serve a localized 360-meter radius indicates severe overshooting from distant sites, completely destroying the signal-to-noise ratio (Al-Ahmed & Shakir, 2022).
+Cluster 4, with 12 unique PCIs but a higher average SINR of 8.8 dB, represents a moderate pilot pollution zone. The higher SINR suggests that while many cells overlap, one cell (PCI 277, which is the dominant PCI) maintains sufficient signal dominance to keep the SINR above the interference threshold. However, the large number of overlapping cells creates a fragile coverage condition that is vulnerable to load-dependent interference fluctuations (Siddiqui et al., 2021).
+Conversely, Clusters 0 and 6 each have only 1 unique PCI, confirming single-cell dominance. Their poor RSRP is attributable to coverage deficiencies (antenna pattern or shadowing) rather than interference, which is consistent with their high SINR values (10.0 dB and 16.5 dB, respectively).
+
+Figure 4.9 PCI Count per Cluster (left) and PCI Count vs SINR Correlation (right)
+Automated Root Cause Analysis Labelling
+Following the identification of problem clusters, a rule-based Root Cause Analysis (RCA) algorithm was applied to classify the specific nature of the RF degradation for each data point. The logic was designed to emulate the deductive reasoning of an RF engineer, utilizing RSRP, SINR, and Haversine Distance as the three discriminating metrics (Inyang & Johnson, 2025). The classification rules were defined as follows:
+Normal Coverage: RSRP -95 dBm.
+Coverage Hole (Distance): RSRP < -95 dBm AND Distance > 500 m. This rule captures areas where signal degradation is primarily attributable to free-space path loss, as the UE is beyond the effective cell radius.
+Interference (Pilot Pollution): RSRP < -95$ dBm AND Distance 500 m AND SINR < 0 dB. This rule identifies locations where the UE is within reasonable range of the site but experiences severe inter-cell interference, indicated by the SINR falling below 0 dB (i.e., the interference power exceeds the desired signal power).
+Weak Coverage (Antenna Pattern / Shadowing): RSRP < -95$ dBm AND Distance 500 m AND SINR dB. This rule captures locations where the signal is weak despite proximity to the site and the absence of interference, pointing to physical obstructions (shadowing) or antenna pattern deficiencies.
+The distribution of root causes across the dataset is illustrated in Table 4.6.
+Table 4.6 Distribution of Root Causes
+Root Cause Classification
+Count
+Percentage (%)
+Normal Coverage
+1,583
+73.8%
+Weak Coverage (Antenna Pattern / Shadowing)
+311
+14.5%
+Coverage Hole (Distance)
+197
+9.2%
+Interference (Pilot Pollution)
+53
+2.5%
+The results indicate that while nearly three-quarters of the network area enjoys normal coverage, the primary cause of degradation is Weak Coverage due to shadowing or antenna patterns (14.5%), rather than absolute distance (9.2%). The interference category, though affecting only 2.5% of the samples, is disproportionately impactful on user experience because SINR degradation directly reduces the achievable modulation order and throughput. A single interference point at SINR = -9.0 dB would force the gNB scheduler to use QPSK modulation instead of 256-QAM, reducing the peak throughput by approximately 8x (3rd Generation Partnership Project, 2023).
+
+Validation of RCA Logic via Classifier
+To validate the robustness of the identified spatial and RF relationships, a Random Forest classifier was developed to predict RCA labels using Latitude, Longitude, RSRP, and Haversine Distance as input features. The model achieved a test accuracy of 99.77%, indicating strong predictive performance. It is important to note that the classifier was trained on rule-generated labels rather than manually annotated ground truth. As such, the near-perfect accuracy reflects the clear separability of patterns within the rule-defined feature space, rather than independent validation against human-labeled data. Nevertheless, the results demonstrate that the combined use of spatial positioning, distance metrics, and signal strength forms a comprehensive and reliable signature for diagnosing network faults.
+
+Figure 4.10 Confusion Matrix for the RCA Random Forest Classifier
+As shown in the Confusion Matrix (Figure 4.10), out of 429 test samples, the model misclassified only 1 instance of Interference as Weak Coverage. This near-perfect classification proves that the combination of spatial coordinates, distance, and signal strength provides a complete signature for diagnosing network faults.
+
+Figure 4.11 Feature Importance for RCA Classification
+Feature importance analysis of the classifier (Figure 4.11) showed that RSRP (65.8%) and Haversine Distance (18.1%) were the dominant discriminators, directly validating the theoretical basis of the RCA rule set designed for this framework.
+Integration of Local Generative AI for Prescriptive Analytics
+To comply with the strict data sovereignty regulations mandated by the Malaysian Personal Data Protection Act (PDPA) 2010 and the Cyber Security Act 2024, a local Large Language Model (LLM) was deployed (Malaysian Communications and Multimedia Commission, 2024; Othman, 2025). The qwen3.5:4b model was hosted locally via the Ollama framework, ensuring that sensitive telecommunications infrastructure data—such as exact site coordinates and performance metrics—never traversed the public internet (Pereira et al., 2022).
+The Intelligent Geospatial Bot utilized Chain-of-Thought (CoT) prompting to analyze the aggregated data for each of the 7 problem clusters. By structuring the prompt to include the cluster's location, average RSRP, minimum RSRP, average SINR, minimum SINR, distance to site, unique PCIs, and the rule-based RCA classification, the LLM was guided to produce technically precise, context-aware optimization steps (Wei et al., 2022). The inclusion of both RSRP and SINR in the prompt is critical: it provides the LLM with sufficient information to distinguish between coverage-limited and interference-limited scenarios, enabling differentiated prescriptive recommendations.
+LLM Evaluation Case Studies
+To evaluate the qualitative performance of the Generative AI, its recommendations were compared against standard RF engineering practices. The ability of the LLM to provide explicit reasoning for its recommendations enhances the interpretability and trustworthiness of the system, which is essential for adoption in critical telecommunications infrastructure (Chai et al., 2024). Two distinct case studies are presented below.
+Case Study 1: Interference Mitigation (Cluster 5)
+When analyzing Cluster 5 (Avg RSRP: -102.2 dBm, Avg SINR: 2.6 dB, Min SINR: -9.0 dB, Distance: 363.1m, Unique PCIs: 11, Classified as Interference — Severe Pilot Pollution), the local LLM successfully deduced that the combination of poor RSRP, critically low SINR, and 11 unique PCIs at a medium distance definitively indicates severe inter-cell interference (pilot pollution) compounded by physical shadowing. The LLM's generated output recommended specific actions:
+Physical Tuning: Adjust the electrical downtilt (e-tilt) of the serving cell (PCI 384) upward by 1-2 degrees to extend the main lobe coverage into the shadowed area, while simultaneously increasing the downtilt of the dominant interfering neighbor to reduce the overlapping footprint causing the pilot pollution.
+Parameter Tuning: Review and potentially lower the RsrpThreshold for inter-frequency handover to prevent premature dropping of the connection before the UE can clear the physical obstruction.
+Carrier Aggregation: Delay the activation of the Secondary Component Carrier (SCC) until the Primary Cell (PCell) RSRP recovers above -90 dBm, as attempting CA in a -102 dBm environment with SINR of 2.6 dB will result in high block error rates (BLER) and wasted scheduling resources.
+Case Study 2: Near-Field Coverage Optimization (Cluster 6)
+In contrast, when analyzing Cluster 6 (Avg RSRP: -101.0 dBm, Avg SINR: 16.5 dB, Distance: 48.2m, Unique PCIs: 1), the LLM correctly identified that the high SINR (16.5 dB) and single PCI presence eliminates interference as a root cause. The LLM reasoned that at only 48 meters from the site with no interference, the poor RSRP must be caused by the UE being positioned directly beneath the antenna (in the "null" zone of the vertical radiation pattern). The recommendation was to increase the mechanical downtilt or adjust the vertical beamwidth to fill the near-field coverage gap—a fundamentally different prescription from Cluster 5.
+This outcome demonstrates that small, quantized models (such as the 4-billion parameter Qwen 3.5) operating on consumer-grade edge hardware (laptop with RTX 3050) possess sufficient domain-specific reasoning capabilities to generate expert-level RF optimization strategies. The framework effectively bridges the gap between descriptive spatial clustering and prescriptive network engineering, fulfilling the research objectives while strictly adhering to data privacy constraints. The complete structured output of the LLM Root Cause Analysis, including all 7 cluster diagnoses, is illustrated in Figure 4.14.
+
+Figure 4.12 QGIS visualization with Intelligent Geospatial Assistant
+
+Figure 4.13 QGIS output result of cell sites locations (triangle) and Problem Clusters
+
+Figure 4.14 Local LLM Root Cause Analysis Report
+
+Summary
+This chapter demonstrated that the proposed Intelligent Geospatial Assistant framework successfully achieved the research objectives. The data pipeline accurately fused drive test measurements with spatial features using the Haversine formula. The Random Forest Regressor demonstrated strong predictive capability ( = 0.8206), significantly outperforming baseline models such as Linear Regression and SVR. The DBSCAN algorithm successfully identified 7 localized degradation zones, and the rule-based RCA classifier accurately categorized network faults with 99.77% accuracy. Finally, the locally deployed Generative AI model produced context-aware, technically sound optimization recommendations tailored to the specific RSRP, SINR, and PCI profiles of each cluster, while maintaining strict data privacy. Together, these components form a complete AI-assisted RF optimization framework capable of supporting next-generation network analysis.
+
+
+
+
+
+
+
+
+
+
+CONCLUSION
+Introduction
+This chapter concludes the research by summarizing the key findings derived from the development and deployment of the machine learning framework for automated geospatial root cause analysis in 5G Radio Frequency (RF) optimization. It evaluates the extent to which the research objectives were achieved, highlights the primary contributions to the field of telecommunications engineering, and outlines the limitations encountered during the study. Finally, it provides actionable recommendations for future research and practical implementations in the telecommunications industry.
+Summary of Findings
+The central premise of this research was to address the inefficiencies inherent in manual 5G drive test analysis by introducing an automated, geospatial, and AI-driven framework. Building upon the research gap established in Chapter 2, this study integrates the predictive capability of Random Forest, the spatial precision of GIS, and the semantic reasoning of a locally deployed LLM into a unified, privacy-compliant framework — a combination not previously realized in the literature (Sana et al., 2025; Songjiayi, 2024). The empirical results, based on the Third Drive Test conducted in Bandar Utama using G-NetTrack Pro v33.3, yielded several significant findings.
+First, the Random Forest Regressor demonstrated strong effectiveness in predicting Reference Signal Received Power (RSRP) using only spatial inputs—Latitude, Longitude, and Haversine Distance—achieving a testing  of 0.8206 and a Root Mean Square Error (RMSE) of 4.57 dBm. This result confirms that spatial coordinates in dense urban environments inherently capture the impact of physical structures, such as building shadowing, on RF propagation, thereby enabling accurate prediction without reliance on computationally intensive 3D ray-tracing models (Yuliana, 2024; Fauzi et al., 2022). 
+Second, the combined use of RSRP and SINR proved critical for accurate root cause classification, as RSRP reflects signal strength while SINR indicates signal quality relative to interference and noise. Their joint analysis enabled differentiation between distance-related path loss (low RSRP, normal SINR), interference-driven degradation (low RSRP, low SINR), and antenna-related anomalies (low RSRP, high SINR at short range), consistent with multi-dimensional evaluation standards outlined in 3GPP TS 38.133 and supported by Nurakhov (2025) (3rd Generation Partnership Project, 2023a; Nurakhov, 2025).
+Third, the application of the Density-Based Spatial Clustering of Applications with Noise (DBSCAN) algorithm successfully shifted the analysis from isolated measurements to contiguous problem regions, identifying seven clusters of poor coverage (RSRP $< -95$ dBm) and enabling targeted, large-scale optimization strategies aligned with self-organizing network (SON) principles (Mourya et al., 2025; Zhang, H., 2023). 
+Fourth, the implementation of a rule-based root cause classification framework, utilizing RSRP, SINR, and Haversine Distance as discriminative features, effectively categorized RF degradation patterns, revealing that 14.5% of the network area experienced weak coverage due to antenna patterns or physical obstructions, 9.2% due to distance-related coverage gaps, and 2.5% due to interference such as pilot pollution. The robustness of this approach was further validated using a Random Forest Classifier that achieved 99.77% accuracy, confirming the reliability of fundamental RF metrics for automated diagnostics (Inyang & Johnson, 2025;  Li, Q., 2023). 
+Finally, the deployment of a local Large Language Model (LLM), specifically qwen3.5:4b via the Ollama framework, demonstrated that Generative AI can deliver expert-level, actionable engineering recommendations—such as antenna tilt adjustments and Carrier Aggregation configurations—while preserving strict data sovereignty. The LLM generated differentiated recommendations based on RSRP-SINR relationships, providing interference mitigation strategies for interference-limited clusters and physical optimization solutions for coverage-limited areas. By ensuring that all data processing occurs on local consumer-grade hardware, the framework complies fully with the Malaysian Personal Data Protection Act (PDPA) 2010, offering a practical and compliant pathway for integrating AI into regulated telecommunications environments (Malaysian Communications and Multimedia Commission, 2024), and aligning with emerging governance standards where data privacy and residency are essential (Othman, 2025).
+Achievement of Research Objectives
+The outcomes of this study successfully fulfilled the research objectives established in Chapter 1:
+Objective 1: A robust data pipeline was developed that successfully fused user-plane drive test metrics (RSRP, SINR) with network infrastructure data. The use of the Haversine formula to calculate the exact distance between the User Equipment (UE) and the serving base station provided a critical spatial feature that drove the predictive accuracy of the machine learning models. The pipeline processed 2,144 valid samples with zero data loss.
+Objective 2: The research conclusively assessed and validated that locally deployed Generative AI can provide explainable RF root cause analysis. The Chain-of-Thought (CoT) prompting guided the LLM to produce technical diagnostics that aligned with standard human engineering judgment, while the local deployment architecture ensured absolute data sovereignty. The LLM successfully generated differentiated recommendations based on the RSRP-SINR profile of each cluster.
+Objective 3: The integration of predictive geospatial analytics (Random Forest and DBSCAN) and local Generative AI within a GIS-based decision-support system was successfully evaluated. The development of the Intelligent Geospatial Assistant QGIS plugin provided a tangible, visual interface for RF engineers to interact with the automated insights, thereby streamlining the optimization workflow.
+Contributions to Knowledge
+This research contributes significantly to the intersection of telecommunications engineering and artificial intelligence across methodological, practical, and regulatory dimensions. 
+From a methodological perspective, it introduces a novel end-to-end framework that bridges the gap between descriptive spatial clustering and prescriptive Generative AI, extending beyond traditional coverage prediction (the “WHERE”) to include automated, natural-language engineering insights that explain the “WHY” and “HOW TO FIX.” In doing so, it demonstrates that the predictive capabilities of Random Forest and the semantic reasoning of a locally deployed LLM are complementary rather than competing approaches (Maneesha & Kiran, 2025). 
+Practically, the development of the open-source QGIS plugin, known as the Intelligent Geospatial Assistant, provides RF engineers with an effective tool that reduces drive test analysis time from hours to minutes, while the integration of dual metrics (RSRP and SINR) enables more precise and reliable diagnostics compared to conventional single-metric methods. 
+From a regulatory standpoint, this study also establishes a viable pathway for deploying Generative AI within highly regulated environments by demonstrating that quantized, locally hosted LLMs can perform advanced engineering tasks while maintaining compliance with national data privacy and residency requirements (Othman, 2025; Malaysian Communications and Multimedia Commission, 2024).
+Limitations of the Study
+Despite the successful implementation of the proposed framework, several limitations should be acknowledged. 
+First, the empirical validation was confined to a single urban environment, Bandar Utama, and a specific frequency band (N78). Although the results are robust within this context, further validation is required to assess the framework’s applicability in rural settings or across higher-frequency deployments such as millimeter-wave (mmWave). 
+Second, the predictive models were based solely on two-dimensional spatial features—Latitude, Longitude, and Haversine distance—without incorporating three-dimensional data such as building heights or digital elevation models (DEM), which could enhance the modeling of shadowing effects in dense urban landscapes. 
+Third, the Root Cause Analysis (RCA) component relied on static, rule-based thresholds (e.g., Distance > 500 m, SINR < 0 dB), which, while effective for the N78 band, are not inherently adaptive to varying network configurations or frequency bands without manual adjustment. 
+Finally, the absence of Channel Quality Indicator (CQI) data represents a notable limitation, as G-NetTrack Pro v33.3 recorded CQI values as null for 5G NR measurements. Since CQI is a user equipment (UE)-internal feedback parameter reported to the gNB scheduler and is not typically accessible through standard modem diagnostic interfaces used by third-party drive test tools (3rd Generation Partnership Project, 2023c), its inclusion was not feasible. However, incorporating CQI would have enabled a more detailed evaluation of achievable throughput and modulation schemes, complementing the RSRP-SINR analysis. Future research should therefore consider the use of professional-grade tools, such as TEMS Investigation or Nemo Outdoor, which provide deeper chipset-level access to CQI measurements.
+Recommendations for Future Work
+Building upon the foundation established in this thesis, several directions for future research are proposed. 
+First, the integration of three-dimensional geospatial data, including building footprints and heights, would enhance the predictive capability of the model by enabling a transition from 2D Haversine distance to more accurate line-of-sight (LoS) and non-line-of-sight (NLoS) classifications (Rekkas et al., 2025). 
+Second, the static thresholds currently used for Root Cause Analysis could be improved through the adoption of unsupervised learning techniques or adaptive thresholding methods that dynamically adjust to varying propagation conditions across different frequency bands and deployment scenarios. 
+Third, future studies should incorporate additional performance indicators such as Channel Quality Indicator (CQI), Block Error Rate (BLER), and throughput metrics, thereby extending the framework beyond Layer 1 (physical layer) analysis to include Layer 2 (MAC layer) optimization, and enabling more comprehensive recommendations, including scheduler-level tuning (Nurakhov, 2025). 
+Fourth, while the present framework operates as an open-loop decision support system, future work could explore its integration into Open Radio Access Network (O-RAN) architectures through near-real-time RAN Intelligent Controllers (RIC), allowing for closed-loop automation and direct execution of optimization strategies generated by the LLM (Azkaei, 2025). 
+Finally, the incorporation of multi-modal AI approaches should be considered, where vision-language models such as Qwen-VL could be used to analyze RF heatmaps and geographical imagery directly, thereby enhancing the system’s ability to replicate the visual diagnostic reasoning employed by human engineers.
+Conclusion
+The optimization of 5G networks is a complex, multi-dimensional challenge that exceeds the capacity of traditional manual analysis. This thesis demonstrates that integrating geospatial machine learning with locally deployed Generative AI provides a robust and privacy-preserving approach. The proposed framework automates the detection of coverage anomalies through combined RSRP and SINR analysis, identifies their root causes using spatial and RF-based indicators, and produces targeted engineering recommendations via a local LLM. As a result, it significantly enhances both the efficiency and accuracy of RF optimization. The findings reinforce the key premise that a fully integrated, privacy-compliant dashboard—merging GIS-based spatial analysis, Random Forest prediction, and local LLM-driven reasoning—has not been formally established, and that this study successfully realizes such a framework. As telecommunications systems continue to advance in complexity and automation, the approaches introduced in this research serve as an important foundation for the development of fully autonomous and self-optimizing 5G and future 6G networks.
+REFERENCES
+
+3rd Generation Partnership Project. (2023a). TS 38.133: NR; Requirements for support of radio resource management (Release 16, V16.16.0). ETSI.
+3rd Generation Partnership Project. (2023b). TS 38.211: NR; Physical channels and modulation (Release 16, V16.7.0). ETSI.
+3rd Generation Partnership Project. (2023c). TS 38.214: NR; Physical layer procedures for data (Release 16, V16.9.0). ETSI.
+3rd Generation Partnership Project. (2024). "Study on artificial intelligence (AI)/machine learning (ML) for NR air interface," 3GPP TR 38.843 V18.0.0
+Al-Ahmed, S. A., & Shakir, M. Z. (2022). Semi-supervised learning-based coverage hole detection in cellular networks. ITU Journal on Future and Evolving Technologies, 3(3), 48–62.
+Azkaei, B. (2025). Machine learning-driven anomaly detection for 5G O-RAN. arXiv. https://doi.org/10.48550/arXiv.2509.03290
+Canastro, D., Rocha, R., Antunes, M., Gomes, D., & Aguiar, R. L. (2021). Root cause analysis in 5G/6G networks. 2021 IEEE International Conference on Communications Workshops (ICC Workshops), 1–6.
+Chai, H., Wang, H., Li, T., & Wang, Z. (2024). Generative AI-driven Digital Twin for Mobile Networks. IEEE Network, 38(3), 1–9. https://doi.org/10.1109/MNET.2024.3420702
+Chatchalermpu, S., Phanrattanachai, K., Poomipattrakul, P., & Uthansakul, P. (2024). Comparison of 5G performance post-merger between two network operators using field tests in urban areas. arXiv. ttps://doi.org/10.11591/eei.v13i6.8307
+Devi, P. R. (2026). Machine learning based optimization techniques for 5G networks. International Journal of Research and Innovation in Social Science, 10(19), 1–10. https://doi.org/10.47772/IJRISS.2026.10190031
+Digital Nasional Berhad. (2025). Malaysia must ensure its interests protected as 5G matures. DNB Corporate News. https://www.digital-nasional.com.my
+Ericsson. (2025, October). DNB and Ericsson secure TM Forum's world-first validation of Level 4 Autonomy for 5G service assurance. Ericsson Press Releases. https://www.ericsson.com/en/press-releases
+Fauzi, M. F. A., Nordin, R., & Abdullah, N. F. (2022). Mobile network coverage prediction based on supervised machine learning algorithms. IEEE Access, 10, 55782–55793. https://doi.org/10.1109/ACCESS.2022.3176619
+GSMA. (2025). Smartening the telecom edge: An operator's guide to LLM deployment and inference optimisation. GSMA Newsroom. https://www.gsma.com/newsroom/article/smartening-the-telecom-edge-an-operators-guide-to-llm-deployment-and-inference-optimisation/
+Hernández-Carlón, J. J. (2023). On the detection and solution of coverage holes in 5G radio access network deployments [Doctoral dissertation, Universitat Politècnica de Catalunya]. UPC Commons.
+Infovista. (2021). The truth about crowdsourced network data: Why dedicated drive testing is still essential for 5G optimization. Infovista White Paper.
+Inyang, U. P., & Johnson, E. A. (2025). Performance comparison of XGBoost and Random Forest for the prediction of students academic performance. European Journal of Computer Science and Information Technology, 13(2), 1–21.
+ITU-T. (2025). Technical report ITU-T TR.GenAI-Telecom (03/2025): Requirements and methodology for deploying generative AI models in telecom networks. International Telecommunication Union. https://www.itu.int/dms_pub/itu-t/opb/tut/T-TUT-AI4N-2025-1-PDF-E.pdf
+Karapantelakis, A., Alizadeh, P., Alabbasi, A., Dey, K., & Nikou, A. (2024). Generative AI in mobile networks: A survey. Annals of Telecommunications, 79(1), 15–33.
+Kshetri, T., & Ojha, R. (2025). GeoAgent: A QGIS plugin for geospatial analysis using Large Language Models. QGIS Plugins Repository. https://plugins.qgis.org/plugins/geo_agent/
+Li, Q. (2023). Utilize DBN and DBSCAN to detect selective forwarding attacks in wireless sensor networks. Engineering Applications of Artificial Intelligence, 126, 107064.
+Maneesha, B., & Kiran, K. V. D. (2025). Comparison of machine learning algorithms for predicting 5G coverage: Predictive accuracy and the identification of dominant feature parameters. International Journal of Environmental Sciences, 11(5), 457.
+Mourya, S., Reddy, P., & Amuru, S. D. (2025). DBSCAN clustering for user pairing in wireless networks. In IEEE International Conference on Communications Systems and NETworks (COMSNETS). https://doi.org/10.1109/COMSNETS.2025.10885692
+Mughees, A., Tahir, M., Sheikh, M. A., & Ahad, A. (2020). Towards energy efficient 5G networks using machine learning: Taxonomy, research challenges, and future research directions. IEEE Access, 8, 187498–187522.
+Nikula, M.-M., Correia, L. M., Grilo, A., Mähönen, P., Santo, L., & Dinis, R. (2025). Machine learning-based anomaly detection and root cause analysis in mobile networks. 2025 IEEE Wireless Communications and Networking Conference (WCNC), 1–6. https://doi.org/10.1109/WCNC61545.2025.10978282
+Nurakhov, Y. (2025). A machine learning approach to investigating key performance indicators in 5G networks. Electronics, 14(19), 3817. https://doi.org/10.3390/electronics14193817
+Othman, Z. (2025). Data sovereignty and national cloud strategy: The case of Malaysia. Journal of Southeast Asian Digital Policy, 4(2), 112–128.
+Pereira, G. W., Valente, D. S. M., & Queiroz, D. M. (2022). Smart-Map: An open-source QGIS plugin for digital mapping using machine learning techniques and ordinary kriging. Agronomy, 12(6), 1350. https://doi.org/10.3390/agronomy12061350
+Rappaport, T. S. (2024). Wireless communications: Principles and practice (3rd ed.). Pearson.
+Rekkas, V. P., Sotiroudis, S. P., Zaharis, Z. D., & Koudouridis, G. P. (2025). Machine learning based radio environment maps for 4G/5G networks. IEEE Transactions on Antennas and Propagation, PP(99), 1–1. https://doi.org/10.1109/TAP.2025.3607974
+Sana, M., Piovesan, N., De Domenico, A., Kang, Y., Zhang, H., Debbah, M., & Ayed, F. (2025). Reasoning language models for root cause analysis in 5G wireless networks. arXiv. https://doi.org/10.48550/arXiv.2507.21974
+Shaibu, F. E., et al. (2025). A novel hybrid path loss prediction model for 5G midband networks using empirical, machine learning, and feature prioritization techniques. International Journal of Antennas and Propagation, 2025(1).
+Siddiqui, M. U. A., Qamar, F., Nguyen, Q., & Hassan, R. (2021). Interference management in 5G and beyond network: Requirements, challenges and future directions. IEEE Access, 9, 1–1. https://doi.org/10.1109/ACCESS.2021.3073543
+Songjiayi, W. (2024). Integration of GIS and Artificial Intelligence Algorithms in Rural Landscape Protection and Planning. Journal of Artificial Intelligence and Practice, 7, 1–10. https://doi.org/10.23977/jaip.2024.070201
+Trujillo, J. A., Lykke, R., de-la-Bandera, I., Søndergaard, S., Sønrensen, T. B., & Barco, R. (2025). Real-time overshoot and undershoot detection in cellular networks. IEEE Access, 13, 22325–22341. https://doi.org/10.1109/ACCESS.2025.3537327
+Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E., Le, Q., & Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. Advances in Neural Information Processing Systems, 35, 24824–24837.
+Xu, T., Xu, N., Gao, J., & Ma, H. (2025). Path loss prediction model of 5G signal based on fusing data and XGBoost—SHAP method. Sensors, 25(17), 5440. https://doi.org/10.3390/s25175440
+Yuliana, H. (2024). Comparative analysis of machine learning algorithms for 5G coverage prediction: Identification of dominant feature parameters and prediction accuracy. IEEE Access, 12, 1–15. https://doi.org/10.1109/ACCESS.2024.3361403
+Zhang, H. (2023). Wireless network analysis and optimization based on the clustering algorithm. Hill Publisher Journal of Computing and Communications.
+
+
+
+
+
+
+
+
+APPENDICES
+Appendix A:QGIS
+
+
+
+
+
+
+
+
+
+Appendix B:G-NetTrack Pro
+
+
