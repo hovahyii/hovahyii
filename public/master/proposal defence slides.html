@@ -300,6 +300,30 @@
                 A localized, modular architecture designed around data sovereignty compliance. All inference operates securely on-premises via local REST APIs. Data never traverses the external public internet, protecting critical infrastructure telemetry.
             </p>
         </div>
+    <!-- Slide 10: Methodology Framework -->
+    <section class="slide">
+        <h2>Methodology Framework (CRISP-DM)</h2>
+        <div class="scroll-content grid grid-cols-1 gap-4">
+            <div class="glass-card">
+                <p class="text-[13px] text-slate-300 leading-relaxed mb-4">
+                    The study adopts the <strong class="text-white">Cross-Industry Standard Process for Data Mining (CRISP-DM)</strong> lifecycle, adapted for telecommunications RF analytics to ensure structured, repeatable execution.
+                </p>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="border-t-2 border-sky-400 pt-2 p-3 bg-sky-900/10 rounded-b">
+                        <h4 class="font-bold text-sky-400 text-xs uppercase tracking-widest mb-1">1. Data Preparation</h4>
+                        <p class="text-[11px] text-slate-300">Acquisition via G-NetTrack Pro. Pre-processing involves filtering anomalous RSRP (-340 dBm) and stationary samples using UE velocity thresholds.</p>
+                    </div>
+                    <div class="border-t-2 border-indigo-400 pt-2 p-3 bg-indigo-900/10 rounded-b">
+                        <h4 class="font-bold text-indigo-400 text-xs uppercase tracking-widest mb-1">2. Modeling (Core)</h4>
+                        <p class="text-[11px] text-slate-300">Execution of Random Forest Regressor and Density-Based Spatial Clustering (DBSCAN) relying heavily on computed spatial geometry.</p>
+                    </div>
+                    <div class="border-t-2 border-fuchsia-400 pt-2 p-3 bg-fuchsia-900/10 rounded-b">
+                        <h4 class="font-bold text-fuchsia-400 text-xs uppercase tracking-widest mb-1">3. Deployment</h4>
+                        <p class="text-[11px] text-slate-300">Contextual Prompt Engineering to a localized LLM (qwen3.5:4b) mapping rule-based logic to expert semantic text on a QGIS Dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Slide 10: Methodology (Layer 1) -->
@@ -431,49 +455,57 @@
         </div>
     </section>
 
-    <!-- Slide 16: Expected Outcomes -->
+    <!-- Slide 16: Expected Outcomes & Timeline -->
     <section class="slide">
-        <h2>Expected / Preliminary Outcomes</h2>
-        <div class="scroll-content">
-            <div class="flex flex-col md:flex-row gap-6">
-                <!-- Text on left -->
-                <div class="space-y-4 w-full md:w-1/2">
-                    <div class="glass-card border-l-4 border-sky-500">
-                        <h3 class="font-bold text-[14px]">Actionable Intelligence</h3>
-                        <p class="text-[12px] text-slate-300 mt-1">Radically reduce drive test synthesis time from hours to minutes. Directly automates the identification of pilot pollution versus morphological shadowing.</p>
+        <h2>Expected Outcomes & Timeline</h2>
+        <div class="scroll-content grid grid-cols-1 gap-6">
+            <div class="glass-card border-l-4 border-emerald-500">
+                <h3 class="font-bold text-[15px] text-emerald-400">Expected Diagnostic Shift</h3>
+                <p class="text-[13px] text-slate-300 mt-2 leading-relaxed">
+                    The framework is expected to radically reduce drive test synthesis time from hours to minutes. By integrating semantic GenAI, it will specifically automate the disambiguation of complex interference scenarios—such as pilot pollution overlapping with physical shadowing—outputting deterministic engineering resolutions rather than just numeric heatmaps.
+                </p>
+            </div>
+            
+            <div class="glass-card mt-2">
+                <h3 class="font-bold text-[14px] text-sky-400 mb-4">Project Milestones (Gantt representation)</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4">
+                        <div class="w-24 text-[11px] font-bold text-slate-400 text-right uppercase">Phase 1</div>
+                        <div class="flex-grow bg-slate-800 h-6 rounded-full overflow-hidden relative border border-slate-700">
+                            <div class="absolute top-0 left-0 h-full bg-sky-500 w-[30%] text-[10px] flex items-center px-3 font-bold text-sky-900">Data Collection & Spatial Fusion</div>
+                        </div>
                     </div>
-                    <div class="glass-card border-l-4 border-purple-500">
-                        <h3 class="font-bold text-[14px]">Sovereign Compliance</h3>
-                        <p class="text-[12px] text-slate-300 mt-1">Proof-of-concept that local edge-deployed Generative AI operates at expert reasoning capacity without off-premises data risk to national telecom assets.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-24 text-[11px] font-bold text-slate-400 text-right uppercase">Phase 2</div>
+                        <div class="flex-grow bg-slate-800 h-6 rounded-full overflow-hidden relative border border-slate-700">
+                            <div class="absolute top-0 left-[25%] h-full bg-indigo-500 w-[40%] text-[10px] flex items-center px-3 font-bold text-indigo-100">Intelligent Core (RF + DBSCAN Integration)</div>
+                        </div>
                     </div>
-                </div>
-                <!-- Visual placeholder on right -->
-                <div class="glass-card w-full md:w-1/2 flex flex-col justify-center items-center text-center border-dashed border-sky-500/30">
-                    <img src="/master/chart/Fig_Problem_Clusters.png" alt="Preliminary Spatial Cluster" class="w-full object-contain rounded border border-slate-700/50" style="max-height: 180px;">
-                    <p class="text-[11px] text-sky-400 mt-2 font-mono">Preliminary Mapping: Spatial Identification</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-24 text-[11px] font-bold text-slate-400 text-right uppercase">Phase 3</div>
+                        <div class="flex-grow bg-slate-800 h-6 rounded-full overflow-hidden relative border border-slate-700">
+                            <div class="absolute top-0 left-[60%] h-full bg-purple-500 w-[40%] text-[10px] flex items-center px-3 font-bold text-purple-100">GenAI Tuning & QGIS Dashboard Deployment</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Slide 17: Conclusion / Q&A -->
+    <!-- Slide 17: Summary and Q&A -->
     <section class="slide justify-center items-center text-center">
-        <h2 class="border-none p-0 text-sky-400 text-4xl mb-6">Conclusion & Future Work</h2>
-        <div class="glass-card text-left max-w-5xl text-[13px] leading-relaxed text-slate-300 mb-8 space-y-4">
-            <p>This study successfully developed and validated an <strong class="text-white">Integrated Geospatial-Semantic RF Optimization Framework</strong> that automates the transition from descriptive drive test data to prescriptive engineering actions. By combining the predictive power of Random Forest (R² = 0.8206) [13], the spatial clustering capabilities of DBSCAN [23], [21], and the semantic reasoning of a locally deployed Large Language Model [36], [31], the framework effectively emulates human expert judgment in diagnosing 5G network anomalies [19], [25].</p>
-
-            <p>The empirical results demonstrate that complex RF optimization tasks can be automated while strictly adhering to data sovereignty requirements through edge-based AI deployment [27], [11], [14], [18]. The system accurately differentiated between distance-related path loss [29], [37], severe pilot pollution [5], [33], and near-field antenna anomalies [15], [35], generating specific, actionable recommendations for each scenario.</p>
-
-            <p>Future work will focus on integrating this framework with <strong class="text-white">Open RAN (O-RAN)</strong> architectures to enable closed-loop, automated network tuning based on the AI-generated prescriptions [6]. Furthermore, while this study was limited to a single geographic area (Bandar Utama) and relied on rule-derived labels rather than ground-truth human annotations, the methodology is highly scalable [19]. Future iterations will validate the framework across diverse urban morphologies and multi-operator environments [9]. Ultimately, this approach provides a blueprint for national operators to achieve autonomous network optimization while strictly adhering to data sovereignty mandates [27], [11].</p>
+        <h2 class="border-none p-0 text-sky-400 text-5xl mb-6">Summary</h2>
+        <div class="glass-card text-left max-w-4xl text-[15px] leading-relaxed text-slate-300 mb-10">
+            <p>I propose a structural shift in RF Optimization strategies: transitioning from purely descriptive heatmaps to a fully automated <strong class="text-white">Intelligent Geospatial Agent</strong>. By coupling robust predictive spatial tools (QGIS, Random Forest) with domain-guided Sovereign AI logic, I aim to forge a scalable blueprint for autonomous, self-organizing 5G networks that inherently respect critical national data governance.</p>
         </div>
-        <p class="text-2xl font-bold italic text-white uppercase tracking-wider">Thank You / Q&A</p>
+        <p class="text-2xl font-bold italic text-white uppercase tracking-wider">End of Proposal Defense</p>
         <p class="text-slate-500 mt-4 text-[11px] font-mono tracking-widest">Jehovah Yii Zui Hon | Master of Science | UMPSA</p>
     </section>
 
     <!-- Controls -->
     <div class="fixed bottom-8 left-10 right-10 flex justify-between items-center z-50">
         <div class="glass-card py-2 px-4 text-xs font-mono text-slate-400 border border-slate-700/50 bg-slate-900/80">
-            Slide <span id="currentNum">1</span> / 18
+            Slide <span id="currentNum">1</span> / 19
         </div>
         <div class="flex gap-4">
             <button onclick="changeSlide(-1)" class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-600 flex items-center justify-center hover:bg-slate-700 transition" aria-label="Previous Slide">
