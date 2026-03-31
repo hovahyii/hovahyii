@@ -101,3 +101,56 @@ body {
 .button:hover {
   color: #1e3a8a; /* Tailwind blue-800 */
 }
+
+/* Blog content text colors - force pure white in dark mode */
+.dark .prose {
+  color: #ffffff !important;
+}
+
+.dark .prose p,
+.dark .prose li,
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+  color: #ffffff !important;
+}
+
+.dark .prose a {
+  color: #60a5fa !important; /* blue-400 */
+}
+
+.dark .prose strong {
+  color: #ffffff !important;
+}
+
+.dark .prose blockquote {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.dark .prose code {
+  color: #ffffff !important;
+  background-color: #374151 !important; /* gray-700 */
+}
+
+.dark .prose pre {
+  background-color: #1f2937 !important; /* gray-800 */
+}
+
+.dark .prose figcaption {
+  color: #9ca3af !important; /* gray-400 */
+}
+
+/* Blog post layout text */
+.dark .blog-post-content p,
+.dark .blog-post-content li,
+.dark .blog-post-content h1,
+.dark .blog-post-content h2,
+.dark .blog-post-content h3,
+.dark .blog-post-content h4,
+.dark .blog-post-content h5,
+.dark .blog-post-content h6 {
+  color: #ffffff !important;
+}
