@@ -5,7 +5,7 @@ import ProjectPage from "@/components/projects";
 import Footer from "@/components/footer";
 import ContactVCFComponent from "@/components/ContactVCFComponent";
 import QRCodeDrawer from "@/components/QRCodeDrawer";
-import WelcomePopup from "@/components/WelcomePopup";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -29,6 +29,9 @@ export default function Main() {
     <>
       <WelcomePopup />
       <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow p-4 flex justify-center space-x-12 md:space-x-24 ">
+        <Link href="/blog" className={`flex items-center ${isDarkMode ? 'text-white' : 'text-gray-600'} hover:text-gray-800`}>
+          Blog
+        </Link>
         <ContactVCFComponent isDarkMode={isDarkMode} />
         <QRCodeDrawer isDarkMode={isDarkMode} />
       </div>
