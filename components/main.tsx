@@ -29,7 +29,11 @@ export default function Main() {
   return (
     <>
       <WelcomePopup />
-      <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow p-4 flex justify-center space-x-12 md:space-x-24 ">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow p-4 flex items-center justify-center space-x-6 sm:space-x-10 md:space-x-16 text-sm sm:text-base">
+        <Link href="/supabase-for-mvps-workshop" className={`flex items-center gap-1.5 font-medium ${isDarkMode ? 'text-emerald-400 hover:text-emerald-300' : 'text-emerald-600 hover:text-emerald-700'}`}>
+          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          MRANTI × Supabase Workshop
+        </Link>
         <Link href="/blog" className={`flex items-center ${isDarkMode ? 'text-white' : 'text-gray-600'} hover:text-gray-800`}>
           Blog
         </Link>
