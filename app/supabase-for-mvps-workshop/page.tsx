@@ -4,7 +4,6 @@ import { ArrowLeft, ArrowRight, Bot, CalendarClock, Check, ChevronRight, Cloud, 
 import { createClient } from "@supabase/supabase-js";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const dynamic = "force-dynamic";
 
 const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/^["']|["']$/g, "").trim();
 const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "").replace(/^["']|["']$/g, "").trim();
