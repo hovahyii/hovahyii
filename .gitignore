@@ -37,3 +37,6 @@ next-env.d.ts
 
 # blog view counter data
 /data
+
+# Standalone source copy; the deployed route lives under /app.
+/supabase-for-mvps-workshop/

@@ -5,6 +5,7 @@ import ProjectPage from "@/components/projects";
 import Footer from "@/components/footer";
 import ContactVCFComponent from "@/components/ContactVCFComponent";
 import QRCodeDrawer from "@/components/QRCodeDrawer";
+import WelcomePopup from "@/components/WelcomePopup";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
