@@ -8,11 +8,14 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/^["']|["']$/g, "").trim();
 const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "").replace(/^["']|["']$/g, "").trim();
 
-// To prevent Next.js from crashing during static build (SSG) if env vars are missing, we provide a valid dummy URL format.
-const supabase = createClient(
-  url || "https://build.supabase.co",
-  key || "sb_build_placeholder"
-);
+// Lazy singleton – avoids calling createClient at module scope, which crashes
+// Next.js static generation (the returned object is not JSON-serializable).
+let _supabase: ReturnType<typeof createClient> | null = null;
+function getSupabase() {
+  if (!_supabase) _supabase = createClient(url || "https://build.supabase.co", key || "sb_build_placeholder");
+  return _supabase as ReturnType<typeof createClient>;
+}
+
 
 type Idea = { id: string; name: string; pitch: string; category: string; votes: number };
 type ConnectionState = "idle" | "testing" | "live" | "error";
@@ -159,7 +162,7 @@ export default function Home() {
   const testConnection = async () => {
     setConnection("testing");
     const started = performance.now();
-    const { data, error, count } = await supabase.from("mvp_ideas").select("id, name, pitch, category, votes", { count: "exact" }).order("votes", { ascending: false }).limit(6);
+    const { data, error, count } = await getSupabase().from("mvp_ideas").select("id, name, pitch, category, votes", { count: "exact" }).order("votes", { ascending: false }).limit(6);
     setLatency(Math.round(performance.now() - started));
     if (error) { setConnection("error"); return; }
     setIdeas((data as Idea[]) ?? fallbackIdeas); setRowCount(count ?? data?.length ?? 0); setConnection("live");
