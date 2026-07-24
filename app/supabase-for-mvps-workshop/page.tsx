@@ -6,15 +6,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 export const dynamic = "force-dynamic";
 
-const getCleanEnv = (val: string | undefined, fallback: string) => {
-  if (!val) return fallback;
-  const clean = val.replace(/^["']|["']$/g, "").trim();
-  return clean.length > 5 ? clean : fallback;
-};
-
-const PROJECT_URL = getCleanEnv(process.env.NEXT_PUBLIC_SUPABASE_URL, "https://xkimiccvqhhjzagojvvv.supabase.co");
-const PUBLISHABLE_KEY = getCleanEnv(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, "sb_publishable_DLGIy9GhuPpK5UzhH8YYSw_Cz2j-jt8");
-const supabase = createClient(PROJECT_URL, PUBLISHABLE_KEY);
+const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/^["']|["']$/g, "").trim();
+const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "").replace(/^["']|["']$/g, "").trim();
+const supabase = createClient(url || "https://localhost", key || "sb_publishable");
 
 type Idea = { id: string; name: string; pitch: string; category: string; votes: number };
 type ConnectionState = "idle" | "testing" | "live" | "error";

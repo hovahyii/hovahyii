@@ -7,15 +7,9 @@ import "./wall.css";
 
 export const dynamic = "force-dynamic";
 
-const getCleanEnv = (val: string | undefined, fallback: string) => {
-  if (!val) return fallback;
-  const clean = val.replace(/^["']|["']$/g, "").trim();
-  return clean.length > 5 ? clean : fallback;
-};
-
-const PROJECT_URL = getCleanEnv(process.env.NEXT_PUBLIC_SUPABASE_URL, "https://xkimiccvqhhjzagojvvv.supabase.co");
-const PUBLISHABLE_KEY = getCleanEnv(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, "sb_publishable_DLGIy9GhuPpK5UzhH8YYSw_Cz2j-jt8");
-const supabase = createClient(PROJECT_URL, PUBLISHABLE_KEY);
+const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/^["']|["']$/g, "").trim();
+const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "").replace(/^["']|["']$/g, "").trim();
+const supabase = createClient(url || "https://localhost", key || "sb_publishable");
 type MemoryPost = { id:string; created_at:string; name:string; message:string; image_path:string|null; session_id:string };
 
 const timeAgo=(date:string)=>{const seconds=Math.max(1,Math.floor((Date.now()-new Date(date).getTime())/1000));if(seconds<60)return"just now";const minutes=Math.floor(seconds/60);if(minutes<60)return minutes+"m ago";const hours=Math.floor(minutes/60);if(hours<24)return hours+"h ago";return new Date(date).toLocaleDateString(undefined,{day:"numeric",month:"short"})};
