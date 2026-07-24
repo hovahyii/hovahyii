@@ -4,8 +4,16 @@ import { ArrowLeft, ArrowRight, Bot, CalendarClock, Check, ChevronRight, Cloud, 
 import { createClient } from "@supabase/supabase-js";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const PROJECT_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://xkimiccvqhhjzagojvvv.supabase.co";
-const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_DLGIy9GhuPpK5UzhH8YYSw_Cz2j-jt8";
+export const dynamic = "force-dynamic";
+
+const getCleanEnv = (val: string | undefined, fallback: string) => {
+  if (!val) return fallback;
+  const clean = val.replace(/^["']|["']$/g, "").trim();
+  return clean.length > 5 ? clean : fallback;
+};
+
+const PROJECT_URL = getCleanEnv(process.env.NEXT_PUBLIC_SUPABASE_URL, "https://xkimiccvqhhjzagojvvv.supabase.co");
+const PUBLISHABLE_KEY = getCleanEnv(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, "sb_publishable_DLGIy9GhuPpK5UzhH8YYSw_Cz2j-jt8");
 const supabase = createClient(PROJECT_URL, PUBLISHABLE_KEY);
 
 type Idea = { id: string; name: string; pitch: string; category: string; votes: number };
