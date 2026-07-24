@@ -13,7 +13,12 @@ const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT
 // Next.js static generation (the returned object is not JSON-serializable).
 let _supabase: ReturnType<typeof createClient> | null = null;
 function getSupabase() {
-  if (!_supabase) _supabase = createClient(url || "https://build.supabase.co", key || "sb_build_placeholder");
+  if (!_supabase) {
+    const finalUrl = url || "https://placeholder.supabase.co";
+    const finalKey = key || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.placeholder";
+    try { _supabase = createClient(finalUrl, finalKey); }
+    catch (e) { console.error("Supabase client error:", e); _supabase = createClient("https://placeholder.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.placeholder"); }
+  }
   return _supabase as ReturnType<typeof createClient>;
 }
 type MemoryPost = { id:string; created_at:string; name:string; message:string; image_path:string|null; session_id:string };
