@@ -6,18 +6,16 @@ import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
 import "./wall.css";
 
 
-const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/^["']|["']$/g, "").trim();
-const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "").replace(/^["']|["']$/g, "").trim();
+const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "https://xkimiccvqhhjzagojvvv.supabase.co").replace(/^["']|["']$/g, "").trim();
+const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_DLGIy9GhuPpK5UzhH8YYSw_Cz2j-jt8").replace(/^["']|["']$/g, "").trim();
 
 // Lazy singleton – avoids calling createClient at module scope, which crashes
 // Next.js static generation (the returned object is not JSON-serializable).
 let _supabase: ReturnType<typeof createClient> | null = null;
 function getSupabase() {
   if (!_supabase) {
-    const finalUrl = url || "https://placeholder.supabase.co";
-    const finalKey = key || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.placeholder";
-    try { _supabase = createClient(finalUrl, finalKey); }
-    catch (e) { console.error("Supabase client error:", e); _supabase = createClient("https://placeholder.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.placeholder"); }
+    try { _supabase = createClient(url, key); }
+    catch (e) { console.error("Supabase client error:", e); _supabase = createClient("https://xkimiccvqhhjzagojvvv.supabase.co", "sb_publishable_DLGIy9GhuPpK5UzhH8YYSw_Cz2j-jt8"); }
   }
   return _supabase as ReturnType<typeof createClient>;
 }
