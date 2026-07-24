@@ -8,7 +8,12 @@ export const dynamic = "force-dynamic";
 
 const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/^["']|["']$/g, "").trim();
 const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "").replace(/^["']|["']$/g, "").trim();
-const supabase = createClient(url || "https://localhost", key || "sb_publishable");
+
+// To prevent Next.js from crashing during static build (SSG) if env vars are missing, we provide a valid dummy URL format.
+const supabase = createClient(
+  url || "https://build.supabase.co",
+  key || "sb_build_placeholder"
+);
 
 type Idea = { id: string; name: string; pitch: string; category: string; votes: number };
 type ConnectionState = "idle" | "testing" | "live" | "error";
@@ -199,7 +204,7 @@ export default function Home() {
 
   return <main className={"deck " + (theme === "light" ? "light-mode" : "")} onTouchStart={(e) => { touchStart.current = e.touches[0]?.clientX ?? null; }} onTouchEnd={(e) => { if (touchStart.current === null) return; const distance = (e.changedTouches[0]?.clientX ?? touchStart.current) - touchStart.current; if (Math.abs(distance) > 55) go(slide + (distance < 0 ? 1 : -1)); touchStart.current = null; }}>
     <header className="deck-header">
-      <button className="brand brand-lockup" onClick={() => go(0)} aria-label="MRANTI and Supabase Kuala Lumpur — go to first slide"><img className="mranti-logo" src="/supabase-for-mvps-workshop-assets/mranti-30-logo.png" alt="MRANTI 30 Years"/><i>×</i><span className="supabase-kl-logo"><img src="/supabase-for-mvps-workshop-assets/supabase-kl-logo-removebg-preview.png" alt="Supabase Kuala Lumpur"/></span></button>
+      <button className="brand brand-lockup" onClick={() => go(0)} aria-label="MRANTI and Supabase Kuala Lumpur — go to first slide"><img className="mranti-logo" src="/mranti-30-logo.png" alt="MRANTI 30 Years"/><i>×</i><span className="supabase-kl-logo"><img src="/supabase-kl-logo.png" alt="Supabase Kuala Lumpur"/></span></button>
       <div className="header-progress" aria-label={"Slide " + (slide + 1) + " of " + chapters.length}><span style={{ width: ((slide + 1) / chapters.length * 100) + "%" }}/></div>
       <button className="theme-toggle" onClick={() => { const next = theme === "dark" ? "light" : "dark"; setTheme(next); localStorage.setItem("theme", next); }} aria-label={"Switch to " + (theme === "dark" ? "light" : "dark") + " mode"}>{theme === "dark" ? <Sun size={14}/> : <Moon size={14}/>}<span>{theme === "dark" ? "Light" : "Dark"}</span></button>
       <div className="slide-count"><b>{String(slide + 1).padStart(2, "0")}</b><span>/ {String(chapters.length).padStart(2, "0")}</span></div>

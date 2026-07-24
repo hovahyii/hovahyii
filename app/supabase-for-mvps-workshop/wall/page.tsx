@@ -9,7 +9,12 @@ export const dynamic = "force-dynamic";
 
 const url = String(process.env.NEXT_PUBLIC_SUPABASE_URL || "").replace(/^["']|["']$/g, "").trim();
 const key = String(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "").replace(/^["']|["']$/g, "").trim();
-const supabase = createClient(url || "https://localhost", key || "sb_publishable");
+
+// To prevent Next.js from crashing during static build (SSG) if env vars are missing, we provide a valid dummy URL format.
+const supabase = createClient(
+  url || "https://build.supabase.co",
+  key || "sb_build_placeholder"
+);
 type MemoryPost = { id:string; created_at:string; name:string; message:string; image_path:string|null; session_id:string };
 
 const timeAgo=(date:string)=>{const seconds=Math.max(1,Math.floor((Date.now()-new Date(date).getTime())/1000));if(seconds<60)return"just now";const minutes=Math.floor(seconds/60);if(minutes<60)return minutes+"m ago";const hours=Math.floor(minutes/60);if(hours<24)return hours+"h ago";return new Date(date).toLocaleDateString(undefined,{day:"numeric",month:"short"})};
