@@ -106,15 +106,15 @@ const glossary = [
 ];
 
 const benchmarkRoutes = [
-  ['1', 'MobiFone Office → Government Office', 'Completed', 'FTP UL/DL completed; MOS pending in the 29–31 Aug run.'],
-  ['2', 'MobiFone Office → MPS Branch Office', 'Completed', 'Also recorded as a pre-FTPDL benchmark on 30 Aug.'],
-  ['3', 'MobiFone Office → MPS HQ', 'Completed', 'The handover history also records Route 3 to Government Office; verify the latest route master before departure.'],
-  ['4', 'MPS Branch Office → MPS HQ', 'Completed', 'Pre-FTPDL benchmark recorded on 30 Aug.'],
-  ['5', 'MPS Branch Office → Government Office', 'Completed', 'Pre-FTPDL benchmark recorded on 30 Aug.'],
-  ['6', 'MobiFone Office → Northern MobiFone Network Center', 'Completed', 'Separate pre-FTPDL and pre-FTPUL runs recorded on 30 Aug.'],
-  ['7', 'MPS HQ → Government Office', 'Completed', 'Separate FTP DL and FTP UL runs recorded on 31 Aug.'],
-  ['8', 'MPS HQ → Vinhomes Riverside', 'Retest', 'FTP UL completed; FTP DL blocked by low Viettel 4G / VNPT 4G balance.'],
-  ['9', 'MPS HQ → National Data Center', 'Completed', 'Longest route: about 2.5 hours; consider splitting the segment or reducing test scope.'],
+  ['1', 'MobiFone Office → Government Office', 'Incomplete', 'FTP UL/DL recorded; MOS was not tested.'],
+  ['2', 'MobiFone Office → MPS Branch Office', 'Incomplete', 'FTP benchmark recorded; MOS was not tested.'],
+  ['3', 'MobiFone Office → MPS HQ', 'Incomplete', 'MOS was not tested. The handover also describes Route 3 as going to Government Office, so verify the latest route master.'],
+  ['4', 'MPS Branch Office → MPS HQ', 'Incomplete', 'FTP benchmark recorded; MOS was not tested.'],
+  ['5', 'MPS Branch Office → Government Office', 'Incomplete', 'FTP benchmark recorded; MOS was not tested.'],
+  ['6', 'MobiFone Office → Northern MobiFone Network Center', 'Incomplete', 'Separate FTP DL and UL runs were recorded; MOS was not tested.'],
+  ['7', 'MPS HQ → Government Office', 'Incomplete', 'Separate FTP DL and UL runs were recorded; MOS was not tested.'],
+  ['8', 'MPS HQ → Vinhomes Riverside', 'Incomplete', 'FTP DL still requires retest and MOS was not tested.'],
+  ['9', 'MPS HQ → National Data Center', 'Incomplete', 'MOS was not tested, so this route is not complete. It is the longest route at about 2.5 hours; confirm the remaining scope and consider splitting the run.'],
 ];
 
 const beforeChecklist = [
@@ -601,19 +601,22 @@ export default function HanoiDriveTestSharingPage() {
             icon={Route}
             eyebrow="05 · Benchmark control"
             title="Nine-route benchmark matrix"
-            description="The 29–31 August benchmark compared Viettel, MobiFone, and Vinaphone across LTE/NR FTP UL/DL. MOS remained incomplete because voice-test SIMs malfunctioned."
+            description="All nine routes remain incomplete: no MOS test was completed on routes 1–9. The recorded FTP work is shown below, but an FTP result alone does not close a route."
           />
+          <div className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-5 text-sm leading-6 text-red-950 dark:border-red-900 dark:bg-red-950/30 dark:text-red-100">
+            <strong>Completion rule:</strong> mark a route complete only after every required FTP UL/DL and MOS combination has an accepted log. Route 9 is incomplete, and Route 8 also has an outstanding FTP DL retest.
+          </div>
           <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
             <table className="w-full min-w-[820px] text-left text-sm">
               <thead className="bg-slate-950 text-white">
-                <tr><th className="px-5 py-4">Route</th><th className="px-5 py-4">Description</th><th className="px-5 py-4">FTP status</th><th className="px-5 py-4">Operational note</th></tr>
+                <tr><th className="px-5 py-4">Route</th><th className="px-5 py-4">Description</th><th className="px-5 py-4">Overall status</th><th className="px-5 py-4">Operational note</th></tr>
               </thead>
               <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
                 {benchmarkRoutes.map(([number, description, status, note]) => (
                   <tr key={number} className="align-top">
                     <td className="px-5 py-4 font-black text-emerald-700 dark:text-emerald-400">{number}</td>
                     <td className="px-5 py-4 font-semibold">{description}</td>
-                    <td className="px-5 py-4"><Status tone={status === 'Retest' ? 'amber' : 'green'}>{status}</Status></td>
+                    <td className="px-5 py-4"><Status tone="red">{status}</Status></td>
                     <td className="px-5 py-4 leading-6 text-slate-600 dark:text-slate-300">{note}</td>
                   </tr>
                 ))}
@@ -651,7 +654,7 @@ export default function HanoiDriveTestSharingPage() {
               ['25 Aug', 'Noi Bai Airport T1 · post-optimization walk test', 'Public areas on floors 1–3 were tested with 4G and 5G FTP DL. IBC improved, but some areas still handed over to macro. Restricted access had expired; Floor 3 public-area shape differed from the PPTX. 3G was not tested.', 'Report actual access and route coverage, state untested layers, and reconcile map mismatches before interpreting coverage.'],
               ['26 Aug', 'VIP Cluster 21 · Riverside complaint', 'Immediate DT required a local MobiFone staff member because interns could not enter the VIP area.', 'Access is a test dependency. Coordinate through Phan Tuan Anh and never attempt unapproved entry.'],
               ['27–28 Aug', 'VIP residential complaint report', 'The report showed poor 4G/5G coverage but initially lacked analysis and optimization suggestions. The suspected root cause was severe cross-coverage; post-DT optimization was pending and relocation/transmission work was needed first.', 'A customer report needs cause, evidence, proposed action, dependency, owner, and next verification—not screenshots alone.'],
-              ['29 Aug–1 Sep', 'VIP nine-road benchmark', 'Most LTE/NR FTP UL/DL completed across three operators. Route 8 FTP DL failed because of low balance; all MOS tests failed because voice SIMs malfunctioned; Route 9 took about 2.5 hours and a missed turn added distance.', 'Test SIM balance and MOS function before departure, split long routes, brief the driver, and keep incomplete cells visibly red with a reason.'],
+              ['29 Aug–1 Sep', 'VIP nine-road benchmark', 'Most LTE/NR FTP UL/DL was recorded across three operators, but none of the nine routes completed MOS. Route 8 also lacks an accepted FTP DL result. Route 9 took about 2.5 hours and remains incomplete.', 'Do not equate an FTP run with route completion. Test the MOS setup before departure, split long routes, brief the driver, and keep every missing test combination visibly open.'],
             ].map(([date, title, finding, lesson]) => (
               <article key={title} className="grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 md:grid-cols-[120px_1fr_1fr]">
                 <div><Status tone="blue">{date}</Status></div>
@@ -752,7 +755,7 @@ export default function HanoiDriveTestSharingPage() {
                   ['VIP residential analysis', 'Needs action', 'Add optimization suggestions and address relocation/transmission dependencies.'],
                   ['Shop 2 uplink', 'Low UL persists', 'Interference and load check requested; target was >10 Mbps.'],
                   ['Route 8 FTP DL', 'Retest', 'Wait for confirmed Viettel/VNPT SIM balance.'],
-                  ['MOS for routes 1–9', 'Retest', 'Replace or repair voice/MOS SIMs, then complete all operators.'],
+                  ['MOS for routes 1–9', 'Not tested', 'Verify the voice/MOS setup, then execute and validate MOS for every required operator and route.'],
                 ].map(([item, status, note]) => <div key={item} className="flex items-start justify-between gap-4 border-b border-slate-200 pb-4 last:border-0 last:pb-0 dark:border-slate-800"><div><p className="font-bold">{item}</p><p className="mt-1 text-xs leading-5 text-slate-500">{note}</p></div><Status tone="red">{status}</Status></div>)}
               </div>
             </div>
