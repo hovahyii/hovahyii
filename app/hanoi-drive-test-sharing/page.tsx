@@ -92,18 +92,10 @@ const roles = [
 const glossary = [
   ['DT', 'Drive Test', 'A mobile field measurement along a planned road or indoor route.'],
   ['CDT', 'Continuous / walk drive test', 'A moving test that follows a route or floor map while the logger records continuously.'],
-  ['CQT', 'Call Quality Test', 'A fixed-point campaign covering accessibility, retainability, coverage, RxQual, one-way audio/crosstalk, and voice quality.'],
-  ['Benchmark test', 'Controlled operator comparison', 'Runs equivalent FTP DL, FTP UL, and MOS cases on the same route to compare MobiFone, Viettel, and VNPT/Vinaphone fairly.'],
-  ['Emergency-site test', 'Urgent site validation', 'A time-critical validation of the assigned site or service condition. Use Luo Yanyang’s current protocol as the controlling test plan.'],
-  ['MOC / MTC', 'Originated / terminated call', 'MOC is dialed by the test UE; MTC is received by the test UE. A CQT voice plan may require both roles.'],
-  ['MOS', 'Mean Opinion Score', 'A voice-quality KPI, usually 1–5. The handover treats ≥3.0 as acceptable and ≥4.0 as good; always follow the current customer threshold.'],
-  ['FTP DL / UL', 'Downlink / uplink throughput', 'File-transfer tests used to measure user-plane speed and stability.'],
   ['RSRP', 'Reference Signal Received Power', 'A primary LTE/NR coverage-strength KPI.'],
   ['SINR', 'Signal-to-Interference-plus-Noise Ratio', 'A quality KPI that helps distinguish weak coverage from interference.'],
   ['PCI', 'Physical Cell ID', 'Identifies the serving or detected cell and helps reveal handover, overlap, and pollution behavior.'],
-  ['EARFCN / NR-ARFCN', 'LTE / NR channel number', 'EARFCN identifies an LTE frequency channel; NR-ARFCN identifies a 5G NR channel.'],
   ['IBC', 'In-building coverage', 'The indoor coverage layer; compare IBC serving behavior with outdoor macro coverage.'],
-  ['Spatial dotting', 'Indoor manual dot trace', 'Manual points placed on a floor plan to map PHU samples when indoor GPS is unreliable.'],
   ['BasicInfo', 'Radio information screen', 'Capture LTE and NR serving-cell details at the same place and time as a static or speed test.'],
   ['VUE Trace', 'Network-side UE trace', 'A trace used when deeper analysis is required; record the trace ID and exact test window.'],
 ];
@@ -125,7 +117,6 @@ const beforeChecklist = [
   'Import the KML/KMZ into OsmAnd or Tracklia; verify start, end, direction, closures, and an alternate path.',
   'Secure restricted-area access, field partner, vehicle, driver, meeting point, and test window.',
   'Charge and label every phone; map each UE to its SIM, operator, RAT, and PHU task.',
-  'Prove SIM balance/quota, 4G/5G registration, data service, and VoLTE/MOS function with a real test.',
   'Open PHU, sync the correct project/task, check GPS, storage, time, license, script, and log-size settings.',
   'Send the tentative plan and state that it may change.',
 ];
@@ -373,40 +364,26 @@ export default function HanoiDriveTestSharingPage() {
             })}
           </div>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-            <div>
-              <h3 className="text-xl font-black">Project scope captured in the handover</h3>
-              <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800">
-                {[
-                  ['Project', 'MobiFone RAN 2026 · Vietnam · Hanoi / North'],
-                  ['Handover scope', 'Drive-test work performed from August 2026 onward'],
-                  ['Benchmark operators', 'Viettel, MobiFone, and Vinaphone/VNPT'],
-                  ['Radio layers', 'LTE 4G and NR 5G'],
-                  ['Test cases', 'Benchmark FTP UL/DL and MOS comparison, emergency-site validation, idle, Ookla 5G speed test, VUE trace, and VoLTE MOS'],
-                  ['Core KPIs', 'RSRP, SINR, PCI, throughput, latency, call accessibility/retainability, and MOS'],
-                  ['Log format', '.gen.zip'],
-                ].map(([label, value], index) => (
-                  <div key={label} className={`grid gap-1 px-5 py-4 sm:grid-cols-[150px_1fr] ${index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-slate-50 dark:bg-slate-900/50'}`}>
-                    <dt className="text-sm font-bold text-slate-500 dark:text-slate-400">{label}</dt>
-                    <dd className="text-sm leading-6 text-slate-800 dark:text-slate-100">{value}</dd>
-                  </div>
-                ))}
-              </div>
+          <div className="mt-10">
+            <h3 className="text-xl font-black">Project scope captured in the handover</h3>
+            <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800">
+              {[
+                ['Project', 'MobiFone RAN 2026 · Vietnam · Hanoi / North'],
+                ['Handover scope', 'Drive-test work performed from August 2026 onward'],
+                ['Radio layers', 'LTE 4G and NR 5G'],
+                ['Core KPIs', 'RSRP, SINR, PCI, throughput, latency, call accessibility/retainability, and MOS'],
+                ['Log format', '.gen.zip'],
+              ].map(([label, value], index) => (
+                <div key={label} className={`grid gap-1 px-5 py-4 sm:grid-cols-[150px_1fr] ${index % 2 === 0 ? 'bg-white dark:bg-slate-900' : 'bg-slate-50 dark:bg-slate-900/50'}`}>
+                  <dt className="text-sm font-bold text-slate-500 dark:text-slate-400">{label}</dt>
+                  <dd className="text-sm leading-6 text-slate-800 dark:text-slate-100">{value}</dd>
+                </div>
+              ))}
             </div>
-            <aside className="rounded-2xl bg-slate-950 p-6 text-white">
-              <BookOpen className="h-7 w-7 text-cyan-300" aria-hidden="true" />
-              <h3 className="mt-4 text-xl font-black">CQT and MOS are not the same thing</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-300">CQT is the comprehensive fixed-location test methodology. MOS is one voice-quality score that may be collected during CQT or DT.</p>
-              <div className="mt-5 space-y-3 text-sm">
-                <div className="rounded-xl bg-slate-900 p-4"><strong className="text-cyan-300">CQT asks:</strong> Can the user access, retain, and use the service at this location?</div>
-                <div className="rounded-xl bg-slate-900 p-4"><strong className="text-emerald-300">MOS asks:</strong> How good did the speech sound?</div>
-                <div className="rounded-xl bg-slate-900 p-4"><strong className="text-slate-200">Formula:</strong> MOS = (M₁ + M₂ + … + Mₙ) / n</div>
-              </div>
-            </aside>
           </div>
 
           <div className="mt-12">
-            <h3 className="text-xl font-black">Essential vocabulary</h3>
+            <h3 className="text-xl font-black">Quick technical reference</h3>
             <div className="mt-4 grid gap-3 md:grid-cols-2">
               {glossary.map(([term, name, meaning]) => (
                 <details key={term} className="group rounded-xl border border-slate-200 bg-white p-4 open:border-emerald-300 dark:border-slate-800 dark:bg-slate-900 dark:open:border-emerald-800">
@@ -430,11 +407,11 @@ export default function HanoiDriveTestSharingPage() {
 
           <div className="grid gap-5 md:grid-cols-2">
             {[
-              [Smartphone, 'PHU', 'Primary field collection', 'Use the approved Huawei PHU project and task to run the assigned LTE/NR, FTP, idle, voice, or mobility test and record the radio/GPS log.', ['Sync the correct project and assigned task.', 'Map one accepted task to the correct phone/UE.', 'Verify GPS, SIM/operator, RAT/test script, storage, and log-size settings.', 'Watch task state and recording health throughout the route.']],
-              [Monitor, 'PHU Assistant Lite', 'Post-test log verification', 'Open the PHU log after the run to check route continuity, events, RSRP, SINR, PCI, throughput, test status, and whether the file is suitable for upload and reporting.', ['Confirm the expected KPIs and map trace are present.', 'Identify gaps, wrong RAT/operator, failed service, or invalid trials.', 'Use the project-approved workspace/profile and export settings.', 'Do not modify or delete the only raw copy of a log.']],
-              [Navigation, 'OsmAnd', 'Offline route following', 'Import the project KML/KMZ, which OsmAnd converts to a GPX track, download the Hanoi offline map, and use Follow track so the driver can see the approved path without depending on mobile data.', ['Check the imported start/end and travel direction.', 'Keep the original geometry visible; do not snap it to roads unless the plan owner approves.', 'Use offline maps as a resilience measure.', 'Record detours in the DT event notes, not only in the navigation app.']],
-              [Map, 'Tracklia', 'Route inspection and repair', 'Use Tracklia on Android to import, inspect, combine, or carefully edit GPX/KML/KMZ tracks and waypoints. It is especially useful when a supplied path needs checking before field execution.', ['Inspect every point and segment before departure.', 'Keep an untouched copy of the customer route.', 'Export the corrected route only after approval.', 'Use it for route data—not as the RF measurement source.']],
-            ].map(([Icon, name, role, description, steps]) => {
+              [Smartphone, 'PHU', 'Primary field collection', 'Use the approved Huawei PHU project and task to run the assigned LTE/NR, FTP, idle, voice, or mobility test and record the radio/GPS log. Watch the task state and recording health throughout collection.'],
+              [Monitor, 'PHU Assistant Lite', 'Post-test log verification', 'Open the PHU log after the run to check route continuity, events, radio KPIs, service results, and invalid trials before upload. Preserve the untouched raw copy.'],
+              [Navigation, 'OsmAnd', 'Offline route following', 'Import the approved KML/KMZ, download the Hanoi offline map, and use Follow track so the driver can follow the route without depending on mobile data. Never alter the original geometry without approval.'],
+              [Map, 'Tracklia', 'Route inspection and repair', 'Use Tracklia on Android to inspect GPX/KML/KMZ tracks and waypoints or prepare an approved corrected copy. It manages route data; it is not an RF logger.'],
+            ].map(([Icon, name, role, description]) => {
               const ToolIcon = Icon as LucideIcon;
               return (
                 <article key={name as string} className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
@@ -445,24 +422,12 @@ export default function HanoiDriveTestSharingPage() {
                   <h3 className="mt-5 text-2xl font-black">{name as string}</h3>
                   {name === 'OsmAnd' && <p className="mt-1 text-xs font-semibold text-slate-400">Correct product spelling; sometimes written “OmsAnd” in team messages.</p>}
                   <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{description as string}</p>
-                  <ul className="mt-5 space-y-2 border-t border-slate-200 pt-4 text-sm dark:border-slate-800">
-                    {(steps as string[]).map((step) => <li key={step} className="flex gap-2 leading-6"><Check className="mt-1 h-4 w-4 shrink-0 text-emerald-500" />{step}</li>)}
-                  </ul>
                 </article>
               );
             })}
           </div>
 
-          <div className="mt-6 grid overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900 md:grid-cols-4">
-            {[
-              ['1', 'Route file', 'Open and verify in OsmAnd or Tracklia.'],
-              ['2', 'Field task', 'Collect the assigned test in PHU.'],
-              ['3', 'Log QA', 'Inspect the result in PHU Assistant Lite.'],
-              ['4', 'Delivery', 'Back up, upload, analyze, and report.'],
-            ].map(([number, title, body]) => <div key={number} className="border-b border-slate-200 p-5 last:border-0 dark:border-slate-800 md:border-b-0 md:border-r"><span className="text-xs font-black text-emerald-600">STEP {number}</span><h4 className="mt-2 font-black">{title}</h4><p className="mt-1 text-xs leading-5 text-slate-500">{body}</p></div>)}
-          </div>
-
-          <div className="mt-4 flex flex-col gap-2 text-xs leading-5 text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-6 flex flex-col gap-2 text-xs leading-5 text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>PHU and PHU Assistant Lite are project-controlled Huawei tools. Screens, task names, permissions, and menus vary by build; use the current project APK/license/profile and the team’s approved SOP.</p>
             <div className="flex shrink-0 gap-3"><a href="https://www.osmand.net/docs/user/personal/tracks/manage-tracks/" target="_blank" rel="noreferrer" className="font-bold text-cyan-700 hover:underline dark:text-cyan-400">OsmAnd track docs</a><a href="https://tracklia.app/" target="_blank" rel="noreferrer" className="font-bold text-cyan-700 hover:underline dark:text-cyan-400">Tracklia formats</a></div>
           </div>
@@ -473,7 +438,7 @@ export default function HanoiDriveTestSharingPage() {
             icon={ClipboardCheck}
             eyebrow="03 · Field runbook"
             title="One checklist, organized by field phase"
-            description="This replaces the repeated workflow and checklist sections. Run it top to bottom for benchmark routes, emergency-site tests, walk tests, store tests, and VIP complaint verification."
+            description="Use this single phase-based checklist for benchmark routes, emergency-site tests, walk tests, store tests, and VIP complaint verification."
           />
           <div className="grid gap-8 xl:grid-cols-3">
             <div><div className="mb-4 flex items-center gap-2"><Clock3 className="h-5 w-5 text-cyan-600" /><h3 className="text-lg font-black">Before departure</h3></div><Checklist items={beforeChecklist} /></div>
@@ -488,8 +453,8 @@ export default function HanoiDriveTestSharingPage() {
               <p className="mt-4 text-xs leading-5 text-slate-500">28 Aug snapshot: two VNPT data + two voice SIMs; two Viettel data + two voice SIMs; MobiFone SIMs available at stores. Reconfirm current inventory.</p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-              <h3 className="flex items-center gap-2 text-lg font-black"><HardDrive className="h-5 w-5 text-cyan-600" />Known equipment references</h3>
-              <dl className="mt-4 space-y-3 text-sm"><div className="flex justify-between gap-4"><dt className="text-slate-500">Collection / QA</dt><dd className="text-right font-semibold">PHU · PHU Assistant Lite</dd></div><div className="flex justify-between gap-4"><dt className="text-slate-500">Route apps</dt><dd className="font-semibold">OsmAnd · Tracklia</dd></div><div className="flex justify-between gap-4"><dt className="text-slate-500">Log format</dt><dd className="font-semibold">.gen.zip</dd></div><div className="flex justify-between gap-4"><dt className="text-slate-500">Handover DT phone</dt><dd className="font-semibold">841212953022</dd></div><div className="flex justify-between gap-4"><dt className="text-slate-500">Recorded VUE trace</dt><dd className="font-semibold">977718</dd></div></dl>
+              <h3 className="flex items-center gap-2 text-lg font-black"><HardDrive className="h-5 w-5 text-cyan-600" />Handover identifiers</h3>
+              <dl className="mt-4 space-y-3 text-sm"><div className="flex justify-between gap-4"><dt className="text-slate-500">Log format</dt><dd className="font-semibold">.gen.zip</dd></div><div className="flex justify-between gap-4"><dt className="text-slate-500">DT phone reference</dt><dd className="font-semibold">841212953022</dd></div><div className="flex justify-between gap-4"><dt className="text-slate-500">Recorded VUE trace</dt><dd className="font-semibold">977718</dd></div></dl>
             </div>
           </div>
 
@@ -531,7 +496,7 @@ export default function HanoiDriveTestSharingPage() {
                 'Keep the route, direction, planned time window, test duration/file/server, and RAT configuration as equivalent as practical.',
                 'Label every phone and map the correct MobiFone, Viettel, or VNPT SIM to the correct PHU task before recording.',
                 'Keep each operator result separate. Record detours, congestion, device differences, invalid trials, and other conditions that affect fairness.',
-                'Close the route only after the complete operator × required RAT × FTP DL/FTP UL matrix and every required MOS result have accepted evidence.',
+                'Compare accepted trials only; never use a truncated log, missing MOS value, wrong operator/RAT, or unrecorded deviation as a valid result.',
               ].map((rule) => <div key={rule} className="flex gap-3 rounded-xl bg-emerald-50 p-4 text-sm leading-6 dark:bg-emerald-950/30"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />{rule}</div>)}
             </div>
           </article>
@@ -681,19 +646,10 @@ export default function HanoiDriveTestSharingPage() {
             </table>
           </div>
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-              <h3 className="text-lg font-black">Route quality-control matrix</h3>
-              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Before leaving the endpoint, mark every required combination—not just the route—as complete.</p>
-              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {['Viettel LTE', 'Viettel NR', 'MobiFone LTE', 'MobiFone NR', 'Vinaphone LTE', 'Vinaphone NR', 'FTP UL', 'FTP DL', 'MOS / VoLTE', 'Event notes', 'Route trace', 'Upload path'].map((item) => <div key={item} className="flex min-h-16 items-center gap-2 rounded-xl border border-slate-200 p-3 text-xs font-bold dark:border-slate-700"><span className="h-4 w-4 shrink-0 rounded border-2 border-emerald-500" />{item}</div>)}
-              </div>
-            </div>
-            <aside className="rounded-2xl bg-amber-50 p-6 dark:bg-amber-950/30">
-              <h3 className="flex items-center gap-2 text-lg font-black text-amber-950 dark:text-amber-100"><AlertTriangle className="h-5 w-5" />Route master conflict</h3>
-              <p className="mt-3 text-sm leading-6 text-amber-900 dark:text-amber-200">Two source sections describe Route 3 differently. Treat the latest customer/plan file as authoritative, show the route on the map to the driver, and confirm direction in writing before testing.</p>
-            </aside>
-          </div>
+          <aside className="mt-8 rounded-2xl bg-amber-50 p-6 dark:bg-amber-950/30">
+            <h3 className="flex items-center gap-2 text-lg font-black text-amber-950 dark:text-amber-100"><AlertTriangle className="h-5 w-5" />Route master conflict</h3>
+            <p className="mt-3 text-sm leading-6 text-amber-900 dark:text-amber-200">Two source sections describe Route 3 differently. Treat the latest customer/plan file as authoritative, show the route on the map to the driver, and confirm direction in writing before testing.</p>
+          </aside>
         </section>
 
         <section id="cases" className="scroll-mt-24 border-b border-slate-200 py-20 dark:border-slate-800">
@@ -711,7 +667,6 @@ export default function HanoiDriveTestSharingPage() {
               ['25 Aug', 'Noi Bai Airport T1 · post-optimization walk test', 'Public areas on floors 1–3 were tested with 4G and 5G FTP DL. IBC improved, but some areas still handed over to macro. Restricted access had expired; Floor 3 public-area shape differed from the PPTX. 3G was not tested.', 'Report actual access and route coverage, state untested layers, and reconcile map mismatches before interpreting coverage.'],
               ['26 Aug', 'VIP Cluster 21 · Riverside complaint', 'Immediate DT required a local MobiFone staff member because interns could not enter the VIP area.', 'Access is a test dependency. Coordinate through Phan Tuan Anh and never attempt unapproved entry.'],
               ['27–28 Aug', 'VIP residential complaint report', 'The report showed poor 4G/5G coverage but initially lacked analysis and optimization suggestions. The suspected root cause was severe cross-coverage; post-DT optimization was pending and relocation/transmission work was needed first.', 'A customer report needs cause, evidence, proposed action, dependency, owner, and next verification—not screenshots alone.'],
-              ['29 Aug–1 Sep', 'VIP nine-road benchmark', 'Most LTE/NR FTP UL/DL was recorded across three operators, but none of the nine routes completed MOS. Route 8 also lacks an accepted FTP DL result. Route 9 took about 2.5 hours and remains incomplete.', 'Do not equate an FTP run with route completion. Test the MOS setup before departure, split long routes, brief the driver, and keep every missing test combination visibly open.'],
             ].map(([date, title, finding, lesson]) => (
               <article key={title} className="grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 md:grid-cols-[120px_1fr_1fr]">
                 <div><Status tone="blue">{date}</Status></div>
@@ -811,10 +766,9 @@ export default function HanoiDriveTestSharingPage() {
                   ['CQT report retest', 'Not done', 'Installation-quality issues require a retest.'],
                   ['VIP residential analysis', 'Needs action', 'Add optimization suggestions and address relocation/transmission dependencies.'],
                   ['Shop 2 uplink', 'Low UL persists', 'Interference and load check requested; target was >10 Mbps.'],
-                  ['Route 8 FTP DL', 'Retest', 'Wait for confirmed Viettel/VNPT SIM balance.'],
-                  ['MOS for routes 1–9', 'Not tested', 'Verify the voice/MOS setup, then execute and validate MOS for every required operator and route.'],
                 ].map(([item, status, note]) => <div key={item} className="flex items-start justify-between gap-4 border-b border-slate-200 pb-4 last:border-0 last:pb-0 dark:border-slate-800"><div><p className="font-bold">{item}</p><p className="mt-1 text-xs leading-5 text-slate-500">{note}</p></div><Status tone="red">{status}</Status></div>)}
               </div>
+              <a href="#routes" className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-cyan-700 hover:underline dark:text-cyan-400">View benchmark route gaps <Navigation className="h-4 w-4" /></a>
             </div>
           </div>
 
