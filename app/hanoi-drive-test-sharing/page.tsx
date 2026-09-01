@@ -92,12 +92,15 @@ const glossary = [
   ['DT', 'Drive Test', 'A mobile field measurement along a planned road or indoor route.'],
   ['CDT', 'Continuous / walk drive test', 'A moving test that follows a route or floor map while the logger records continuously.'],
   ['CQT', 'Call Quality Test', 'A fixed-point campaign covering accessibility, retainability, coverage, RxQual, one-way audio/crosstalk, and voice quality.'],
+  ['MOC / MTC', 'Originated / terminated call', 'MOC is dialed by the test UE; MTC is received by the test UE. A CQT voice plan may require both roles.'],
   ['MOS', 'Mean Opinion Score', 'A voice-quality KPI, usually 1–5. The handover treats ≥3.0 as acceptable and ≥4.0 as good; always follow the current customer threshold.'],
   ['FTP DL / UL', 'Downlink / uplink throughput', 'File-transfer tests used to measure user-plane speed and stability.'],
   ['RSRP', 'Reference Signal Received Power', 'A primary LTE/NR coverage-strength KPI.'],
   ['SINR', 'Signal-to-Interference-plus-Noise Ratio', 'A quality KPI that helps distinguish weak coverage from interference.'],
   ['PCI', 'Physical Cell ID', 'Identifies the serving or detected cell and helps reveal handover, overlap, and pollution behavior.'],
+  ['EARFCN / NR-ARFCN', 'LTE / NR channel number', 'EARFCN identifies an LTE frequency channel; NR-ARFCN identifies a 5G NR channel.'],
   ['IBC', 'In-building coverage', 'The indoor coverage layer; compare IBC serving behavior with outdoor macro coverage.'],
+  ['Spatial dotting', 'Indoor manual dot trace', 'Manual points placed on a floor plan to map PHU samples when indoor GPS is unreliable.'],
   ['BasicInfo', 'Radio information screen', 'Capture LTE and NR serving-cell details at the same place and time as a static or speed test.'],
   ['VUE Trace', 'Network-side UE trace', 'A trace used when deeper analysis is required; record the trace ID and exact test window.'],
 ];
@@ -494,31 +497,88 @@ export default function HanoiDriveTestSharingPage() {
           <SectionHeading
             icon={Gauge}
             eyebrow="04 · Execution recipes"
-            title="How to run each test method"
-            description="Use the same discipline—exact location, known configuration, synchronized evidence, and repeatable naming—while adapting the movement pattern and KPI focus."
+            title="CQT, MOS, 5G verification, and indoor dotting"
+            description="These are the operational details that must be checked during collection—not inferred later from a 5G icon, a route line, or a completed-call counter."
           />
-          <div className="grid gap-6 lg:grid-cols-2">
-            {[
-              [MapPinned, 'Indoor static test · CQT', ['Stand at the agreed counter, desk, or marked point.', 'Record floor, exact position, operator, UE, time, and indoor/outdoor condition.', 'Run the requested 4G and 5G FTP DL/UL or idle cases.', 'Run two to three trials when results vary.', 'Capture LTE and NR BasicInfo and any customer-visible symptom.', 'Start VUE trace when requested and record the trace ID and test window.']],
-              [Route, 'Walk test · CDT', ['Load the current floor map/KMZ and identify public versus restricted areas.', 'Start only after GPS/position and logger status are stable.', 'Walk at a steady pace; do not cut corners or skip wings without a note.', 'Run separate 4G/5G and DL/UL tasks as required.', 'Mark macro-to-IBC handovers, coverage holes, route mismatch, and inaccessible areas.', 'Upload each floor/test case separately and label pre- or post-optimization.']],
-              [Car, 'Outdoor benchmark route', ['Verify the exact start/end direction and route version with the plan owner.', 'Map each phone to operator, RAT, and test case before entering the vehicle.', 'Run a short start-point proof log, then follow the KML.', 'Keep the tester—not the driver—responsible for devices and event notes.', 'Record detours and missed turns; they change time and spatial comparability.', 'At the end, reconcile the operator × RAT × UL/DL/MOS matrix before leaving.']],
-              [Smartphone, 'Ookla 5G store test', ['The handover specifies 5G speed tests at both indoor and outdoor positions.', 'Confirm real NR connection; a 5G icon alone may be “false 5G.”', 'Capture download, upload, latency, server, time, and location.', 'Capture LTE/NR BasicInfo at the same position.', 'Compare indoor and outdoor results before concluding that coverage is weak.', 'Escalate persistent indoor gaps to VIP care and optimization.']],
-            ].map(([Icon, title, steps]) => {
-              const MethodIcon = Icon as LucideIcon;
-              return (
-                <article key={title as string} className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-                  <div className="flex items-center gap-3">
-                    <span className="rounded-xl bg-emerald-100 p-2.5 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300"><MethodIcon className="h-5 w-5" aria-hidden="true" /></span>
-                    <h3 className="text-xl font-black">{title as string}</h3>
-                  </div>
-                  <ol className="mt-5 space-y-3">
-                    {(steps as string[]).map((step, index) => (
-                      <li key={step} className="flex gap-3 text-sm leading-6 text-slate-600 dark:text-slate-300"><span className="font-black text-emerald-700 dark:text-emerald-400">{index + 1}.</span>{step}</li>
-                    ))}
-                  </ol>
-                </article>
-              );
-            })}
+
+          <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+            <div className="border-b border-slate-200 bg-slate-950 p-6 text-white dark:border-slate-800 md:p-8">
+              <div className="flex items-center gap-3"><Phone className="h-6 w-6 text-emerald-400" /><h3 className="text-2xl font-black">CQT call cycle: MOC, MTC, and MOS</h3></div>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">A CQT voice test needs both call directions and a working audio path. “Call connected” is not enough when the task also requires speech quality.</p>
+            </div>
+            <div className="grid gap-6 p-6 md:grid-cols-2 md:p-8">
+              <div className="rounded-xl bg-emerald-50 p-5 dark:bg-emerald-950/30"><p className="text-xs font-black uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-400">MOC · Mobile Originated Call</p><p className="mt-2 text-sm leading-6">The test UE starts the call to the configured called number. Verify attempt, setup, alerting, connection, speech period, MOS result, and normal release.</p></div>
+              <div className="rounded-xl bg-cyan-50 p-5 dark:bg-cyan-950/30"><p className="text-xs font-black uppercase tracking-[0.18em] text-cyan-700 dark:text-cyan-400">MTC · Mobile Terminated Call</p><p className="mt-2 text-sm leading-6">The test UE receives the call. Verify paging/ringing, answer or auto-answer, two-way audio, call retainability, MOS result, and release.</p></div>
+            </div>
+            <div className="grid gap-8 px-6 pb-8 md:grid-cols-[1fr_1.08fr] md:px-8">
+              <div>
+                <h4 className="text-lg font-black">Bluetooth MOS connection</h4>
+                <ol className="mt-4 space-y-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  {[
+                    'Identify the approved Bluetooth MOS headset/audio accessory for each MOC and MTC phone; do not swap labels between UEs.',
+                    'Enable Bluetooth on the phone, place the MOS accessory in pairing mode, select its device name, and complete the PIN/confirmation prompt.',
+                    'In the paired-device settings, enable Calls or Phone audio. Disconnect old headsets, watches, or car audio that may take the call audio route.',
+                    'Place one short manual call. Confirm ringing, answer, microphone, and speech in both directions; verify the call screen shows Bluetooth audio.',
+                    'Keep the project-defined volume/gain unchanged, disable mute, keep the microphone unobstructed, and prevent the accessory from sleeping.',
+                    'Open the matching PHU MOS tasks only after both Bluetooth links are stable. If either device reconnects, repeat the audio proof call.',
+                  ].map((step, index) => <li key={step} className="flex gap-3"><span className="font-black text-emerald-700 dark:text-emerald-400">{index + 1}.</span>{step}</li>)}
+                </ol>
+              </div>
+              <div>
+                <h4 className="text-lg font-black">Run the paired PHU tasks</h4>
+                <ol className="mt-4 space-y-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  {[
+                    'Confirm both SIMs have call credit, correct phone numbers, LTE service, IMS/VoLTE registration, and normal manual calling.',
+                    'Assign one phone as MOC and the other as MTC. Check that the MOC called number matches the MTC SIM and that MTC answer/auto-answer follows the project script.',
+                    'Start log recording on both phones. Arm the MTC side so it is ready, then start the MOC dialing task; follow the current PHU task order if it differs.',
+                    'Watch for call attempt → alerting → connected → speech sample/MOS → normal release. Record setup failure, no answer, drop, one-way audio, or missing MOS as separate failures.',
+                    'Verify both uplink and downlink MOS results are populated. A connected call with blank MOS is an incomplete MOS trial.',
+                    'Repeat the required cycles and reverse MOC/MTC roles only when the test plan requires both directions. Keep the failed attempts in the evidence set.',
+                  ].map((step, index) => <li key={step} className="flex gap-3"><span className="font-black text-cyan-700 dark:text-cyan-400">{index + 1}.</span>{step}</li>)}
+                </ol>
+              </div>
+            </div>
+          </article>
+
+          <article className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 md:p-8">
+            <div className="flex items-center gap-3"><Signal className="h-6 w-6 text-emerald-600" /><h3 className="text-2xl font-black">PHU: verify whether 5G is actually connected</h3></div>
+            <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">LTE PCI and EARFCN identify the LTE serving/anchor cell. They do not, by themselves, prove that the UE has an active NR connection.</p>
+            <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+              <table className="w-full min-w-[700px] text-left text-sm"><thead className="bg-slate-950 text-white"><tr><th className="px-4 py-3">PHU readout</th><th className="px-4 py-3">Interpretation</th><th className="px-4 py-3">Action</th></tr></thead><tbody className="divide-y divide-slate-200 dark:divide-slate-800"><tr><td className="px-4 py-4 font-semibold">LTE PCI + LTE EARFCN only</td><td className="px-4 py-4">LTE serving cell or NSA anchor is visible; NR is not yet proven.</td><td className="px-4 py-4">Start active traffic and check the NR/SCG fields.</td></tr><tr><td className="px-4 py-4 font-semibold">LTE anchor + EN-DC/SCG connected + NR PCI + NR-ARFCN</td><td className="px-4 py-4">5G NSA is active.</td><td className="px-4 py-4">Capture LTE and NR radio KPIs during FTP/Speedtest.</td></tr><tr><td className="px-4 py-4 font-semibold">Serving RAT = NR/5G SA + NR PCI + NR-ARFCN</td><td className="px-4 py-4">5G SA is active.</td><td className="px-4 py-4">Capture NR serving-cell and registration details.</td></tr><tr><td className="px-4 py-4 font-semibold">5G icon, but no NR PCI/NR-ARFCN/NR measurements</td><td className="px-4 py-4">“False 5G” or NR not active at that moment.</td><td className="px-4 py-4">Do not report 5G as verified; generate traffic and retest.</td></tr></tbody></table>
+            </div>
+            <ol className="mt-6 grid gap-3 md:grid-cols-2">
+              {[
+                'Open PHU BasicInfo/Parameter view and record RAT, LTE PCI, EARFCN, band, RSRP, RSRQ, and SINR.',
+                'Compare the LTE PCI/EARFCN with the latest engineering parameters to confirm the expected anchor/serving cell.',
+                'Start FTP DL/UL or Ookla traffic because NSA NR may be added only when data demand begins.',
+                'Look for EN-DC/SCG/NR serving status plus NR PCI, NR-ARFCN, NR RSRP/RSRQ/SINR, and NR throughput contribution.',
+                'Take one BasicInfo screenshot before traffic and one while traffic is active; include time and indoor/outdoor position.',
+                'If LTE fields change unexpectedly or NR disappears, annotate the location and time for handover/cross-coverage analysis.',
+              ].map((step, index) => <li key={step} className="flex gap-3 rounded-xl bg-slate-50 p-4 text-sm leading-6 dark:bg-slate-950"><span className="font-black text-emerald-700 dark:text-emerald-400">{index + 1}.</span>{step}</li>)}
+            </ol>
+            <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm leading-6 text-amber-950 dark:bg-amber-950/30 dark:text-amber-100"><strong>Channel naming:</strong> EARFCN is the LTE channel number. The 5G channel is NR-ARFCN. Record both for NSA; record NR-ARFCN and NR PCI for SA.</p>
+          </article>
+
+          <article className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 md:p-8">
+            <div className="flex items-center gap-3"><MapPinned className="h-6 w-6 text-cyan-600" /><h3 className="text-2xl font-black">Indoor spatial dotting · manual dot trace</h3></div>
+            <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">GPS is unreliable indoors. Spatial dotting anchors the PHU samples to the floor plan so Assistant Lite can replay the walk in the correct location.</p>
+            <div className="mt-6 grid gap-3 md:grid-cols-2">
+              {[
+                ['1', 'Load the correct floor plan', 'Verify building, floor, orientation, scale, public/restricted boundary, and planned start/end points.'],
+                ['2', 'Select indoor/manual dotting', 'Use the project indoor map and begin one log for one floor and one clearly named test case.'],
+                ['3', 'Place the first dot', 'Stand at a recognizable landmark, tap the exact position on the floor plan, then start moving.'],
+                ['4', 'Dot every geometry change', 'Tap at every corner, corridor junction, entrance, escalator/elevator, direction change, and route deviation.'],
+                ['5', 'Walk steadily between dots', 'PHU distributes/interpolates samples along the segment; irregular speed or late dots distort the plotted location.'],
+                ['6', 'Handle pauses correctly', 'Add a dot at the actual pause/static test point and annotate the reason; do not let stationary samples appear along a moving segment.'],
+                ['7', 'Separate floors', 'Stop or segment the log before changing floors, load the next floor plan, and restart dotting from a confirmed landmark.'],
+                ['8', 'Verify before leaving', 'Replay the floor trace in PHU Assistant Lite and check that lines do not cut through walls, jump floors, or miss tested areas.'],
+              ].map(([number, title, body]) => <div key={number} className="flex gap-4 rounded-xl bg-slate-50 p-4 dark:bg-slate-950"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-xs font-black text-cyan-800 dark:bg-cyan-950 dark:text-cyan-300">{number}</span><div><h4 className="font-black">{title}</h4><p className="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-300">{body}</p></div></div>)}
+            </div>
+          </article>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"><Car className="h-6 w-6 text-emerald-600" /><h3 className="mt-4 text-xl font-black">Outdoor benchmark route</h3><p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">Verify direction and task-to-phone mapping, run a proof log, follow the KML in OsmAnd/Tracklia, record detours, and reconcile operator × RAT × FTP UL/DL × MOS before leaving.</p></article>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"><Smartphone className="h-6 w-6 text-cyan-600" /><h3 className="mt-4 text-xl font-black">Indoor/outdoor 5G store test</h3><p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">Run the project-required 5G Speedtest at both positions, prove NR in PHU during active traffic, capture BasicInfo, speed, latency, server, time, and compare conditions before escalating an indoor gap.</p></article>
           </div>
 
           <div className="mt-10 overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800">
