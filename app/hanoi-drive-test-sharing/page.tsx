@@ -43,12 +43,13 @@ import {
 export const metadata: Metadata = {
   title: 'Hanoi Drive Test Sharing | Huawei–MobiFone Vietnam Intern Field Guide',
   description:
-    'A detailed English field guide for Huawei–MobiFone Vietnam interns covering Hanoi drive-test preparation, 4G/5G FTP and MOS execution, route control, log uploads, reporting, troubleshooting, and handover.',
+    'A detailed English field guide for Huawei–MobiFone Vietnam interns covering Hanoi benchmark and emergency-site testing, 4G/5G FTP and MOS execution, route control, log uploads, reporting, troubleshooting, and handover.',
   keywords: [
     'Hanoi drive test',
     'Huawei MobiFone Vietnam',
     'RAN intern guide',
     'benchmark drive test',
+    'emergency site test',
     'FTP DL UL',
     'MOS CQT CDT',
     'Huawei PHU',
@@ -85,13 +86,15 @@ const roles = [
   ['Su Xiaobo', 's00921749', 'GSC engineer', 'Performs log analysis and report writing.'],
   ['Nguyen Ha Phan', 'n50066043', 'Local engineer', 'Field-testing partner.'],
   ['Phan Truong Khang', 'p50065883', 'Local engineer', 'Field-testing partner.'],
-  ['Luo Yanyang', 'l00947656', 'RF engineer', 'VIP complaint testing and Riverside DT support.'],
+  ['Luo Yanyang', 'l00947656', 'RF engineer', 'VIP complaint testing, Riverside DT support, and the project protocol to follow for emergency-site tests.'],
 ];
 
 const glossary = [
   ['DT', 'Drive Test', 'A mobile field measurement along a planned road or indoor route.'],
   ['CDT', 'Continuous / walk drive test', 'A moving test that follows a route or floor map while the logger records continuously.'],
   ['CQT', 'Call Quality Test', 'A fixed-point campaign covering accessibility, retainability, coverage, RxQual, one-way audio/crosstalk, and voice quality.'],
+  ['Benchmark test', 'Controlled operator comparison', 'Runs equivalent FTP DL, FTP UL, and MOS cases on the same route to compare MobiFone, Viettel, and VNPT/Vinaphone fairly.'],
+  ['Emergency-site test', 'Urgent site validation', 'A time-critical validation of the assigned site or service condition. Use Luo Yanyang’s current protocol as the controlling test plan.'],
   ['MOC / MTC', 'Originated / terminated call', 'MOC is dialed by the test UE; MTC is received by the test UE. A CQT voice plan may require both roles.'],
   ['MOS', 'Mean Opinion Score', 'A voice-quality KPI, usually 1–5. The handover treats ≥3.0 as acceptable and ≥4.0 as good; always follow the current customer threshold.'],
   ['FTP DL / UL', 'Downlink / uplink throughput', 'File-transfer tests used to measure user-plane speed and stability.'],
@@ -379,7 +382,7 @@ export default function HanoiDriveTestSharingPage() {
                   ['Handover scope', 'Drive-test work performed from August 2026 onward'],
                   ['Benchmark operators', 'Viettel, MobiFone, and Vinaphone/VNPT'],
                   ['Radio layers', 'LTE 4G and NR 5G'],
-                  ['Test cases', 'FTP uplink, FTP downlink, idle, Ookla 5G speed test, VUE trace, and VoLTE MOS'],
+                  ['Test cases', 'Benchmark FTP UL/DL and MOS comparison, emergency-site validation, idle, Ookla 5G speed test, VUE trace, and VoLTE MOS'],
                   ['Core KPIs', 'RSRP, SINR, PCI, throughput, latency, call accessibility/retainability, and MOS'],
                   ['Log format', '.gen.zip'],
                 ].map(([label, value], index) => (
@@ -470,7 +473,7 @@ export default function HanoiDriveTestSharingPage() {
             icon={ClipboardCheck}
             eyebrow="03 · Field runbook"
             title="One checklist, organized by field phase"
-            description="This replaces the repeated workflow and checklist sections. Run it top to bottom for benchmark routes, walk tests, store tests, and VIP complaint verification."
+            description="This replaces the repeated workflow and checklist sections. Run it top to bottom for benchmark routes, emergency-site tests, walk tests, store tests, and VIP complaint verification."
           />
           <div className="grid gap-8 xl:grid-cols-3">
             <div><div className="mb-4 flex items-center gap-2"><Clock3 className="h-5 w-5 text-cyan-600" /><h3 className="text-lg font-black">Before departure</h3></div><Checklist items={beforeChecklist} /></div>
@@ -497,11 +500,68 @@ export default function HanoiDriveTestSharingPage() {
           <SectionHeading
             icon={Gauge}
             eyebrow="04 · Execution recipes"
-            title="CQT, MOS, 5G verification, and indoor dotting"
-            description="These are the operational details that must be checked during collection—not inferred later from a 5G icon, a route line, or a completed-call counter."
+            title="Benchmark, emergency-site, and field test recipes"
+            description="Definitions and operating steps for FTP/MOS operator comparison, Yanyang’s emergency-site protocol, CQT, real-5G verification, and indoor spatial dotting."
           />
 
-          <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 md:p-8">
+            <div className="flex items-center gap-3"><Car className="h-6 w-6 text-emerald-600" /><h3 className="text-2xl font-black">What is a benchmark test?</h3></div>
+            <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+              A benchmark drive test is a controlled, route-by-route comparison of competing mobile networks. For this project, the same planned route and equivalent test conditions are used to compare <strong>MobiFone</strong>, <strong>Viettel</strong>, and <strong>VNPT/Vinaphone</strong>. The goal is to show relative coverage, data performance, stability, and voice quality—not merely to prove that one phone has service.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              {[
+                ['MobiFone', 'Project/customer network'],
+                ['Viettel', 'Benchmark competitor'],
+                ['VNPT / Vinaphone', 'Benchmark competitor'],
+              ].map(([operator, role]) => <div key={operator} className="rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950"><p className="font-black">{operator}</p><p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{role}</p></div>)}
+            </div>
+            <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+              <table className="w-full min-w-[760px] text-left text-sm">
+                <thead className="bg-slate-950 text-white"><tr><th className="px-4 py-3">Test case</th><th className="px-4 py-3">What it does</th><th className="px-4 py-3">What to compare</th><th className="px-4 py-3">Completion evidence</th></tr></thead>
+                <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
+                  <tr><td className="px-4 py-4 font-black">FTP DL</td><td className="px-4 py-4">Transfers data from the test server to the UE.</td><td className="px-4 py-4">Downlink throughput, stability, radio coverage/quality, and failures.</td><td className="px-4 py-4">Accepted PHU log for each required operator, RAT, and route.</td></tr>
+                  <tr><td className="px-4 py-4 font-black">FTP UL</td><td className="px-4 py-4">Transfers data from the UE to the test server.</td><td className="px-4 py-4">Uplink throughput, stability, radio coverage/quality, and failures.</td><td className="px-4 py-4">Accepted PHU log for each required operator, RAT, and route.</td></tr>
+                  <tr><td className="px-4 py-4 font-black">MOS</td><td className="px-4 py-4">Runs the planned VoLTE voice call and scores perceived speech quality.</td><td className="px-4 py-4">MOC/MTC accessibility, retainability, two-way audio, and UL/DL MOS.</td><td className="px-4 py-4">Accepted paired call logs with populated MOS results for each required operator and route.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="mt-6 grid gap-3 md:grid-cols-2">
+              {[
+                'Keep the route, direction, planned time window, test duration/file/server, and RAT configuration as equivalent as practical.',
+                'Label every phone and map the correct MobiFone, Viettel, or VNPT SIM to the correct PHU task before recording.',
+                'Keep each operator result separate. Record detours, congestion, device differences, invalid trials, and other conditions that affect fairness.',
+                'Close the route only after the complete operator × required RAT × FTP DL/FTP UL matrix and every required MOS result have accepted evidence.',
+              ].map((rule) => <div key={rule} className="flex gap-3 rounded-xl bg-emerald-50 p-4 text-sm leading-6 dark:bg-emerald-950/30"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />{rule}</div>)}
+            </div>
+          </article>
+
+          <article className="mt-8 overflow-hidden rounded-2xl border border-amber-200 bg-white dark:border-amber-900 dark:bg-slate-900">
+            <div className="bg-amber-50 p-6 dark:bg-amber-950/30 md:p-8">
+              <div className="flex items-center gap-3"><RadioTower className="h-6 w-6 text-amber-700 dark:text-amber-400" /><h3 className="text-2xl font-black">Emergency-site test</h3></div>
+              <p className="mt-3 max-w-4xl text-sm leading-6 text-amber-950 dark:text-amber-100">This is an urgent validation of the assigned site or service condition, not a three-operator benchmark. <strong>Luo Yanyang’s current prepared protocol is the controlling document</strong> for the scope, sequence, thresholds, route/points, and deliverables.</p>
+            </div>
+            <div className="grid gap-6 p-6 md:grid-cols-[1fr_0.8fr] md:p-8">
+              <ol className="space-y-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                {[
+                  'Get the current protocol directly from Yanyang or the assigned task owner. Confirm its version, site ID/name, location, deadline, and whether the site is new, restored, temporary, or under incident investigation.',
+                  'Confirm the on-air status, permitted test area, access contact, safety restrictions, baseline/post-change condition, and exact cells, bands, RATs, points, or route required by the protocol.',
+                  'Prepare only the required phones, SIMs, PHU tasks, locks, KML/floor plan, call pair, server/profile, and screenshots. Run a short proof test before travel or before entering the site.',
+                  'At the site, synchronize time and record the starting condition. Capture PHU BasicInfo and run idle, FTP, voice, speed, or handover cases only in the order and duration specified by the protocol.',
+                  'Record site/cell identity, LTE PCI/EARFCN, NR PCI/NR-ARFCN, radio KPIs, test result, exact time/location, abnormalities, access limits, and any deviation approved by the task owner.',
+                  'Validate the trace in PHU Assistant Lite, preserve the raw logs, upload to the instructed path, and report pass, fail, or inconclusive against the protocol. Notify Yanyang of missing scope or urgent failures.',
+                ].map((step, index) => <li key={step} className="flex gap-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-xs font-black text-amber-800 dark:bg-amber-950 dark:text-amber-300">{index + 1}</span><span>{step}</span></li>)}
+              </ol>
+              <aside className="rounded-xl bg-slate-950 p-5 text-white">
+                <ShieldAlert className="h-6 w-6 text-amber-400" />
+                <h4 className="mt-4 text-lg font-black">Protocol gate</h4>
+                <p className="mt-2 text-sm leading-6 text-slate-300">Do not substitute the benchmark matrix for the emergency-site protocol. If the current protocol is missing, outdated, or conflicts with the live task, stop and confirm with Yanyang or the task owner before collection.</p>
+                <p className="mt-4 border-t border-slate-800 pt-4 text-sm leading-6 text-slate-300">Interns collect and verify evidence; they must not change site or network parameters unless explicitly authorized through the project process.</p>
+              </aside>
+            </div>
+          </article>
+
+          <article className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
             <div className="border-b border-slate-200 bg-slate-950 p-6 text-white dark:border-slate-800 md:p-8">
               <div className="flex items-center gap-3"><Phone className="h-6 w-6 text-emerald-400" /><h3 className="text-2xl font-black">CQT call cycle: MOC, MTC, and MOS</h3></div>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-300">A CQT voice test needs both call directions and a working audio path. “Call connected” is not enough when the task also requires speech quality.</p>
@@ -576,10 +636,7 @@ export default function HanoiDriveTestSharingPage() {
             </div>
           </article>
 
-          <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"><Car className="h-6 w-6 text-emerald-600" /><h3 className="mt-4 text-xl font-black">Outdoor benchmark route</h3><p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">Verify direction and task-to-phone mapping, run a proof log, follow the KML in OsmAnd/Tracklia, record detours, and reconcile operator × RAT × FTP UL/DL × MOS before leaving.</p></article>
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"><Smartphone className="h-6 w-6 text-cyan-600" /><h3 className="mt-4 text-xl font-black">Indoor/outdoor 5G store test</h3><p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">Run the project-required 5G Speedtest at both positions, prove NR in PHU during active traffic, capture BasicInfo, speed, latency, server, time, and compare conditions before escalating an indoor gap.</p></article>
-          </div>
+          <article className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900"><Smartphone className="h-6 w-6 text-cyan-600" /><h3 className="mt-4 text-xl font-black">Indoor/outdoor 5G store test</h3><p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">Run the project-required 5G Speedtest at both positions, prove NR in PHU during active traffic, capture BasicInfo, speed, latency, server, time, and compare conditions before escalating an indoor gap.</p></article>
 
           <div className="mt-10 overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800">
             <div className="bg-slate-950 px-6 py-4 text-white"><h3 className="font-black">Minimum evidence package</h3></div>
