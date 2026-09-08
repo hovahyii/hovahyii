@@ -318,4 +318,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/GTC2026/nvidia-vera-rubin-system.PNG',
     categories: ['AI', 'NVIDIA', 'GTC 2026', 'Hardware', 'Robotics'],
   },
+  'how-to-get-free-mulerun-rakyat-digital': {
+    slug: 'how-to-get-free-mulerun-rakyat-digital',
+    title: '🇲🇾 How I Got 3 Months of Free MuleRun via Malaysia\'s AI Untuk Rakyat (Rakyat Digital)',
+    date: '8 September 2026',
+    author: 'Hovah Yii',
+    description: 'A step-by-step walkthrough on how Malaysian youth (18–30) can get 3 months of free access to MuleRun by logging in via MyDigital ID and completing 6 short courses on Rakyat Digital.',
+    ogImage: '/blog/rakyat-digital/3-months-free-access.png',
+    categories: ['AI', 'Tutorial', 'Malaysia', 'MuleRun', 'Freemium'],
+  },
 };
