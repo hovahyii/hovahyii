@@ -327,4 +327,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/rakyat-digital/3-months-free-access.png',
     categories: ['AI', 'Tutorial', 'Malaysia', 'MuleRun', 'Freemium'],
   },
+  'transforming-into-fde-reading-list-roadmap': {
+    slug: 'transforming-into-fde-reading-list-roadmap',
+    title: '⚡ Transforming into a Forward Deployed Engineer (FDE): Books, Papers, and the 2026 Production Roadmap',
+    date: '9 September 2026',
+    author: 'Hovah Yii',
+    description: 'A comprehensive blueprint for engineers transitioning into Forward Deployed Engineering (FDE). Covers the 8-pillar skill tree, 7 essential books with covers, must-read agent papers (ReAct, Toolformer, Reflexion, SWE-agent), RAG beyond kindergarten, MCP, production security, and a 6-month hands-on curriculum.',
+    ogImage: '/blog/fde/hero.jpg',
+    categories: ['AI', 'Engineering', 'Career', 'Agent', 'Architecture'],
+  },
 };

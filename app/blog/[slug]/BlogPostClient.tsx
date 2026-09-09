@@ -18,6 +18,7 @@ import SeedanceContent from './SeedanceContent';
 import MiniMaxM27Content from './MiniMaxM27Content';
 import GTC2026HighlightsContent from './GTC2026HighlightsContent';
 import RakyatDigitalMulerunContent from './RakyatDigitalMulerunContent';
+import FdeTransitionRoadmapContent from './FdeTransitionRoadmapContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -613,6 +614,11 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
       setPost({
         ...postData,
         content: <RakyatDigitalMulerunContent />
+      });
+    } else if (slug === 'transforming-into-fde-reading-list-roadmap') {
+      setPost({
+        ...postData,
+        content: <FdeTransitionRoadmapContent />
       });
     } else if (slug === 'ai-killing-programmers-2026-crisis') {
       setPost({
