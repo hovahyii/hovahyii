@@ -25,21 +25,24 @@ export default function WelcomePopup() {
 
   return (
     <div 
-      className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-75 p-4 animate-in fade-in duration-300 overflow-y-auto"
+      className="fixed inset-0 z-[200] flex items-start sm:items-center justify-center bg-black bg-opacity-75 overflow-y-auto animate-in fade-in duration-300"
+      style={{ padding: 'env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px)' }}
       onClick={() => setIsOpen(false)}
     >
+      {/* Close button — positioned outside the card, always visible */}
+      <button
+        onClick={() => setIsOpen(false)}
+        className="fixed top-3 right-3 sm:top-5 sm:right-5 z-[210] p-2.5 bg-black/70 hover:bg-black/90 backdrop-blur-sm rounded-full text-white transition-all shadow-lg"
+        style={{ marginTop: 'env(safe-area-inset-top, 0px)' }}
+        aria-label="Close popup"
+      >
+        <FaTimes className="h-5 w-5 sm:h-6 sm:w-6" />
+      </button>
+
       <div 
-        className="relative w-full max-w-3xl my-8 bg-white dark:bg-gray-900 rounded-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300"
+        className="relative w-full max-w-3xl mt-14 sm:mt-8 mb-8 mx-4 bg-white dark:bg-gray-900 rounded-lg shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-4 right-4 z-10 p-2 bg-black bg-opacity-50 rounded-full text-white hover:bg-opacity-75 transition-all"
-          aria-label="Close popup"
-        >
-          <FaTimes className="h-6 w-6" />
-        </button>
-        
         <div className="p-6 border-b dark:border-gray-700 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900">
           <h3 className="font-bold text-xl dark:text-white flex items-center gap-2">
             <FaInstagram className="text-pink-600" /> Huawei ICT Academy Interview
@@ -52,7 +55,7 @@ export default function WelcomePopup() {
         <div className="w-full bg-black">
           <iframe
             src="https://www.instagram.com/p/DPVC-5vESxX/embed"
-            className="w-full h-[500px]"
+            className="w-full h-[400px] sm:h-[500px]"
             frameBorder="0"
             scrolling="yes"
             allowTransparency={true}
