@@ -496,7 +496,7 @@ export default function FdeTransitionRoadmapContent() {
           <p className="text-slate-400"># Autonomous Hypothesis Loop</p>
           <p><span className="text-indigo-400">1. Agent Hypothesis:</span> &ldquo;Suspect Physical Cell ID (PCI) collision on Sector A causing throughput drop.&rdquo;</p>
           <p><span className="text-blue-400">2. Tool Call:</span> query_oss_kpis(site_id=&apos;KUL0921&apos;, metric=&apos;DL_SINR_dist&apos;, window=&apos;24h&apos;)</p>
-          <p><span className="text-amber-400">3. Observation:</span> SINR remains clean (>18dB); contradictory evidence retrieved.</p>
+          <p><span className="text-amber-400">3. Observation:</span> SINR remains clean (&gt;18dB); contradictory evidence retrieved.</p>
           <p><span className="text-purple-400">4. Reflection:</span> &ldquo;PCI conflict hypothesis falsified. Check for mechanical antenna downtilt drift or neighbor handover ping-pong.&rdquo;</p>
           <p><span className="text-blue-400">5. Tool Call:</span> query_ret_antenna_tilt() + analyze_handover_matrix()</p>
           <p><span className="text-emerald-400">6. Final RCA:</span> RET remote electrical tilt failure caused overshooting into adjacent cluster. Recommended action: Reset RET controller unit via MML command.</p>
