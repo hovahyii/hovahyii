@@ -14,6 +14,22 @@ import {
 import { Badge } from "@/components/ui/badge";
 import projectData from '../public/projects.json'; // Import the JSON data
 import Slideshow from "@/components/carousel";
+import { ArrowUpRight } from "lucide-react";
+
+interface ProjectEntry {
+  name: string;
+  description: string;
+  website: string;
+  logo: string;
+  status: string;
+  type: string | string[];
+  award?: string;
+  revenue?: string;
+  filter: string | string[];
+  detail?: string;
+}
+
+const projects = projectData as unknown as ProjectEntry[];
 
 
 interface ProjectPageProps {
@@ -59,21 +75,23 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ isDarkMode }) => {
           </Badge>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:mt-6 lg:ml-6 lg:grid-cols-2 gap-4">
-        {projectData
+      <div className="grid grid-cols-1 lg:mt-6 lg:ml-6 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+        {projects
           .filter(
             (project) => !selectedFilter || project.filter.includes(selectedFilter)
           )
-          .map((project, index) => (
-            <Card key={index} className="w-full transition-shadow duration-300 hover:shadow-lg dark:bg-white">
-              <Link href={project.website} target="_blank" rel="noopener noreferrer" className="block">
+          .map((project, index) => {
+            const href = project.website || project.detail || "#";
+            return (
+            <Card key={index} className="relative w-full transition-shadow duration-300 hover:shadow-lg dark:bg-white">
+              <Link href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="block">
                 <CardHeader className="flex justify-start items-start">
-                  <div className="flex items-center">
+                  <div className="flex min-w-0 items-center pr-20">
                     <Image src={project.logo} alt={project.name} width={32} height={32} className="mr-2" />
                     <CardTitle className="text-sm truncate text-black">{project.name}</CardTitle>
                     <Badge
                       variant="default"
-                      className={`flex absolute ml-56 md:ml-72 dark:hover:bg-slate-300 dark:hover:text-white hover:border-slate-500 dark:border-0 text-white dark:text-white ${
+                      className={`flex absolute right-4 top-6 dark:hover:bg-slate-300 dark:hover:text-white hover:border-slate-500 dark:border-0 text-white dark:text-white ${
                         project.status === "Completed"
                           ? "bg-green-500 dark:bg-green-500 "
                           : project.status === "On-going"
@@ -102,11 +120,18 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ isDarkMode }) => {
                   <CardDescription>{project.description}</CardDescription>
                 </CardContent>
                 <CardFooter className="justify-between text-slate-500">
-                  <div className="text-xs" dangerouslySetInnerHTML={{ __html: project.type }} />
+                  <div className="text-xs" dangerouslySetInnerHTML={{ __html: Array.isArray(project.type) ? project.type.join(', ') : project.type }} />
+                  {project.detail && (
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                      Case study
+                      <ArrowUpRight className="h-3 w-3" />
+                    </span>
+                  )}
                 </CardFooter>
               </Link>
             </Card>
-          ))}
+            );
+          })}
       </div>
       <Slideshow isDarkMode={isDarkMode} />
     </div>

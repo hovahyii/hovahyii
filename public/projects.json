@@ -1,15 +1,35 @@
 [
   {
+    "name": "MobiFone Vietnam",
+    "description": "RAN 2026 in Hanoi — drive test, VIP route assurance, airport IBC, and award-winning MML automation.",
+    "website": "",
+    "logo": "/logo/mobifone.png",
+    "status": "Completed",
+    "type": [
+      "RF",
+      "Drive Test",
+      "4G/5G"
+    ],
+    "award": "NE Sitename Automapper - SEA Delivery Award (Jul 2026)",
+    "revenue": "",
+    "detail": "/projects/mobifone-vietnam",
+    "filter": "Engineering"
+  },
+  {
     "name": "U Mobile 5G",
-    "description": "5G Network Implementation",
+    "description": "5G Swap & Mod traffic assurance — built the HW-LTE-Traffic-Volume daily monitoring tool.",
     "website": "",
     "logo": "/logo/umobile.jpg",
     "status": "On-going",
     "type": [
-      "5G"
+      "5G",
+      "LTE",
+      "Automation",
+      "RF"
     ],
-    "award": "",
+    "award": "23 daily cycles · 46 regional reports",
     "revenue": "",
+    "detail": "/projects/umobile-5g",
     "filter": "Engineering"
   },
   {

@@ -53,7 +53,7 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
           <span className={`ml-1 text-sm md:text-lg dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Radio Frequency Engineer </span>
         </div>
         <p className={`mt-4 text-xl font-semibold dark:text-white ${isDarkMode ? 'text-white' : 'text-black'}`}>Master's Student, Mentor, Developer</p>
-        <p className={`mt-2 text-sm dark:text-gray-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Engineering Technologist (BEM) | Certified Associate HarmonyOS Developer | UMPSA×Huawei AppGallery '24 1st RU | CITREX '24 Best of Best | PSM '25 Best Innovation | Huawei ICT '24 (Cloud) 3rd | Intermediate Data Analyst (Huawei) | HCIP-GaussDB (pursuing) | HCIA-AI </p>
+        <p className={`mt-2 text-sm dark:text-gray-300 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Engineering Technologist (BEM) | CITREX '24 Best of Best | PSM '25 Best Innovation | Huawei ICT '24 (Cloud) 3rd | HCIA-AI | HCIP-GaussDB (pursuing)</p>
         <p className={`mt-2 dark:text-red-400 ${isDarkMode ? 'text-red-400' : 'text-gray-600'}`}>
           Need a solution designed by me? 🚀
         </p>
@@ -74,16 +74,16 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
       <div className={`mt-8 p-4 rounded-lg ${isDarkMode ? 'bg-white text-black' : 'bg-gray-100 text-black'}`}>
         <h2 className="text-2xl font-bold text-center text-black">Professional Summary</h2>
         <p className="mt-4 text-black">
-          Holding dual roles at Huawei Malaysia, I serve primarily as a Radio Frequency Engineer while also contributing as an Intermediate Data Analyst. In my capacity as an RF Engineer, I am currently driving the U Mobile 5G project, managing network performance across Perlis, Kedah, Melaka, Johor, and Penang. My scope encompasses end-to-end optimization including KPI monitoring, OSS analysis, MSQOS, planning, UAT, and antenna verification, utilizing advanced tools like QGIS, ThreeCloud, and GeneCloud.
+          Holding dual roles at Huawei Malaysia — primarily a Radio Frequency Engineer, also an Intermediate Data Analyst.
         </p>
         <p className="mt-4 text-black">
-          Simultaneously, as a Data Analyst, I build performance dashboards and deliver insights across Asia Pacific, Middle East, Southern Africa, and Latin America. I am also pursuing my HCIP-GaussDB certification to further strengthen my data engineering capabilities.
+          As RF Engineer, I drive the U Mobile 5G rollout in Malaysia — end-to-end optimization across KPI monitoring, OSS analysis, planning, UAT and antenna verification — and built the HW-LTE-Traffic-Volume tool that verified traffic migration across the Swap &amp; Mod workstream.
         </p>
         <p className="mt-4 text-black">
-          My academic and professional journey is defined by innovation. Currently pursuing an MSc in Telecommunications and AI, I was recently honored with the Best Innovation Award at PSM '25 for my faculty. My track record includes 1st Runner-Up at UMPSA×Huawei AppGallery '24, Best of the Best at CITREX '24, and 3rd place at Huawei ICT Competition '24 (Cloud track).
+          In Vietnam, I led drive test &amp; network assurance for MobiFone&apos;s RAN 2026 5G delivery in Hanoi, where my in-house NE Sitename Automapper tool was awarded by the Southeast Asia Delivery &amp; Service Business Department (Jul 2026).
         </p>
         <p className="mt-4 text-black">
-          Beyond the corporate world, I serve as a mentor at CodingBar and founded Hovah Digital Solutions—delivering smart digital ecosystems for SMEs like HLF Cooling and Panca Hydrau-Pneumatic Sdn Bhd. Whether leading, coding, teaching, or building, I am engineering the future.
+          As Data Analyst, I build performance dashboards and deliver insights across APAC, the Middle East, Southern Africa, and Latin America — and I am pursuing HCIP-GaussDB. Beyond work, I mentor at CodingBar and founded Hovah Digital Solutions.
         </p>
       </div>
 

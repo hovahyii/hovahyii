@@ -1,0 +1,10 @@
+{
+  "respData": {
+    "maxMsgId": 0,
+    "minMsgId": 0,
+    "msgTotalCount": 0
+  },
+  "resultCode": "0",
+  "resultContext": "Operate Success",
+  "sno": null
+}

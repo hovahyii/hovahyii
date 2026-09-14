@@ -1,0 +1,87 @@
+E:\hovahyii\.agent-work\s-19949f13\summarize.py:6: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  return datetime.datetime.utcfromtimestamp(ms/1000).strftime('%Y-%m-%d %H:%M')
+2026-06-03 03:35 | g50056879 | TEXT_MSG | 3/6/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector are  found in the modernize tracker
+2026-06-03 03:36 | g50056879 | IMAGESPAN_MSG | [IMG]Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-03 03:36 | g50056879 | TEXT_MSG | Please update work site list. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0      @Yim Jian Leon @Kee Yuhang @Pravin AL Sreedharan
+2026-06-04 02:05 | g50056879 | IMAGESPAN_MSG | [IMG]Hi, since 27 Days showing under optimization but trend showing traffic lost >20% since 27 days
+2026-06-04 02:05 | g50056879 | PICTURE_MSG | [IMG]
+2026-06-04 03:52 | g50056879 | IMAGESPAN_MSG | [IMG]04/06/23 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-04 03:52 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector are  found in the modernize tracker
+2026-06-04 03:53 | g50056879 | TEXT_MSG | Please update work site list. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0      @Yim Jian Leon @Kee Yuhang @Pravin AL Sreedharan
+2026-06-05 03:52 | g50056879 | IMAGESPAN_MSG | [IMG]05/06/23 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-05 03:52 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector are  found in the modernize tracker
+2026-06-05 03:53 | g50056879 | TEXT_MSG | Please update work site list. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0      @Yim Jian Leon @Kee Yuhang @Pravin AL Sreedharan
+2026-06-08 03:55 | g50056879 | IMAGESPAN_MSG | [IMG]8/6/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-08 04:01 | g50056879 | IMAGESPAN_MSG | [IMG]Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-08 04:01 | g50056879 | TEXT_MSG | Please update work site list. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0      @Yim Jian Leon @Kee Yuhang @Pravin AL Sreedharan
+2026-06-09 01:45 | g50056879 | TEXT_MSG | Please update work site list！It hasn't been updated recently https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0       @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan
+2026-06-09 03:32 | g50056879 | TEXT_MSG | 9/6/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+
+Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are rem
+2026-06-10 03:58 | g50056879 | IMAGESPAN_MSG | [IMG]10/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-10 03:58 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-10 03:58 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list！It hasn't been updated recently. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-11 03:52 | g50056879 | IMAGESPAN_MSG | [IMG]11/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-11 03:52 | g50056879 | IMAGESPAN_MSG | [IMG]Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-11 03:52 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list！It hasn't been updated recently. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-12 03:55 | g50056879 | IMAGESPAN_MSG | [IMG]12/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-12 03:55 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-12 03:55 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list！It hasn't been updated recently. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-15 07:19 | g50056879 | IMAGESPAN_MSG | [IMG]15/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-15 07:19 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-15 07:19 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list！It hasn't been updated recently. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-24 04:17 | g50056879 | IMAGESPAN_MSG | [IMG]24/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-24 04:17 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-24 04:17 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list！It hasn't been updated recently. https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-25 06:48 | g50056879 | TEXT_MSG | 25/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-25 06:48 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-25 06:50 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-26 03:23 | g50056879 | IMAGESPAN_MSG | [IMG]26/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-26 03:23 | g50056879 | IMAGESPAN_MSG | [IMG]Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-26 03:23 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-29 08:54 | g50056879 | TEXT_MSG | 29/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-29 08:55 | g50056879 | IMAGESPAN_MSG | [IMG]Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-29 08:55 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-06-30 06:10 | g50056879 | TEXT_MSG | 30/6/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-06-30 06:10 | g50056879 | TEXT_MSG | Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-06-30 06:10 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-01 08:35 | g50056879 | TEXT_MSG | 1/7/26 Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are rem
+2026-07-01 08:35 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-02 04:18 | g50056879 | IMAGESPAN_MSG | [IMG]2/7/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-07-02 04:19 | g50056879 | TEXT_MSG | Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-07-02 04:19 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-03 06:39 | g50056879 | IMAGESPAN_MSG | [IMG]3/7/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-07-03 06:39 | g50056879 | TEXT_MSG | Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-07-03 06:39 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-06 01:19 | y00816842 | TEXT_MSG | @Gan Serene we do not have anymore COPA80 sites. You need us to provide inputs for COPA90 sites?
+2026-07-06 01:30 | g50056879 | TEXT_MSG | yes
+2026-07-06 06:04 | g50056879 | TEXT_MSG | 6/7/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are remo
+2026-07-06 06:04 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-08 07:46 | g50056879 | IMAGESPAN_MSG | [IMG]8/7/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-07-08 07:46 | g50056879 | TEXT_MSG | Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-07-08 07:46 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-09 07:08 | g50056879 | IMAGESPAN_MSG | [IMG]9/7/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-07-09 07:08 | g50056879 | IMAGESPAN_MSG | [IMG]Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-07-09 07:08 | g50056879 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-13 04:05 | mwx1337472 | TEXT_MSG | 13/7/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-07-13 04:10 | mwx1337472 | IMAGESPAN_MSG | [IMG]Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-07-13 04:10 | mwx1337472 | TEXT_MSG | @Yim Jian Leon   @Kee Yuhang   @Pravin AL Sreedharan   Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-07-13 06:16 | y00816842 | CARD_MSG | [CARD]
+2026-07-13 06:16 | y00816842 | TEXT_MSG | For KV, no more sites for 4G MOD
+2026-07-13 06:17 | y00816842 | TEXT_MSG | @Gan Serene  @Murali Krishna Bogi 
+Moving forward, the following PIC will be in charge of their respective region
+KV SR -  @Muhammad Asyraf Bin Che Hasnan 
+EC NR -  @Kee Yuhang
+2026-07-15 04:12 | mwx1337472 | PICTURE_MSG | [IMG]
+2026-07-15 04:12 | mwx1337472 | TEXT_MSG | Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-07-15 04:13 | mwx1337472 | TEXT_MSG | 15/7/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-07-15 04:49 | g50056879 | TEXT_MSG | @Muhammad Asyraf Bin Che Hasnan @Kee Yuhang  Please update work site list! https://onebox.huawei.com/v/1c870e81b61a8f53e06043a30ce91fee?type=0
+2026-08-05 08:37 | mwx1337472 | IMAGESPAN_MSG | [IMG]05/8/26 Traffic monitoring: SR&NR - After activity of Swap & Mod Traffic reduce >20% *all detected sector found in the modernize tracker are removed
+2026-08-05 08:38 | mwx1337472 | PICTURE_MSG | [IMG]
+2026-08-05 08:38 | mwx1337472 | TEXT_MSG | Traffic monitoring: CENTRAL & EASTERN- After activity of Swap Traffic reduce >20%. *critical KV EC site which have comments are removed.
+2026-08-27 10:32 | k84302625 | PICTURE_MSG | [IMG]
+2026-08-27 10:33 | k84302625 | TEXT_MSG | SDLK NR35  Sector Swap Clockwise Direction Pls help to resolve
+2026-08-27 10:35 | k84302625 | TEXT_MSG | @Yim Jian Leon
+TOTAL: 77
