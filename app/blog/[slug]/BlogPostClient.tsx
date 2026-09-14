@@ -19,6 +19,7 @@ import MiniMaxM27Content from './MiniMaxM27Content';
 import GTC2026HighlightsContent from './GTC2026HighlightsContent';
 import RakyatDigitalMulerunContent from './RakyatDigitalMulerunContent';
 import FdeTransitionRoadmapContent from './FdeTransitionRoadmapContent';
+import PerplexityStudentDiscountContent from './PerplexityStudentDiscountContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -6244,6 +6245,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         ...postData,
         content: (
           <ClaudeSmartForkingContent />
+        )
+      });
+    } else if (slug === 'how-to-get-perplexity-pro-student-discount') {
+      setPost({
+        ...postData,
+        content: (
+          <PerplexityStudentDiscountContent />
         )
       });
     }

@@ -336,4 +336,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/fde/hero.jpg',
     categories: ['AI', 'Engineering', 'Career', 'Agent', 'Architecture'],
   },
+  'how-to-get-perplexity-pro-student-discount': {
+    slug: 'how-to-get-perplexity-pro-student-discount',
+    title: '🎓 How I Got Perplexity Pro at 50% Off as a Student — Education Pro Walkthrough ($9/month)',
+    date: '14 September 2026',
+    author: 'Hovah Yii',
+    description: 'Step-by-step walkthrough of the Perplexity Education Program: fill the student verification form, check out Education Pro at $9/month — 50% off the $20 Pro plan (~RM 45 for Malaysian students) — and unlock every frontier model including GPT-5.6 and Kimi K3.',
+    ogImage: '/blog/perplexity/education-pro-pricing.png',
+    categories: ['AI', 'Perplexity', 'Tutorial', 'Freemium'],
+  },
 };

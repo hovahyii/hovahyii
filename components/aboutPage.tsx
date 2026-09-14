@@ -77,10 +77,10 @@ const About: React.FC<Props> = ({ isDarkMode, toggleDarkMode }) => {
           Holding dual roles at Huawei Malaysia — primarily a Radio Frequency Engineer, also an Intermediate Data Analyst.
         </p>
         <p className="mt-4 text-black">
-          As RF Engineer, I drive the U Mobile 5G rollout in Malaysia — end-to-end optimization across KPI monitoring, OSS analysis, planning, UAT and antenna verification — and built the HW-LTE-Traffic-Volume tool that verified traffic migration across the Swap &amp; Mod workstream.
+          As RF Engineer, I drive the U Mobile 5G rollout in Malaysia — end-to-end optimization across KPI monitoring, OSS analysis, planning, UAT and antenna verification — and built the HW-LTE-Traffic-Volume tool, whose 23 daily monitoring cycles and 46 regional reports verified traffic migration across the Swap &amp; Mod workstream and underpinned the 4G MOD close-out.
         </p>
         <p className="mt-4 text-black">
-          In Vietnam, I led drive test &amp; network assurance for MobiFone&apos;s RAN 2026 5G delivery in Hanoi, where my in-house NE Sitename Automapper tool was awarded by the Southeast Asia Delivery &amp; Service Business Department (Jul 2026).
+          In Vietnam, I led drive test &amp; network assurance for MobiFone&apos;s RAN 2026 5G delivery in Hanoi — benchmarking 14 VIP routes in a single field day — where my in-house NE Sitename Automapper tool was awarded by the Southeast Asia Delivery &amp; Service Business Department (Jul 2026).
         </p>
         <p className="mt-4 text-black">
           As Data Analyst, I build performance dashboards and deliver insights across APAC, the Middle East, Southern Africa, and Latin America — and I am pursuing HCIP-GaussDB. Beyond work, I mentor at CodingBar and founded Hovah Digital Solutions.

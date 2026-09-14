@@ -1,0 +1,418 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "MRANTI × Supabase Workshop" [ref=e3] [cursor=pointer]:
+      - /url: /supabase-for-mvps-workshop
+      - text: MRANTI × Supabase Workshop
+    - link "Blog" [ref=e5] [cursor=pointer]:
+      - /url: /blog
+    - button "Save Contact" [ref=e6] [cursor=pointer]:
+      - img [ref=e7]
+      - generic [ref=e10]: Save Contact
+    - button "QR Code" [ref=e11] [cursor=pointer]:
+      - img [ref=e12]
+      - generic [ref=e15]: QR Code
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - img "Hovah Yii" [ref=e20]
+        - heading "Lt M. Jehovah Yii Zui Hon" [level=1] [ref=e21]
+        - generic [ref=e23] [cursor=pointer]: ☀️
+        - generic [ref=e24]:
+          - img [ref=e25]
+          - generic [ref=e28]: Selangor, Malaysia
+          - img [ref=e29]
+          - generic [ref=e31]: Radio Frequency Engineer
+        - paragraph [ref=e32]: Master's Student, Mentor, Developer
+        - paragraph [ref=e33]: Engineering Technologist (BEM) | CITREX '24 Best of Best | PSM '25 Best Innovation | Huawei ICT '24 (Cloud) 3rd | HCIA-AI | HCIP-GaussDB (pursuing)
+        - paragraph [ref=e34]: Need a solution designed by me? 🚀
+        - generic [ref=e35]:
+          - textbox "Your enquiry..." [ref=e36]
+          - button "Message" [ref=e37] [cursor=pointer]:
+            - link "Message" [ref=e38]:
+              - /url: https://api.whatsapp.com/send?phone=601110501375&text=
+        - generic [ref=e39]:
+          - link "Connect with Hovah on Linkedin" [ref=e40] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/hovahyii
+            - img [ref=e41]
+          - link "Checkout Hovah's repo" [ref=e43] [cursor=pointer]:
+            - /url: https://github.com/hovahyii
+            - img [ref=e44]
+          - link "Checkout Hovah's repo" [ref=e46] [cursor=pointer]:
+            - /url: https://www.cloudskillsboost.google/public_profiles/0c67c603-196b-4f60-81d1-ecef0d6454b3
+            - img [ref=e47]
+          - link "Connect with Hovah on HackerRank" [ref=e49] [cursor=pointer]:
+            - /url: https://www.hackerrank.com/profile/hovahyii
+            - img [ref=e50]
+          - link "Email me" [ref=e52] [cursor=pointer]:
+            - /url: mailto:hovahyii@proton.me
+            - img [ref=e53]
+          - link "Consider buying Hovah a coffee" [ref=e56] [cursor=pointer]:
+            - /url: https://buymeacoffee.com/hovahyii
+            - img [ref=e57]
+      - generic [ref=e59]:
+        - heading "Professional Summary" [level=2] [ref=e60]
+        - paragraph [ref=e61]: Holding dual roles at Huawei Malaysia — primarily a Radio Frequency Engineer, also an Intermediate Data Analyst.
+        - paragraph [ref=e62]: As RF Engineer, I drive the U Mobile 5G rollout in Malaysia — end-to-end optimization across KPI monitoring, OSS analysis, planning, UAT and antenna verification — and built the HW-LTE-Traffic-Volume tool, whose 23 daily monitoring cycles and 46 regional reports verified traffic migration across the Swap & Mod workstream and underpinned the 4G MOD close-out.
+        - paragraph [ref=e63]: In Vietnam, I led drive test & network assurance for MobiFone's RAN 2026 5G delivery in Hanoi — benchmarking 14 VIP routes in a single field day — where my in-house NE Sitename Automapper tool was awarded by the Southeast Asia Delivery & Service Business Department (Jul 2026).
+        - paragraph [ref=e64]: As Data Analyst, I build performance dashboards and deliver insights across APAC, the Middle East, Southern Africa, and Latin America — and I am pursuing HCIP-GaussDB. Beyond work, I mentor at CodingBar and founded Hovah Digital Solutions.
+      - generic [ref=e65]:
+        - heading "Work" [level=2] [ref=e66]:
+          - img [ref=e67]
+          - generic [ref=e69]: Work
+        - list [ref=e70]:
+          - listitem [ref=e71]:
+            - img "Huawei Technologies Logo" [ref=e73]
+            - generic [ref=e74]:
+              - term [ref=e75]: Company
+              - definition [ref=e76]: Huawei Technologies (Malaysia) Sdn Bhd
+              - term [ref=e77]: Role
+              - definition [ref=e78]: Radio Frequency Engineer
+              - term [ref=e79]: Date
+              - definition [ref=e80]:
+                - time [ref=e81]: April 2025
+                - text: —
+                - time [ref=e82]: Present
+          - listitem [ref=e83]:
+            - img "Huawei Technologies Logo" [ref=e85]
+            - generic [ref=e86]:
+              - term [ref=e87]: Company
+              - definition [ref=e88]: Huawei Technologies (Malaysia) Sdn Bhd
+              - term [ref=e89]: Role
+              - definition [ref=e90]: Radio Frequency Engineer Intern
+              - term [ref=e91]: Date
+              - definition [ref=e92]:
+                - time [ref=e93]: September 2024
+                - text: —
+                - time [ref=e94]: March 2025
+          - listitem [ref=e95]:
+            - img "Mahiran Digital Sdn Bhd Logo" [ref=e97]
+            - generic [ref=e98]:
+              - term [ref=e99]: Company
+              - definition [ref=e100]: Mahiran Digital Sdn Bhd
+              - term [ref=e101]: Role
+              - definition [ref=e102]: Full-stack Developer
+              - term [ref=e103]: Date
+              - definition [ref=e104]:
+                - time [ref=e105]: "2021"
+                - text: —
+                - time [ref=e106]: August 2022
+          - listitem [ref=e107]:
+            - img "Rajang Digital Solutions Logo" [ref=e109]
+            - generic [ref=e110]:
+              - term [ref=e111]: Company
+              - definition [ref=e112]: Rajang Digital Solutions
+              - term [ref=e113]: Role
+              - definition [ref=e114]: Junior Web Developer
+              - term [ref=e115]: Date
+              - definition [ref=e116]:
+                - time [ref=e117]: Mar 2020
+                - text: —
+                - time [ref=e118]: Jun 2020
+          - listitem [ref=e119]:
+            - img "Press Metal Bintulu Sdn Bhd Logo" [ref=e121]
+            - generic [ref=e122]:
+              - term [ref=e123]: Company
+              - definition [ref=e124]: Press Metal Bintulu Sdn Bhd
+              - term [ref=e125]: Role
+              - definition [ref=e126]: Robotics Engineer
+              - term [ref=e127]: Date
+              - definition [ref=e128]:
+                - time [ref=e129]: June 2019
+                - text: —
+                - time [ref=e130]: August 2019
+          - listitem [ref=e131]:
+            - img "iLead Solutions Logo" [ref=e133]
+            - generic [ref=e134]:
+              - term [ref=e135]: Company
+              - definition [ref=e136]: iLead Solutions
+              - term [ref=e137]: Role
+              - definition [ref=e138]: Web Designer
+              - term [ref=e139]: Date
+              - definition [ref=e140]:
+                - time [ref=e141]: June 2018
+                - text: —
+                - time [ref=e142]: August 2018
+      - generic [ref=e144]:
+        - heading "Certificates & Achievements" [level=2] [ref=e145]:
+          - img [ref=e146]
+          - generic [ref=e148]: Certificates & Achievements
+        - list [ref=e149]:
+          - listitem [ref=e150]:
+            - link "Engineering Technologist (BEM)" [ref=e151] [cursor=pointer]:
+              - /url: /blog/eng-tech/engineering-technologist.jpg
+              - img "Engineering Technologist (BEM)" [ref=e152]
+          - listitem [ref=e153]:
+            - link "Anugerah Best of the Best Citrex 2024" [ref=e154] [cursor=pointer]:
+              - /url: https://www.linkedin.com/feed/update/urn:li:activity:7194406897800687619/
+              - img "Anugerah Best of the Best Citrex 2024" [ref=e155]
+          - listitem [ref=e156]:
+            - link "Postman API Fundamentals Student Expert" [ref=e157] [cursor=pointer]:
+              - /url: https://badgr.com/public/assertions/rmVwiQe3RbqmjpnQ9brwyw?identity__email=tb20091@student.ump.edu.my
+              - img "Postman API Fundamentals Student Expert" [ref=e158]
+          - listitem [ref=e159]:
+            - link "Google Project Management Certificate" [ref=e160] [cursor=pointer]:
+              - /url: https://www.credly.com/badges/a30646a1-4000-40d4-9fcf-d87c0fad2af7/linked_in_profile
+              - img "Google Project Management Certificate" [ref=e161]
+          - listitem [ref=e162]:
+            - link "Cytron ProMaker" [ref=e163] [cursor=pointer]:
+              - /url: https://my.cytron.io/referral?referral_id=292f2146434006
+              - img "Cytron ProMaker" [ref=e164]
+          - listitem [ref=e165]:
+            - link "Young Innovators Challenge 2022 - Train-the-Trainer (TTT)" [ref=e166] [cursor=pointer]:
+              - /url: https://sms.chumbaka.asia/b/TEYKjgaATR
+              - img "Young Innovators Challenge 2022 - Train-the-Trainer (TTT)" [ref=e167]
+          - listitem [ref=e168]:
+            - link "Contributor to Exercism" [ref=e169] [cursor=pointer]:
+              - /url: https://exercism.org/profiles/hovahyii/badges
+              - img "Contributor to Exercism" [ref=e170]
+      - generic [ref=e172]:
+        - heading "Blog & Articles" [level=2] [ref=e173]:
+          - img [ref=e174]
+          - generic [ref=e176]: Blog & Articles
+        - paragraph [ref=e177]: Deep dives into launches, practical how-tos, and product notes—updated whenever something new ships.
+        - link "Explore the Blog →" [ref=e178] [cursor=pointer]:
+          - /url: /blog
+    - generic [ref=e179]:
+      - figure [ref=e180]
+      - generic [ref=e182]:
+        - heading "Projects" [level=1] [ref=e183]
+        - generic [ref=e184]:
+          - generic [ref=e185]: Web
+          - generic [ref=e186]: Engineering
+          - generic [ref=e187]: IoT
+          - generic [ref=e188]: 3D Modeling
+      - generic [ref=e189]:
+        - link "MobiFone Vietnam MobiFone Vietnam Completed NE Sitename Automapper - SEA Delivery Award (Jul 2026) RAN 2026 in Hanoi — drive test, VIP route assurance, airport IBC, and award-winning MML automation. RF, Drive Test, 4G/5G Case study" [ref=e191] [cursor=pointer]:
+          - /url: /projects/mobifone-vietnam
+          - generic [ref=e192]:
+            - generic [ref=e193]:
+              - img "MobiFone Vietnam" [ref=e194]
+              - heading "MobiFone Vietnam" [level=3] [ref=e195]
+              - generic [ref=e196]: Completed
+            - generic [ref=e197]: NE Sitename Automapper - SEA Delivery Award (Jul 2026)
+          - paragraph [ref=e199]: RAN 2026 in Hanoi — drive test, VIP route assurance, airport IBC, and award-winning MML automation.
+          - generic [ref=e200]:
+            - generic [ref=e201]: RF, Drive Test, 4G/5G
+            - generic [ref=e202]:
+              - text: Case study
+              - img [ref=e203]
+        - link "U Mobile 5G U Mobile 5G On-going 23 daily cycles · 46 regional reports 5G Swap & Mod traffic assurance — built the HW-LTE-Traffic-Volume daily monitoring tool. 5G, LTE, Automation, RF Case study" [ref=e207] [cursor=pointer]:
+          - /url: /projects/umobile-5g
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - img "U Mobile 5G" [ref=e210]
+              - heading "U Mobile 5G" [level=3] [ref=e211]
+              - generic [ref=e212]: On-going
+            - generic [ref=e213]: 23 daily cycles · 46 regional reports
+          - paragraph [ref=e215]: 5G Swap & Mod traffic assurance — built the HW-LTE-Traffic-Volume daily monitoring tool.
+          - generic [ref=e216]:
+            - generic [ref=e217]: 5G, LTE, Automation, RF
+            - generic [ref=e218]:
+              - text: Case study
+              - img [ref=e219]
+        - link "Amigos Cafe Amigos Cafe On-going Restaurant App Next Js, Restaurant App" [ref=e223] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e225]:
+            - img "Amigos Cafe" [ref=e226]
+            - heading "Amigos Cafe" [level=3] [ref=e227]
+            - generic [ref=e228]: On-going
+          - paragraph [ref=e230]: Restaurant App
+          - generic [ref=e232]: Next Js, Restaurant App
+        - link "Trident Quantum Trident Quantum On-going ERP System Flutter Mobile App, ERP" [ref=e234] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e236]:
+            - img "Trident Quantum" [ref=e237]
+            - heading "Trident Quantum" [level=3] [ref=e238]
+            - generic [ref=e239]: On-going
+          - paragraph [ref=e241]: ERP System
+          - generic [ref=e243]: Flutter Mobile App, ERP
+        - link "Panca Hydrau-Pneumatic Sdn Bhd Panca Hydrau-Pneumatic Sdn Bhd Completed Professional hydraulic and pneumatic solutions provider in Malaysia. Next JS, Corporate Website, SEO" [ref=e245] [cursor=pointer]:
+          - /url: https://panca-hydrau.com.my
+          - generic [ref=e247]:
+            - img "Panca Hydrau-Pneumatic Sdn Bhd" [ref=e248]
+            - heading "Panca Hydrau-Pneumatic Sdn Bhd" [level=3] [ref=e249]
+            - generic [ref=e250]: Completed
+          - paragraph [ref=e252]: Professional hydraulic and pneumatic solutions provider in Malaysia.
+          - generic [ref=e254]: Next JS, Corporate Website, SEO
+        - link "HLF Cooling HLF Cooling On-going Premier cooling tower solutions in Malaysia. Next JS, Ecommerce, Auto Reply Email" [ref=e256] [cursor=pointer]:
+          - /url: https://hlfcooling.com.my
+          - generic [ref=e258]:
+            - img "HLF Cooling" [ref=e259]
+            - heading "HLF Cooling" [level=3] [ref=e260]
+            - generic [ref=e261]: On-going
+          - paragraph [ref=e263]: Premier cooling tower solutions in Malaysia.
+          - generic [ref=e265]: Next JS, Ecommerce, Auto Reply Email
+        - link "Leica Malaysia Leica Malaysia Completed Buy your favourite Leica Camera here Shopify, Ecommerce, Cron Job, Freelance" [ref=e267] [cursor=pointer]:
+          - /url: https://leica-store.my
+          - generic [ref=e269]:
+            - img "Leica Malaysia" [ref=e270]
+            - heading "Leica Malaysia" [level=3] [ref=e271]
+            - generic [ref=e272]: Completed
+          - paragraph [ref=e274]: Buy your favourite Leica Camera here
+          - generic [ref=e276]: Shopify, Ecommerce, Cron Job, Freelance
+        - link "TEDxPetaling Street TEDxPetaling Street On-going Writing backend server Volunteer, ABP, GraphQL" [ref=e278] [cursor=pointer]:
+          - /url: http://www.tedxpetalingstreet.com/en/
+          - generic [ref=e280]:
+            - img "TEDxPetaling Street" [ref=e281]
+            - heading "TEDxPetaling Street" [level=3] [ref=e282]
+            - generic [ref=e283]: On-going
+          - paragraph [ref=e285]: Writing backend server
+          - generic [ref=e287]: Volunteer, ABP, GraphQL
+        - link "Aito Aito Completed Supplies fire equipment at best price Laravel, Part-time" [ref=e289] [cursor=pointer]:
+          - /url: https://aito.com.my/
+          - generic [ref=e291]:
+            - img "Aito" [ref=e292]
+            - heading "Aito" [level=3] [ref=e293]
+            - generic [ref=e294]: Completed
+          - paragraph [ref=e296]: Supplies fire equipment at best price
+          - generic [ref=e298]: Laravel, Part-time
+        - link "IEM UMPSA IEM UMPSA On-going IEM UMPSA Club Official Website Next Js, Volunteer" [ref=e300] [cursor=pointer]:
+          - /url: https://iemumpsa.vercel.app
+          - generic [ref=e302]:
+            - img "IEM UMPSA" [ref=e303]
+            - heading "IEM UMPSA" [level=3] [ref=e304]
+            - generic [ref=e305]: On-going
+          - paragraph [ref=e307]: IEM UMPSA Club Official Website
+          - generic [ref=e309]: Next Js, Volunteer
+        - link "Hovah's Blog Hovah's Blog On-going My blog about life at UMPSA Next Js, Work" [ref=e311] [cursor=pointer]:
+          - /url: https://hovah-blog.vercel.app/
+          - generic [ref=e313]:
+            - img "Hovah's Blog" [ref=e314]
+            - heading "Hovah's Blog" [level=3] [ref=e315]
+            - generic [ref=e316]: On-going
+          - paragraph [ref=e318]: My blog about life at UMPSA
+          - generic [ref=e320]: Next Js, Work
+        - link "MilkTea+ MilkTea+ On-going MYR200/month Get your assignment done with price of Milk Tea Next Js, Services" [ref=e322] [cursor=pointer]:
+          - /url: https://milkteaplus.vercel.app/
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - img "MilkTea+" [ref=e325]
+              - heading "MilkTea+" [level=3] [ref=e326]
+              - generic [ref=e327]: On-going
+            - generic [ref=e328]: MYR200/month
+          - paragraph [ref=e330]: Get your assignment done with price of Milk Tea
+          - generic [ref=e332]: Next Js, Services
+        - link "Pekan Christian Community Pekan Christian Community On-going A welcoming community of Christian students dedicated to connecting, supporting, and strengthening the faith of its members. Next Js, Charity" [ref=e334] [cursor=pointer]:
+          - /url: https://pekan-christian-community.vercel.app/
+          - generic [ref=e336]:
+            - img "Pekan Christian Community" [ref=e337]
+            - heading "Pekan Christian Community" [level=3] [ref=e338]
+            - generic [ref=e339]: On-going
+          - paragraph [ref=e341]: A welcoming community of Christian students dedicated to connecting, supporting, and strengthening the faith of its members.
+          - generic [ref=e343]: Next Js, Charity
+        - link "STEM Lab | FPGA STEM Lab | FPGA On-going Researching on FPGA DE10-Lite, Verilog HDL, Research" [ref=e345] [cursor=pointer]:
+          - /url: https://stem-lab-fpga.vercel.app/
+          - generic [ref=e347]:
+            - img "STEM Lab | FPGA" [ref=e348]
+            - heading "STEM Lab | FPGA" [level=3] [ref=e349]
+            - generic [ref=e350]: On-going
+          - paragraph [ref=e352]: Researching on FPGA
+          - generic [ref=e354]: DE10-Lite, Verilog HDL, Research
+        - 'link "DISTILWISE IoT DISTILWISE IoT On-going Citrex 2024: Best of the Best Award (Staff) Final Year Project IoT, 3D Modelling, Electrical Wiring, Mechanical Piping, Software" [ref=e356] [cursor=pointer]':
+          - /url: https://smart-agrotech-solutions.vercel.app/projects/compact-membrane-distillation
+          - generic [ref=e357]:
+            - generic [ref=e358]:
+              - img "DISTILWISE IoT" [ref=e359]
+              - heading "DISTILWISE IoT" [level=3] [ref=e360]
+              - generic [ref=e361]: On-going
+            - generic [ref=e362]: "Citrex 2024: Best of the Best Award (Staff)"
+          - paragraph [ref=e364]: Final Year Project
+          - generic [ref=e366]: IoT, 3D Modelling, Electrical Wiring, Mechanical Piping, Software
+        - link "IoT Smart Home IoT Smart Home Completed LED Control with Flutter App and ESP32 IoT, Flutter, ESP32, Smart Home, Exhibition" [ref=e368] [cursor=pointer]:
+          - /url: https://www.linkedin.com/feed/update/urn:li:activity:7196313348429291520/
+          - generic [ref=e370]:
+            - img "IoT Smart Home" [ref=e371]
+            - heading "IoT Smart Home" [level=3] [ref=e372]
+            - generic [ref=e373]: Completed
+          - paragraph [ref=e375]: LED Control with Flutter App and ESP32
+          - generic [ref=e377]: IoT, Flutter, ESP32, Smart Home, Exhibition
+        - link "CanteenBuddy CanteenBuddy Completed Smart food ordering system using ESP32 to streamline school cafeteria orders IoT, ESP32, PHP, MySQL" [ref=e379] [cursor=pointer]:
+          - /url: https://github.com/hovahyii/CanteenBuddy
+          - generic [ref=e381]:
+            - img "CanteenBuddy" [ref=e382]
+            - heading "CanteenBuddy" [level=3] [ref=e383]
+            - generic [ref=e384]: Completed
+          - paragraph [ref=e386]: Smart food ordering system using ESP32 to streamline school cafeteria orders
+          - generic [ref=e388]: IoT, ESP32, PHP, MySQL
+      - generic [ref=e389]:
+        - heading "Photos" [level=1] [ref=e391]
+        - generic [ref=e393]:
+          - list [ref=e394]:
+            - button "slide item 1" [ref=e395] [cursor=pointer]
+            - button "slide item 2" [ref=e396] [cursor=pointer]
+            - button "slide item 3" [ref=e397] [cursor=pointer]
+            - button "slide item 4" [ref=e398] [cursor=pointer]
+            - button "slide item 5" [ref=e399] [cursor=pointer]
+            - button "slide item 6" [ref=e400] [cursor=pointer]
+            - button "slide item 7" [ref=e401] [cursor=pointer]
+            - button "slide item 8" [ref=e402] [cursor=pointer]
+            - button "slide item 9" [ref=e403] [cursor=pointer]
+            - button "slide item 10" [ref=e404] [cursor=pointer]
+            - button "slide item 11" [ref=e405] [cursor=pointer]
+          - button "previous slide / item" [ref=e406] [cursor=pointer]
+          - list [ref=e408]:
+            - listitem [ref=e409]:
+              - generic [ref=e410]:
+                - img "FIMIEX 2023"
+                - paragraph [ref=e411]: FIMIEX 2023
+            - listitem [ref=e412]:
+              - generic [ref=e413]:
+                - img "Huawei Life"
+                - paragraph [ref=e414]: Huawei Life
+            - listitem [ref=e415]:
+              - generic [ref=e416]:
+                - img "Pengurniaan Watikah"
+                - paragraph [ref=e417]: Pengurniaan Watikah
+            - listitem [ref=e418]:
+              - generic [ref=e419]:
+                - img "Pertauliahan Leftenan Muda"
+                - paragraph [ref=e420]: Pertauliahan Leftenan Muda
+            - listitem [ref=e421]:
+              - generic [ref=e422]:
+                - img "Commissiong Ball Night"
+                - paragraph [ref=e423]: Commissiong Ball Night
+            - listitem [ref=e424]:
+              - generic [ref=e425]:
+                - img "Hari Ulang Tahun TUDM Ke-66"
+                - paragraph [ref=e426]: Hari Ulang Tahun TUDM Ke-66
+            - listitem [ref=e427]:
+              - generic [ref=e428]:
+                - img "Chumbaka TTT Workshop 2024"
+                - paragraph [ref=e429]: Chumbaka TTT Workshop 2024
+            - listitem [ref=e430]:
+              - generic [ref=e431]:
+                - img "Huawei Sales Elite Challenge"
+                - paragraph [ref=e432]: Huawei Sales Elite Challenge
+            - listitem [ref=e433]:
+              - generic [ref=e434]:
+                - img "Citrex 2024"
+                - paragraph [ref=e435]: Citrex 2024
+            - listitem [ref=e436]:
+              - generic [ref=e437]:
+                - img "Citrex 2024"
+                - paragraph [ref=e438]: Citrex 2024
+            - listitem [ref=e439]:
+              - generic [ref=e440]:
+                - img "Site Visit to UPC Chemicals"
+                - paragraph [ref=e441]: Site Visit to UPC Chemicals
+            - listitem [ref=e442]:
+              - generic [ref=e443]:
+                - img "FIMIEX 2023"
+                - paragraph [ref=e444]: FIMIEX 2023
+            - listitem [ref=e445]:
+              - generic [ref=e446]:
+                - img "Huawei Life"
+                - paragraph [ref=e447]: Huawei Life
+          - button "next slide / item" [ref=e448] [cursor=pointer]
+          - paragraph [ref=e449]: 9 of 11
+  - contentinfo [ref=e450]:
+    - generic [ref=e451]:
+      - link "Deployed on Vercel" [ref=e452] [cursor=pointer]:
+        - /url: https://vercel.com/
+        - img "Deployed on Vercel" [ref=e453]
+      - paragraph [ref=e454]: © 2026 Hovah Yii
+    - generic [ref=e455]:
+      - generic [ref=e456]: Powered By
+      - link "TapNex" [ref=e457] [cursor=pointer]:
+        - /url: https://tapnex-card.vercel.app/
+  - alert [ref=e474]
