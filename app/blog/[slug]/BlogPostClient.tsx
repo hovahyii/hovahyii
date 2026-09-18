@@ -20,6 +20,7 @@ import GTC2026HighlightsContent from './GTC2026HighlightsContent';
 import RakyatDigitalMulerunContent from './RakyatDigitalMulerunContent';
 import FdeTransitionRoadmapContent from './FdeTransitionRoadmapContent';
 import PerplexityStudentDiscountContent from './PerplexityStudentDiscountContent';
+import CourseraFreeAICertContent from './CourseraFreeAICertContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -6252,6 +6253,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         ...postData,
         content: (
           <PerplexityStudentDiscountContent />
+        )
+      });
+    } else if (slug === 'how-to-get-free-coursera-ai-certifications') {
+      setPost({
+        ...postData,
+        content: (
+          <CourseraFreeAICertContent />
         )
       });
     }

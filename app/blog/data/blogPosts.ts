@@ -345,4 +345,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/perplexity/education-pro-pricing.png',
     categories: ['AI', 'Perplexity', 'Tutorial', 'Freemium'],
   },
+  'how-to-get-free-coursera-ai-certifications': {
+    slug: 'how-to-get-free-coursera-ai-certifications',
+    title: '🎓 How to Get Free Coursera AI Certifications via Rakyat Digital Skills Hub',
+    date: '18 September 2026',
+    author: 'Hovah Yii',
+    description: 'Step-by-step guide on accessing free Coursera courses through Malaysia\'s Rakyat Digital Skills Hub. Includes recommended AI courses on Knowledge Graphs, RAG, Vector Databases, GenAI project planning, and Google AI for Data Analysis.',
+    ogImage: '/blog/coursera/coursera-hero.jpg',
+    categories: ['AI', 'Tutorial', 'Malaysia', 'Coursera', 'Freemium'],
+  },
 };
