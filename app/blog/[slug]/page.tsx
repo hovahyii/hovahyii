@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: post.title,
     description: post.description,
     authors: [{ name: post.author }],
-    keywords: ['cursor', 'student discount', 'free premium', 'AI code editor', 'programming tools'],
+    keywords: post.categories,
     openGraph: {
       title: post.title,
       description: post.description,
@@ -29,14 +29,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
           url: post.ogImage,
           width: 1200,
           height: 630,
-          alt: 'Cursor Student Program',
+          alt: post.title,
         },
       ],
       locale: 'en_US',
       type: 'article',
-      publishedTime: '2024-05-01T00:00:00Z',
+      publishedTime: new Date(post.date).toISOString(),
       authors: [post.author],
-      tags: ['cursor', 'student', 'free', 'AI'],
+      tags: post.categories,
     },
     twitter: {
       card: 'summary_large_image',
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       creator: '@HovahYii',
       images: {
         url: post.ogImage,
-        alt: 'Cursor Student Program',
+        alt: post.title,
       },
     },
   };

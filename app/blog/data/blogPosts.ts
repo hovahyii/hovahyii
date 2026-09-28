@@ -354,4 +354,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/coursera/coursera-hero.jpg',
     categories: ['AI', 'Tutorial', 'Malaysia', 'Coursera', 'Freemium'],
   },
+  'how-to-lodge-mcmc-complaint-whatsapp-banned-account': {
+    slug: 'how-to-lodge-mcmc-complaint-whatsapp-banned-account',
+    title: '🇲🇾 How to Lodge an MCMC Complaint for a Banned WhatsApp Account (When Review Fails)',
+    date: '28 September 2026',
+    author: 'Hovah Yii',
+    description: 'Complete step-by-step guide on how to file a formal complaint with MCMC (Consumer Redress Portal) when your WhatsApp account is banned or hacked and in-app review is exhausted. Includes real screenshots, complaint template, and latest news on MCMC meeting Meta.',
+    ogImage: '/blog/whatsapp-mcmc/mcmc-home.png',
+    categories: ['Tutorial', 'Malaysia', 'WhatsApp', 'MCMC', 'Security'],
+  },
 };

@@ -21,6 +21,7 @@ import RakyatDigitalMulerunContent from './RakyatDigitalMulerunContent';
 import FdeTransitionRoadmapContent from './FdeTransitionRoadmapContent';
 import PerplexityStudentDiscountContent from './PerplexityStudentDiscountContent';
 import CourseraFreeAICertContent from './CourseraFreeAICertContent';
+import WhatsappMcmcComplaintContent from './WhatsappMcmcComplaintContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -6260,6 +6261,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         ...postData,
         content: (
           <CourseraFreeAICertContent />
+        )
+      });
+    } else if (slug === 'how-to-lodge-mcmc-complaint-whatsapp-banned-account') {
+      setPost({
+        ...postData,
+        content: (
+          <WhatsappMcmcComplaintContent />
         )
       });
     }
