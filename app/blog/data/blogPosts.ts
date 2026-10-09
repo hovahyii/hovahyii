@@ -363,4 +363,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/whatsapp-mcmc/mcmc-home.png',
     categories: ['Tutorial', 'Malaysia', 'WhatsApp', 'MCMC', 'Security'],
   },
+  'hms-core-android-integration-guide': {
+    slug: 'hms-core-android-integration-guide',
+    title: '📱 Complete Guide: Integrating Huawei HMS Core into Your Android App',
+    date: '9 October 2026',
+    author: 'Hovah Yii',
+    description: 'A comprehensive, step-by-step developer guide on integrating Huawei Mobile Services (HMS Core) SDK into an Android app — from AppGallery Connect console setup and SHA-256 fingerprinting to Gradle build scripts, code initialization, and Android Studio compatibility matrices.',
+    ogImage: '/blog/hms-core/hms-core-hero.jpg',
+    categories: ['Huawei', 'Android', 'Mobile Development', 'Tutorial'],
+  },
 };

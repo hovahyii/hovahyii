@@ -1,0 +1,269 @@
+﻿Create a professional technical infographic / knowledge card titled "HMS Core 接入 Android App 完全指南".
+
+=== STYLE ===
+- Dark theme developer documentation card, like a GitHub dark-mode README or technical cheat sheet.
+- Background: deep navy gradient from #0f0f1a to #1a1a2e.
+- Card sections: slightly lighter navy #16213e with subtle border rgba(255,255,255,0.08), border-radius 16px, padding 28px.
+- Font: Inter for text, JetBrains Mono for code.
+- Accent colors: Huawei red #C7000B, electric blue #4a90d9, green #00c853, orange #ff9800, red #f44336.
+- Code blocks: background #0d1117, border-radius 12px, header bar with three macOS dots (red #ff5f56, yellow #ffbd2e, green #27c93f) and a filename label on the right.
+- Code syntax highlighting: keywords coral #ff7b72, strings light blue #a5d6ff, comments gray italic #8b949e, function names purple #d2a8ff, variables orange #ffa657.
+- Table headers: background rgba(74,144,217,0.1), header text color #a0c4ff.
+- Badges: small rounded pills, green (rgba(0,200,83,0.15) / #00e676), blue (rgba(74,144,217,0.15) / #64b5f6), orange (rgba(255,152,0,0.15) / #ffb74d), red (rgba(244,67,54,0.15) / #ff5252).
+- Callout boxes: info (blue tinted), warning (orange tinted), each with an emoji icon and text.
+- Section headers: 40x40 rounded icon square + section title (22px bold white) + section description (14px gray).
+- Vertical layout, max width 960px, centered.
+
+=== LAYOUT (top to bottom) ===
+
+--- 1. HERO SECTION ---
+Center-aligned, padding 60px 40px 48px, background gradient #1a1a2e → #16213e → #0f3460, border-radius 20px, with a radial red glow effect in the top-right corner.
+
+Content:
+- Small red badge: "📱 HMS Core SDK" (uppercase, letter-spacing 1px, background rgba(199,0,11,0.15), border rgba(199,0,11,0.4), color #ff6b6b)
+- Large bold title (42px, gradient white → #a0c4ff):
+  Line 1: "HMS Core 接入 Android App"
+  Line 2: "完全指南"
+- Subtitle (16px gray): "从 AGConnect 控制台配置到 Android Studio 编译运行 · 全流程实操手册"
+- Four meta items in a row, each with a colored dot + label:
+  • green dot — "AGConnect 配置"
+  • blue dot — "Gradle 集成"
+  • orange dot — "签名 & 初始化"
+  • red dot — "版本兼容矩阵"
+
+--- 2. PART 1 · AGConnect 控制台准备 ---
+Section icon: green gear ⚙️ (background rgba(0,200,83,0.15))
+Section title: "Part 1 · AGConnect 控制台准备"
+Section desc: "在华为开发者后台完成项目配置"
+
+Card with blue left border (3px solid #4a90d9). Inside: a 4-row table, columns [#, 步骤, 操作位置]:
+
+Row 1: # = 1 | 步骤 = "开通 HMS Kit" (subtitle: "选择你需要的 Kit（Push / Analytics / Map 等）") | 操作位置 = "My apps → APIs"
+Row 2: # = 2 | 步骤 = "下载配置文件" (subtitle: "获取 agconnect-services.json") | 操作位置 = "Project settings → App information"
+Row 3: # = 3 | 步骤 = "配置签名指纹" (subtitle: "填入 SHA-256（debug 和 release 都要）") | 操作位置 = "Project settings → App information"
+Row 4: # = 4 | 步骤 = "开发者实名认证" (subtitle: "确保华为开发者账号已完成实名认证") | 操作位置 = "华为开发者账号设置"
+
+--- 3. PART 2 · Android Studio 工程配置 ---
+Section icon: blue wrench 🔧 (background rgba(74,144,217,0.15))
+Section title: "Part 2 · Android Studio 工程配置"
+Section desc: "Gradle 依赖、插件、混淆规则"
+
+Card A — Step A:
+- Step number circle "A" (blue tinted)
+- Title: "放置配置文件"
+- Description: "将 agconnect-services.json 放到 app/ 根目录（和 build.gradle 同级），不是 project 根目录。"
+
+Card B — Step B:
+- Step number circle "B"
+- Title: "Project 级 build.gradle（或 settings.gradle）"
+- Description: "添加 HMS Maven 仓库和 agcp classpath"
+- Code block, header label "build.gradle (Project)":
+```
+repositories {
+    google()
+    mavenCentral()
+    maven { url 'https://developer.huawei.com/repo/' }  // HMS Maven 仓库
+}
+
+dependencies {
+    // buildscript 里
+    classpath 'com.huawei.agconnect:agcp:1.9.1.301'  // AGConnect 插件
+}
+```
+- Warning callout (orange, ⚠️ icon): "新版 Gradle 用 settings.gradle 的 dependencyResolutionManagement 管理 repositories 时，把 maven URL 放到那里。"
+
+Card C — Step C:
+- Step number circle "C"
+- Title: "App 级 build.gradle"
+- Description: "应用 agcp 插件 + 按需引入 HMS Kit 依赖"
+- Code block, header label "build.gradle (app)":
+```
+plugins {
+    id 'com.android.application'
+    id 'com.huawei.agconnect.agcp'  // AGConnect 插件
+}
+
+android {
+    // ...
+    signingConfigs {
+        release {
+            storeFile file('xxx.jks')
+            storePassword 'xxx'
+            keyAlias 'xxx'
+            keyPassword 'xxx'
+        }
+    }
+}
+
+dependencies {
+    // HMS Core 基础包
+    implementation 'com.huawei.hms:base:6.11.0.301'
+
+    // Push Kit
+    implementation 'com.huawei.hms:push:6.11.0.300'
+
+    // Analytics Kit
+    implementation 'com.huawei.hms:hianalytics:6.11.0.301'
+
+    // Map Kit
+    implementation 'com.huawei.hms:maps:6.11.0.301'
+}
+```
+
+Card D — Step D:
+- Step number circle "D"
+- Title: "混淆规则 proguard-rules.pro"
+- Code block, header label "proguard-rules.pro":
+```
+# HMS Core
+-keep class com.huawei.hianalytics.**{*;}
+-keep class com.huawei.hms.**{*;}
+-keep class com.huawei.agconnect.**{*;}
+-dontwarn com.huawei.hms.**
+```
+
+--- 4. PART 3 · 代码初始化 & 验证 ---
+Section icon: purple rocket 🚀 (background rgba(210,168,255,0.15))
+Section title: "Part 3 · 代码初始化 & 验证"
+Section desc: "Application 初始化 + HMS Core 可用性检查"
+
+Card containing 3 code blocks:
+
+Code block 1, header label "MyApp.java — Application 初始化":
+```
+public class MyApp extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        // 初始化 Analytics
+        HiAnalytics.getInstance(this);
+    }
+}
+```
+
+Code block 2, header label "AndroidManifest.xml — 注册 Application":
+```
+<application
+    android:name=".MyApp"
+    ... >
+```
+
+Code block 3, header label "HMS Core 可用性检查":
+```
+// 检查 HMS Core 是否可用
+if (HuaweiApiAvailability.getInstance()
+        .isHuaweiMobileServicesAvailable(this)
+        == ConnectionResult.SUCCESS) {
+    Log.d("HMS", "HMS Core available ✅");
+} else {
+    Log.d("HMS", "HMS Core NOT available ❌");
+}
+```
+
+--- 5. PART 4 · 签名指纹获取 ---
+Section icon: orange key 🔑 (background rgba(255,152,0,0.15))
+Section title: "Part 4 · 签名指纹获取"
+Section desc: "用 keytool 获取 SHA-256 填入 AGConnect 控制台"
+
+Card containing:
+
+Code block, header label "Terminal — keytool 命令":
+```
+# Debug 签名
+keytool -list -v -keystore "%USERPROFILE%\.android\debug.keystore" \
+  -alias androiddebugkey -storepass android -keypass android
+
+# Release 签名
+keytool -list -v -keystore your_release.jks
+```
+
+Info callout (blue, 💡 icon): "把输出里的 SHA-256 值填到 AGConnect 控制台的 Project settings → App information。"
+
+--- 6. PART 5 · 关键注意事项 ---
+Section icon: red pin 📌 (background rgba(244,67,54,0.15))
+Section title: "Part 5 · 关键注意事项"
+
+Card with orange left border (3px solid #ff9800). Inside: a 5-row table, columns [事项, 说明]:
+
+Row 1: 事项 = "海外设备" | 说明 = "HMS Core 需要设备上有 HMS 框架；中国大陆华为设备默认有，海外设备需安装 HMS Core APK"
+Row 2: 事项 = "和 GMS 共存" | 说明 = "用 HuaweiApiAvailability 判断是否支持 HMS，不支持时 fallback 到 GMS"
+Row 3: 事项 = "agconnect-services.json" | 说明 = "包含 app_id、api_key 等配置，必须放在 app/ 目录，不要提交到公开仓库"
+Row 4: 事项 = "多 flavor" | 说明 = "每个 flavor 可能需要单独的 json，放在 src/{flavor}/ 下"
+Row 5: 事项 = "网络" | 说明 = "构建时需要能访问 developer.huawei.com/repo Maven 仓库"
+
+--- 7. PART 6 · HMS Kit 一览 ---
+Section icon: green package 📦 (background rgba(0,200,83,0.15))
+Section title: "Part 6 · HMS Kit 一览"
+Section desc: "按需引入，不同 Kit 初始化和使用差别很大"
+
+Card containing a 2×3 grid (gap 12px) of kit items, each item: rounded card, emoji icon (24px) on left, kit name (14px bold white) + description (12px gray) on right:
+
+Item 1: 🔔 | Push Kit | 推送通知
+Item 2: 📊 | Analytics Kit | 数据分析
+Item 3: 🗺️ | Map Kit | 地图服务
+Item 4: 👤 | Account Kit | 华为账号登录
+Item 5: 💳 | IAP Kit | 应用内支付
+Item 6: 🤖 | ML Kit | AI 能力（OCR / 翻译 / 语音）
+
+--- 8. PART 7 · Android Studio 版本兼容性 ---
+Section icon: red monitor 🖥️ (background rgba(199,0,11,0.15))
+Section title: "Part 7 · Android Studio 版本兼容性"
+Section desc: "没有华为官方强制要求，约束来自 AGP 和 agcp 插件"
+
+Sub-card 1 (blue left border) — Requirements summary table, columns [组件, 要求]:
+- Android Studio | green badge "Arctic Fox (2020.3.1)+" + blue badge "推荐 Hedgehog (2023.1.1)+"
+- AGP | orange badge "7.0+" (text: "对应 agcp 1.9.x")
+- Gradle | orange badge "7.0+" (text: "AGP 7.x；AGP 8.x 需 Gradle 8.x")
+- JDK | orange badge "JDK 11" (text: "AGP 7.x 最低") + red badge "JDK 17" (text: "AGP 8.x 需")
+- compileSdk | "31+（推荐 34 或最新）"
+- minSdk | "各 Kit 不同，一般 19+，部分 Kit 要求 21+"
+
+Sub-card 2 — Version compatibility matrix table (title "📋 版本对应速查表"), columns [Android Studio, AGP, Gradle, JDK, HMS Core]:
+
+Row 1: "4.2 (2021.1)" | "4.2" | "6.7+" | "8/11" | ❌ "不推荐"
+Row 2: "Arctic Fox (2020.3.1)" | "7.0" | "7.0+" | "11" | ✅ "基本可用"
+Row 3: "Bumblebee (2021.2.1)" | "7.1" | "7.2+" | "11" | ✅
+Row 4: "Dolphin (2021.3.1)" | "7.3" | "7.4+" | "11" | ✅
+Row 5: "Flamingo (2022.2.1)" | "8.0" | "8.0+" | "17" | ✅
+Row 6: "Hedgehog (2023.1.1)" [bold, row highlighted green tint] | "8.2" | "8.2+" | "17" | ✅ + green badge "推荐"
+Row 7: "Iguana (2023.2.1)" | "8.3" | "8.4+" | "17" | ✅ + blue badge "推荐"
+Row 8: "Koala (2024.1.1)" | "8.5+" | "8.7+" | "17" | ✅
+
+Use green ✅ checkmark (#00e676, 18px) and red ❌ cross (#ff5252, 18px) in the last column.
+
+Info callout (blue, 💡 icon): "核心原因：agcp（AGConnect Gradle Plugin）1.9.x 依赖 AGP 7.x+，AGP 7.0 对应 Android Studio Arctic Fox，这就是实际最低线。"
+
+Sub-card 3 — "🔌 HMS Toolkit 插件（可选但推荐）":
+Description text: "华为提供的 Android Studio 插件，可自动配置 HMS Maven 仓库、下载 agconnect-services.json、一键添加 Kit 依赖、检查配置问题。"
+Code block, header label "安装路径":
+```
+Settings → Plugins → 搜索 "HMS Toolkit" → Install
+```
+
+Sub-card 4 (red left border) — "⚠️ 不要搞混 IDE":
+Table, columns [IDE, 用途]:
+- Android Studio | "HMS Core（Android 平台）开发 ✅"
+- DevEco Studio | "HarmonyOS / HarmonyOS NEXT 开发，不用于 HMS Core Android 接入"
+
+--- 9. 接入流程总览 ---
+Section icon: blue map 🗺️ (background rgba(74,144,217,0.15))
+Section title: "接入流程总览"
+
+Card containing a horizontal flow of pill-shaped items connected by → arrows:
+AGConnect 配置 → 下载 json → Gradle 集成 → 签名指纹 → 代码初始化 → 验证 ✅
+
+Each pill: background rgba(74,144,217,0.1), border rgba(74,144,217,0.3), border-radius 8px, padding 8px 16px, color #a0c4ff, font-size 13px, font-weight 500.
+Arrows: gray, 16px.
+
+--- 10. FOOTER ---
+Center-aligned, top border, padding 32px 0 16px.
+Text: "HMS Core 接入指南 · 整理 by 薄冰哥小余 · 2026-10-09"
+"HMS Core 接入指南" in bold blue (#a0c4ff), rest in gray (#a0a0b0).
+
+=== RENDERING NOTES ===
+- The entire image should feel like a single long vertical scrolling cheat sheet / knowledge card.
+- All code must be rendered in monospace font with the syntax highlighting colors specified above.
+- Every single code block listed above MUST appear in the image with its COMPLETE content — do not truncate, summarize, or omit any line of code.
+- Tables should have subtle row hover states (not critical for static image but indicates clean styling).
+- The overall aesthetic is professional, information-dense, well-structured, dark-mode developer reference.
+- Suitable for screenshot or PDF export at 960px width.
