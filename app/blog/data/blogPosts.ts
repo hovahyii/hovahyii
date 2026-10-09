@@ -363,4 +363,13 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/whatsapp-mcmc/mcmc-home.png',
     categories: ['Tutorial', 'Malaysia', 'WhatsApp', 'MCMC', 'Security'],
   },
+  'gtm-engineering-and-fde-two-new-jobs': {
+    slug: 'gtm-engineering-and-fde-two-new-jobs',
+    title: '🚀 GTM Engineering & FDE: The Two New Jobs AI Just Created (and How to Get In)',
+    date: '9 October 2026',
+    author: 'Hovah Yii',
+    description: 'GTM (Go-to-Market) engineering is an emerging technical discipline that applies software engineering principles, AI, and workflow automation to build scalable, data-driven revenue systems rather than running one-off sales campaigns. A deep dive into GTM Engineering and Forward Deployed Engineering — the two hottest new job categories of the AI era: what they are, who is hiring (Clay, Cursor, Notion, Palantir, OpenAI, Anthropic), real salary data ($160K median GTME / $350K–$550K FDE total comp), the three-rung build ladder, and a step-by-step path into each role.',
+    ogImage: '/blog/gtm/clay-guide.png',
+    categories: ['AI', 'Career', 'GTM', 'FDE', 'Engineering'],
+  },
 };
