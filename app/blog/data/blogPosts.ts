@@ -57,15 +57,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/chatgpt5.1/new.png',
     categories: ['AI'],
   },
-  'night-stars-kashgar': {
-    slug: 'night-stars-kashgar',
-    title: 'Night Stars Over Kashgar — A Smallness Meditation',
-    date: '2026-10-19',
-    author: 'Hovah Yii',
-    description: 'A brief philosophical and theological reflection on human smallness before the stars, inspired by Psalm 8:3-4 and the night sky above Kashgar Prefecture.',
-    ogImage: '/blog/night-stars-kashgar.jpg',
-    categories: ['Philosophy', 'Theology'],
-  },
+
   'gemini-3-ultimate-ai': {
     slug: 'gemini-3-ultimate-ai',
     title: '👑 The Strongest AI of the Year: Google Gemini 3 Is Here!',
@@ -75,15 +67,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/gemini-3/gemini-3-pro.png',
     categories: ['AI'],
   },
-  'night-stars-kashgar': {
-    slug: 'night-stars-kashgar',
-    title: 'Night Stars Over Kashgar — A Smallness Meditation',
-    date: '2026-10-19',
-    author: 'Hovah Yii',
-    description: 'A brief philosophical and theological reflection on human smallness before the stars, inspired by Psalm 8:3-4 and the night sky above Kashgar Prefecture.',
-    ogImage: '/blog/night-stars-kashgar.jpg',
-    categories: ['Philosophy', 'Theology'],
-  },
+
   'openai-gpt-5-1-pro-codex-max': {
     slug: 'openai-gpt-5-1-pro-codex-max',
     title: '🚀 OpenAI Strikes Back: GPT-5.1 Pro and GPT-5.1-Codex-Max',
@@ -93,15 +77,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/openai/gpt-5.1-announcement.png',
     categories: ['AI'],
   },
-  'night-stars-kashgar': {
-    slug: 'night-stars-kashgar',
-    title: 'Night Stars Over Kashgar — A Smallness Meditation',
-    date: '2026-10-19',
-    author: 'Hovah Yii',
-    description: 'A brief philosophical and theological reflection on human smallness before the stars, inspired by Psalm 8:3-4 and the night sky above Kashgar Prefecture.',
-    ogImage: '/blog/night-stars-kashgar.jpg',
-    categories: ['Philosophy', 'Theology'],
-  },
+
   'google-nano-banana-pro-gemini-3-image': {
     slug: 'google-nano-banana-pro-gemini-3-image',
     title: '🍌 Google Nano Banana Pro: Designers Beware! Deep Integration with Gemini 3',
@@ -111,15 +87,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/nano-banana/gemini-3-pro-image.png',
     categories: ['AI'],
   },
-  'night-stars-kashgar': {
-    slug: 'night-stars-kashgar',
-    title: 'Night Stars Over Kashgar — A Smallness Meditation',
-    date: '2026-10-19',
-    author: 'Hovah Yii',
-    description: 'A brief philosophical and theological reflection on human smallness before the stars, inspired by Psalm 8:3-4 and the night sky above Kashgar Prefecture.',
-    ogImage: '/blog/night-stars-kashgar.jpg',
-    categories: ['Philosophy', 'Theology'],
-  },
+
   'how-to-get-bem-engineering-technologist-approval': {
     slug: 'how-to-get-bem-engineering-technologist-approval',
     title: 'How to Get Your Engineering Technologist (BEM) Approval in Malaysia',
