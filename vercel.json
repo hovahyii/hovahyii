@@ -9,6 +9,11 @@
       "source": "/my-experience",
       "destination": "https://excalidraw.com/#room=fbe50366df08dc1cfa15,ip6LQ3qkes8XqwTPiy8-gg",
       "permanent": false
+    },
+    {
+      "source": "/blog/night-stars-kashgar",
+      "destination": "/night-stars-smallness-blog.md",
+      "permanent": false
     }
   ]
 }
