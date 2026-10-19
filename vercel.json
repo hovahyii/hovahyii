@@ -12,7 +12,7 @@
     },
     {
       "source": "/blog/night-stars-kashgar",
-      "destination": "/night-stars-smallness-blog",
+      "destination": "/night-stars-smallness-blog.md",
       "permanent": false
     }
   ]
