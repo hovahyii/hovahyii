@@ -44,7 +44,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     title: 'Night Stars Over Kashgar — A Smallness Meditation',
     date: '2026-10-19',
     author: 'Hovah Yii',
-    description: 'A brief philosophical and theological reflection on human smallness before the stars, inspired by Psalm 8:3-4 and the night sky above Kashgar Prefecture.',
+    description: 'A personal reflection on a desert night in Kashgar, a slow climb through altitude sickness in Pamir, and the faith and dependence that brought The Pilgrim’s Progress to mind.',
     ogImage: '/blog/kashgar/torch-under-night-sky.png',
     categories: ['Philosophy', 'Theology'],
   },
