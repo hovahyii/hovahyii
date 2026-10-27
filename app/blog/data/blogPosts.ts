@@ -45,7 +45,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     date: '2026-10-19',
     author: 'Hovah Yii',
     description: 'A brief philosophical and theological reflection on human smallness before the stars, inspired by Psalm 8:3-4 and the night sky above Kashgar Prefecture.',
-    ogImage: '/hovah-blog.png',
+    ogImage: '/blog/kashgar/torch-under-night-sky.png',
     categories: ['Philosophy', 'Theology'],
   },
   'gpt-5-1-emotional-upgrade': {

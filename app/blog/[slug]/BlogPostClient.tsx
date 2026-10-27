@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BlogPost } from '../data/blogPosts';
@@ -26,19 +26,22 @@ import GtmEngineeringContent from './GtmEngineeringContent';
 import HmsCoreGuideContent from './HmsCoreGuideContent';
 
 interface BlogPostClientProps {
+  children?: ReactNode;
   slug: string;
   postData: Omit<BlogPost, 'content'>;
 }
 
-export default function BlogPostClient({ slug, postData }: BlogPostClientProps) {
-  const [post, setPost] = useState<BlogPost | null>(null);
+export default function BlogPostClient({ slug, postData, children }: BlogPostClientProps) {
+  const [post, setPost] = useState<BlogPost | null>(() => children ? { ...postData, content: children } : null);
   const [views, setViews] = useState<number>(0);
   const [isLoadingViews, setIsLoadingViews] = useState(true);
 
   useEffect(() => {
     // In a real application, you would fetch this data from an API or CMS
     // For now, we'll hardcode the blog post content
-    if (slug === 'how-to-publish-app-into-appgallery-store') {
+    if (children) {
+      setPost({ ...postData, content: children });
+    } else if (slug === 'how-to-publish-app-into-appgallery-store') {
       setPost({
         ...postData,
         content: (
@@ -6287,7 +6290,7 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         )
       });
     }
-  }, [slug, postData]);
+  }, [slug, postData, children]);
 
   // Standard random view count logic
   useEffect(() => {
