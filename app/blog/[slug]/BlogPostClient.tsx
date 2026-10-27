@@ -23,6 +23,7 @@ import PerplexityStudentDiscountContent from './PerplexityStudentDiscountContent
 import CourseraFreeAICertContent from './CourseraFreeAICertContent';
 import WhatsappMcmcComplaintContent from './WhatsappMcmcComplaintContent';
 import GtmEngineeringContent from './GtmEngineeringContent';
+import HmsCoreGuideContent from './HmsCoreGuideContent';
 
 interface BlogPostClientProps {
   slug: string;
@@ -6276,6 +6277,13 @@ export default function BlogPostClient({ slug, postData }: BlogPostClientProps) 
         ...postData,
         content: (
           <GtmEngineeringContent />
+        )
+      });
+    } else if (slug === 'hms-core-android-integration-guide') {
+      setPost({
+        ...postData,
+        content: (
+          <HmsCoreGuideContent />
         )
       });
     }

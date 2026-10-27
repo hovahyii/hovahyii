@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import NightStarsKashgarContent from './NightStarsKashgarContent';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import BlogPostClient from './BlogPostClient';
@@ -65,5 +67,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     notFound();
   }
   
+  if (slug === 'night-stars-kashgar') {
+    return (
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
+        <Link href="/blog" className="text-blue-600 hover:underline">&larr; Back to Blog</Link>
+        <h1 className="text-3xl font-bold mt-6 mb-2">{postData.title}</h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">{postData.author} &bull; {postData.date}</p>
+        <NightStarsKashgarContent />
+      </div>
+    );
+  }
+
   return <BlogPostClient slug={slug} postData={postData} />;
 }

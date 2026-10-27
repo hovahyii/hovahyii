@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HMS Core 接入 Android App 完全指南</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --huawei-red: #C7000B;
+    --huawei-dark: #1a1a2e;
+    --bg-primary: #0f0f1a;
+    --bg-secondary: #1a1a2e;
+    --bg-card: #16213e;
+    --bg-code: #0d1117;
+    --text-primary: #e8e8e8;
+    --text-secondary: #a0a0b0;
+    --accent-blue: #4a90d9;
+    --accent-green: #00c853;
+    --accent-orange: #ff9800;
+    --accent-red: #f44336;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    padding: 0;
+  }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 48px 40px; }
+
+  .hero {
+    text-align: center;
+    padding: 60px 40px 48px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(199,0,11,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(199,0,11,0.15);
+    border: 1px solid rgba(199,0,11,0.4);
+    color: #ff6b6b;
+    padding: 6px 18px; border-radius: 50px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1px;
+    margin-bottom: 20px; text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: 42px; font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #a0c4ff 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 12px; line-height: 1.3;
+  }
+  .hero .subtitle { font-size: 16px; color: var(--text-secondary); }
+  .hero-meta { display: flex; justify-content: center; gap: 24px; margin-top: 28px; flex-wrap: wrap; }
+  .hero-meta-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-secondary); }
+  .hero-meta-item .dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  .section { margin-bottom: 36px; }
+  .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .section-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .section-title { font-size: 22px; font-weight: 700; color: #ffffff; }
+  .section-desc { font-size: 14px; color: var(--text-secondary); margin-top: 2px; }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; margin-bottom: 20px; }
+  .card-highlight { border-left: 3px solid var(--accent-blue); }
+  .card-warning { border-left: 3px solid var(--accent-orange); }
+  .card-danger { border-left: 3px solid var(--accent-red); }
+
+  .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead { background: rgba(74,144,217,0.1); }
+  th { padding: 14px 16px; text-align: left; font-weight: 600; color: #a0c4ff; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--text-primary); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: rgba(255,255,255,0.02); }
+
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 50px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .badge-green { background: rgba(0,200,83,0.15); color: #00e676; }
+  .badge-red   { background: rgba(244,67,54,0.15); color: #ff5252; }
+  .badge-blue   { background: rgba(74,144,217,0.15); color: #64b5f6; }
+  .badge-orange { background: rgba(255,152,0,0.15); color: #ffb74d; }
+
+  .code-block { background: var(--bg-code); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 16px 0; }
+  .code-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border); }
+  .code-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+  .code-dots { display: flex; gap: 6px; }
+  .code-dot { width: 10px; height: 10px; border-radius: 50%; }
+  pre { padding: 18px 20px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.6; color: #c9d1d9; }
+
+  .kwd { color: #ff7b72; } .str { color: #a5d6ff; } .cmt { color: #8b949e; font-style: italic; }
+  .fn  { color: #d2a8ff; } .num { color: #79c0ff; } .var { color: #ffa657; } .op  { color: #ff7b72; }
+
+  .steps { display: flex; flex-direction: column; gap: 16px; }
+  .step { display: flex; gap: 16px; align-items: flex-start; }
+  .step-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; background: rgba(74,144,217,0.15); color: #64b5f6; border: 1px solid rgba(74,144,217,0.3); }
+  .step-content { flex: 1; }
+  .step-title { font-weight: 600; font-size: 15px; margin-bottom: 4px; color: #ffffff; }
+  .step-desc { font-size: 14px; color: var(--text-secondary); }
+
+  .callout { padding: 16px 20px; border-radius: 10px; font-size: 14px; margin: 16px 0; display: flex; gap: 12px; align-items: flex-start; }
+  .callout-info { background: rgba(74,144,217,0.08); border: 1px solid rgba(74,144,217,0.2); }
+  .callout-warn { background: rgba(255,152,0,0.08); border: 1px solid rgba(255,152,0,0.2); }
+  .callout-icon { font-size: 18px; flex-shrink: 0; line-height: 1.5; }
+  .callout-text { color: var(--text-primary); }
+
+  .kit-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 16px 0; }
+  .kit-item { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+  .kit-emoji { font-size: 24px; }
+  .kit-name { font-weight: 600; font-size: 14px; color: #ffffff; }
+  .kit-desc { font-size: 12px; color: var(--text-secondary); }
+
+  .flow { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+  .flow-item { padding: 8px 16px; background: rgba(74,144,217,0.1); border: 1px solid rgba(74,144,217,0.3); border-radius: 8px; font-size: 13px; font-weight: 500; color: #a0c4ff; }
+  .flow-arrow { color: var(--text-secondary); font-size: 16px; }
+
+  .footer { text-align: center; padding: 32px 0 16px; border-top: 1px solid var(--border); margin-top: 48px; }
+  .footer-text { font-size: 13px; color: var(--text-secondary); }
+  .footer-brand { font-weight: 700; color: #a0c4ff; }
+
+  .compat-table th:nth-child(5), .compat-table td:nth-child(5) { text-align: center; }
+  .check { color: #00e676; font-size: 18px; }
+  .cross { color: #ff5252; font-size: 18px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-badge">📱 HMS Core SDK</div>
+    <h1>HMS Core 接入 Android App<br>完全指南</h1>
+    <p class="subtitle">从 AGConnect 控制台配置到 Android Studio 编译运行 · 全流程实操手册</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span class="dot" style="background:var(--accent-green)"></span> AGConnect 配置</div>
+      <div class="hero-meta-item"><span class="dot" style="background:var(--accent-blue)"></span> Gradle 集成</div>
+      <div class="hero-meta-item"><span class="dot" style="background:var(--accent-orange)"></span> 签名 &amp; 初始化</div>
+      <div class="hero-meta-item"><span class="dot" style="background:var(--huawei-red)"></span> 版本兼容矩阵</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(0,200,83,0.15)">⚙️</div>
+      <div>
+        <div class="section-title">Part 1 · AGConnect 控制台准备</div>
+        <div class="section-desc">在华为开发者后台完成项目配置</div>
+      </div>
+    </div>
+    <div class="card card-highlight">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th style="width:40px">#</th><th>步骤</th><th>操作位置</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><strong>开通 HMS Kit</strong><br><span style="color:var(--text-secondary);font-size:13px">选择你需要的 Kit（Push / Analytics / Map 等）</span></td><td><code>My apps → APIs</code></td></tr>
+            <tr><td>2</td><td><strong>下载配置文件</strong><br><span style="color:var(--text-secondary);font-size:13px">获取 agconnect-services.json</span></td><td><code>Project settings → App information</code></td></tr>
+            <tr><td>3</td><td><strong>配置签名指纹</strong><br><span style="color:var(--text-secondary);font-size:13px">填入 SHA-256（debug 和 release 都要）</span></td><td><code>Project settings → App information</code></td></tr>
+            <tr><td>4</td><td><strong>开发者实名认证</strong><br><span style="color:var(--text-secondary);font-size:13px">确保华为开发者账号已完成实名认证</span></td><td><code>华为开发者账号设置</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(74,144,217,0.15)">🔧</div>
+      <div>
+        <div class="section-title">Part 2 · Android Studio 工程配置</div>
+        <div class="section-desc">Gradle 依赖、插件、混淆规则</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">A</div>
+          <div class="step-content">
+            <div class="step-title">放置配置文件</div>
+            <div class="step-desc">将 <code>agconnect-services.json</code> 放到 <strong>app/</strong> 根目录（和 build.gradle 同级），不是 project 根目录。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="step">
+        <div class="step-num">B</div>
+        <div class="step-content">
+          <div class="step-title">Project 级 build.gradle（或 settings.gradle）</div>
+          <div class="step-desc">添加 HMS Maven 仓库和 agcp classpath</div>
+        </div>
+      </div>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">build.gradle (Project)</div>
+        </div>
+<pre><span class="kwd">repositories</span> {
+    <span class="fn">google</span>()
+    <span class="fn">mavenCentral</span>()
+    <span class="fn">maven</span> { <span class="var">url</span> <span class="str">'https://developer.huawei.com/repo/'</span> }  <span class="cmt">// HMS Maven 仓库</span>
+}
+
+<span class="kwd">dependencies</span> {
+    <span class="cmt">// buildscript 里</span>
+    <span class="kwd">classpath</span> <span class="str">'com.huawei.agconnect:agcp:1.9.1.301'</span>  <span class="cmt">// AGConnect 插件</span>
+}</pre>
+      </div>
+      <div class="callout callout-warn">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-text">新版 Gradle 用 <code>settings.gradle</code> 的 <code>dependencyResolutionManagement</code> 管理 repositories 时，把 maven URL 放到那里。</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="step">
+        <div class="step-num">C</div>
+        <div class="step-content">
+          <div class="step-title">App 级 build.gradle</div>
+          <div class="step-desc">应用 agcp 插件 + 按需引入 HMS Kit 依赖</div>
+        </div>
+      </div>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">build.gradle (app)</div>
+        </div>
+<pre><span class="kwd">plugins</span> {
+    <span class="var">id</span> <span class="str">'com.android.application'</span>
+    <span class="var">id</span> <span class="str">'com.huawei.agconnect.agcp'</span>  <span class="cmt">// AGConnect 插件</span>
+}
+
+<span class="kwd">android</span> {
+    <span class="cmt">// ...</span>
+    <span class="kwd">signingConfigs</span> {
+        <span class="fn">release</span> {
+            <span class="var">storeFile</span> <span class="fn">file</span>(<span class="str">'xxx.jks'</span>)
+            <span class="var">storePassword</span> <span class="str">'xxx'</span>
+            <span class="var">keyAlias</span> <span class="str">'xxx'</span>
+            <span class="var">keyPassword</span> <span class="str">'xxx'</span>
+        }
+    }
+}
+
+<span class="kwd">dependencies</span> {
+    <span class="cmt">// HMS Core 基础包</span>
+    <span class="kwd">implementation</span> <span class="str">'com.huawei.hms:base:6.11.0.301'</span>
+
+    <span class="cmt">// Push Kit</span>
+    <span class="kwd">implementation</span> <span class="str">'com.huawei.hms:push:6.11.0.300'</span>
+
+    <span class="cmt">// Analytics Kit</span>
+    <span class="kwd">implementation</span> <span class="str">'com.huawei.hms:hianalytics:6.11.0.301'</span>
+
+    <span class="cmt">// Map Kit</span>
+    <span class="kwd">implementation</span> <span class="str">'com.huawei.hms:maps:6.11.0.301'</span>
+}</pre>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="step">
+        <div class="step-num">D</div>
+        <div class="step-content">
+          <div class="step-title">混淆规则 proguard-rules.pro</div>
+        </div>
+      </div>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">proguard-rules.pro</div>
+        </div>
+<pre><span class="cmt"># HMS Core</span>
+<span class="op">-keep</span> <span class="kwd">class</span> com.huawei.hianalytics.**{*;}
+<span class="op">-keep</span> <span class="kwd">class</span> com.huawei.hms.**{*;}
+<span class="op">-keep</span> <span class="kwd">class</span> com.huawei.agconnect.**{*;}
+<span class="op">-dontwarn</span> com.huawei.hms.**</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(210,168,255,0.15)">🚀</div>
+      <div>
+        <div class="section-title">Part 3 · 代码初始化 &amp; 验证</div>
+        <div class="section-desc">Application 初始化 + HMS Core 可用性检查</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">MyApp.java — Application 初始化</div>
+        </div>
+<pre><span class="kwd">public class</span> <span class="fn">MyApp</span> <span class="kwd">extends</span> Application {
+    <span class="op">@Override</span>
+    <span class="kwd">public void</span> <span class="fn">onCreate</span>() {
+        <span class="kwd">super</span>.<span class="fn">onCreate</span>();
+        <span class="cmt">// 初始化 Analytics</span>
+        <span class="fn">HiAnalytics</span>.<span class="fn">getInstance</span>(<span class="kwd">this</span>);
+    }
+}</pre>
+      </div>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">AndroidManifest.xml — 注册 Application</div>
+        </div>
+<pre><span class="op">&lt;application</span>
+    <span class="var">android:name</span>=<span class="str">".MyApp"</span>
+    ... <span class="op">&gt;</span></pre>
+      </div>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">HMS Core 可用性检查</div>
+        </div>
+<pre><span class="cmt">// 检查 HMS Core 是否可用</span>
+<span class="kwd">if</span> (<span class="fn">HuaweiApiAvailability</span>.<span class="fn">getInstance</span>()
+        .<span class="fn">isHuaweiMobileServicesAvailable</span>(<span class="kwd">this</span>)
+        == <span class="fn">ConnectionResult</span>.SUCCESS) {
+    <span class="fn">Log</span>.<span class="fn">d</span>(<span class="str">"HMS"</span>, <span class="str">"HMS Core available ✅"</span>);
+} <span class="kwd">else</span> {
+    <span class="fn">Log</span>.<span class="fn">d</span>(<span class="str">"HMS"</span>, <span class="str">"HMS Core NOT available ❌"</span>);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(255,152,0,0.15)">🔑</div>
+      <div>
+        <div class="section-title">Part 4 · 签名指纹获取</div>
+        <div class="section-desc">用 keytool 获取 SHA-256 填入 AGConnect 控制台</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">Terminal — keytool 命令</div>
+        </div>
+<pre><span class="cmt"># Debug 签名</span>
+<span class="fn">keytool</span> -list -v -keystore <span class="str">"%USERPROFILE%\.android\debug.keystore"</span> \
+  -alias androiddebugkey -storepass android -keypass android
+
+<span class="cmt"># Release 签名</span>
+<span class="fn">keytool</span> -list -v -keystore <span class="str">your_release.jks</span></pre>
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-text">把输出里的 <strong>SHA-256</strong> 值填到 AGConnect 控制台的 <code>Project settings → App information</code>。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(244,67,54,0.15)">📌</div>
+      <div><div class="section-title">Part 5 · 关键注意事项</div></div>
+    </div>
+    <div class="card card-warning">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>事项</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td><strong>海外设备</strong></td><td>HMS Core 需要设备上有 HMS 框架；中国大陆华为设备默认有，海外设备需安装 HMS Core APK</td></tr>
+            <tr><td><strong>和 GMS 共存</strong></td><td>用 <code>HuaweiApiAvailability</code> 判断是否支持 HMS，不支持时 fallback 到 GMS</td></tr>
+            <tr><td><strong>agconnect-services.json</strong></td><td>包含 app_id、api_key 等配置，必须放在 <code>app/</code> 目录，不要提交到公开仓库</td></tr>
+            <tr><td><strong>多 flavor</strong></td><td>每个 flavor 可能需要单独的 json，放在 <code>src/{flavor}/</code> 下</td></tr>
+            <tr><td><strong>网络</strong></td><td>构建时需要能访问 <code>developer.huawei.com/repo</code> Maven 仓库</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(0,200,83,0.15)">📦</div>
+      <div><div class="section-title">Part 6 · HMS Kit 一览</div><div class="section-desc">按需引入，不同 Kit 初始化和使用差别很大</div></div>
+    </div>
+    <div class="card">
+      <div class="kit-grid">
+        <div class="kit-item"><div class="kit-emoji">🔔</div><div><div class="kit-name">Push Kit</div><div class="kit-desc">推送通知</div></div></div>
+        <div class="kit-item"><div class="kit-emoji">📊</div><div><div class="kit-name">Analytics Kit</div><div class="kit-desc">数据分析</div></div></div>
+        <div class="kit-item"><div class="kit-emoji">🗺️</div><div><div class="kit-name">Map Kit</div><div class="kit-desc">地图服务</div></div></div>
+        <div class="kit-item"><div class="kit-emoji">👤</div><div><div class="kit-name">Account Kit</div><div class="kit-desc">华为账号登录</div></div></div>
+        <div class="kit-item"><div class="kit-emoji">💳</div><div><div class="kit-name">IAP Kit</div><div class="kit-desc">应用内支付</div></div></div>
+        <div class="kit-item"><div class="kit-emoji">🤖</div><div><div class="kit-name">ML Kit</div><div class="kit-desc">AI 能力（OCR / 翻译 / 语音）</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(199,0,11,0.15)">🖥️</div>
+      <div><div class="section-title">Part 7 · Android Studio 版本兼容性</div><div class="section-desc">没有华为官方强制要求，约束来自 AGP 和 agcp 插件</div></div>
+    </div>
+
+    <div class="card card-highlight">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>组件</th><th>要求</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Android Studio</strong></td><td><span class="badge badge-green">Arctic Fox (2020.3.1)+</span> &nbsp; 推荐 <span class="badge badge-blue">Hedgehog (2023.1.1)+</span></td></tr>
+            <tr><td><strong>AGP</strong></td><td><span class="badge badge-orange">7.0+</span>（对应 agcp 1.9.x）</td></tr>
+            <tr><td><strong>Gradle</strong></td><td><span class="badge badge-orange">7.0+</span>（AGP 7.x）；AGP 8.x 需 Gradle 8.x</td></tr>
+            <tr><td><strong>JDK</strong></td><td><span class="badge badge-orange">JDK 11</span>（AGP 7.x 最低）；AGP 8.x 需 <span class="badge badge-red">JDK 17</span></td></tr>
+            <tr><td><strong>compileSdk</strong></td><td>31+（推荐 34 或最新）</td></tr>
+            <tr><td><strong>minSdk</strong></td><td>各 Kit 不同，一般 19+，部分 Kit 要求 21+</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:15px;font-weight:600;margin-bottom:16px;color:#ffffff">📋 版本对应速查表</div>
+      <div class="table-wrap">
+        <table class="compat-table">
+          <thead><tr><th>Android Studio</th><th>AGP</th><th>Gradle</th><th>JDK</th><th>HMS Core</th></tr></thead>
+          <tbody>
+            <tr><td>4.2 (2021.1)</td><td>4.2</td><td>6.7+</td><td>8/11</td><td><span class="cross">❌</span> <span style="font-size:12px;color:var(--text-secondary)">不推荐</span></td></tr>
+            <tr><td>Arctic Fox (2020.3.1)</td><td>7.0</td><td>7.0+</td><td>11</td><td><span class="check">✅</span> <span style="font-size:12px;color:var(--text-secondary)">基本可用</span></td></tr>
+            <tr><td>Bumblebee (2021.2.1)</td><td>7.1</td><td>7.2+</td><td>11</td><td><span class="check">✅</span></td></tr>
+            <tr><td>Dolphin (2021.3.1)</td><td>7.3</td><td>7.4+</td><td>11</td><td><span class="check">✅</span></td></tr>
+            <tr><td>Flamingo (2022.2.1)</td><td>8.0</td><td>8.0+</td><td>17</td><td><span class="check">✅</span></td></tr>
+            <tr style="background:rgba(0,200,83,0.05)"><td><strong>Hedgehog (2023.1.1)</strong></td><td>8.2</td><td>8.2+</td><td>17</td><td><span class="check">✅</span> <span class="badge badge-green">推荐</span></td></tr>
+            <tr><td>Iguana (2023.2.1)</td><td>8.3</td><td>8.4+</td><td>17</td><td><span class="check">✅</span> <span class="badge badge-blue">推荐</span></td></tr>
+            <tr><td>Koala (2024.1.1)</td><td>8.5+</td><td>8.7+</td><td>17</td><td><span class="check">✅</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <div class="callout-icon">💡</div>
+      <div class="callout-text"><strong>核心原因：</strong>agcp（AGConnect Gradle Plugin）1.9.x 依赖 AGP 7.x+，AGP 7.0 对应 Android Studio Arctic Fox，这就是实际最低线。</div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:15px;font-weight:600;margin-bottom:12px;color:#ffffff">🔌 HMS Toolkit 插件（可选但推荐）</div>
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">华为提供的 Android Studio 插件，可自动配置 HMS Maven 仓库、下载 agconnect-services.json、一键添加 Kit 依赖、检查配置问题。</p>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><div class="code-dot" style="background:#ff5f56"></div><div class="code-dot" style="background:#ffbd2e"></div><div class="code-dot" style="background:#27c93f"></div></div>
+          <div class="code-label">安装路径</div>
+        </div>
+<pre><span class="fn">Settings</span> → <span class="fn">Plugins</span> → 搜索 <span class="str">"HMS Toolkit"</span> → <span class="fn">Install</span></pre>
+      </div>
+    </div>
+
+    <div class="card card-danger">
+      <div style="font-size:15px;font-weight:600;margin-bottom:12px;color:#ffffff">⚠️ 不要搞混 IDE</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>IDE</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Android Studio</strong></td><td>HMS Core（Android 平台）开发 <span class="check">✅</span></td></tr>
+            <tr><td><strong>DevEco Studio</strong></td><td>HarmonyOS / HarmonyOS NEXT 开发，<span style="color:var(--accent-red)">不用于</span> HMS Core Android 接入</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(74,144,217,0.15)">🗺️</div>
+      <div><div class="section-title">接入流程总览</div></div>
+    </div>
+    <div class="card">
+      <div class="flow">
+        <div class="flow-item">AGConnect 配置</div><div class="flow-arrow">→</div>
+        <div class="flow-item">下载 json</div><div class="flow-arrow">→</div>
+        <div class="flow-item">Gradle 集成</div><div class="flow-arrow">→</div>
+        <div class="flow-item">签名指纹</div><div class="flow-arrow">→</div>
+        <div class="flow-item">代码初始化</div><div class="flow-arrow">→</div>
+        <div class="flow-item">验证 ✅</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="footer-text"><span class="footer-brand">HMS Core 接入指南</span> · 整理 by 薄冰哥小余 · 2026-10-09</p>
+  </div>
+</div>
+</body>
+</html>

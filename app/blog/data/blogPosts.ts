@@ -39,6 +39,15 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/qwen/qwen-app.png',
     categories: ['AI'],
   },
+  'night-stars-kashgar': {
+    slug: 'night-stars-kashgar',
+    title: 'Night Stars Over Kashgar — A Smallness Meditation',
+    date: '2026-10-19',
+    author: 'Hovah Yii',
+    description: 'A brief philosophical and theological reflection on human smallness before the stars, inspired by Psalm 8:3-4 and the night sky above Kashgar Prefecture.',
+    ogImage: '/hovah-blog.png',
+    categories: ['Philosophy', 'Theology'],
+  },
   'gpt-5-1-emotional-upgrade': {
     slug: 'gpt-5-1-emotional-upgrade',
     title: 'GPT-5.1 Goes Emotional: Warmth, Styles, and Adaptive Reasoning',
@@ -48,6 +57,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/chatgpt5.1/new.png',
     categories: ['AI'],
   },
+
   'gemini-3-ultimate-ai': {
     slug: 'gemini-3-ultimate-ai',
     title: '👑 The Strongest AI of the Year: Google Gemini 3 Is Here!',
@@ -57,6 +67,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/gemini-3/gemini-3-pro.png',
     categories: ['AI'],
   },
+
   'openai-gpt-5-1-pro-codex-max': {
     slug: 'openai-gpt-5-1-pro-codex-max',
     title: '🚀 OpenAI Strikes Back: GPT-5.1 Pro and GPT-5.1-Codex-Max',
@@ -66,6 +77,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/openai/gpt-5.1-announcement.png',
     categories: ['AI'],
   },
+
   'google-nano-banana-pro-gemini-3-image': {
     slug: 'google-nano-banana-pro-gemini-3-image',
     title: '🍌 Google Nano Banana Pro: Designers Beware! Deep Integration with Gemini 3',
@@ -75,6 +87,7 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     ogImage: '/blog/nano-banana/gemini-3-pro-image.png',
     categories: ['AI'],
   },
+
   'how-to-get-bem-engineering-technologist-approval': {
     slug: 'how-to-get-bem-engineering-technologist-approval',
     title: 'How to Get Your Engineering Technologist (BEM) Approval in Malaysia',
@@ -371,5 +384,14 @@ export const blogPosts: Record<string, Omit<BlogPost, 'content'>> = {
     description: 'GTM (Go-to-Market) engineering is an emerging technical discipline that applies software engineering principles, AI, and workflow automation to build scalable, data-driven revenue systems rather than running one-off sales campaigns. A deep dive into GTM Engineering and Forward Deployed Engineering — the two hottest new job categories of the AI era: what they are, who is hiring (Clay, Cursor, Notion, Palantir, OpenAI, Anthropic), real salary data ($160K median GTME / $350K–$550K FDE total comp), the three-rung build ladder, and a step-by-step path into each role.',
     ogImage: '/blog/gtm/clay-guide.png',
     categories: ['AI', 'Career', 'GTM', 'FDE', 'Engineering'],
+  },
+  'hms-core-android-integration-guide': {
+    slug: 'hms-core-android-integration-guide',
+    title: '📱 Complete Guide: Integrating Huawei HMS Core into Your Android App',
+    date: '9 October 2026',
+    author: 'Hovah Yii',
+    description: 'A comprehensive, step-by-step developer guide on integrating Huawei Mobile Services (HMS Core) SDK into an Android app — from AppGallery Connect console setup and SHA-256 fingerprinting to Gradle build scripts, code initialization, and Android Studio compatibility matrices.',
+    ogImage: '/blog/hms-core/hms-core-hero.jpg',
+    categories: ['Huawei', 'Android', 'Mobile Development', 'Tutorial'],
   },
 };
